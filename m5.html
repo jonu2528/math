@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เนื้อหาคณิตศาสตร์ มัธยมศึกษาปีที่ 5 เมทริกซ์ ความน่าจะเป็น สถิติ แคลคูลัส ลิมิต อนุพันธ์">
+    <meta name="keywords" content="คณิตม.5, เมทริกซ์, ความน่าจะเป็น, สถิติ, แคลคูลัส, ลิมิต, อนุพันธ์">
+    <title>คณิตศาสตร์ ม.5 - เมทริกซ์ ความน่าจะเป็น แคลคูลัส อนุพันธ์</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>📐 คณิตศาสตร์มัธยม</h1>
+                <p class="tagline">เรียนรู้คณิตศาสตร์ ม.1-6 อย่างละเอียดและเข้าใจง่าย</p>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="m1.html">ม.1</a></li>
+                    <li><a href="m2.html">ม.2</a></li>
+                    <li><a href="m3.html">ม.3</a></li>
+                    <li><a href="m4.html">ม.4</a></li>
+                    <li><a href="m5.html" class="active">ม.5</a></li>
+                    <li><a href="m6.html">ม.6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="ad-container ad-top">
+        <div class="ad-placeholder">
+            <p>[ พื้นที่โฆษณา AdSense - Top Banner 728x90 ]</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">หน้าแรก</a>
+            <span>›</span>
+            <span>มัธยมศึกษาปีที่ 5</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: #667eea; margin-bottom: 20px;">คณิตศาสตร์ มัธยมศึกษาปีที่ 5</h1>
+
+                <div class="intro-section">
+                    <p>คณิตศาสตร์ ม.5 เป็นเนื้อหาที่ลึกซึ้งและท้าทาย ครอบคลุมเมทริกซ์ ความน่าจะเป็น สถิติเชิงวิเคราะห์ และแคลคูลัสเบื้องต้น รวมถึงลิมิต ความต่อเนื่อง และอนุพันธ์ ซึ่งเป็นพื้นฐานสำคัญสำหรับการศึกษาในระดับอุดมศึกษา</p>
+                </div>
+
+                <article class="lesson-section">
+                    <h2>บทที่ 1: เมทริกซ์ (Matrices)</h2>
+
+                    <h3>1.1 ความหมายของเมทริกซ์</h3>
+                    <p>เมทริกซ์ คือ ตารางสี่เหลี่ยมผืนผ้าที่เรียงลำดับของจำนวนหรือสัญลักษณ์</p>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่าง:</h4>
+                        <p>A = [2 3]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;[1 4]<br>
+                        เป็นเมทริกซ์ขนาด 2×2</p>
+                    </div>
+
+                    <h3>1.2 การบวกและลบเมทริกซ์</h3>
+                    <p>บวกหรือลบสมาชิกที่อยู่ในตำแหน่งเดียวกัน (ต้องมีขนาดเท่ากัน)</p>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            [a b] + [e f] = [a+e b+f]<br>
+                            [c d]&nbsp;&nbsp;&nbsp;[g h]&nbsp;&nbsp;&nbsp;[c+g d+h]
+                        </div>
+                    </div>
+
+                    <h3>1.3 การคูณเมทริกซ์</h3>
+                    <p>การคูณเมทริกซ์ A (m×n) กับ B (n×p) ได้เมทริกซ์ผลลัพธ์ขนาด (m×p)</p>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 1:</h4>
+                        <p>[1 2] × [5 6] = [1×5+2×7 1×6+2×8] = [19 22]<br>
+                        [3 4]&nbsp;&nbsp;&nbsp;[7 8]&nbsp;&nbsp;&nbsp;[3×5+4×7 3×6+4×8]&nbsp;&nbsp;&nbsp;[43 50]</p>
+                    </div>
+
+                    <h3>1.4 ดีเทอร์มิแนนต์</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร (เมทริกซ์ 2×2):</h4>
+                        <div class="formula">
+                            det [a b] = ad - bc<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[c d]
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 2:</h4>
+                        <p>จงหา det [2 3]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1 4]</p>
+                        <p><strong>วิธีทำ:</strong> det = (2×4) - (3×1) = 8 - 3 = 5</p>
+                        <p><strong>ตอบ:</strong> 5</p>
+                    </div>
+
+                    <h3>1.5 เมทริกซ์ผกผัน</h3>
+                    <p>เมทริกซ์ผกผัน A⁻¹ คือ เมทริกซ์ที่ทำให้ A × A⁻¹ = I (เมทริกซ์เอกลักษณ์)</p>
+
+                    <div class="formula-box">
+                        <h4>สูตร (เมทริกซ์ 2×2):</h4>
+                        <div class="formula">
+                            A⁻¹ = 1/det(A) × [d -b]<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-c a]
+                        </div>
+                    </div>
+                </article>
+
+                <div class="ad-placeholder ad-article">
+                    <p>[ พื้นที่โฆษณา AdSense - In-Article ]</p>
+                </div>
+
+                <article class="lesson-section">
+                    <h2>บทที่ 2: ความน่าจะเป็น (Probability)</h2>
+
+                    <h3>2.1 ความน่าจะเป็นเบื้องต้น</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            P(A) = n(A) / n(S)<br>
+                            0 ≤ P(A) ≤ 1
+                        </div>
+                    </div>
+
+                    <h3>2.2 กฎการบวก</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            P(A ∪ B) = P(A) + P(B) - P(A ∩ B)<br>
+                            ถ้า A และ B เป็นเหตุการณ์แยกกัน: P(A ∪ B) = P(A) + P(B)
+                        </div>
+                    </div>
+
+                    <h3>2.3 กฎการคูณ</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            P(A ∩ B) = P(A) × P(B|A)<br>
+                            ถ้า A และ B เป็นอิสระต่อกัน: P(A ∩ B) = P(A) × P(B)
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 3:</h4>
+                        <p>โยนเหรียญ 2 ครั้ง จงหาความน่าจะเป็นที่จะได้หัว 2 ครั้ง</p>
+                        <p><strong>วิธีทำ:</strong> P(หัว) = 1/2</p>
+                        <p>P(หัว 2 ครั้ง) = 1/2 × 1/2 = 1/4</p>
+                        <p><strong>ตอบ:</strong> 1/4</p>
+                    </div>
+
+                    <h3>2.4 ความน่าจะเป็นแบบมีเงื่อนไข</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">P(A|B) = P(A ∩ B) / P(B)</div>
+                    </div>
+
+                    <h3>2.5 การจัดหมู่และการเรียงสับเปลี่ยน</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            การเรียงสับเปลี่ยน: P(n,r) = n!/(n-r)!<br>
+                            การจัดหมู่: C(n,r) = n!/[r!(n-r)!]
+                        </div>
+                    </div>
+                </article>
+
+                <article class="lesson-section">
+                    <h2>บทที่ 3: สถิติเชิงวิเคราะห์</h2>
+
+                    <h3>3.1 ส่วนเบี่ยงเบนมาตรฐาน</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            ความแปรปรวน: σ² = Σ(xᵢ - x̄)² / n<br>
+                            ส่วนเบี่ยงเบนมาตรฐาน: σ = √(σ²)
+                        </div>
+                    </div>
+
+                    <h3>3.2 การแจกแจงความน่าจะเป็น</h3>
+                    <p>การแจกแจงแบบปกติ (Normal Distribution) มีรูปร่างเป็นรูประฆังคว่ำ</p>
+
+                    <div class="note-box">
+                        <h4>สมบัติของการแจกแจงปกติ:</h4>
+                        <p>• สมมาตรรอบค่าเฉลี่ย<br>
+                        • ค่าเฉลี่ย = มัธยฐาน = ฐานนิยม<br>
+                        • พื้นที่ใต้กราฟ = 1</p>
+                    </div>
+                </article>
+
+                <div class="ad-placeholder ad-article">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+
+                <article class="lesson-section">
+                    <h2>บทที่ 4: ลิมิตและความต่อเนื่อง</h2>
+
+                    <h3>4.1 ลิมิตของฟังก์ชัน</h3>
+
+                    <div class="formula-box">
+                        <h4>สัญลักษณ์:</h4>
+                        <div class="formula">lim f(x) = L<br>x→a</div>
+                        <p style="margin-top: 10px;">หมายความว่า เมื่อ x เข้าใกล้ a ค่าของ f(x) จะเข้าใกล้ L</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 4:</h4>
+                        <p>จงหาค่า lim (2x + 3)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x→2</p>
+                        <p><strong>วิธีทำ:</strong> แทน x = 2</p>
+                        <p>= 2(2) + 3 = 7</p>
+                        <p><strong>ตอบ:</strong> 7</p>
+                    </div>
+
+                    <h3>4.2 ทฤษฎีบทลิมิต</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            lim [f(x) + g(x)] = lim f(x) + lim g(x)<br>
+                            lim [f(x) × g(x)] = lim f(x) × lim g(x)<br>
+                            lim [f(x)/g(x)] = lim f(x) / lim g(x) [เมื่อ lim g(x) ≠ 0]
+                        </div>
+                    </div>
+
+                    <h3>4.3 ความต่อเนื่อง</h3>
+                    <p>ฟังก์ชัน f ต่อเนื่องที่ x = a ถ้า:</p>
+                    <ul>
+                        <li>1. f(a) มีค่า</li>
+                        <li>2. lim f(x) มีค่า<br>&nbsp;&nbsp;&nbsp;&nbsp;x→a</li>
+                        <li>3. lim f(x) = f(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;x→a</li>
+                    </ul>
+                </article>
+
+                <article class="lesson-section">
+                    <h2>บทที่ 5: อนุพันธ์ (Derivatives)</h2>
+
+                    <h3>5.1 ความหมายของอนุพันธ์</h3>
+                    <p>อนุพันธ์ของฟังก์ชัน f ที่ x คือ อัตราการเปลี่ยนแปลงของ f ที่ x</p>
+
+                    <div class="formula-box">
+                        <h4>นิยาม:</h4>
+                        <div class="formula">
+                            f'(x) = lim [f(x+h) - f(x)] / h<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h→0
+                        </div>
+                    </div>
+
+                    <h3>5.2 สูตรอนุพันธ์พื้นฐาน</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">
+                            d/dx(c) = 0<br>
+                            d/dx(xⁿ) = nxⁿ⁻¹<br>
+                            d/dx(sin x) = cos x<br>
+                            d/dx(cos x) = -sin x<br>
+                            d/dx(eˣ) = eˣ<br>
+                            d/dx(ln x) = 1/x
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 5:</h4>
+                        <p>จงหาอนุพันธ์ของ f(x) = 3x⁴</p>
+                        <p><strong>วิธีทำ:</strong> f'(x) = 3 × 4x³ = 12x³</p>
+                        <p><strong>ตอบ:</strong> 12x³</p>
+                    </div>
+
+                    <h3>5.3 กฎลูกโซ่</h3>
+
+                    <div class="formula-box">
+                        <h4>สูตร:</h4>
+                        <div class="formula">d/dx[f(g(x))] = f'(g(x)) × g'(x)</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>ตัวอย่างที่ 6:</h4>
+                        <p>จงหาอนุพันธ์ของ f(x) = (2x + 1)³</p>
+                        <p><strong>วิธีทำ:</strong> f'(x) = 3(2x + 1)² × 2 = 6(2x + 1)²</p>
+                        <p><strong>ตอบ:</strong> 6(2x + 1)²</p>
+                    </div>
+
+                    <h3>5.4 การประยุกต์ใช้อนุพันธ์</h3>
+                    <ul>
+                        <li>หาค่าสูงสุดและต่ำสุด</li>
+                        <li>หาจุดเปลี่ยนทิศทาง</li>
+                        <li>หาความชันของเส้นสัมผัส</li>
+                        <li>หาอัตราการเปลี่ยนแปลง</li>
+                    </ul>
+
+                    <div class="note-box">
+                        <h4>หมายเหตุ:</h4>
+                        <p>• f'(x) = 0 ที่จุดสูงสุดหรือต่ำสุดในพื้นที่<br>
+                        • f''(x) > 0 แสดงว่ากราฟเว้าขึ้น<br>
+                        • f''(x) < 0 แสดงว่ากราฟเว้าลง</p>
+                    </div>
+                </article>
+
+                <section class="exercise-section">
+                    <h3>แบบฝึกหัดท้ายบท</h3>
+
+                    <div class="exercise-item">
+                        <p><strong>ข้อ 1:</strong> จงหา det [3 2]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1 4]</p>
+                        <button class="exercise-toggle">แสดงเฉลย</button>
+                        <div class="exercise-answer">
+                            <p><strong>เฉลย:</strong> det = (3×4) - (2×1) = 12 - 2 = 10</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <p><strong>ข้อ 2:</strong> โยนลูกเต๋า 1 ลูก จงหาความน่าจะเป็นที่จะได้เลขคู่</p>
+                        <button class="exercise-toggle">แสดงเฉลย</button>
+                        <div class="exercise-answer">
+                            <p><strong>เฉลย:</strong> เลขคู่ = {2, 4, 6}</p>
+                            <p>P(คู่) = 3/6 = 1/2</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <p><strong>ข้อ 3:</strong> จงหาค่า lim (x² + 2x)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x→3</p>
+                        <button class="exercise-toggle">แสดงเฉลย</button>
+                        <div class="exercise-answer">
+                            <p><strong>เฉลย:</strong> = 3² + 2(3) = 9 + 6 = 15</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <p><strong>ข้อ 4:</strong> จงหาอนุพันธ์ของ f(x) = 5x³ - 2x + 1</p>
+                        <button class="exercise-toggle">แสดงเฉลย</button>
+                        <div class="exercise-answer">
+                            <p><strong>เฉลย:</strong> f'(x) = 15x² - 2</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-item">
+                        <p><strong>ข้อ 5:</strong> จงหาค่าของ C(5,2)</p>
+                        <button class="exercise-toggle">แสดงเฉลย</button>
+                        <div class="exercise-answer">
+                            <p><strong>เฉลย:</strong> C(5,2) = 5!/(2!×3!) = 120/(2×6) = 10</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="sidebar-right">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense - Sidebar 300x250 ]</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="ad-container ad-bottom">
+        <div class="ad-placeholder">
+            <p>[ พื้นที่โฆษณา AdSense - Bottom Banner ]</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>เกี่ยวกับเรา</h3>
+                    <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา ที่มุ่งเน้นการนำเสนอเนื้อหาที่เข้าใจง่าย ครบถ้วน และเหมาะสมกับนักเรียนไทย</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ลิงก์ด่วน</h3>
+                    <ul>
+                        <li><a href="index.html">หน้าแรก</a></li>
+                        <li><a href="m1.html">คณิตศาสตร์ ม.1</a></li>
+                        <li><a href="m2.html">คณิตศาสตร์ ม.2</a></li>
+                        <li><a href="m3.html">คณิตศาสตร์ ม.3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ช่วงชั้นที่ 2</h3>
+                    <ul>
+                        <li><a href="m4.html">คณิตศาสตร์ ม.4</a></li>
+                        <li><a href="m5.html">คณิตศาสตร์ ม.5</a></li>
+                        <li><a href="m6.html">คณิตศาสตร์ ม.6</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved. | เว็บไซต์เพื่อการศึกษา</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
