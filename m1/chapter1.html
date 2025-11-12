@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="บทที่ 1 จำนวนเต็ม - เรียนรู้การบวก ลบ คูณ หาร จำนวนเต็ม ห.ร.ม. และ ค.ร.น.">
+    <title>บทที่ 1: จำนวนเต็ม | คณิตศาสตร์ ม.1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- MathJax for LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>📐 คณิตศาสตร์มัธยม</h1>
+                <p class="tagline">เรียนรู้คณิตศาสตร์ ม.1-6 อย่างละเอียดและเข้าใจง่าย</p>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">หน้าแรก</a></li>
+                    <li><a href="../m1.html" class="active">ม.1</a></li>
+                    <li><a href="../m2.html">ม.2</a></li>
+                    <li><a href="../m3.html">ม.3</a></li>
+                    <li><a href="../m4.html">ม.4</a></li>
+                    <li><a href="../m5.html">ม.5</a></li>
+                    <li><a href="../m6.html">ม.6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">หน้าแรก</a>
+            <span>›</span>
+            <a href="../m1.html">ม.1</a>
+            <span>›</span>
+            <span>บทที่ 1: จำนวนเต็ม</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+            </aside>
+
+            <section class="main-content">
+                <div class="chapter-content">
+                    <div class="chapter-header" id="top">
+                        <h1>บทที่ 1: จำนวนเต็ม</h1>
+                        <p class="chapter-subtitle">Integers - พื้นฐานของระบบจำนวน</p>
+                    </div>
+
+                    <!-- สารบัญภายในบท -->
+                    <div class="section-nav" id="section-nav">
+                        <h3>📑 สารบัญในบทนี้</h3>
+                        <ul>
+                            <li><a href="#section-1-1">1.1 ความหมายของจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-2">1.2 การเปรียบเทียบจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-3">1.3 การบวกจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-4">1.4 การลบจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-5">1.5 การคูณจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-6">1.6 การหารจำนวนเต็ม</a></li>
+                            <li><a href="#section-1-7">1.7 การดำเนินการผสม</a></li>
+                            <li><a href="#section-1-8">1.8 ห.ร.ม. และ ค.ร.น.</a></li>
+                            <li><a href="#exercises">แบบฝึกหัด</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.1 ความหมายของจำนวนเต็ม -->
+                    <article class="lesson-section" id="section-1-1">
+                        <h2>1.1 ความหมายของจำนวนเต็ม</h2>
+
+                        <p><strong>จำนวนเต็ม (Integers)</strong> คือ เซตของจำนวนที่ประกอบด้วย จำนวนนับ ศูนย์ และจำนวนตรงข้ามของจำนวนนับ</p>
+
+                        <div class="formula-box">
+                            <h4>สัญลักษณ์:</h4>
+                            <p>เซตของจำนวนเต็ม แทนด้วย $\mathbb{Z}$ (จาก Zahlen ภาษาเยอรมัน)</p>
+                            $$\mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$$
+                        </div>
+
+                        <h3>ประเภทของจำนวนเต็ม</h3>
+
+                        <div class="note-box">
+                            <h4>การจำแนกจำนวนเต็ม:</h4>
+                            <p><strong>1. จำนวนเต็มบวก (Positive Integers):</strong> $\mathbb{Z}^+ = \{1, 2, 3, 4, \ldots\}$</p>
+                            <p><strong>2. ศูนย์ (Zero):</strong> $0$ (ไม่ใช่บวก ไม่ใช่ลบ)</p>
+                            <p><strong>3. จำนวนเต็มลบ (Negative Integers):</strong> $\mathbb{Z}^- = \{-1, -2, -3, -4, \ldots\}$</p>
+                        </div>
+
+                        <h3>จำนวนตรงข้าม (Opposite Numbers)</h3>
+                        <p>จำนวนตรงข้ามของจำนวน $a$ คือ $-a$ โดยที่ $a + (-a) = 0$</p>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 1:</h4>
+                            <p><strong>โจทย์:</strong> จงหาจำนวนตรงข้ามของจำนวนต่อไปนี้</p>
+                            <p>ก) $5$ <br>
+                            ข) $-12$ <br>
+                            ค) $0$</p>
+
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>ก) จำนวนตรงข้ามของ $5$ คือ $-5$ เพราะ $5 + (-5) = 0$</p>
+                            <p>ข) จำนวนตรงข้ามของ $-12$ คือ $12$ เพราะ $(-12) + 12 = 0$</p>
+                            <p>ค) จำนวนตรงข้ามของ $0$ คือ $0$ เพราะ $0 + 0 = 0$</p>
+                        </div>
+
+                        <h3>เส้นจำนวน (Number Line)</h3>
+                        <p>เส้นจำนวนเป็นเส้นตรงที่แสดงตำแหน่งของจำนวนเต็ม โดยมีศูนย์อยู่ตรงกลาง จำนวนบวกอยู่ทางขวา และจำนวนลบอยู่ทางซ้าย</p>
+
+                        <div class="note-box">
+                            <h4>สมบัติของเส้นจำนวน:</h4>
+                            <p>• จำนวนที่อยู่ทางขวามากกว่ามีค่ามากกว่า</p>
+                            <p>• ระยะห่างจากศูนย์เรียกว่า ค่าสัมบูรณ์ (Absolute Value)</p>
+                            <p>• จำนวนตรงข้ามอยู่ห่างจากศูนย์เท่ากันแต่คนละทิศทาง</p>
+                        </div>
+
+                        <h3>ค่าสัมบูรณ์ (Absolute Value)</h3>
+                        <p>ค่าสัมบูรณ์ของจำนวนเต็ม $a$ เขียนแทนด้วย $|a|$ หมายถึง ระยะห่างจากศูนย์บนเส้นจำนวน</p>
+
+                        <div class="formula-box">
+                            <h4>นิยาม:</h4>
+                            $$|a| = \begin{cases} 
+                            a & \text{ถ้า } a \geq 0 \\
+                            -a & \text{ถ้า } a < 0
+                            \end{cases}$$
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 2:</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่า</p>
+                            <p>ก) $|7|$ <br>
+                            ข) $|-5|$ <br>
+                            ค) $|0|$ <br>
+                            ง) $-|8|$</p>
+
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>ก) $|7| = 7$</p>
+                            <p>ข) $|-5| = 5$</p>
+                            <p>ค) $|0| = 0$</p>
+                            <p>ง) $-|8| = -8$ (ระวัง! เครื่องหมายลบอยู่ด้านนอก)</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <div class="ad-placeholder ad-article">
+                        <p>[ พื้นที่โฆษณา AdSense ]</p>
+                    </div>
+
+                    <!-- 1.2 การเปรียบเทียบจำนวนเต็ม -->
+                    <article class="lesson-section" id="section-1-2">
+                        <h2>1.2 การเปรียบเทียบจำนวนเต็ม</h2>
+
+                        <p>การเปรียบเทียบจำนวนเต็มสามารถทำได้โดยใช้เส้นจำนวน หรือใช้กฎการเปรียบเทียบ</p>
+
+                        <div class="formula-box">
+                            <h4>กฎการเปรียบเทียบ:</h4>
+                            <p><strong>1.</strong> จำนวนบวก $>$ ศูนย์ $>$ จำนวนลบ</p>
+                            <p><strong>2.</strong> ในจำนวนบวก จำนวนที่มากกว่ามีค่ามากกว่า</p>
+                            <p><strong>3.</strong> ในจำนวนลบ จำนวนที่มีค่าสัมบูรณ์มากกว่ามีค่าน้อยกว่า</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 3:</h4>
+                            <p><strong>โจทย์:</strong> จงเปรียบเทียบจำนวนเต็มต่อไปนี้</p>
+                            <p>ก) $5$ และ $8$ <br>
+                            ข) $-3$ และ $2$ <br>
+                            ค) $-7$ และ $-4$ <br>
+                            ง) $-10$ และ $-15$</p>
+
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>ก) $5 < 8$ (ทั้งคู่เป็นบวก จำนวนที่มากกว่ามีค่ามากกว่า)</p>
+                            <p>ข) $-3 < 2$ (จำนวนบวก $>$ จำนวนลบ)</p>
+                            <p>ค) $-7 < -4$ (ทั้งคู่เป็นลบ $|-7| = 7 > |-4| = 4$ ดังนั้น $-7 < -4$)</p>
+                            <p>ง) $-10 > -15$ ($|-10| = 10 < |-15| = 15$ ดังนั้น $-10 > -15$)</p>
+                        </div>
+
+                        <div class="warning-box">
+                            <h4>⚠️ ข้อควรระวัง:</h4>
+                            <p>สำหรับจำนวนลบ จำนวนที่มีค่าสัมบูรณ์<strong>มากกว่า</strong>กลับมีค่า<strong>น้อยกว่า</strong></p>
+                            <p>ตัวอย่าง: $-100 < -1$ แม้ว่า $100 > 1$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <!-- 1.3 การบวกจำนวนเต็ม -->
+                    <article class="lesson-section" id="section-1-3">
+                        <h2>1.3 การบวกจำนวนเต็ม</h2>
+
+                        <p>การบวกจำนวนเต็มมีกฎที่แตกต่างกันตามเครื่องหมายของจำนวน</p>
+
+                        <div class="formula-box">
+                            <h4>กฎการบวกจำนวนเต็ม:</h4>
+                            <p><strong>กรณีที่ 1:</strong> บวก $(+)$ กับ บวก $(+)$</p>
+                            $$a + b = |a| + |b|$$
+                            <p>ผลลัพธ์เป็นบวก บวกค่าสัมบูรณ์แล้วใส่เครื่องหมายบวก</p>
+
+                            <p><strong>กรณีที่ 2:</strong> ลบ $(-)$ กับ ลบ $(-)$</p>
+                            $$(-a) + (-b) = -(|a| + |b|)$$
+                            <p>ผลลัพธ์เป็นลบ บวกค่าสัมบูรณ์แล้วใส่เครื่องหมายลบ</p>
+
+                            <p><strong>กรณีที่ 3:</strong> บวก $(+)$ กับ ลบ $(-)$</p>
+                            $$a + (-b) = \begin{cases}
+                            |a| - |b| & \text{ถ้า } |a| > |b| \\
+                            -(|b| - |a|) & \text{ถ้า } |a| < |b| \\
+                            0 & \text{ถ้า } |a| = |b|
+                            \end{cases}$$
+                            <p>หาผลต่างของค่าสัมบูรณ์ ผลลัพธ์ตามเครื่องหมายของจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 4: การบวกจำนวนบวกกับบวก</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $15 + 23$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$15 + 23 = 38$$</p>
+                            <p><strong>ตอบ:</strong> $38$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 5: การบวกจำนวนลบกับลบ</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $(-15) + (-7)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            (-15) + (-7) &= -(15 + 7) \\
+                            &= -22
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $-22$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 6: การบวกจำนวนบวกกับลบ (บวกมากกว่า)</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $25 + (-18)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            25 + (-18) &= 25 - 18 \\
+                            &= 7
+                            \end{align}$$</p>
+                            <p>เพราะ $|25| > |-18|$ ผลลัพธ์เป็นบวก</p>
+                            <p><strong>ตอบ:</strong> $7$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 7: การบวกจำนวนบวกกับลบ (ลบมากกว่า)</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $12 + (-30)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            12 + (-30) &= -(30 - 12) \\
+                            &= -18
+                            \end{align}$$</p>
+                            <p>เพราะ $|12| < |-30|$ ผลลัพธ์เป็นลบ</p>
+                            <p><strong>ตอบ:</strong> $-18$</p>
+                        </div>
+
+                        <h3>สมบัติการบวกจำนวนเต็ม</h3>
+                        <div class="formula-box">
+                            <h4>สมบัติสำคัญ:</h4>
+                            <p><strong>1. สมบัติการสลับที่ (Commutative Property):</strong></p>
+                            $$a + b = b + a$$
+
+                            <p><strong>2. สมบัติการเข้ากลุ่ม (Associative Property):</strong></p>
+                            $$(a + b) + c = a + (b + c)$$
+
+                            <p><strong>3. สมบัติของศูนย์ (Identity Property):</strong></p>
+                            $$a + 0 = 0 + a = a$$
+
+                            <p><strong>4. สมบัติของจำนวนตรงข้าม (Inverse Property):</strong></p>
+                            $$a + (-a) = 0$$
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <div class="ad-placeholder ad-article">
+                        <p>[ พื้นที่โฆษณา AdSense ]</p>
+                    </div>
+
+                    <!-- 1.4 การลบจำนวนเต็ม -->
+                    <article class="lesson-section" id="section-1-4">
+                        <h2>1.4 การลบจำนวนเต็ม</h2>
+
+                        <p>การลบจำนวนเต็ม คือ การบวกกับจำนวนตรงข้าม</p>
+
+                        <div class="formula-box">
+                            <h4>กฎการลบ:</h4>
+                            $$a - b = a + (-b)$$
+                            <p>การลบ $b$ เท่ากับการบวก $-b$</p>
+                        </div>
+
+                        <div class="note-box">
+                            <h4>วิธีคิด:</h4>
+                            <p><strong>ลบลบเป็นบวก:</strong> $a - (-b) = a + b$</p>
+                            <p><strong>ลบบวกเป็นลบ:</strong> $a - b = a + (-b)$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 8:</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $12 - (-5)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            12 - (-5) &= 12 + 5 \\
+                            &= 17
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $17$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 9:</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $(-8) - 15$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            (-8) - 15 &= (-8) + (-15) \\
+                            &= -(8 + 15) \\
+                            &= -23
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $-23$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 10:</h4>
+                            <p><strong>โจทย์:</strong> จงหาค่าของ $(-20) - (-35)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            (-20) - (-35) &= (-20) + 35 \\
+                            &= 35 - 20 \\
+                            &= 15
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $15$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <!-- Navigation to next chapter -->
+                    <div class="chapter-nav">
+                        <a href="../m1.html" class="nav-prev">← กลับหน้าสารบัญ ม.1</a>
+                        <a href="chapter2.html" class="nav-next">บทที่ 2: เศษส่วนและทศนิยม →</a>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar-right">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>เกี่ยวกับเรา</h3>
+                    <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา ที่มุ่งเน้นการนำเสนอเนื้อหาที่เข้าใจง่าย ครบถ้วน และเหมาะสมกับนักเรียนไทย</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ลิงก์ด่วน</h3>
+                    <ul>
+                        <li><a href="../index.html">หน้าแรก</a></li>
+                        <li><a href="../m1.html">คณิตศาสตร์ ม.1</a></li>
+                        <li><a href="../m2.html">คณิตศาสตร์ ม.2</a></li>
+                        <li><a href="../m3.html">คณิตศาสตร์ ม.3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ช่วงชั้นที่ 2</h3>
+                    <ul>
+                        <li><a href="../m4.html">คณิตศาสตร์ ม.4</a></li>
+                        <li><a href="../m5.html">คณิตศาสตร์ ม.5</a></li>
+                        <li><a href="../m6.html">คณิตศาสตร์ ม.6</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved. | เว็บไซต์เพื่อการศึกษา</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
