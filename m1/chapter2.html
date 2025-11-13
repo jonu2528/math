@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="บทที่ 2 เศษส่วนและทศนิยม - การบวก ลบ คูณ หาร เศษส่วน และทศนิยม">
+    <title>บทที่ 2: เศษส่วนและทศนิยม | คณิตศาสตร์ ม.1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>📐 คณิตศาสตร์มัธยม</h1>
+                <p class="tagline">เรียนรู้คณิตศาสตร์ ม.1-6 อย่างละเอียดและเข้าใจง่าย</p>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">หน้าแรก</a></li>
+                    <li><a href="../m1.html" class="active">ม.1</a></li>
+                    <li><a href="../m2.html">ม.2</a></li>
+                    <li><a href="../m3.html">ม.3</a></li>
+                    <li><a href="../m4.html">ม.4</a></li>
+                    <li><a href="../m5.html">ม.5</a></li>
+                    <li><a href="../m6.html">ม.6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">หน้าแรก</a>
+            <span>›</span>
+            <a href="../m1.html">ม.1</a>
+            <span>›</span>
+            <span>บทที่ 2: เศษส่วนและทศนิยม</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+            </aside>
+
+            <section class="main-content">
+                <div class="chapter-content">
+                    <div class="chapter-header">
+                        <h1>บทที่ 2: เศษส่วนและทศนิยม</h1>
+                        <p class="chapter-subtitle">Fractions and Decimals - จำนวนที่แสดงส่วนของจำนวนนับ</p>
+                    </div>
+
+                    <div class="section-nav" id="section-nav">
+                        <h3>📑 สารบัญในบทนี้</h3>
+                        <ul>
+                            <li><a href="#section-2-1">2.1 ความหมายของเศษส่วน</a></li>
+                            <li><a href="#section-2-2">2.2 การเปรียบเทียบเศษส่วน</a></li>
+                            <li><a href="#section-2-3">2.3 การบวกและลบเศษส่วน</a></li>
+                            <li><a href="#section-2-4">2.4 การคูณและหารเศษส่วน</a></li>
+                            <li><a href="#section-2-5">2.5 ทศนิยมและการดำเนินการ</a></li>
+                            <li><a href="#section-2-6">2.6 การแปลงระหว่างเศษส่วนและทศนิยม</a></li>
+                            <li><a href="#exercises">แบบฝึกหัด</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2.1 ความหมายของเศษส่วน -->
+                    <article class="lesson-section" id="section-2-1">
+                        <h2>2.1 ความหมายของเศษส่วน</h2>
+
+                        <p>เศษส่วน คือ จำนวนที่แสดงส่วนหนึ่งส่วนใดของจำนวนทั้งหมด</p>
+
+                        <div class="formula-box">
+                            <h4>รูปแบบทั่วไป:</h4>
+                            $$\frac{a}{b}$$
+                            <p>โดยที่ $a$ = ตัวเศษ (Numerator)</p>
+                            <p>$b$ = ตัวส่วน (Denominator) โดย $b \neq 0$</p>
+                        </div>
+
+                        <h3>ประเภทของเศษส่วน</h3>
+
+                        <div class="note-box">
+                            <h4>การจำแนกเศษส่วน:</h4>
+                            <p><strong>1. เศษส่วนแท้ (Proper Fraction):</strong> $\frac{a}{b}$ เมื่อ $a < b$</p>
+                            <p>ตัวอย่าง: $\frac{2}{3}, \frac{5}{7}, \frac{11}{15}$</p>
+
+                            <p><strong>2. เศษส่วนเกิน (Improper Fraction):</strong> $\frac{a}{b}$ เมื่อ $a \geq b$</p>
+                            <p>ตัวอย่าง: $\frac{7}{4}, \frac{11}{5}, \frac{8}{3}$</p>
+
+                            <p><strong>3. จำนวนคละ (Mixed Number):</strong> ประกอบด้วยจำนวนเต็มและเศษส่วนแท้</p>
+                            <p>ตัวอย่าง: $2\frac{1}{3}, 5\frac{2}{5}, 7\frac{3}{8}$</p>
+                        </div>
+
+                        <h3>การเปลี่ยนรูปเศษส่วน</h3>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 1: เปลี่ยนเศษส่วนเกินเป็นจำนวนคละ</h4>
+                            <p><strong>โจทย์:</strong> จงเปลี่ยน $\frac{17}{5}$ เป็นจำนวนคละ</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            17 \div 5 &= 3 \text{ เศษ } 2 \\
+                            \frac{17}{5} &= 3\frac{2}{5}
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $3\frac{2}{5}$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 2: เปลี่ยนจำนวนคละเป็นเศษส่วนเกิน</h4>
+                            <p><strong>โจทย์:</strong> จงเปลี่ยน $4\frac{3}{7}$ เป็นเศษส่วนเกิน</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            4\frac{3}{7} &= \frac{(4 \times 7) + 3}{7} \\
+                            &= \frac{28 + 3}{7} \\
+                            &= \frac{31}{7}
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $\frac{31}{7}$</p>
+                        </div>
+
+                        <h3>การทำเศษส่วนให้เท่ากัน</h3>
+
+                        <div class="formula-box">
+                            <h4>หลักการ:</h4>
+                            $$\frac{a}{b} = \frac{a \times k}{b \times k}$$
+                            <p>โดยที่ $k$ เป็นจำนวนเต็มที่ไม่เท่ากับ 0</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 3:</h4>
+                            <p><strong>โจทย์:</strong> จงเขียน $\frac{3}{4}$ ให้มีตัวส่วนเป็น 20</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            \frac{3}{4} &= \frac{3 \times 5}{4 \times 5} \\
+                            &= \frac{15}{20}
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $\frac{15}{20}$</p>
+                        </div>
+
+                        <h3>การย่อเศษส่วน</h3>
+
+                        <div class="formula-box">
+                            <h4>หลักการ:</h4>
+                            $$\frac{a}{b} = \frac{a \div d}{b \div d}$$
+                            <p>โดยที่ $d$ = ห.ร.ม. ของ $a$ และ $b$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 4:</h4>
+                            <p><strong>โจทย์:</strong> จงย่อ $\frac{24}{36}$ ให้เป็นเศษส่วนอย่างต่ำ</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>หา ห.ร.ม. ของ 24 และ 36 = 12</p>
+                            <p>$$\begin{align}
+                            \frac{24}{36} &= \frac{24 \div 12}{36 \div 12} \\
+                            &= \frac{2}{3}
+                            \end{align}$$</p>
+                            <p><strong>ตอบ:</strong> $\frac{2}{3}$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <div class="ad-placeholder ad-article">
+                        <p>[ พื้นที่โฆษณา AdSense ]</p>
+                    </div>
+
+                    <!-- 2.2 การเปรียบเทียบเศษส่วน -->
+                    <article class="lesson-section" id="section-2-2">
+                        <h2>2.2 การเปรียบเทียบเศษส่วน</h2>
+
+                        <h3>กรณีที่ 1: ตัวส่วนเท่ากัน</h3>
+                        <p>เศษส่วนที่มีตัวส่วนเท่ากัน เศษส่วนที่มีตัวเศษมากกว่ามีค่ามากกว่า</p>
+
+                        <div class="formula-box">
+                            <h4>หลักการ:</h4>
+                            <p>ถ้า $\frac{a}{c}$ และ $\frac{b}{c}$ โดย $a > b$ แล้ว $\frac{a}{c} > \frac{b}{c}$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 5:</h4>
+                            <p>$$\frac{5}{7} > \frac{3}{7}$$ เพราะ $5 > 3$</p>
+                        </div>
+
+                        <h3>กรณีที่ 2: ตัวเศษเท่ากัน</h3>
+                        <p>เศษส่วนที่มีตัวเศษเท่ากัน เศษส่วนที่มีตัวส่วนน้อยกว่ามีค่ามากกว่า</p>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 6:</h4>
+                            <p>$$\frac{3}{4} > \frac{3}{5}$$ เพราะ $4 < 5$</p>
+                        </div>
+
+                        <h3>กรณีที่ 3: ตัวเศษและตัวส่วนต่างกัน</h3>
+                        <p>ทำให้ตัวส่วนเท่ากันโดยหา ค.ร.น. ของตัวส่วนทั้งสอง</p>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 7:</h4>
+                            <p><strong>โจทย์:</strong> จงเปรียบเทียบ $\frac{2}{3}$ กับ $\frac{3}{4}$</p>
+                            <p><strong>วิธีทำ:</strong> ค.ร.น. ของ 3 และ 4 = 12</p>
+                            <p>$$\frac{2}{3} = \frac{8}{12}, \quad \frac{3}{4} = \frac{9}{12}$$</p>
+                            <p>เพราะ $8 < 9$ ดังนั้น $\frac{2}{3} < \frac{3}{4}$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <!-- 2.3 การบวกและลบเศษส่วน -->
+                    <article class="lesson-section" id="section-2-3">
+                        <h2>2.3 การบวกและลบเศษส่วน</h2>
+
+                        <h3>กรณีที่ 1: ตัวส่วนเท่ากัน</h3>
+
+                        <div class="formula-box">
+                            <h4>สูตร:</h4>
+                            $$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c}$$
+                            $$\frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 8:</h4>
+                            <p>$$\frac{5}{9} + \frac{2}{9} = \frac{5 + 2}{9} = \frac{7}{9}$$</p>
+                        </div>
+
+                        <h3>กรณีที่ 2: ตัวส่วนต่างกัน</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>1. หา ค.ร.น. ของตัวส่วน</p>
+                            <p>2. ทำให้ตัวส่วนเท่ากัน</p>
+                            <p>3. บวกหรือลบตัวเศษ</p>
+                            <p>4. ย่อเศษส่วน (ถ้าทำได้)</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 9:</h4>
+                            <p><strong>โจทย์:</strong> $\frac{2}{5} + \frac{3}{4}$</p>
+                            <p><strong>วิธีทำ:</strong> ค.ร.น. ของ 5 และ 4 = 20</p>
+                            <p>$$\begin{align}
+                            \frac{2}{5} + \frac{3}{4} &= \frac{8}{20} + \frac{15}{20} \\
+                            &= \frac{23}{20} \\
+                            &= 1\frac{3}{20}
+                            \end{align}$$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 10:</h4>
+                            <p><strong>โจทย์:</strong> $\frac{5}{6} - \frac{1}{4}$</p>
+                            <p><strong>วิธีทำ:</strong> ค.ร.น. ของ 6 และ 4 = 12</p>
+                            <p>$$\begin{align}
+                            \frac{5}{6} - \frac{1}{4} &= \frac{10}{12} - \frac{3}{12} \\
+                            &= \frac{7}{12}
+                            \end{align}$$</p>
+                        </div>
+
+                        <h3>การบวกลบจำนวนคละ</h3>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 11:</h4>
+                            <p><strong>โจทย์:</strong> $2\frac{1}{3} + 1\frac{1}{4}$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>$$\begin{align}
+                            2\frac{1}{3} + 1\frac{1}{4} &= (2 + 1) + \left(\frac{1}{3} + \frac{1}{4}\right) \\
+                            &= 3 + \frac{4 + 3}{12} \\
+                            &= 3 + \frac{7}{12} \\
+                            &= 3\frac{7}{12}
+                            \end{align}$$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <div class="ad-placeholder ad-article">
+                        <p>[ พื้นที่โฆษณา AdSense ]</p>
+                    </div>
+
+                    <!-- 2.4 การคูณและหารเศษส่วน -->
+                    <article class="lesson-section" id="section-2-4">
+                        <h2>2.4 การคูณและหารเศษส่วน</h2>
+
+                        <h3>การคูณเศษส่วน</h3>
+
+                        <div class="formula-box">
+                            <h4>สูตร:</h4>
+                            $$\frac{a}{b} \times \frac{c}{d} = \frac{a \times c}{b \times d}$$
+                        </div>
+
+                        <div class="note-box">
+                            <h4>ขั้นตอน:</h4>
+                            <p>1. คูณตัวเศษด้วยกัน</p>
+                            <p>2. คูณตัวส่วนด้วยกัน</p>
+                            <p>3. ย่อเศษส่วน (ถ้าทำได้)</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 12:</h4>
+                            <p>$$\frac{3}{4} \times \frac{2}{5} = \frac{3 \times 2}{4 \times 5} = \frac{6}{20} = \frac{3}{10}$$</p>
+                        </div>
+
+                        <h3>การหารเศษส่วน</h3>
+
+                        <div class="formula-box">
+                            <h4>สูตร:</h4>
+                            $$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c}$$
+                            <p>การหาร = คูณด้วยส่วนกลับ</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 13:</h4>
+                            <p>$$\begin{align}
+                            \frac{2}{3} \div \frac{4}{5} &= \frac{2}{3} \times \frac{5}{4} \\
+                            &= \frac{10}{12} \\
+                            &= \frac{5}{6}
+                            \end{align}$$</p>
+                        </div>
+
+                        <h3>การคูณหารจำนวนคละ</h3>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 14:</h4>
+                            <p><strong>โจทย์:</strong> $2\frac{1}{2} \times 1\frac{1}{3}$</p>
+                            <p><strong>วิธีทำ:</strong> เปลี่ยนเป็นเศษส่วนเกินก่อน</p>
+                            <p>$$\begin{align}
+                            2\frac{1}{2} \times 1\frac{1}{3} &= \frac{5}{2} \times \frac{4}{3} \\
+                            &= \frac{20}{6} \\
+                            &= \frac{10}{3} \\
+                            &= 3\frac{1}{3}
+                            \end{align}$$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <!-- 2.5 ทศนิยมและการดำเนินการ -->
+                    <article class="lesson-section" id="section-2-5">
+                        <h2>2.5 ทศนิยมและการดำเนินการ</h2>
+
+                        <h3>ความหมายของทศนิยม</h3>
+                        <p>ทศนิยม คือ จำนวนที่มีจุดทศนิยม แบ่งเป็นส่วนจำนวนเต็มและส่วนทศนิยม</p>
+
+                        <div class="note-box">
+                            <h4>ตำแหน่งทศนิยม:</h4>
+                            <p>$12.345$ อ่านว่า "สิบสองจุดสามสี่ห้า"</p>
+                            <p>• ส่วนจำนวนเต็ม: $12$</p>
+                            <p>• ตำแหน่งที่ 1: $3$ (หนึ่งในสิบ = $\frac{3}{10}$)</p>
+                            <p>• ตำแหน่งที่ 2: $4$ (หนึ่งในร้อย = $\frac{4}{100}$)</p>
+                            <p>• ตำแหน่งที่ 3: $5$ (หนึ่งในพัน = $\frac{5}{1000}$)</p>
+                        </div>
+
+                        <h3>การบวกและลบทศนิยม</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>1. เขียนให้จุดทศนิยมตรงกัน</p>
+                            <p>2. บวกหรือลบเหมือนจำนวนเต็ม</p>
+                            <p>3. ลากจุดทศนิยมลงมาในคำตอบ</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 15:</h4>
+                            <p>$$\begin{align}
+                            15.25 + 8.7 &= 15.25 + 8.70 \\
+                            &= 23.95
+                            \end{align}$$</p>
+                        </div>
+
+                        <h3>การคูณทศนิยม</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>1. คูณเหมือนจำนวนเต็ม (ไม่สนใจจุดทศนิยม)</p>
+                            <p>2. นับจำนวนตำแหน่งทศนิยมรวมของตัวตั้งและตัวคูณ</p>
+                            <p>3. จุดทศนิยมในคำตอบตามจำนวนที่นับได้</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 16:</h4>
+                            <p>$$2.5 \times 0.4 = 1.0 = 1$$</p>
+                            <p>(2.5 มี 1 ตำแหน่ง, 0.4 มี 1 ตำแหน่ง รวม 2 ตำแหน่ง)</p>
+                        </div>
+
+                        <h3>การหารทศนิยม</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>1. เลื่อนจุดทศนิยมของตัวหารให้เป็นจำนวนเต็ม</p>
+                            <p>2. เลื่อนจุดทศนิยมของตัวตั้งเท่าจำนวนครั้งเดียวกัน</p>
+                            <p>3. หารเหมือนจำนวนเต็ม</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 17:</h4>
+                            <p>$$6.4 \div 0.8 = 64 \div 8 = 8$$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <div class="ad-placeholder ad-article">
+                        <p>[ พื้นที่โฆษณา AdSense ]</p>
+                    </div>
+
+                    <!-- 2.6 การแปลงระหว่างเศษส่วนและทศนิยม -->
+                    <article class="lesson-section" id="section-2-6">
+                        <h2>2.6 การแปลงระหว่างเศษส่วนและทศนิยม</h2>
+
+                        <h3>เปลี่ยนเศษส่วนเป็นทศนิยม</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>$$\frac{a}{b} = a \div b$$</p>
+                            <p>หารตัวเศษด้วยตัวส่วน</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 18:</h4>
+                            <p>$$\frac{3}{4} = 3 \div 4 = 0.75$$</p>
+                            <p>$$\frac{1}{8} = 1 \div 8 = 0.125$$</p>
+                        </div>
+
+                        <h3>เปลี่ยนทศนิยมเป็นเศษส่วน</h3>
+
+                        <div class="formula-box">
+                            <h4>วิธีทำ:</h4>
+                            <p>1. นับจำนวนตำแหน่งทศนิยม</p>
+                            <p>2. ตัวเศษ = ทศนิยมทั้งหมด (ไม่มีจุด)</p>
+                            <p>3. ตัวส่วน = $10, 100, 1000, \ldots$ ตามจำนวนตำแหน่ง</p>
+                            <p>4. ย่อเศษส่วน</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 19:</h4>
+                            <p>$$\begin{align}
+                            0.25 &= \frac{25}{100} = \frac{1}{4} \\
+                            0.375 &= \frac{375}{1000} = \frac{3}{8}
+                            \end{align}$$</p>
+                        </div>
+
+                        <h3>ทศนิยมซ้ำ</h3>
+
+                        <div class="note-box">
+                            <h4>ทศนิยมซ้ำ:</h4>
+                            <p>ทศนิยมที่มีเลขซ้ำกันไม่สิ้นสุด เขียนด้วยขีดอยู่เหนือเลขที่ซ้ำ</p>
+                            <p>$0.\overline{3} = 0.333...$ = $\frac{1}{3}$</p>
+                            <p>$0.\overline{6} = 0.666...$ = $\frac{2}{3}$</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>ตัวอย่างที่ 20:</h4>
+                            <p>$$\frac{1}{3} = 0.333... = 0.\overline{3}$$</p>
+                            <p>$$\frac{5}{6} = 0.8333... = 0.8\overline{3}$$</p>
+                        </div>
+
+                        <a href="#section-nav" class="back-to-section">↑ กลับไปสารบัญ</a>
+                    </article>
+
+                    <!-- แบบฝึกหัด -->
+                    <section class="exercise-section" id="exercises">
+                        <h2>แบบฝึกหัดท้ายบท</h2>
+
+                        <h3>ส่วนที่ 1: ความหมายและการเปลี่ยนรูป (20 คะแนน)</h3>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 1.</strong> จงเปลี่ยน $\frac{23}{5}$ เป็นจำนวนคละ</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$23 \div 5 = 4$ เศษ $3$</p>
+                                <p><strong>ตอบ:</strong> $4\frac{3}{5}$</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 2.</strong> จงย่อ $\frac{48}{72}$ ให้เป็นเศษส่วนอย่างต่ำ</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>ห.ร.ม. ของ 48 และ 72 = 24</p>
+                                <p>$$\frac{48}{72} = \frac{48 \div 24}{72 \div 24} = \frac{2}{3}$$</p>
+                            </div>
+                        </div>
+
+                        <h3>ส่วนที่ 2: การบวกและลบ (25 คะแนน)</h3>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 3.</strong> $\frac{3}{8} + \frac{5}{12}$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>ค.ร.น. ของ 8 และ 12 = 24</p>
+                                <p>$$\frac{9}{24} + \frac{10}{24} = \frac{19}{24}$$</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 4.</strong> $2\frac{2}{3} - 1\frac{1}{4}$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$= \frac{8}{3} - \frac{5}{4} = \frac{32}{12} - \frac{15}{12} = \frac{17}{12} = 1\frac{5}{12}$$</p>
+                            </div>
+                        </div>
+
+                        <h3>ส่วนที่ 3: การคูณและหาร (25 คะแนน)</h3>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 5.</strong> $\frac{5}{6} \times \frac{3}{10}$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$= \frac{15}{60} = \frac{1}{4}$$</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 6.</strong> $\frac{4}{5} \div \frac{2}{3}$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$= \frac{4}{5} \times \frac{3}{2} = \frac{12}{10} = \frac{6}{5} = 1\frac{1}{5}$$</p>
+                            </div>
+                        </div>
+
+                        <h3>ส่วนที่ 4: ทศนิยม (20 คะแนน)</h3>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 7.</strong> $12.35 + 7.8$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$= 12.35 + 7.80 = 20.15$$</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 8.</strong> $3.6 \times 2.5$</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$= 9.0 = 9$$</p>
+                            </div>
+                        </div>
+
+                        <h3>ส่วนที่ 5: การแปลง (10 คะแนน)</h3>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 9.</strong> จงเปลี่ยน $\frac{7}{8}$ เป็นทศนิยม</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$7 \div 8 = 0.875$$</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise-item">
+                            <p><strong>ข้อ 10.</strong> จงเปลี่ยน $0.6$ เป็นเศษส่วนอย่างต่ำ</p>
+                            <button class="exercise-toggle">แสดงเฉลย</button>
+                            <div class="exercise-answer">
+                                <p>$$0.6 = \frac{6}{10} = \frac{3}{5}$$</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Navigation -->
+                    <div class="chapter-nav">
+                        <a href="chapter1.html" class="nav-prev">← บทที่ 1: จำนวนเต็ม</a>
+                        <a href="chapter3.html" class="nav-next">บทที่ 3: พีชคณิตเบื้องต้น →</a>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar-right">
+                <div class="ad-placeholder ad-sidebar">
+                    <p>[ พื้นที่โฆษณา AdSense ]</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>เกี่ยวกับเรา</h3>
+                    <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา ที่มุ่งเน้นการนำเสนอเนื้อหาที่เข้าใจง่าย ครบถ้วน และเหมาะสมกับนักเรียนไทย</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ลิงก์ด่วน</h3>
+                    <ul>
+                        <li><a href="../index.html">หน้าแรก</a></li>
+                        <li><a href="../m1.html">คณิตศาสตร์ ม.1</a></li>
+                        <li><a href="../m2.html">คณิตศาสตร์ ม.2</a></li>
+                        <li><a href="../m3.html">คณิตศาสตร์ ม.3</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ช่วงชั้นที่ 2</h3>
+                    <ul>
+                        <li><a href="../m4.html">คณิตศาสตร์ ม.4</a></li>
+                        <li><a href="../m5.html">คณิตศาสตร์ ม.5</a></li>
+                        <li><a href="../m6.html">คณิตศาสตร์ ม.6</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved. | เว็บไซต์เพื่อการศึกษา</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 4: เรขาคณิต - คณิตศาสตร์ ม.1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">คณิตศาสตร์มัธยม</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">หน้าแรก</a></li>
+                <li><a href="../m1.html" class="active">ม.1</a></li>
+                <li><a href="../m2.html">ม.2</a></li>
+                <li><a href="../m3.html">ม.3</a></li>
+                <li><a href="../m4.html">ม.4</a></li>
+                <li><a href="../m5.html">ม.5</a></li>
+                <li><a href="../m6.html">ม.6</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chapter Content -->
+    <div class="content-wrapper">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">หน้าแรก</a> &gt; 
+            <a href="../m1.html">ม.1</a> &gt; 
+            <span>บทที่ 4</span>
+        </div>
+
+        <article class="chapter-content">
+            <h1>บทที่ 4: เรขาคณิต</h1>
+            
+            <div class="chapter-intro">
+                <p>เรขาคณิตเป็นสาขาของคณิตศาสตร์ที่ศึกษาเกี่ยวกับรูปร่าง ขนาด และตำแหน่งของวัตถุในอวกาศ ในบทนี้เราจะเรียนรู้เกี่ยวกับรูปเรขาคณิตพื้นฐาน มุม และคุณสมบัติต่างๆ ของรูปเรขาคณิต</p>
+            </div>
+
+            <!-- Section Navigation -->
+            <div class="section-nav">
+                <h3>สารบัญ</h3>
+                <ul>
+                    <li><a href="#section1">4.1 จุด เส้นตรง รังสี และส่วนของเส้นตรง</a></li>
+                    <li><a href="#section2">4.2 มุมและชนิดของมุม</a></li>
+                    <li><a href="#section3">4.3 รูปสามเหลี่ยม</a></li>
+                    <li><a href="#section4">4.4 รูปสี่เหลี่ยม</a></li>
+                    <li><a href="#section5">4.5 วงกลม</a></li>
+                    <li><a href="#section6">4.6 ความสมมาตร</a></li>
+                    <li><a href="#exercises">แบบฝึกหัด</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 4.1 -->
+            <section id="section1">
+                <h2>4.1 จุด เส้นตรง รังสี และส่วนของเส้นตรง</h2>
+                
+                <div class="definition">
+                    <h4>จุด (Point)</h4>
+                    <p>ตำแหน่งในอวกาศที่ไม่มีขนาด แทนด้วยจุดและใช้ตัวอักษรพิมพ์ใหญ่กำกับ เช่น จุด $A$, จุด $B$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>เส้นตรง (Line)</h4>
+                    <p>เส้นที่ยาวไม่มีที่สิ้นสุดทั้งสองทาง แทนด้วยสัญลักษณ์ $\overleftrightarrow{AB}$ หรือเส้น $AB$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>รังสี (Ray)</h4>
+                    <p>ส่วนหนึ่งของเส้นตรงที่มีจุดเริ่มต้นและยาวไม่มีที่สิ้นสุดทางเดียว แทนด้วย $\overrightarrow{AB}$</p>
+                    <p>จุด $A$ คือจุดเริ่มต้น และรังสีผ่านจุด $B$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>ส่วนของเส้นตรง (Line Segment)</h4>
+                    <p>ส่วนหนึ่งของเส้นตรงที่มีจุดปลายทั้งสองข้าง แทนด้วย $\overline{AB}$ หรือ $AB$</p>
+                    <p>ความยาวของส่วนของเส้นตรง $AB$ แทนด้วย $|AB|$ หรือ $AB$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 1: การเรียกชื่อเส้นและส่วนของเส้น</h4>
+                    <p><strong>โจทย์:</strong> ให้จุด $A$, $B$, $C$ อยู่บนเส้นตรงเดียวกัน โดย $B$ อยู่ระหว่าง $A$ และ $C$</p>
+                    <p>จงเขียนสัญลักษณ์ของ:</p>
+                    <ul>
+                        <li>เส้นตรงที่ผ่านจุดทั้งสาม: $\overleftrightarrow{AC}$ หรือ $\overleftrightarrow{AB}$ หรือ $\overleftrightarrow{BC}$</li>
+                        <li>รังสีที่มีจุดเริ่มต้นที่ $B$ และผ่าน $C$: $\overrightarrow{BC}$</li>
+                        <li>ส่วนของเส้นตรงที่มีจุดปลายคือ $A$ และ $C$: $\overline{AC}$</li>
+                    </ul>
+                </div>
+
+                <div class="definition">
+                    <h4>จุดกึ่งกลาง (Midpoint)</h4>
+                    <p>จุดที่แบ่งส่วนของเส้นตรงออกเป็นสองส่วนเท่ากัน</p>
+                    <p>ถ้า $M$ เป็นจุดกึ่งกลางของ $\overline{AB}$ แล้ว $AM = MB = \frac{1}{2}AB$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 2: การหาความยาวส่วนของเส้นตรง</h4>
+                    <p><strong>โจทย์:</strong> ให้ $M$ เป็นจุดกึ่งกลางของ $\overline{AB}$ ถ้า $AB = 24$ ซม. จงหา $AM$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$AM = \frac{1}{2}AB = \frac{1}{2}(24) = 12 \text{ ซม.}$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 3: จุดบนเส้นตรง</h4>
+                    <p><strong>โจทย์:</strong> จุด $P$ อยู่บน $\overline{AB}$ โดย $AP = 8$ ซม. และ $PB = 5$ ซม. จงหา $AB$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$AB = AP + PB = 8 + 5 = 13 \text{ ซม.}$$</p>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Section 4.2 -->
+            <section id="section2">
+                <h2>4.2 มุมและชนิดของมุม</h2>
+                
+                <div class="definition">
+                    <h4>มุม (Angle)</h4>
+                    <p>รูปที่เกิดจากรังสีสองรังสีที่มีจุดเริ่มต้นร่วมกัน</p>
+                    <p>แทนด้วย $\angle ABC$ หรือ $\angle B$ โดย $B$ เป็นจุดยอดของมุม</p>
+                    <p>วัดมุมด้วยหน่วยองศา (degree) แทนด้วย $^\circ$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>ชนิดของมุม</h4>
+                    <ul>
+                        <li><strong>มุมแหลม (Acute Angle):</strong> มุมที่มีขนาด $0^\circ < \theta < 90^\circ$</li>
+                        <li><strong>มุมฉาก (Right Angle):</strong> มุมที่มีขนาด $90^\circ$</li>
+                        <li><strong>มุมป้าน (Obtuse Angle):</strong> มุมที่มีขนาด $90^\circ < \theta < 180^\circ$</li>
+                        <li><strong>มุมตรง (Straight Angle):</strong> มุมที่มีขนาด $180^\circ$</li>
+                        <li><strong>มุมสะท้อน (Reflex Angle):</strong> มุมที่มีขนาด $180^\circ < \theta < 360^\circ$</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 4: การจำแนกมุม</h4>
+                    <p><strong>โจทย์:</strong> จงจำแนกมุมต่อไปนี้</p>
+                    <ul>
+                        <li>$\angle A = 45^\circ$ เป็น<strong>มุมแหลม</strong></li>
+                        <li>$\angle B = 90^\circ$ เป็น<strong>มุมฉาก</strong></li>
+                        <li>$\angle C = 120^\circ$ เป็น<strong>มุมป้าน</strong></li>
+                        <li>$\angle D = 180^\circ$ เป็น<strong>มุมตรง</strong></li>
+                    </ul>
+                </div>
+
+                <div class="definition">
+                    <h4>มุมเสริม (Complementary Angles)</h4>
+                    <p>มุมสองมุมที่รวมกันได้ $90^\circ$</p>
+                    <p>ถ้า $\angle A + \angle B = 90^\circ$ แล้ว $\angle A$ และ $\angle B$ เป็นมุมเสริมกัน</p>
+                </div>
+
+                <div class="definition">
+                    <h4>มุมประกอบ (Supplementary Angles)</h4>
+                    <p>มุมสองมุมที่รวมกันได้ $180^\circ$</p>
+                    <p>ถ้า $\angle A + \angle B = 180^\circ$ แล้ว $\angle A$ และ $\angle B$ เป็นมุมประกอบกัน</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 5: มุมเสริม</h4>
+                    <p><strong>โจทย์:</strong> ถ้า $\angle A = 35^\circ$ จงหามุมเสริมของ $\angle A$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>ให้มุมเสริมเป็น $x$</p>
+                    <p>$$x + 35^\circ = 90^\circ$$</p>
+                    <p>$$x = 90^\circ - 35^\circ = 55^\circ$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 6: มุมประกอบ</h4>
+                    <p><strong>โจทย์:</strong> ถ้า $\angle B = 110^\circ$ จงหามุมประกอบของ $\angle B$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>ให้มุมประกอบเป็น $y$</p>
+                    <p>$$y + 110^\circ = 180^\circ$$</p>
+                    <p>$$y = 180^\circ - 110^\circ = 70^\circ$$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>มุมตรงข้ามจุดยอด (Vertical Angles)</h4>
+                    <p>เมื่อเส้นตรงสองเส้นตัดกัน จะเกิดมุมตรงข้ามจุดยอดสองคู่</p>
+                    <p><strong>คุณสมบัติ:</strong> มุมตรงข้ามจุดยอดมีขนาดเท่ากัน</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 7: มุมตรงข้ามจุดยอด</h4>
+                    <p><strong>โจทย์:</strong> เส้นตรง $AB$ และ $CD$ ตัดกันที่จุด $O$ ถ้า $\angle AOC = 65^\circ$ จงหา $\angle BOD$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>เนื่องจาก $\angle AOC$ และ $\angle BOD$ เป็นมุมตรงข้ามจุดยอด</p>
+                    <p>$$\angle BOD = \angle AOC = 65^\circ$$</p>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Section 4.3 -->
+            <section id="section3">
+                <h2>4.3 รูปสามเหลี่ยม</h2>
+                
+                <div class="definition">
+                    <h4>รูปสามเหลี่ยม (Triangle)</h4>
+                    <p>รูปปิดที่มีด้านสามด้าน และมีมุมสามมุม</p>
+                    <p>แทนด้วย $\triangle ABC$ โดย $A$, $B$, $C$ เป็นจุดยอด</p>
+                </div>
+
+                <div class="definition">
+                    <h4>ทฤษฎีบทผลบวกมุมภายในรูปสามเหลี่ยม</h4>
+                    <p>ผลบวกของมุมทั้งสามมุมภายในรูปสามเหลี่ยมเท่ากับ $180^\circ$</p>
+                    <p>$$\angle A + \angle B + \angle C = 180^\circ$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 8: การหามุมในรูปสามเหลี่ยม</h4>
+                    <p><strong>โจทย์:</strong> ใน $\triangle ABC$ มี $\angle A = 50^\circ$ และ $\angle B = 60^\circ$ จงหา $\angle C$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$\angle A + \angle B + \angle C = 180^\circ$$</p>
+                    <p>$$50^\circ + 60^\circ + \angle C = 180^\circ$$</p>
+                    <p>$$\angle C = 180^\circ - 110^\circ = 70^\circ$$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>การจำแนกรูปสามเหลี่ยมตามมุม</h4>
+                    <ul>
+                        <li><strong>สามเหลี่ยมมุมแหลม:</strong> มุมทั้งสามเป็นมุมแหลม (น้อยกว่า $90^\circ$)</li>
+                        <li><strong>สามเหลี่ยมมุมฉาก:</strong> มีมุมหนึ่งเป็นมุมฉาก ($90^\circ$)</li>
+                        <li><strong>สามเหลี่ยมมุมป้าน:</strong> มีมุมหนึ่งเป็นมุมป้าน (มากกว่า $90^\circ$)</li>
+                    </ul>
+                </div>
+
+                <div class="definition">
+                    <h4>การจำแนกรูปสามเหลี่ยมตามด้าน</h4>
+                    <ul>
+                        <li><strong>สามเหลี่ยมด้านเท่า:</strong> มีด้านทั้งสามยาวเท่ากัน มุมทั้งสามเท่ากับ $60^\circ$</li>
+                        <li><strong>สามเหลี่ยมหน้าจั่ว:</strong> มีสองด้านยาวเท่ากัน มุมที่ฐานสองมุมเท่ากัน</li>
+                        <li><strong>สามเหลี่ยมด้านไม่เท่า:</strong> มีด้านทั้งสามยาวไม่เท่ากัน</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 9: สามเหลี่ยมหน้าจั่ว</h4>
+                    <p><strong>โจทย์:</strong> ใน $\triangle ABC$ เป็นสามเหลี่ยมหน้าจั่วที่ $AB = AC$ ถ้า $\angle A = 80^\circ$ จงหา $\angle B$ และ $\angle C$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>เนื่องจาก $AB = AC$ ดังนั้น $\angle B = \angle C$ (มุมที่ฐานเท่ากัน)</p>
+                    <p>$$\angle A + \angle B + \angle C = 180^\circ$$</p>
+                    <p>$$80^\circ + \angle B + \angle B = 180^\circ$$</p>
+                    <p>$$2\angle B = 100^\circ$$</p>
+                    <p>$$\angle B = \angle C = 50^\circ$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 10: การหาความยาวด้านในสามเหลี่ยมมุมฉาก</h4>
+                    <p><strong>โจทย์:</strong> สามเหลี่ยมมุมฉาก $\triangle ABC$ โดยมุม $C$ เป็นมุมฉาก ถ้า $AC = 3$ ซม. และ $BC = 4$ ซม. จงหา $AB$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>ใช้ทฤษฎีบทพีทาโกรัส: $AB^2 = AC^2 + BC^2$</p>
+                    <p>$$AB^2 = 3^2 + 4^2 = 9 + 16 = 25$$</p>
+                    <p>$$AB = \sqrt{25} = 5 \text{ ซม.}$$</p>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Section 4.4 -->
+            <section id="section4">
+                <h2>4.4 รูปสี่เหลี่ยม</h2>
+                
+                <div class="definition">
+                    <h4>รูปสี่เหลี่ยม (Quadrilateral)</h4>
+                    <p>รูปปิดที่มีด้านสี่ด้าน และมีมุมสี่มุม</p>
+                    <p><strong>คุณสมบัติ:</strong> ผลบวกของมุมภายในรูปสี่เหลี่ยมเท่ากับ $360^\circ$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 11: การหามุมในรูปสี่เหลี่ยม</h4>
+                    <p><strong>โจทย์:</strong> รูปสี่เหลี่ยม $ABCD$ มีมุม $\angle A = 80^\circ$, $\angle B = 110^\circ$, $\angle C = 90^\circ$ จงหา $\angle D$</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$\angle A + \angle B + \angle C + \angle D = 360^\circ$$</p>
+                    <p>$$80^\circ + 110^\circ + 90^\circ + \angle D = 360^\circ$$</p>
+                    <p>$$\angle D = 360^\circ - 280^\circ = 80^\circ$$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>รูปสี่เหลี่ยมผืนผ้า (Rectangle)</h4>
+                    <p>รูปสี่เหลี่ยมที่มีคุณสมบัติ:</p>
+                    <ul>
+                        <li>มีมุมทั้งสี่เป็นมุมฉาก ($90^\circ$)</li>
+                        <li>ด้านตรงข้ามยาวเท่ากันและขนานกัน</li>
+                        <li>เส้นทแยงมุมยาวเท่ากันและแบ่งครึ่งกัน</li>
+                    </ul>
+                    <p><strong>สูตร:</strong></p>
+                    <ul>
+                        <li>พื้นที่ $= l \times w$ (ความยาว × ความกว้าง)</li>
+                        <li>ปริมาตร $= 2(l + w)$</li>
+                    </ul>
+                </div>
+
+                <div class="definition">
+                    <h4>รูปสี่เหลี่ยมจัตุรัส (Square)</h4>
+                    <p>รูปสี่เหลี่ยมผืนผ้าที่มีด้านทั้งสี่ยาวเท่ากัน</p>
+                    <p><strong>สูตร:</strong></p>
+                    <ul>
+                        <li>พื้นที่ $= s^2$ ($s$ = ความยาวด้าน)</li>
+                        <li>ปริมาตร $= 4s$</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 12: การหาพื้นที่รูปสี่เหลี่ยมผืนผ้า</h4>
+                    <p><strong>โจทย์:</strong> รูปสี่เหลี่ยมผืนผ้ามีความยาว 8 ซม. และความกว้าง 5 ซม. จงหาพื้นที่และปริมาตร</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>พื้นที่ $= l \times w = 8 \times 5 = 40$ ตร.ซม.</p>
+                    <p>ปริมาตร $= 2(l + w) = 2(8 + 5) = 2(13) = 26$ ซม.</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 13: การหาพื้นที่รูปสี่เหลี่ยมจัตุรัส</h4>
+                    <p><strong>โจทย์:</strong> รูปสี่เหลี่ยมจัตุรัสมีความยาวด้าน 6 ซม. จงหาพื้นที่และปริมาตร</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>พื้นที่ $= s^2 = 6^2 = 36$ ตร.ซม.</p>
+                    <p>ปริมาตร $= 4s = 4(6) = 24$ ซม.</p>
+                </div>
+
+                <div class="definition">
+                    <h4>รูปสี่เหลี่ยมด้านขนาน (Parallelogram)</h4>
+                    <p>รูปสี่เหลี่ยมที่มีด้านตรงข้ามขนานกันและยาวเท่ากัน</p>
+                    <p><strong>คุณสมบัติ:</strong> มุมตรงข้ามเท่ากัน</p>
+                    <p><strong>สูตร:</strong> พื้นที่ $= \text{ฐาน} \times \text{สูง}$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>รูปสี่เหลี่ยมคางหมู (Trapezoid)</h4>
+                    <p>รูปสี่เหลี่ยมที่มีด้านคู่หนึ่งขนานกัน</p>
+                    <p><strong>สูตร:</strong> พื้นที่ $= \frac{1}{2}(a + b) \times h$</p>
+                    <p>โดย $a$ และ $b$ เป็นความยาวของด้านที่ขนานกัน และ $h$ เป็นความสูง</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 14: การหาพื้นที่รูปสี่เหลี่ยมคางหมู</h4>
+                    <p><strong>โจทย์:</strong> รูปสี่เหลี่ยมคางหมูมีด้านขนานยาว 10 ซม. และ 6 ซม. สูง 4 ซม. จงหาพื้นที่</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$\text{พื้นที่} = \frac{1}{2}(a + b) \times h$$</p>
+                    <p>$$= \frac{1}{2}(10 + 6) \times 4$$</p>
+                    <p>$$= \frac{1}{2}(16) \times 4 = 8 \times 4 = 32 \text{ ตร.ซม.}$$</p>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Section 4.5 -->
+            <section id="section5">
+                <h2>4.5 วงกลม</h2>
+                
+                <div class="definition">
+                    <h4>วงกลม (Circle)</h4>
+                    <p>เส้นโค้งปิดที่จุดทุกจุดบนเส้นโค้งอยู่ห่างจากจุดคงที่จุดหนึ่งเป็นระยะเท่ากัน</p>
+                    <ul>
+                        <li><strong>จุดศูนย์กลาง (Center):</strong> จุดคงที่ที่กล่าวถึง แทนด้วย $O$</li>
+                        <li><strong>รูปสำหรับารัศมี (Radius):</strong> ระยะห่างจากจุดศูนย์กลางไปยังจุดบนวงกลม แทนด้วย $r$</li>
+                        <li><strong>เส้นผ่านศูนย์กลาง (Diameter):</strong> ส่วนของเส้นตรงที่ผ่านจุดศูนย์กลางและมีจุดปลายอยู่บนวงกลม แทนด้วย $d$</li>
+                    </ul>
+                    <p><strong>ความสัมพันธ์:</strong> $d = 2r$ หรือ $r = \frac{d}{2}$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>เส้นรอบวงและพื้นที่วงกลม</h4>
+                    <p><strong>เส้นรอบวง:</strong> $C = 2\pi r = \pi d$</p>
+                    <p><strong>พื้นที่:</strong> $A = \pi r^2$</p>
+                    <p>โดย $\pi \approx 3.14$ หรือ $\pi \approx \frac{22}{7}$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 15: การหารัศมีจากเส้นผ่านศูนย์กลาง</h4>
+                    <p><strong>โจทย์:</strong> วงกลมมีเส้นผ่านศูนย์กลาง 14 ซม. จงหารัศมี</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$r = \frac{d}{2} = \frac{14}{2} = 7 \text{ ซม.}$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 16: การหาเส้นรอบวงวงกลม</h4>
+                    <p><strong>โจทย์:</strong> วงกลมมีรัศมี 7 ซม. จงหาเส้นรอบวง (ใช้ $\pi = \frac{22}{7}$)</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$C = 2\pi r = 2 \times \frac{22}{7} \times 7$$</p>
+                    <p>$$= 2 \times 22 = 44 \text{ ซม.}$$</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 17: การหาพื้นที่วงกลม</h4>
+                    <p><strong>โจทย์:</strong> วงกลมมีรัศมี 10 ซม. จงหาพื้นที่ (ใช้ $\pi = 3.14$)</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>$$A = \pi r^2 = 3.14 \times 10^2$$</p>
+                    <p>$$= 3.14 \times 100 = 314 \text{ ตร.ซม.}$$</p>
+                </div>
+
+                <div class="definition">
+                    <h4>ส่วนอื่นๆ ของวงกลม</h4>
+                    <ul>
+                        <li><strong>คอร์ด (Chord):</strong> ส่วนของเส้นตรงที่มีจุดปลายอยู่บนวงกลม</li>
+                        <li><strong>ส่วนโค้ง (Arc):</strong> ส่วนหนึ่งของเส้นรอบวง</li>
+                        <li><strong>สี่เหลี่ยมภาคเซกเตอร์ (Sector):</strong> ส่วนของวงกลมที่ถูกล้อมรอบด้วยรัศมีสองเส้นและส่วนโค้ง</li>
+                    </ul>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Section 4.6 -->
+            <section id="section6">
+                <h2>4.6 ความสมมาตร</h2>
+                
+                <div class="definition">
+                    <h4>แกนสมมาตร (Line of Symmetry)</h4>
+                    <p>เส้นตรงที่แบ่งรูปออกเป็นสองส่วนเท่ากัน โดยส่วนหนึ่งเป็นภาพสะท้อนของอีกส่วนหนึ่ง</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 18: แกนสมมาตรของรูปต่างๆ</h4>
+                    <ul>
+                        <li><strong>รูปสี่เหลี่ยมจัตุรัส:</strong> มีแกนสมมาตร 4 เส้น</li>
+                        <li><strong>รูปสี่เหลี่ยมผืนผ้า:</strong> มีแกนสมมาตร 2 เส้น</li>
+                        <li><strong>รูปสามเหลี่ยมด้านเท่า:</strong> มีแกนสมมาตร 3 เส้น</li>
+                        <li><strong>รูปสามเหลี่ยมหน้าจั่ว:</strong> มีแกนสมมาตร 1 เส้น</li>
+                        <li><strong>วงกลม:</strong> มีแกนสมมาตรจำนวนไม่จำกัด</li>
+                    </ul>
+                </div>
+
+                <div class="definition">
+                    <h4>จุดสมมาตร (Point Symmetry)</h4>
+                    <p>รูปที่มีจุดสมมาตร คือ เมื่อหมุนรูปรอบจุดนั้น $180^\circ$ แล้วได้รูปเดิม</p>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 19: จุดสมมาตร</h4>
+                    <ul>
+                        <li>รูปสี่เหลี่ยมจัตุรัสมีจุดสมมาตรที่จุดศูนย์กลาง</li>
+                        <li>รูปสี่เหลี่ยมผืนผ้ามีจุดสมมาตรที่จุดตัดของเส้นทแยงมุม</li>
+                        <li>วงกลมมีจุดสมมาตรที่จุดศูนย์กลาง</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <h4>ตัวอย่างที่ 20: การหาแกนสมมาตร</h4>
+                    <p><strong>โจทย์:</strong> รูปสี่เหลี่ยมคางหมูที่มีด้านข้างเท่ากันมีแกนสมมาตรกี่เส้น</p>
+                    <p><strong>วิธีทำ:</strong></p>
+                    <p>รูปสี่เหลี่ยมคางหมูที่มีด้านข้างเท่ากันมีแกนสมมาตร <strong>1 เส้น</strong></p>
+                    <p>(เป็นเส้นตั้งฉากกับด้านที่ขนานกันและผ่านจุดกึ่งกลางของด้านทั้งสอง)</p>
+                </div>
+
+                <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
+            </section>
+
+            <!-- Exercises -->
+            <section id="exercises">
+                <h2>แบบฝึกหัดบทที่ 4</h2>
+                
+                <div class="exercise-section">
+                    <h3>ส่วนที่ 1: จุด เส้นตรง และมุม (2 คะแนน)</h3>
+                    <ol>
+                        <li>ถ้า $M$ เป็นจุดกึ่งกลางของ $\overline{AB}$ และ $AB = 36$ ซม. จงหา $AM$</li>
+                        <li>ถ้า $\angle A = 25^\circ$ จงหามุมเสริมของ $\angle A$</li>
+                    </ol>
+                    <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
+                    <div id="answer1" class="answer" style="display: none;">
+                        <h4>เฉลย ส่วนที่ 1:</h4>
+                        <p><strong>1.</strong> $AM = \frac{1}{2}AB = \frac{1}{2}(36) = 18$ ซม.</p>
+                        <p><strong>2.</strong> มุมเสริม $= 90^\circ - 25^\circ = 65^\circ$</p>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>ส่วนที่ 2: รูปสามเหลี่ยม (2 คะแนน)</h3>
+                    <ol start="3">
+                        <li>ใน $\triangle ABC$ มี $\angle A = 45^\circ$ และ $\angle B = 70^\circ$ จงหา $\angle C$</li>
+                        <li>สามเหลี่ยมมุมฉากมีด้านประมาณมุมฉากยาว 6 ซม. และ 8 ซม. จงหาความยาวด้านตรงข้ามมุมฉาก</li>
+                    </ol>
+                    <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
+                    <div id="answer2" class="answer" style="display: none;">
+                        <h4>เฉลย ส่วนที่ 2:</h4>
+                        <p><strong>3.</strong> $\angle C = 180^\circ - 45^\circ - 70^\circ = 65^\circ$</p>
+                        <p><strong>4.</strong> $c^2 = 6^2 + 8^2 = 36 + 64 = 100$, ดังนั้น $c = 10$ ซม.</p>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>ส่วนที่ 3: รูปสี่เหลี่ยม (2 คะแนน)</h3>
+                    <ol start="5">
+                        <li>รูปสี่เหลี่ยมผืนผ้ามีความยาว 12 ซม. และความกว้าง 7 ซม. จงหาพื้นที่</li>
+                        <li>รูปสี่เหลี่ยมจัตุรัสมีความยาวด้าน 9 ซม. จงหาปริมาตร</li>
+                    </ol>
+                    <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
+                    <div id="answer3" class="answer" style="display: none;">
+                        <h4>เฉลย ส่วนที่ 3:</h4>
+                        <p><strong>5.</strong> พื้นที่ $= 12 \times 7 = 84$ ตร.ซม.</p>
+                        <p><strong>6.</strong> ปริมาตร $= 4 \times 9 = 36$ ซม.</p>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>ส่วนที่ 4: วงกลม (2 คะแนน)</h3>
+                    <ol start="7">
+                        <li>วงกลมมีรัศมี 14 ซม. จงหาเส้นรอบวง (ใช้ $\pi = \frac{22}{7}$)</li>
+                        <li>วงกลมมีรัศมี 5 ซม. จงหาพื้นที่ (ใช้ $\pi = 3.14$)</li>
+                    </ol>
+                    <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
+                    <div id="answer4" class="answer" style="display: none;">
+                        <h4>เฉลย ส่วนที่ 4:</h4>
+                        <p><strong>7.</strong> $C = 2\pi r = 2 \times \frac{22}{7} \times 14 = 88$ ซม.</p>
+                        <p><strong>8.</strong> $A = \pi r^2 = 3.14 \times 5^2 = 3.14 \times 25 = 78.5$ ตร.ซม.</p>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>ส่วนที่ 5: ความสมมาตร (2 คะแนน)</h3>
+                    <ol start="9">
+                        <li>รูปสามเหลี่ยมด้านเท่ามีแกนสมมาตรกี่เส้น</li>
+                        <li>รูปสี่เหลี่ยมคางหมูที่มีด้านขนานยาว 8 ซม. และ 4 ซม. สูง 5 ซม. จงหาพื้นที่</li>
+                    </ol>
+                    <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
+                    <div id="answer5" class="answer" style="display: none;">
+                        <h4>เฉลย ส่วนที่ 5:</h4>
+                        <p><strong>9.</strong> รูปสามเหลี่ยมด้านเท่ามีแกนสมมาตร 3 เส้น</p>
+                        <p><strong>10.</strong> พื้นที่ $= \frac{1}{2}(8 + 4) \times 5 = \frac{1}{2}(12) \times 5 = 30$ ตร.ซม.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter Navigation -->
+            <div class="chapter-nav">
+                <a href="chapter3.html" class="prev-chapter">← บทที่ 3: พีชคณิตเบื้องต้น</a>
+                <a href="chapter5.html" class="next-chapter">บทที่ 5: การวัด →</a>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="ad-space">
+                <!-- Google AdSense Code Here -->
+                <p>[โฆษณา 300x250]</p>
+            </div>
+            
+            <div class="related-topics">
+                <h3>บทเรียนที่เกี่ยวข้อง</h3>
+                <ul>
+                    <li><a href="chapter1.html">บทที่ 1: จำนวนเต็ม</a></li>
+                    <li><a href="chapter2.html">บทที่ 2: เศษส่วนและทศนิยม</a></li>
+                    <li><a href="chapter3.html">บทที่ 3: พีชคณิตเบื้องต้น</a></li>
+                </ul>
+            </div>
+            
+            <div class="ad-space">
+                <!-- Google AdSense Code Here -->
+                <p>[โฆษณา 300x600]</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>เกี่ยวกับเรา</h4>
+                <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา</p>
+            </div>
+            <div class="footer-section">
+                <h4>หมวดหมู่</h4>
+                <ul>
+                    <li><a href="../m1.html">ม.1</a></li>
+                    <li><a href="../m2.html">ม.2</a></li>
+                    <li><a href="../m3.html">ม.3</a></li>
+                    <li><a href="../m4.html">ม.4</a></li>
+                    <li><a href="../m5.html">ม.5</a></li>
+                    <li><a href="../m6.html">ม.6</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ติดต่อเรา</h4>
+                <p>อีเมล: info@mathlearning.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
