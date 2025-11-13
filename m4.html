@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เนื้อหาคณิตศาสตร์ มัธยมศึกษาปีที่ 4 เซตและตรรกศาสตร์ ฟังก์ชันและกราฟ ลอการิทึม ลำดับและอนุกรม ตรีโกณมิติ เวกเตอร์">
-    <meta name="keywords" content="คณิตม.4, เซต, ฟังก์ชัน, ลอการิทึม, ตรีโกณมิติ, เวกเตอร์">
-    <title>คณิตศาสตร์ ม.4 - เซต ฟังก์ชัน ลอการิทึม ตรีโกณมิติ เวกเตอร์</title>
+    <title>คณิตศาสตร์ มัธยมศึกษาปีที่ 4 - สารบัญ</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
 </head>
 <body>
     <header>
@@ -30,11 +38,7 @@
         </div>
     </header>
 
-    <div class="ad-container ad-top">
-        <div class="ad-placeholder">
-            <p>[ พื้นที่โฆษณา AdSense - Top Banner 728x90 ]</p>
-        </div>
-    </div>
+    <div class="ad-container ad-top" data-ad-position="topBanner"></div>
 
     <div class="container">
         <div class="breadcrumb">
@@ -47,389 +51,176 @@
     <main class="container">
         <div class="content-wrapper">
             <aside class="sidebar-left">
-                <div class="ad-placeholder ad-sidebar">
-                    <p>[ พื้นที่โฆษณา AdSense ]</p>
-                </div>
+                <div class="ad-space" data-ad-position="sidebarTop"></div>
             </aside>
 
             <section class="main-content">
                 <h1 style="color: #667eea; margin-bottom: 20px;">คณิตศาสตร์ มัธยมศึกษาปีที่ 4</h1>
 
                 <div class="intro-section">
-                    <p>คณิตศาสตร์ ม.4 เป็นจุดเริ่มต้นของคณิตศาสตร์ระดับมัธยมปลาย มีเนื้อหาที่ลึกซึ้งและท้าทาย ครอบคลุมเซตและตรรกศาสตร์ ฟังก์ชันและกราฟ เลขยกกำลังและลอการิทึม ลำดับและอนุกรม ตรีโกณมิติ และเวกเตอร์ ซึ่งเป็นพื้นฐานสำคัญสำหรับการศึกษาในระดับที่สูงขึ้น</p>
+                    <h2>เกี่ยวกับคณิตศาสตร์ มัธยมศึกษาปีที่ 4</h2>
+                    <p>คณิตศาสตร์ชั้น มัธยมศึกษาปีที่ 4 ครอบคลุมเซต ฟังก์ชัน ลำดับและอนุกรม เรขาคณิตวิเคราะห์ และตรีโกณมิติ</p>
                 </div>
 
-                <article class="lesson-section">
-                    <h2>บทที่ 1: เซตและตรรกศาสตร์ (Sets and Logic)</h2>
+                <div class="ad-space" data-ad-position="inArticle"></div>
 
-                    <h3>1.1 ความหมายของเซต</h3>
-                    <p>เซต คือ กลุ่มของสิ่งต่างๆ ที่ชัดเจน เรียกสิ่งต่างๆ ในเซตว่า สมาชิกของเซต</p>
+                <!-- สารบัญ -->
+                <section class="toc-section" id="table-of-contents">
+                    <h2>📚 สารบัญเนื้อหา</h2>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 1:</h4>
-                        <p>A = {1, 2, 3, 4, 5} เป็นเซตของจำนวนเต็มบวก 5 จำนวนแรก</p>
-                        <p>B = {x | x เป็นจำนวนเต็มคู่ที่มากกว่า 0 และน้อยกว่า 10}</p>
-                        <p>B = {2, 4, 6, 8}</p>
-                    </div>
-
-                    <h3>1.2 ประเภทของเซต</h3>
-                    <ul>
-                        <li><strong>เซตว่าง (∅):</strong> เซตที่ไม่มีสมาชิก</li>
-                        <li><strong>เซตจำกัด:</strong> เซตที่มีสมาชิกจำนวนจำกัด</li>
-                        <li><strong>เซตอนันต์:</strong> เซตที่มีสมาชิกจำนวนไม่จำกัด</li>
-                        <li><strong>เซตย่อย (⊆):</strong> A ⊆ B ถ้าสมาชิกทุกตัวของ A เป็นสมาชิกของ B</li>
-                    </ul>
-
-                    <h3>1.3 การดำเนินการกับเซต</h3>
-
-                    <div class="formula-box">
-                        <h4>สัญลักษณ์เซต:</h4>
-                        <div class="formula">
-                            A ∪ B = ยูเนียน (สมาชิกที่อยู่ใน A หรือ B หรือทั้งสอง)<br>
-                            A ∩ B = อินเตอร์เซกชัน (สมาชิกที่อยู่ใน A และ B)<br>
-                            A' = คอมพลีเมนต์ (สมาชิกที่ไม่อยู่ใน A)<br>
-                            A - B = ผลต่าง (สมาชิกที่อยู่ใน A แต่ไม่อยู่ใน B)
+                    <div class="toc-grid">
+                        <!-- บทที่ 1 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 1</h3>
+                                <h4>เซตและตรรกศาสตร์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>1.1 ความหมายของเซต</li>
+                                    <li>1.2 การดำเนินการของเซต</li>
+                                    <li>1.3 กฎของเซต</li>
+                                    <li>1.4 ประพจน์</li>
+                                    <li>1.5 ตารางค่าความจริง</li>
+                                    <li>1.6 การให้เหตุผล</li>
+                                </ul>
+                                <a href="m4/chapter1.html" class="btn-chapter">เรียนบทที่ 1</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 2:</h4>
-                        <p>กำหนด A = {1, 2, 3, 4} และ B = {3, 4, 5, 6}</p>
-                        <p>A ∪ B = {1, 2, 3, 4, 5, 6}</p>
-                        <p>A ∩ B = {3, 4}</p>
-                        <p>A - B = {1, 2}</p>
-                    </div>
-
-                    <h3>1.4 ตรรกศาสตร์เบื้องต้น</h3>
-                    <p>ประพจน์ คือ ข้อความที่มีค่าความจริงเป็นจริงหรือเท็จอย่างใดอย่างหนึ่ง</p>
-
-                    <div class="formula-box">
-                        <h4>ตัวเชื่อมประพจน์:</h4>
-                        <div class="formula">
-                            p ∧ q (และ) - จริงก็ต่อเมื่อ p และ q จริงทั้งคู่<br>
-                            p ∨ q (หรือ) - จริงเมื่อ p หรือ q จริงอย่างน้อยหนึ่งตัว<br>
-                            ~p (ไม่) - จริงก็ต่อเมื่อ p เท็จ<br>
-                            p → q (ถ้า...แล้ว) - เท็จก็ต่อเมื่อ p จริงและ q เท็จ
+                        <!-- บทที่ 2 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 2</h3>
+                                <h4>ฟังก์ชันและกราฟ</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>2.1 ฟังก์ชันและความสัมพันธ์</li>
+                                    <li>2.2 ประเภทของฟังก์ชัน</li>
+                                    <li>2.3 กราฟฟังก์ชัน</li>
+                                    <li>2.4 ฟังก์ชันกำลังสอง</li>
+                                    <li>2.5 ฟังก์ชันค่าสัมบูรณ์</li>
+                                    <li>2.6 การแปลงกราฟ</li>
+                                </ul>
+                                <a href="m4/chapter2.html" class="btn-chapter">เรียนบทที่ 2</a>
+                            </div>
                         </div>
-                    </div>
-                </article>
 
-                <div class="ad-placeholder ad-article">
-                    <p>[ พื้นที่โฆษณา AdSense - In-Article ]</p>
-                </div>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 2: ฟังก์ชันและกราฟ</h2>
-
-                    <h3>2.1 ประเภทของฟังก์ชัน</h3>
-                    <ul>
-                        <li><strong>ฟังก์ชันเชิงเส้น:</strong> f(x) = mx + b</li>
-                        <li><strong>ฟังก์ชันกำลังสอง:</strong> f(x) = ax² + bx + c</li>
-                        <li><strong>ฟังก์ชันค่าสัมบูรณ์:</strong> f(x) = |x|</li>
-                        <li><strong>ฟังก์ชันชี้กำลัง:</strong> f(x) = aˣ</li>
-                    </ul>
-
-                    <h3>2.2 ฟังก์ชันผสม</h3>
-                    <p>การทำฟังก์ชันผสม (f ∘ g)(x) = f(g(x))</p>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 3:</h4>
-                        <p>กำหนด f(x) = 2x + 1 และ g(x) = x² จงหา (f ∘ g)(x)</p>
-                        <p><strong>วิธีทำ:</strong></p>
-                        <p>(f ∘ g)(x) = f(g(x)) = f(x²) = 2(x²) + 1 = 2x² + 1</p>
-                        <p><strong>ตอบ:</strong> 2x² + 1</p>
-                    </div>
-
-                    <h3>2.3 ฟังก์ชันผกผัน</h3>
-                    <p>ฟังก์ชันผกผัน f⁻¹ จะสลับ domain และ range ของ f</p>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 4:</h4>
-                        <p>จงหาฟังก์ชันผกผันของ f(x) = 2x + 3</p>
-                        <p><strong>วิธีทำ:</strong></p>
-                        <p>ให้ y = 2x + 3</p>
-                        <p>สลับ x และ y: x = 2y + 3</p>
-                        <p>2y = x - 3</p>
-                        <p>y = (x - 3)/2</p>
-                        <p><strong>ตอบ:</strong> f⁻¹(x) = (x - 3)/2</p>
-                    </div>
-                </article>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 3: เลขยกกำลังและลอการิทึม</h2>
-
-                    <h3>3.1 กฎของเลขยกกำลัง</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตรเลขยกกำลัง:</h4>
-                        <div class="formula">
-                            aᵐ × aⁿ = aᵐ⁺ⁿ<br>
-                            aᵐ ÷ aⁿ = aᵐ⁻ⁿ<br>
-                            (aᵐ)ⁿ = aᵐⁿ<br>
-                            (ab)ⁿ = aⁿbⁿ<br>
-                            a⁰ = 1 (a ≠ 0)<br>
-                            a⁻ⁿ = 1/aⁿ
+                        <!-- บทที่ 3 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 3</h3>
+                                <h4>พหุนาม</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>3.1 พหุนามดีกรีสูง</li>
+                                    <li>3.2 ทฤษฎีบทเศษเหลือ</li>
+                                    <li>3.3 สมการพหุนาม</li>
+                                    <li>3.4 อสมการ</li>
+                                    <li>3.5 ความไม่เท่า</li>
+                                    <li>3.6 โจทย์ปัญหา</li>
+                                </ul>
+                                <a href="m4/chapter3.html" class="btn-chapter">เรียนบทที่ 3</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <h3>3.2 ลอการิทึม (Logarithm)</h3>
-                    <p>ลอการิทึม คือ เลขชี้กำลังที่ทำให้ได้จำนวนที่ต้องการ</p>
-
-                    <div class="formula-box">
-                        <h4>นิยาม:</h4>
-                        <div class="formula">logₐ b = x ⟺ aˣ = b</div>
-                        <p style="margin-top: 10px;">โดยที่ a > 0, a ≠ 1, b > 0</p>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 5:</h4>
-                        <p>log₂ 8 = ? เพราะ 2³ = 8 ดังนั้น log₂ 8 = 3</p>
-                        <p>log₁₀ 100 = ? เพราะ 10² = 100 ดังนั้น log₁₀ 100 = 2</p>
-                    </div>
-
-                    <h3>3.3 กฎของลอการิทึม</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตรลอการิทึม:</h4>
-                        <div class="formula">
-                            logₐ(mn) = logₐ m + logₐ n<br>
-                            logₐ(m/n) = logₐ m - logₐ n<br>
-                            logₐ mⁿ = n logₐ m<br>
-                            logₐ a = 1<br>
-                            logₐ 1 = 0
+                        <!-- บทที่ 4 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 4</h3>
+                                <h4>ลำดับและอนุกรม</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>4.1 ลำดับ</li>
+                                    <li>4.2 อนุกรม</li>
+                                    <li>4.3 ลำดับเลขคณิต</li>
+                                    <li>4.4 อนุกรมเลขคณิต</li>
+                                    <li>4.5 ลำดับเรขาคณิต</li>
+                                    <li>4.6 อนุกรมเรขาคณิต</li>
+                                </ul>
+                                <a href="m4/chapter4.html" class="btn-chapter">เรียนบทที่ 4</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 6:</h4>
-                        <p>จงหาค่าของ log₂ 32</p>
-                        <p><strong>วิธีทำ:</strong> 2ˣ = 32 = 2⁵</p>
-                        <p>ดังนั้น x = 5</p>
-                        <p><strong>ตอบ:</strong> log₂ 32 = 5</p>
-                    </div>
-                </article>
-
-                <div class="ad-placeholder ad-article">
-                    <p>[ พื้นที่โฆษณา AdSense ]</p>
-                </div>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 4: ลำดับและอนุกรม</h2>
-
-                    <h3>4.1 ลำดับเลขคณิต (Arithmetic Sequence)</h3>
-                    <p>ลำดับที่แต่ละพจน์ต่างกันด้วยผลต่างคงที่ (d)</p>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            aₙ = a₁ + (n-1)d<br>
-                            Sₙ = n/2 (a₁ + aₙ) หรือ Sₙ = n/2 [2a₁ + (n-1)d]
+                        <!-- บทที่ 5 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 5</h3>
+                                <h4>เรขาคณิตวิเคราะห์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>5.1 ระบบพิกัด</li>
+                                    <li>5.2 ระยะทางระหว่างจุด</li>
+                                    <li>5.3 จุดกึ่งกลาง</li>
+                                    <li>5.4 สมการเส้นตรง</li>
+                                    <li>5.5 เส้นขนานและเส้นตั้งฉาก</li>
+                                    <li>5.6 วงกลม</li>
+                                </ul>
+                                <a href="m4/chapter5.html" class="btn-chapter">เรียนบทที่ 5</a>
+                            </div>
                         </div>
-                        <p style="margin-top: 10px;">โดยที่ aₙ = พจน์ที่ n, d = ผลต่างร่วม, Sₙ = ผลรวมของ n พจน์แรก</p>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 7:</h4>
-                        <p>จงหาพจน์ที่ 10 ของลำดับ 3, 7, 11, 15, ...</p>
-                        <p><strong>วิธีทำ:</strong> a₁ = 3, d = 4</p>
-                        <p>a₁₀ = 3 + (10-1)4 = 3 + 36 = 39</p>
-                        <p><strong>ตอบ:</strong> 39</p>
-                    </div>
-
-                    <h3>4.2 ลำดับเรขาคณิต (Geometric Sequence)</h3>
-                    <p>ลำดับที่แต่ละพจน์มีอัตราส่วนร่วมคงที่ (r)</p>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            aₙ = a₁ × r⁽ⁿ⁻¹⁾<br>
-                            Sₙ = a₁(rⁿ - 1)/(r - 1) เมื่อ r ≠ 1<br>
-                            S∞ = a₁/(1 - r) เมื่อ |r| < 1
+                        <!-- บทที่ 6 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 6</h3>
+                                <h4>ตรีโกณมิติ</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>6.1 อัตราส่วนตรีโกณมิติ</li>
+                                    <li>6.2 การหาค่าอัตราส่วน</li>
+                                    <li>6.3 การแก้สามเหลี่ยมมุมฉาก</li>
+                                    <li>6.4 มุมในตำแหน่งมาตรฐาน</li>
+                                    <li>6.5 กราฟฟังก์ชันตรีโกณมิติ</li>
+                                    <li>6.6 เอกลักษณ์ตรีโกณมิติ</li>
+                                </ul>
+                                <a href="m4/chapter6.html" class="btn-chapter">เรียนบทที่ 6</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 8:</h4>
-                        <p>จงหาพจน์ที่ 5 ของลำดับ 2, 6, 18, 54, ...</p>
-                        <p><strong>วิธีทำ:</strong> a₁ = 2, r = 3</p>
-                        <p>a₅ = 2 × 3⁴ = 2 × 81 = 162</p>
-                        <p><strong>ตอบ:</strong> 162</p>
-                    </div>
-                </article>
 
-                <article class="lesson-section">
-                    <h2>บทที่ 5: ตรีโกณมิติ</h2>
-
-                    <h3>5.1 เอกลักษณ์ตรีโกณมิติ</h3>
-
-                    <div class="formula-box">
-                        <h4>เอกลักษณ์พื้นฐาน:</h4>
-                        <div class="formula">
-                            sin²θ + cos²θ = 1<br>
-                            1 + tan²θ = sec²θ<br>
-                            1 + cot²θ = csc²θ<br>
-                            tan θ = sin θ / cos θ
-                        </div>
-                    </div>
-
-                    <h3>5.2 กฎของไซน์และโคไซน์</h3>
-
-                    <div class="formula-box">
-                        <h4>กฎของไซน์:</h4>
-                        <div class="formula">a/sin A = b/sin B = c/sin C</div>
-                    </div>
-
-                    <div class="formula-box">
-                        <h4>กฎของโคไซน์:</h4>
-                        <div class="formula">c² = a² + b² - 2ab cos C</div>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 9:</h4>
-                        <p>ในสามเหลี่ยม ABC มี a = 8, b = 6, C = 60° จงหาความยาวด้าน c</p>
-                        <p><strong>วิธีทำ:</strong> ใช้กฎของโคไซน์</p>
-                        <p>c² = 8² + 6² - 2(8)(6)cos 60°</p>
-                        <p>c² = 64 + 36 - 96(1/2)</p>
-                        <p>c² = 100 - 48 = 52</p>
-                        <p>c = √52 = 2√13</p>
-                        <p><strong>ตอบ:</strong> 2√13 หน่วย</p>
-                    </div>
-
-                    <h3>5.3 กราฟของฟังก์ชันตรีโกณมิติ</h3>
-                    <p>กราฟของ y = sin x และ y = cos x เป็นคลื่น มีคาบ 2π</p>
-                    <p>กราฟของ y = tan x มีคาบ π และมีเส้นกำกับแนวดิ่ง</p>
-                </article>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 6: เวกเตอร์เบื้องต้น</h2>
-
-                    <h3>6.1 ความหมายของเวกเตอร์</h3>
-                    <p>เวกเตอร์ คือ ปริมาณที่มีทั้งขนาดและทิศทาง แทนด้วย →a หรือ <strong>a</strong></p>
-
-                    <h3>6.2 การบวกและลบเวกเตอร์</h3>
-                    <p>ถ้า →a = (a₁, a₂) และ →b = (b₁, b₂)</p>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            →a + →b = (a₁ + b₁, a₂ + b₂)<br>
-                            →a - →b = (a₁ - b₁, a₂ - b₂)<br>
-                            k→a = (ka₁, ka₂)
-                        </div>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 10:</h4>
-                        <p>กำหนด →a = (3, 4) และ →b = (1, 2) จงหา →a + →b</p>
-                        <p><strong>วิธีทำ:</strong></p>
-                        <p>→a + →b = (3+1, 4+2) = (4, 6)</p>
-                        <p><strong>ตอบ:</strong> (4, 6)</p>
-                    </div>
-
-                    <h3>6.3 ขนาดของเวกเตอร์</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">|→a| = √(a₁² + a₂²)</div>
-                    </div>
-                </article>
-
-                <section class="exercise-section">
-                    <h3>แบบฝึกหัดท้ายบท</h3>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 1:</strong> กำหนด A = {1, 2, 3} และ B = {2, 3, 4} จงหา A ∩ B</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> A ∩ B = {2, 3}</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 2:</strong> จงหาค่าของ log₃ 27</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> 3ˣ = 27 = 3³, ดังนั้น x = 3</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 3:</strong> จงหาพจน์ที่ 8 ของลำดับเลขคณิต 5, 9, 13, 17, ...</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> a₁ = 5, d = 4</p>
-                            <p>a₈ = 5 + (8-1)4 = 5 + 28 = 33</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 4:</strong> กำหนด →a = (2, 3) และ →b = (4, 1) จงหา →a + →b</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> →a + →b = (2+4, 3+1) = (6, 4)</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 5:</strong> จงหาฟังก์ชันผกผันของ f(x) = 3x - 2</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong></p>
-                            <p>y = 3x - 2</p>
-                            <p>x = 3y - 2</p>
-                            <p>3y = x + 2</p>
-                            <p>y = (x + 2)/3</p>
-                            <p>f⁻¹(x) = (x + 2)/3</p>
-                        </div>
                     </div>
                 </section>
             </section>
 
             <aside class="sidebar-right">
-                <div class="ad-placeholder ad-sidebar">
-                    <p>[ พื้นที่โฆษณา AdSense - Sidebar 300x250 ]</p>
-                </div>
+                <div class="ad-space" data-ad-position="sidebarMiddle"></div>
             </aside>
         </div>
     </main>
 
-    <div class="ad-container ad-bottom">
-        <div class="ad-placeholder">
-            <p>[ พื้นที่โฆษณา AdSense - Bottom Banner ]</p>
-        </div>
-    </div>
-
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>เกี่ยวกับเรา</h3>
-                    <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา ที่มุ่งเน้นการนำเสนอเนื้อหาที่เข้าใจง่าย ครบถ้วน และเหมาะสมกับนักเรียนไทย</p>
+                    <h3>คณิตศาสตร์มัธยม</h3>
+                    <p>เว็บไซต์รวมความรู้คณิตศาสตร์ ม.1-6 ครบทุกเนื้อหา</p>
                 </div>
                 <div class="footer-section">
-                    <h3>ลิงก์ด่วน</h3>
+                    <h3>หมวดหมู่</h3>
                     <ul>
-                        <li><a href="index.html">หน้าแรก</a></li>
-                        <li><a href="m1.html">คณิตศาสตร์ ม.1</a></li>
-                        <li><a href="m2.html">คณิตศาสตร์ ม.2</a></li>
-                        <li><a href="m3.html">คณิตศาสตร์ ม.3</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>ช่วงชั้นที่ 2</h3>
-                    <ul>
-                        <li><a href="m4.html">คณิตศาสตร์ ม.4</a></li>
-                        <li><a href="m5.html">คณิตศาสตร์ ม.5</a></li>
-                        <li><a href="m6.html">คณิตศาสตร์ ม.6</a></li>
+                        <li><a href="m1.html">ม.1</a></li>
+                        <li><a href="m2.html">ม.2</a></li>
+                        <li><a href="m3.html">ม.3</a></li>
+                        <li><a href="m4.html" class="active">ม.4</a></li>
+                        <li><a href="m5.html">ม.5</a></li>
+                        <li><a href="m6.html">ม.6</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved. | เว็บไซต์เพื่อการศึกษา</p>
+                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/adsense-config.js"></script>
+    <script src="js/adsense-loader.js"></script>
 </body>
 </html>

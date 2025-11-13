@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เนื้อหาคณิตศาสตร์ มัธยมศึกษาปีที่ 6 ปริพันธ์ สมการเชิงอนุพันธ์ เวกเตอร์ 3 มิติ เรขาคณิตวิเคราะห์">
-    <meta name="keywords" content="คณิตม.6, ปริพันธ์, สมการเชิงอนุพันธ์, เวกเตอร์3D, เรขาคณิตวิเคราะห์">
-    <title>คณิตศาสตร์ ม.6 - ปริพันธ์ สมการเชิงอนุพันธ์ เวกเตอร์สามมิติ</title>
+    <title>คณิตศาสตร์ มัธยมศึกษาปีที่ 6 - สารบัญ</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
 </head>
 <body>
     <header>
@@ -30,11 +38,7 @@
         </div>
     </header>
 
-    <div class="ad-container ad-top">
-        <div class="ad-placeholder">
-            <p>[ พื้นที่โฆษณา AdSense - Top Banner 728x90 ]</p>
-        </div>
-    </div>
+    <div class="ad-container ad-top" data-ad-position="topBanner"></div>
 
     <div class="container">
         <div class="breadcrumb">
@@ -47,461 +51,176 @@
     <main class="container">
         <div class="content-wrapper">
             <aside class="sidebar-left">
-                <div class="ad-placeholder ad-sidebar">
-                    <p>[ พื้นที่โฆษณา AdSense ]</p>
-                </div>
+                <div class="ad-space" data-ad-position="sidebarTop"></div>
             </aside>
 
             <section class="main-content">
                 <h1 style="color: #667eea; margin-bottom: 20px;">คณิตศาสตร์ มัธยมศึกษาปีที่ 6</h1>
 
                 <div class="intro-section">
-                    <p>คณิตศาสตร์ ม.6 เป็นบทสรุปของความรู้คณิตศาสตร์ระดับมัธยมศึกษา ประกอบด้วยเนื้อหาที่ท้าทายและลึกซึ้ง ได้แก่ ปริพันธ์ สมการเชิงอนุพันธ์ เวกเตอร์ในสามมิติ เรขาคณิตวิเคราะห์ขั้นสูง ความน่าจะเป็นขั้นสูง และการวิเคราะห์ข้อมูล ซึ่งเป็นรากฐานสำคัญสำหรับการศึกษาต่อในระดับอุดมศึกษา</p>
+                    <h2>เกี่ยวกับคณิตศาสตร์ มัธยมศึกษาปีที่ 6</h2>
+                    <p>คณิตศาสตร์ชั้น มัธยมศึกษาปีที่ 6 แคลคูลัสขั้นสูง อนุพันธ์ ปริพันธ์ จำนวนเชิงซ้อน และคอนิก</p>
                 </div>
 
-                <article class="lesson-section">
-                    <h2>บทที่ 1: ปริพันธ์ (Integrals)</h2>
+                <div class="ad-space" data-ad-position="inArticle"></div>
 
-                    <h3>1.1 ปริพันธ์ไม่จำกัดเขต</h3>
-                    <p>ปริพันธ์ คือ การหาฟังก์ชันที่เมื่อหาอนุพันธ์แล้วได้ฟังก์ชันเดิม (ตรงข้ามกับอนุพันธ์)</p>
+                <!-- สารบัญ -->
+                <section class="toc-section" id="table-of-contents">
+                    <h2>📚 สารบัญเนื้อหา</h2>
 
-                    <div class="formula-box">
-                        <h4>สูตรพื้นฐาน:</h4>
-                        <div class="formula">
-                            ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ -1)<br>
-                            ∫ 1/x dx = ln|x| + C<br>
-                            ∫ eˣ dx = eˣ + C<br>
-                            ∫ sin x dx = -cos x + C<br>
-                            ∫ cos x dx = sin x + C<br>
-                            ∫ sec²x dx = tan x + C
+                    <div class="toc-grid">
+                        <!-- บทที่ 1 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 1</h3>
+                                <h4>อนุพันธ์ขั้นสูง</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>1.1 อนุพันธ์ของฟังก์ชันตรีโกณมิติ</li>
+                                    <li>1.2 อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียล</li>
+                                    <li>1.3 อนุพันธ์ของฟังก์ชันลอการิทึม</li>
+                                    <li>1.4 การหาอนุพันธ์โดยนัย</li>
+                                    <li>1.5 อัตราการเปลี่ยนแปลง</li>
+                                    <li>1.6 การประมาณค่า</li>
+                                </ul>
+                                <a href="m6/chapter1.html" class="btn-chapter">เรียนบทที่ 1</a>
+                            </div>
                         </div>
-                        <p style="margin-top: 10px;">โดยที่ C = ค่าคงที่</p>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 1:</h4>
-                        <p>จงหา ∫ 3x² dx</p>
-                        <p><strong>วิธีทำ:</strong> = 3 ∫ x² dx = 3 × x³/3 + C = x³ + C</p>
-                        <p><strong>ตอบ:</strong> x³ + C</p>
-                    </div>
-
-                    <h3>1.2 เทคนิคการหาปริพันธ์</h3>
-
-                    <div class="note-box">
-                        <h4>การแทนค่า (Substitution):</h4>
-                        <p>ใช้เมื่อพบฟังก์ชันผสมที่ซับซ้อน<br>
-                        ให้ u = g(x), du = g'(x)dx</p>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 2:</h4>
-                        <p>จงหา ∫ 2x(x²+1)⁵ dx</p>
-                        <p><strong>วิธีทำ:</strong> ให้ u = x²+1, du = 2x dx</p>
-                        <p>= ∫ u⁵ du = u⁶/6 + C = (x²+1)⁶/6 + C</p>
-                        <p><strong>ตอบ:</strong> (x²+1)⁶/6 + C</p>
-                    </div>
-
-                    <h3>1.3 ปริพันธ์จำกัดเขต</h3>
-
-                    <div class="formula-box">
-                        <h4>ทฤษฎีบทพื้นฐานของแคลคูลัส:</h4>
-                        <div class="formula">∫ₐᵇ f(x) dx = F(b) - F(a)</div>
-                        <p style="margin-top: 10px;">โดยที่ F'(x) = f(x)</p>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 3:</h4>
-                        <p>จงหา ∫₁³ x² dx</p>
-                        <p><strong>วิธีทำ:</strong> = [x³/3]₁³ = (3³/3) - (1³/3) = 9 - 1/3 = 26/3</p>
-                        <p><strong>ตอบ:</strong> 26/3</p>
-                    </div>
-
-                    <h3>1.4 การประยุกต์ใช้ปริพันธ์</h3>
-                    <ul>
-                        <li>หาพื้นที่ใต้กราฟ</li>
-                        <li>หาปริมาตรของทรงตัน</li>
-                        <li>หาความยาวของเส้นโค้ง</li>
-                        <li>หาระยะทางจากความเร็ว</li>
-                    </ul>
-
-                    <div class="formula-box">
-                        <h4>พื้นที่ใต้กราฟ:</h4>
-                        <div class="formula">A = ∫ₐᵇ f(x) dx</div>
-                    </div>
-                </article>
-
-                <div class="ad-placeholder ad-article">
-                    <p>[ พื้นที่โฆษณา AdSense - In-Article ]</p>
-                </div>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 2: สมการเชิงอนุพันธ์</h2>
-
-                    <h3>2.1 ความหมายของสมการเชิงอนุพันธ์</h3>
-                    <p>สมการเชิงอนุพันธ์ คือ สมการที่มีอนุพันธ์ของฟังก์ชันเป็นสมาชิก</p>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่าง:</h4>
-                        <p>dy/dx = 2x เป็นสมการเชิงอนุพันธ์อันดับที่ 1</p>
-                        <p>d²y/dx² + 3dy/dx + 2y = 0 เป็นสมการเชิงอนุพันธ์อันดับที่ 2</p>
-                    </div>
-
-                    <h3>2.2 การแก้สมการเชิงอนุพันธ์แบบแยกตัวแปรได้</h3>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 4:</h4>
-                        <p>จงแก้สมการ dy/dx = 2xy</p>
-                        <p><strong>วิธีทำ:</strong></p>
-                        <p>dy/y = 2x dx</p>
-                        <p>∫ dy/y = ∫ 2x dx</p>
-                        <p>ln|y| = x² + C</p>
-                        <p>y = e^(x²+C) = Ae^(x²)</p>
-                        <p><strong>ตอบ:</strong> y = Ae^(x²)</p>
-                    </div>
-
-                    <h3>2.3 การประยุกต์ใช้สมการเชิงอนุพันธ์</h3>
-                    <ul>
-                        <li>แบบจำลองการเจริญเติบโตของประชากร</li>
-                        <li>การสลายตัวของสารกัมมันตรังสี</li>
-                        <li>กฎของนิวตันเกี่ยวกับการเย็นตัว</li>
-                        <li>วงจรไฟฟ้า</li>
-                    </ul>
-                </article>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 3: เวกเตอร์ในสามมิติ</h2>
-
-                    <h3>3.1 เวกเตอร์ในพิกัดสามมิติ</h3>
-                    <p>เวกเตอร์ในสามมิติมีรูปแบบ →v = (x, y, z) หรือ →v = xi + yj + zk</p>
-
-                    <div class="formula-box">
-                        <h4>ขนาดของเวกเตอร์:</h4>
-                        <div class="formula">|→v| = √(x² + y² + z²)</div>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 5:</h4>
-                        <p>จงหาขนาดของเวกเตอร์ →v = (2, 3, 6)</p>
-                        <p><strong>วิธีทำ:</strong> |→v| = √(2² + 3² + 6²) = √(4 + 9 + 36) = √49 = 7</p>
-                        <p><strong>ตอบ:</strong> 7</p>
-                    </div>
-
-                    <h3>3.2 ผลคูณดอต (Dot Product)</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            →a · →b = a₁b₁ + a₂b₂ + a₃b₃<br>
-                            →a · →b = |→a| |→b| cos θ
+                        <!-- บทที่ 2 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 2</h3>
+                                <h4>ปริพันธ์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>2.1 ปริพันธ์ไม่จำกัดเขต</li>
+                                    <li>2.2 กฎการหาปริพันธ์</li>
+                                    <li>2.3 เทคนิคการหาปริพันธ์</li>
+                                    <li>2.4 ปริพันธ์จำกัดเขต</li>
+                                    <li>2.5 ทฤษฎีบทพื้นฐานของแคลคูลัส</li>
+                                    <li>2.6 การหาพื้นที่</li>
+                                </ul>
+                                <a href="m6/chapter2.html" class="btn-chapter">เรียนบทที่ 2</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 6:</h4>
-                        <p>จงหา →a · →b เมื่อ →a = (1, 2, 3) และ →b = (4, 5, 6)</p>
-                        <p><strong>วิธีทำ:</strong> →a · →b = (1×4) + (2×5) + (3×6) = 4 + 10 + 18 = 32</p>
-                        <p><strong>ตอบ:</strong> 32</p>
-                    </div>
-
-                    <h3>3.3 ผลคูณไขว้ (Cross Product)</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            →a × →b = (a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁)<br>
-                            |→a × →b| = |→a| |→b| sin θ
+                        <!-- บทที่ 3 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 3</h3>
+                                <h4>สมการเชิงอนุพันธ์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>3.1 ความหมายของสมการเชิงอนุพันธ์</li>
+                                    <li>3.2 สมการอันดับหนึ่ง</li>
+                                    <li>3.3 การแยกตัวแปร</li>
+                                    <li>3.4 สมการเชิงเส้นอันดับหนึ่ง</li>
+                                    <li>3.5 สมการอันดับสอง</li>
+                                    <li>3.6 การประยุกต์</li>
+                                </ul>
+                                <a href="m6/chapter3.html" class="btn-chapter">เรียนบทที่ 3</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="note-box">
-                        <h4>สมบัติผลคูณไขว้:</h4>
-                        <p>• →a × →b เป็นเวกเตอร์ที่ตั้งฉากกับทั้ง →a และ →b<br>
-                        • →a × →b = -→b × →a<br>
-                        • →a × →a = 0</p>
-                    </div>
-
-                    <h3>3.4 การประยุกต์ใช้เวกเตอร์</h3>
-                    <ul>
-                        <li>หาสมการของเส้นตรงและระนาบในสามมิติ</li>
-                        <li>หาระยะจากจุดถึงเส้นตรงหรือระนาบ</li>
-                        <li>หามุมระหว่างเวกเตอร์</li>
-                        <li>หาพื้นที่ของรูปสี่เหลี่ยมด้านขนาน</li>
-                    </ul>
-                </article>
-
-                <div class="ad-placeholder ad-article">
-                    <p>[ พื้นที่โฆษณา AdSense ]</p>
-                </div>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 4: เรขาคณิตวิเคราะห์ขั้นสูง</h2>
-
-                    <h3>4.1 เส้นตรงในระนาบ</h3>
-
-                    <div class="formula-box">
-                        <h4>สมการเส้นตรง:</h4>
-                        <div class="formula">
-                            รูปทั่วไป: Ax + By + C = 0<br>
-                            รูปความชัน-จุดตัด: y = mx + b<br>
-                            รูปจุด-ความชัน: y - y₁ = m(x - x₁)
+                        <!-- บทที่ 4 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 4</h3>
+                                <h4>จำนวนเชิงซ้อน</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>4.1 ความหมายของจำนวนเชิงซ้อน</li>
+                                    <li>4.2 การดำเนินการจำนวนเชิงซ้อน</li>
+                                    <li>4.3 รูปเรขาคณิต</li>
+                                    <li>4.4 รูปเชิงขั้ว</li>
+                                    <li>4.5 ทฤษฎีบทเดอมัวฟร์</li>
+                                    <li>4.6 รากที่ n</li>
+                                </ul>
+                                <a href="m6/chapter4.html" class="btn-chapter">เรียนบทที่ 4</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <h3>4.2 วงกลม</h3>
-
-                    <div class="formula-box">
-                        <h4>สมการวงกลม:</h4>
-                        <div class="formula">
-                            (x - h)² + (y - k)² = r²<br>
-                            x² + y² + Dx + Ey + F = 0
+                        <!-- บทที่ 5 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 5</h3>
+                                <h4>สถิติประยุกต์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>5.1 การสุ่มตัวอย่าง</li>
+                                    <li>5.2 การแจกแจงความน่าจะเป็น</li>
+                                    <li>5.3 การแจกแจงปกติ</li>
+                                    <li>5.4 การประมาณค่า</li>
+                                    <li>5.5 การทดสอบสมมติฐาน</li>
+                                    <li>5.6 การวิเคราะห์การถดถอย</li>
+                                </ul>
+                                <a href="m6/chapter5.html" class="btn-chapter">เรียนบทที่ 5</a>
+                            </div>
                         </div>
-                        <p style="margin-top: 10px;">โดยที่ (h, k) = ศูนย์กลาง, r = รัศมี</p>
-                    </div>
 
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 7:</h4>
-                        <p>จงหาสมการวงกลมที่มีศูนย์กลาง (3, 4) และรัศมี 5</p>
-                        <p><strong>วิธีทำ:</strong> (x - 3)² + (y - 4)² = 25</p>
-                        <p><strong>ตอบ:</strong> (x - 3)² + (y - 4)² = 25</p>
-                    </div>
-
-                    <h3>4.3 พาราโบลา</h3>
-
-                    <div class="formula-box">
-                        <h4>สมการพาราโบลา:</h4>
-                        <div class="formula">
-                            แนวตั้ง: (x - h)² = 4p(y - k)<br>
-                            แนวนอน: (y - k)² = 4p(x - h)
+                        <!-- บทที่ 6 -->
+                        <div class="toc-card">
+                            <div class="toc-card-header">
+                                <h3>บทที่ 6</h3>
+                                <h4>เรขาคณิตวิเคราะห์</h4>
+                            </div>
+                            <div class="toc-card-body">
+                                <ul class="toc-list">
+                                    <li>6.1 พาราโบลา</li>
+                                    <li>6.2 วงรี</li>
+                                    <li>6.3 ไฮเพอร์โบลา</li>
+                                    <li>6.4 สมการทั่วไปของคอนิก</li>
+                                    <li>6.5 การแปลงพิกัด</li>
+                                    <li>6.6 การประยุกต์</li>
+                                </ul>
+                                <a href="m6/chapter6.html" class="btn-chapter">เรียนบทที่ 6</a>
+                            </div>
                         </div>
-                        <p style="margin-top: 10px;">โดยที่ (h, k) = จุดยอด, p = ระยะจากจุดยอดถึงโฟกัส</p>
-                    </div>
 
-                    <h3>4.4 วงรี (Ellipse)</h3>
 
-                    <div class="formula-box">
-                        <h4>สมการวงรี:</h4>
-                        <div class="formula">
-                            (x - h)²/a² + (y - k)²/b² = 1
-                        </div>
-                        <p style="margin-top: 10px;">โดยที่ (h, k) = ศูนย์กลาง, a = กึ่งแกนเอก, b = กึ่งแกนโท</p>
-                    </div>
-
-                    <h3>4.5 ไฮเพอร์โบลา (Hyperbola)</h3>
-
-                    <div class="formula-box">
-                        <h4>สมการไฮเพอร์โบลา:</h4>
-                        <div class="formula">
-                            แนวนอน: (x - h)²/a² - (y - k)²/b² = 1<br>
-                            แนวตั้ง: (y - k)²/a² - (x - h)²/b² = 1
-                        </div>
-                    </div>
-                </article>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 5: ความน่าจะเป็นขั้นสูง</h2>
-
-                    <h3>5.1 ทฤษฎีบทของเบย์</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            P(A|B) = P(B|A) × P(A) / P(B)
-                        </div>
-                    </div>
-
-                    <h3>5.2 ตัวแปรสุ่มและการแจกแจง</h3>
-                    <p>ตัวแปรสุ่ม คือ ฟังก์ชันที่กำหนดค่าจำนวนให้กับผลลัพธ์แต่ละอย่างในปริภูมิตัวอย่าง</p>
-
-                    <div class="note-box">
-                        <h4>ประเภทของตัวแปรสุ่ม:</h4>
-                        <p>• ตัวแปรสุ่มแบบไม่ต่อเนื่อง (Discrete)<br>
-                        • ตัวแปรสุ่มแบบต่อเนื่อง (Continuous)</p>
-                    </div>
-
-                    <h3>5.3 การแจกแจงแบบปกติ</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            f(x) = (1/σ√(2π)) × e^(-(x-μ)²/(2σ²))
-                        </div>
-                        <p style="margin-top: 10px;">โดยที่ μ = ค่าเฉลี่ย, σ = ส่วนเบี่ยงเบนมาตรฐาน</p>
-                    </div>
-
-                    <h3>5.4 ช่วงความเชื่อมั่น</h3>
-                    <p>ช่วงความเชื่อมั่น คือ ช่วงของค่าที่คาดว่าจะมีพารามิเตอร์ของประชากร</p>
-
-                    <div class="example-box">
-                        <h4>ตัวอย่างที่ 8:</h4>
-                        <p>ช่วงความเชื่อมั่น 95% สำหรับค่าเฉลี่ย:</p>
-                        <p>x̄ - 1.96(σ/√n) < μ < x̄ + 1.96(σ/√n)</p>
-                    </div>
-                </article>
-
-                <article class="lesson-section">
-                    <h2>บทที่ 6: การวิเคราะห์ข้อมูล</h2>
-
-                    <h3>6.1 การถดถอยเชิงเส้น (Linear Regression)</h3>
-                    <p>การหาความสัมพันธ์ระหว่างตัวแปรสองตัวในรูปแบบเส้นตรง</p>
-
-                    <div class="formula-box">
-                        <h4>สมการถดถอย:</h4>
-                        <div class="formula">
-                            ŷ = a + bx<br>
-                            b = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)²<br>
-                            a = ȳ - bx̄
-                        </div>
-                    </div>
-
-                    <h3>6.2 สัมประสิทธิ์สหสัมพันธ์</h3>
-
-                    <div class="formula-box">
-                        <h4>สูตร:</h4>
-                        <div class="formula">
-                            r = Σ(xᵢ - x̄)(yᵢ - ȳ) / √[Σ(xᵢ - x̄)² × Σ(yᵢ - ȳ)²]
-                        </div>
-                        <p style="margin-top: 10px;">-1 ≤ r ≤ 1</p>
-                    </div>
-
-                    <div class="note-box">
-                        <h4>การแปลผล:</h4>
-                        <p>• r ใกล้ 1: มีความสัมพันธ์เชิงบวกสูง<br>
-                        • r ใกล้ -1: มีความสัมพันธ์เชิงลบสูง<br>
-                        • r ใกล้ 0: ไม่มีความสัมพันธ์เชิงเส้น</p>
-                    </div>
-
-                    <h3>6.3 การทดสอบสมมติฐาน</h3>
-                    <p>กระบวนการตัดสินใจทางสถิติโดยใช้ข้อมูลจากตัวอย่าง</p>
-
-                    <ul>
-                        <li>ตั้งสมมติฐานหลัก (H₀) และสมมติฐานรอง (H₁)</li>
-                        <li>กำหนดระดับนัยสำคัญ (α)</li>
-                        <li>คำนวณค่าสถิติทดสอบ</li>
-                        <li>สรุปผล ยอมรับหรือปฏิเสธ H₀</li>
-                    </ul>
-                </article>
-
-                <section class="exercise-section">
-                    <h3>แบบฝึกหัดท้ายบท</h3>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 1:</strong> จงหา ∫ 4x³ dx</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> = 4 × x⁴/4 + C = x⁴ + C</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 2:</strong> จงหา ∫₀² 2x dx</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> = [x²]₀² = 4 - 0 = 4</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 3:</strong> จงหาขนาดของเวกเตอร์ →v = (1, 2, 2)</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> |→v| = √(1² + 2² + 2²) = √9 = 3</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 4:</strong> จงหาศูนย์กลางและรัศมีของวงกลม x² + y² - 6x + 8y = 0</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong> จัดรูปใหม่: (x-3)² + (y+4)² = 25</p>
-                            <p>ศูนย์กลาง (3, -4), รัศมี = 5</p>
-                        </div>
-                    </div>
-
-                    <div class="exercise-item">
-                        <p><strong>ข้อ 5:</strong> จงแก้สมการเชิงอนุพันธ์ dy/dx = 3x²</p>
-                        <button class="exercise-toggle">แสดงเฉลย</button>
-                        <div class="exercise-answer">
-                            <p><strong>เฉลย:</strong></p>
-                            <p>dy = 3x² dx</p>
-                            <p>∫ dy = ∫ 3x² dx</p>
-                            <p>y = x³ + C</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="lesson-section">
-                    <h2>สรุปสำคัญสำหรับสอบเข้ามหาวิทยาลัย</h2>
-
-                    <div class="note-box">
-                        <h4>หัวข้อสำคัญที่ควรทบทวน:</h4>
-                        <ul>
-                            <li>ปริพันธ์และการประยุกต์ใช้ (พื้นที่, ปริมาตร)</li>
-                            <li>อนุพันธ์และการหาค่าสูงสุด-ต่ำสุด</li>
-                            <li>ลิมิตและความต่อเนื่อง</li>
-                            <li>เวกเตอร์ในระนาบและสามมิติ</li>
-                            <li>เรขาคณิตวิเคราะห์ (วงกลม, พาราโบลา)</li>
-                            <li>ความน่าจะเป็นและสถิติ</li>
-                            <li>เซตและตรรกศาสตร์</li>
-                            <li>ฟังก์ชันและกราฟ</li>
-                        </ul>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4>เคล็ดลับในการสอบ:</h4>
-                        <p>• ทำความเข้าใจแนวคิดพื้นฐานให้แม่นยำ<br>
-                        • จำสูตรสำคัญและเข้าใจที่มา<br>
-                        • ฝึกทำโจทย์หลากหลายรูปแบบ<br>
-                        • จัดการเวลาในการทำข้อสอบอย่างมีประสิทธิภาพ<br>
-                        • ตรวจสอบคำตอบอีกครั้งก่อนส่ง</p>
                     </div>
                 </section>
             </section>
 
             <aside class="sidebar-right">
-                <div class="ad-placeholder ad-sidebar">
-                    <p>[ พื้นที่โฆษณา AdSense - Sidebar 300x250 ]</p>
-                </div>
+                <div class="ad-space" data-ad-position="sidebarMiddle"></div>
             </aside>
         </div>
     </main>
 
-    <div class="ad-container ad-bottom">
-        <div class="ad-placeholder">
-            <p>[ พื้นที่โฆษณา AdSense - Bottom Banner ]</p>
-        </div>
-    </div>
-
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>เกี่ยวกับเรา</h3>
-                    <p>เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษา ที่มุ่งเน้นการนำเสนอเนื้อหาที่เข้าใจง่าย ครบถ้วน และเหมาะสมกับนักเรียนไทย</p>
+                    <h3>คณิตศาสตร์มัธยม</h3>
+                    <p>เว็บไซต์รวมความรู้คณิตศาสตร์ ม.1-6 ครบทุกเนื้อหา</p>
                 </div>
                 <div class="footer-section">
-                    <h3>ลิงก์ด่วน</h3>
+                    <h3>หมวดหมู่</h3>
                     <ul>
-                        <li><a href="index.html">หน้าแรก</a></li>
-                        <li><a href="m1.html">คณิตศาสตร์ ม.1</a></li>
-                        <li><a href="m2.html">คณิตศาสตร์ ม.2</a></li>
-                        <li><a href="m3.html">คณิตศาสตร์ ม.3</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>ช่วงชั้นที่ 2</h3>
-                    <ul>
-                        <li><a href="m4.html">คณิตศาสตร์ ม.4</a></li>
-                        <li><a href="m5.html">คณิตศาสตร์ ม.5</a></li>
-                        <li><a href="m6.html">คณิตศาสตร์ ม.6</a></li>
+                        <li><a href="m1.html">ม.1</a></li>
+                        <li><a href="m2.html">ม.2</a></li>
+                        <li><a href="m3.html">ม.3</a></li>
+                        <li><a href="m4.html">ม.4</a></li>
+                        <li><a href="m5.html">ม.5</a></li>
+                        <li><a href="m6.html" class="active">ม.6</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved. | เว็บไซต์เพื่อการศึกษา</p>
+                <p>&copy; 2024 คณิตศาสตร์มัธยม. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/adsense-config.js"></script>
+    <script src="js/adsense-loader.js"></script>
 </body>
 </html>
