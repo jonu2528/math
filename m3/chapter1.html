@@ -71,7 +71,7 @@
                 <h1>บทที่ 1: จำนวนจริง</h1>
                 
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ จำนวนจริง ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.3</p>
+                    <p>จำนวนจริงเป็นพื้นฐานสำคัญของคณิตศาสตร์ ประกอบด้วยจำนวนตรรกยะและจำนวนอตรรกยะ ในบทนี้เราจะศึกษาเกี่ยวกับจำนวนจริง การดำเนินการ รากที่ n และการประมาณค่า ซึ่งจะเป็นพื้นฐานสำคัญในการเรียนคณิตศาสตร์ในระดับที่สูงขึ้น</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -91,24 +91,79 @@
                 <!-- Section 1.1 -->
                 <section id="section1">
                     <h2>1.1 ความหมายของจำนวนจริง</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.1 ความหมายของจำนวนจริง</p>
+                        <p><strong>จำนวนจริง (Real Numbers)</strong> คือจำนวนทั้งหมดที่สามารถเขียนแทนตำแหน่งบนเส้นจำนวนได้ ประกอบด้วย 2 กลุ่มหลัก:</p>
+                        <ul>
+                            <li><strong>จำนวนตรรกยะ (Rational Numbers)</strong> คือจำนวนที่เขียนในรูป $$\frac{a}{b}$$ ได้ โดยที่ $a$ และ $b$ เป็นจำนวนเต็ม และ $b \neq 0$ เช่น $\frac{1}{2}, -3, 0.25, 0.\overline{3}$</li>
+                            <li><strong>จำนวนอตรรกยะ (Irrational Numbers)</strong> คือจำนวนที่เขียนในรูปเศษส่วนไม่ได้ ทศนิยมไม่รู้จบและไม่มีรูปแบบซ้ำ เช่น $\sqrt{2}, \pi, e$</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>โครงสร้างจำนวนจริง</h4>
+                        <p>$$\text{จำนวนจริง} = \{\text{จำนวนตรรกยะ}\} \cup \{\text{จำนวนอตรรกยะ}\}$$</p>
+                        <p>จำนวนตรรกยะ ประกอบด้วย:</p>
+                        <ul>
+                            <li>จำนวนนับ: $1, 2, 3, 4, ...$</li>
+                            <li>จำนวนเต็ม: $..., -2, -1, 0, 1, 2, ...$</li>
+                            <li>เศษส่วน: $\frac{1}{2}, \frac{3}{4}, -\frac{2}{5}$</li>
+                            <li>ทศนิยมรู้จบหรือทศนิยมซ้ำ: $0.5, 0.\overline{3}$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
                         <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.1 ความหมายของจำนวนจริง</p>
+                        <p><strong>โจทย์:</strong> จงบอกว่าจำนวนต่อไปนี้เป็นจำนวนตรรกยะหรืออตรรกยะ</p>
+                        <p>ก) $0.75$ &nbsp;&nbsp; ข) $\sqrt{9}$ &nbsp;&nbsp; ค) $\sqrt{5}$ &nbsp;&nbsp; ง) $\frac{22}{7}$ &nbsp;&nbsp; จ) $\pi$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $0.75 = \frac{75}{100} = \frac{3}{4}$ เป็นจำนวน<strong>ตรรกยะ</strong></p>
+                        <p>ข) $\sqrt{9} = 3$ เป็นจำนวน<strong>ตรรกยะ</strong> (เป็นจำนวนเต็ม)</p>
+                        <p>ค) $\sqrt{5} = 2.236...$ (ทศนิยมไม่รู้จบไม่ซ้ำ) เป็นจำนวน<strong>อตรรกยะ</strong></p>
+                        <p>ง) $\frac{22}{7}$ อยู่ในรูปเศษส่วนอยู่แล้ว เป็นจำนวน<strong>ตรรกยะ</strong></p>
+                        <p>จ) $\pi = 3.141592...$ (ทศนิยมไม่รู้จบไม่ซ้ำ) เป็นจำนวน<strong>อตรรกยะ</strong></p>
                     </div>
 
                     <div class="example">
                         <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.1 ความหมายของจำนวนจริง</p>
+                        <p><strong>โจทย์:</strong> จงเขียนจำนวนต่อไปนี้ในรูปเศษส่วนอย่างต่ำ</p>
+                        <p>ก) $0.6$ &nbsp;&nbsp; ข) $0.\overline{2}$ &nbsp;&nbsp; ค) $2.5$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) $0.6 = \frac{6}{10} = \frac{3}{5}$</p>
+                        <p>ข) ให้ $x = 0.\overline{2} = 0.2222...$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$10x = 2.2222...$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$10x - x = 2.2222... - 0.2222...$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$9x = 2$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$x = \frac{2}{9}$</p>
+                        <p>ค) $2.5 = \frac{25}{10} = \frac{5}{2}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <p><strong>โจทย์:</strong> จงหาจำนวนตรรกยะที่อยู่ระหว่าง $\frac{1}{3}$ และ $\frac{1}{2}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>วิธีที่ 1: หาค่าเฉลี่ย</p>
+                        <p>$$\text{จำนวนตรรกยะ} = \frac{\frac{1}{3} + \frac{1}{2}}{2} = \frac{\frac{2+3}{6}}{2} = \frac{\frac{5}{6}}{2} = \frac{5}{12}$$</p>
+                        <p>ตรวจสอบ: $\frac{1}{3} = \frac{4}{12} < \frac{5}{12} < \frac{6}{12} = \frac{1}{2}$ ✓</p>
+                        <p>วิธีที่ 2: เขียนในรูปทศนิยม</p>
+                        <p>$\frac{1}{3} = 0.333...$ และ $\frac{1}{2} = 0.5$</p>
+                        <p>ดังนั้น $0.4$ อยู่ระหว่างสองจำนวนนี้</p>
+                        <p>$0.4 = \frac{4}{10} = \frac{2}{5}$</p>
+                        <p><strong>ตอบ:</strong> $\frac{5}{12}$ หรือ $\frac{2}{5}$ หรือจำนวนตรรกยะอื่นๆ ที่อยู่ระหว่างสองจำนวนนี้</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4</h4>
+                        <p><strong>โจทย์:</strong> จงเขียน $1.\overline{45}$ ในรูปเศษส่วนอย่างต่ำ</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ให้ $x = 1.\overline{45} = 1.454545...$</p>
+                        <p>เนื่องจากมีเลข 2 ตัวซ้ำ จึงคูณด้วย $10^2 = 100$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$100x = 145.454545...$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$100x - x = 145.454545... - 1.454545...$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$99x = 144$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$x = \frac{144}{99} = \frac{16}{11}$</p>
+                        <p><strong>ตอบ:</strong> $\frac{16}{11}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -117,24 +172,78 @@
                 <!-- Section 1.2 -->
                 <section id="section2">
                     <h2>1.2 จำนวนอตรรกยะ</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.2 จำนวนอตรรกยะ</p>
+                        <p><strong>จำนวนอตรรกยะ (Irrational Numbers)</strong> คือจำนวนที่ไม่สามารถเขียนในรูปเศษส่วน $\frac{a}{b}$ ได้ (โดยที่ $a, b$ เป็นจำนวนเต็ม และ $b \neq 0$) มีลักษณะเป็นทศนิยมไม่รู้จบและไม่มีรูปแบบซ้ำ</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>จำนวนอตรรกยะที่พบบ่อย</h4>
+                        <ul>
+                            <li><strong>รากที่สองของจำนวนที่ไม่ใช่กำลังสองสมบูรณ์:</strong> $\sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{7}, \sqrt{8}, ...$</li>
+                            <li><strong>รากที่สามของจำนวนที่ไม่ใช่กำลังสามสมบูรณ์:</strong> $\sqrt[3]{2}, \sqrt[3]{5}, \sqrt[3]{10}, ...$</li>
+                            <li><strong>ค่าคงตัวทางคณิตศาสตร์:</strong> $\pi = 3.141592..., e = 2.71828...$</li>
+                            <li><strong>ผลบวกหรือผลคูณของจำนวนตรรกยะกับอตรรกยะ:</strong> $2 + \sqrt{3}, 5\sqrt{2}$</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สมบัติสำคัญ</h4>
+                        <ul>
+                            <li>จำนวนตรรกยะ + จำนวนอตรรกยะ = จำนวนอตรรกยะ</li>
+                            <li>จำนวนตรรกยะ (ไม่เท่ากับ 0) × จำนวนอตรรกยะ = จำนวนอตรรกยะ</li>
+                            <li>จำนวนอตรรกยะ + จำนวนอตรรกยะ = อาจเป็นตรรกยะหรืออตรรกยะก็ได้</li>
+                            <li>จำนวนอตรรกยะ × จำนวนอตรรกยะ = อาจเป็นตรรกยะหรืออตรรกยะก็ได้</li>
+                        </ul>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <p><strong>โจทย์:</strong> จงระบุว่าจำนวนต่อไปนี้เป็นจำนวนตรรกยะหรืออตรรกยะ พร้อมอธิบาย</p>
+                        <p>ก) $\sqrt{16}$ &nbsp;&nbsp; ข) $\sqrt{20}$ &nbsp;&nbsp; ค) $2\sqrt{3}$ &nbsp;&nbsp; ง) $\sqrt{2} + \sqrt{8}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $\sqrt{16} = 4$ เป็นจำนวนเต็ม ดังนั้นเป็น<strong>จำนวนตรรกยะ</strong></p>
+                        <p>ข) $\sqrt{20} = \sqrt{4 \times 5} = 2\sqrt{5}$ เนื่องจาก $\sqrt{5}$ เป็นอตรรกยะ จึงเป็น<strong>จำนวนอตรรกยะ</strong></p>
+                        <p>ค) $2\sqrt{3}$ = จำนวนตรรกยะ × จำนวนอตรรกยะ เป็น<strong>จำนวนอตรรกยะ</strong></p>
+                        <p>ง) $\sqrt{2} + \sqrt{8} = \sqrt{2} + 2\sqrt{2} = 3\sqrt{2}$ เป็น<strong>จำนวนอตรรกยะ</strong></p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <p><strong>โจทย์:</strong> พิสูจน์ว่า $\sqrt{2}$ เป็นจำนวนอตรรกยะ</p>
+                        <p><strong>วิธีทำ:</strong> (พิสูจน์โดยวิธีตรงข้าม)</p>
+                        <p>สมมติว่า $\sqrt{2}$ เป็นจำนวนตรรกยะ</p>
+                        <p>กำหนดให้ $\sqrt{2} = \frac{a}{b}$ โดยที่ $\frac{a}{b}$ เป็นเศษส่วนอย่างต่ำ (ห.ร.ม. ของ $a$ และ $b$ เท่ากับ 1)</p>
+                        <p>ยกกำลังสองทั้งสองข้าง: $2 = \frac{a^2}{b^2}$</p>
+                        <p>$a^2 = 2b^2$ แสดงว่า $a^2$ เป็นเลขคู่ ดังนั้น $a$ ต้องเป็นเลขคู่</p>
+                        <p>ให้ $a = 2k$ (โดยที่ $k$ เป็นจำนวนเต็ม)</p>
+                        <p>แทนค่า: $(2k)^2 = 2b^2$</p>
+                        <p>$4k^2 = 2b^2$</p>
+                        <p>$2k^2 = b^2$ แสดงว่า $b^2$ เป็นเลขคู่ ดังนั้น $b$ ต้องเป็นเลขคู่</p>
+                        <p>แต่ถ้า $a$ และ $b$ เป็นเลขคู่ทั้งคู่ แสดงว่าทั้งคู่มีตัวประกอบร่วมคือ 2</p>
+                        <p>ขัดแย้งกับที่สมมติไว้ว่า $\frac{a}{b}$ เป็นเศษส่วนอย่างต่ำ</p>
+                        <p><strong>สรุป:</strong> $\sqrt{2}$ ไม่สามารถเขียนในรูปเศษส่วนได้ จึงเป็นจำนวนอตรรกยะ</p>
                     </div>
 
                     <div class="example">
                         <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.2 จำนวนอตรรกยะ</p>
+                        <p><strong>โจทย์:</strong> จงหาค่าของ ก) $\sqrt{3} \times \sqrt{12}$ &nbsp;&nbsp; ข) $\sqrt{50} - \sqrt{8}$ &nbsp;&nbsp; ค) $(\sqrt{5})^2$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $\sqrt{3} \times \sqrt{12} = \sqrt{3 \times 12} = \sqrt{36} = 6$ (เป็นจำนวนตรรกยะ)</p>
+                        <p>ข) $\sqrt{50} - \sqrt{8} = \sqrt{25 \times 2} - \sqrt{4 \times 2} = 5\sqrt{2} - 2\sqrt{2} = 3\sqrt{2}$ (เป็นจำนวนอตรรกยะ)</p>
+                        <p>ค) $(\sqrt{5})^2 = 5$ (เป็นจำนวนตรรกยะ)</p>
                     </div>
 
                     <div class="example">
                         <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.2 จำนวนอตรรกยะ</p>
-                        <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>โจทย์:</strong> จงเรียงจำนวนต่อไปนี้จากน้อยไปมาก: $\sqrt{7}, 2.5, \frac{8}{3}, \sqrt{10}$</p>
+                        <p><strong>วิธีทำ:</strong> เขียนทุกจำนวนในรูปทศนิยมประมาณ</p>
+                        <p>$\sqrt{7} \approx 2.646$</p>
+                        <p>$2.5 = 2.5$</p>
+                        <p>$\frac{8}{3} \approx 2.667$</p>
+                        <p>$\sqrt{10} \approx 3.162$</p>
+                        <p><strong>ตอบ:</strong> $2.5 < \sqrt{7} < \frac{8}{3} < \sqrt{10}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -143,24 +252,108 @@
                 <!-- Section 1.3 -->
                 <section id="section3">
                     <h2>1.3 การดำเนินการจำนวนจริง</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.3 การดำเนินการจำนวนจริง</p>
+                        <h4>สมบัติของการดำเนินการจำนวนจริง</h4>
+                        <p>จำนวนจริงมีสมบัติพื้นฐานในการดำเนินการดังนี้:</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สมบัติการบวกและการคูณ</h4>
+                        <p><strong>1. สมบัติการสลับที่ (Commutative Property)</strong></p>
+                        <ul>
+                            <li>$a + b = b + a$</li>
+                            <li>$a \times b = b \times a$</li>
+                        </ul>
+                        <p><strong>2. สมบัติการเปลี่ยนหมู่ (Associative Property)</strong></p>
+                        <ul>
+                            <li>$(a + b) + c = a + (b + c)$</li>
+                            <li>$(a \times b) \times c = a \times (b \times c)$</li>
+                        </ul>
+                        <p><strong>3. สมบัติการแจกแจง (Distributive Property)</strong></p>
+                        <ul>
+                            <li>$a(b + c) = ab + ac$</li>
+                            <li>$a(b - c) = ab - ac$</li>
+                        </ul>
+                        <p><strong>4. เอกลักษณ์ (Identity Property)</strong></p>
+                        <ul>
+                            <li>$a + 0 = a$ (0 เป็นเอกลักษณ์ของการบวก)</li>
+                            <li>$a \times 1 = a$ (1 เป็นเอกลักษณ์ของการคูณ)</li>
+                        </ul>
+                        <p><strong>5. สมบัติตรงข้าม (Inverse Property)</strong></p>
+                        <ul>
+                            <li>$a + (-a) = 0$ (ตรงข้ามของการบวก)</li>
+                            <li>$a \times \frac{1}{a} = 1, a \neq 0$ (ตรงข้ามของการคูณ)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>การดำเนินการกับรากที่สอง</h4>
+                        <ul>
+                            <li>$\sqrt{a} \times \sqrt{b} = \sqrt{ab}$ (เมื่อ $a, b \geq 0$)</li>
+                            <li>$\frac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}$ (เมื่อ $a \geq 0, b > 0$)</li>
+                            <li>$\sqrt{a^2} = |a|$</li>
+                            <li>$(\sqrt{a})^2 = a$ (เมื่อ $a \geq 0$)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.3 การดำเนินการจำนวนจริง</p>
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <p><strong>โจทย์:</strong> จงใช้สมบัติของจำนวนจริงในการคำนวณ $5 \times 23 \times 2$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$5 \times 23 \times 2$</p>
+                        <p>$= 5 \times 2 \times 23$ (ใช้สมบัติการสลับที่)</p>
+                        <p>$= (5 \times 2) \times 23$ (ใช้สมบัติการเปลี่ยนหมู่)</p>
+                        <p>$= 10 \times 23$</p>
+                        <p>$= 230$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.3 การดำเนินการจำนวนจริง</p>
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <p><strong>โจทย์:</strong> จงใช้สมบัติการแจกแจงคำนวณ $7(100 - 3)$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$7(100 - 3)$</p>
+                        <p>$= 7 \times 100 - 7 \times 3$ (สมบัติการแจกแจง)</p>
+                        <p>$= 700 - 21$</p>
+                        <p>$= 679$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <p><strong>โจทย์:</strong> จงทำให้เป็นรูปง่าย</p>
+                        <p>ก) $\sqrt{18} + \sqrt{50} - \sqrt{8}$</p>
+                        <p>ข) $\sqrt{12} \times \sqrt{27}$</p>
+                        <p>ค) $\frac{\sqrt{72}}{\sqrt{2}}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $\sqrt{18} + \sqrt{50} - \sqrt{8}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{9 \times 2} + \sqrt{25 \times 2} - \sqrt{4 \times 2}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 3\sqrt{2} + 5\sqrt{2} - 2\sqrt{2}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 6\sqrt{2}$</p>
+                        <p>ข) $\sqrt{12} \times \sqrt{27}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{12 \times 27}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{324}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 18$</p>
+                        <p>ค) $\frac{\sqrt{72}}{\sqrt{2}}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{\frac{72}{2}}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{36}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 6$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4</h4>
+                        <p><strong>โจทย์:</strong> จงทำให้ตัวส่วนเป็นจำนวนตรรกยะ</p>
+                        <p>ก) $\frac{3}{\sqrt{5}}$ &nbsp;&nbsp; ข) $\frac{2}{\sqrt{3} + 1}$ &nbsp;&nbsp; ค) $\frac{6}{\sqrt{7} - \sqrt{2}}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $\frac{3}{\sqrt{5}} = \frac{3}{\sqrt{5}} \times \frac{\sqrt{5}}{\sqrt{5}} = \frac{3\sqrt{5}}{5}$</p>
+                        <p>ข) $\frac{2}{\sqrt{3} + 1} = \frac{2}{\sqrt{3} + 1} \times \frac{\sqrt{3} - 1}{\sqrt{3} - 1}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{2(\sqrt{3} - 1)}{(\sqrt{3})^2 - 1^2}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{2\sqrt{3} - 2}{3 - 1}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{2\sqrt{3} - 2}{2}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{3} - 1$</p>
+                        <p>ค) $\frac{6}{\sqrt{7} - \sqrt{2}} = \frac{6}{\sqrt{7} - \sqrt{2}} \times \frac{\sqrt{7} + \sqrt{2}}{\sqrt{7} + \sqrt{2}}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{6(\sqrt{7} + \sqrt{2})}{7 - 2}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{6(\sqrt{7} + \sqrt{2})}{5}$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{6\sqrt{7} + 6\sqrt{2}}{5}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -169,24 +362,89 @@
                 <!-- Section 1.4 -->
                 <section id="section4">
                     <h2>1.4 รากที่สามและรากที่ n</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.4 รากที่สามและรากที่ n</p>
+                        <p><strong>รากที่ $n$ (n-th root)</strong> ของจำนวน $a$ คือจำนวน $b$ ที่เมื่อยกกำลัง $n$ แล้วได้ $a$</p>
+                        <p>เขียนแทนด้วย $\sqrt[n]{a} = b$ เมื่อ $b^n = a$</p>
+                        <ul>
+                            <li>$n = 2$ คือรากที่สอง เขียน $\sqrt{a}$ หรือ $\sqrt[2]{a}$</li>
+                            <li>$n = 3$ คือรากที่สาม เขียน $\sqrt[3]{a}$</li>
+                            <li>$n = 4$ คือรากที่สี่ เขียน $\sqrt[4]{a}$</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สมบัติของรากที่ n</h4>
+                        <p><strong>เมื่อ $n$ เป็นจำนวนคี่:</strong></p>
+                        <ul>
+                            <li>$\sqrt[n]{a}$ มีค่าเดียว (ไม่ว่า $a$ จะเป็นบวก ลบ หรือศูนย์)</li>
+                            <li>$\sqrt[n]{-a} = -\sqrt[n]{a}$</li>
+                            <li>ตัวอย่าง: $\sqrt[3]{8} = 2, \sqrt[3]{-8} = -2$</li>
+                        </ul>
+                        <p><strong>เมื่อ $n$ เป็นจำนวนคู่:</strong></p>
+                        <ul>
+                            <li>$\sqrt[n]{a}$ หมายถึงค่าบวก (principal root) เมื่อ $a > 0$</li>
+                            <li>$\sqrt[n]{a}$ ไม่นิยามเมื่อ $a < 0$</li>
+                            <li>ตัวอย่าง: $\sqrt[4]{16} = 2$ (ไม่ใช่ $\pm 2$)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎการคำนวณรากที่ n</h4>
+                        <ul>
+                            <li>$\sqrt[n]{a} \times \sqrt[n]{b} = \sqrt[n]{ab}$</li>
+                            <li>$\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$ (เมื่อ $b \neq 0$)</li>
+                            <li>$\sqrt[n]{a^n} = |a|$ (เมื่อ $n$ เป็นเลขคู่), $= a$ (เมื่อ $n$ เป็นเลขคี่)</li>
+                            <li>$(\sqrt[n]{a})^n = a$</li>
+                            <li>$\sqrt[m]{\sqrt[n]{a}} = \sqrt[mn]{a}$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.4 รากที่สามและรากที่ n</p>
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าของ</p>
+                        <p>ก) $\sqrt[3]{27}$ &nbsp;&nbsp; ข) $\sqrt[3]{-64}$ &nbsp;&nbsp; ค) $\sqrt[4]{81}$ &nbsp;&nbsp; ง) $\sqrt[5]{-32}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $\sqrt[3]{27} = \sqrt[3]{3^3} = 3$</p>
+                        <p>ข) $\sqrt[3]{-64} = \sqrt[3]{(-4)^3} = -4$</p>
+                        <p>ค) $\sqrt[4]{81} = \sqrt[4]{3^4} = 3$</p>
+                        <p>ง) $\sqrt[5]{-32} = \sqrt[5]{(-2)^5} = -2$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.4 รากที่สามและรากที่ n</p>
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <p><strong>โจทย์:</strong> จงทำให้เป็นรูปง่าย</p>
+                        <p>ก) $\sqrt[3]{54}$ &nbsp;&nbsp; ข) $\sqrt[3]{16} \times \sqrt[3]{2}$ &nbsp;&nbsp; ค) $\frac{\sqrt[3]{40}}{\sqrt[3]{5}}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) $\sqrt[3]{54} = \sqrt[3]{27 \times 2} = \sqrt[3]{3^3 \times 2} = 3\sqrt[3]{2}$</p>
+                        <p>ข) $\sqrt[3]{16} \times \sqrt[3]{2} = \sqrt[3]{16 \times 2} = \sqrt[3]{32} = \sqrt[3]{2^5} = \sqrt[3]{8 \times 4} = 2\sqrt[3]{4}$</p>
+                        <p>ค) $\frac{\sqrt[3]{40}}{\sqrt[3]{5}} = \sqrt[3]{\frac{40}{5}} = \sqrt[3]{8} = 2$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <p><strong>โจทย์:</strong> จงคำนวณ $\sqrt[3]{2} \times \sqrt[3]{4} \times \sqrt[3]{8}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$\sqrt[3]{2} \times \sqrt[3]{4} \times \sqrt[3]{8}$</p>
+                        <p>$= \sqrt[3]{2 \times 4 \times 8}$</p>
+                        <p>$= \sqrt[3]{64}$</p>
+                        <p>$= \sqrt[3]{4^3}$</p>
+                        <p>$= 4$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่า $x$ ที่ทำให้</p>
+                        <p>ก) $\sqrt[3]{x} = 5$ &nbsp;&nbsp; ข) $\sqrt[4]{x} = 3$ &nbsp;&nbsp; ค) $\sqrt[3]{x + 1} = 2$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $\sqrt[3]{x} = 5$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;ยกกำลัง 3 ทั้งสองข้าง: $x = 5^3 = 125$</p>
+                        <p>ข) $\sqrt[4]{x} = 3$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;ยกกำลัง 4 ทั้งสองข้าง: $x = 3^4 = 81$</p>
+                        <p>ค) $\sqrt[3]{x + 1} = 2$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;ยกกำลัง 3 ทั้งสองข้าง: $x + 1 = 2^3 = 8$</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;$x = 7$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -195,24 +453,69 @@
                 <!-- Section 1.5 -->
                 <section id="section5">
                     <h2>1.5 เลขยกกำลังเศษส่วน</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.5 เลขยกกำลังเศษส่วน</p>
+                        <p><strong>เลขยกกำลังเศษส่วน</strong> เป็นวิธีการเขียนรากที่ $n$ ในรูปของเลขยกกำลัง</p>
+                        <p>$$a^{\frac{m}{n}} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m$$</p>
+                        <p>โดยเฉพาะ: $a^{\frac{1}{n}} = \sqrt[n]{a}$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎของเลขยกกำลังเศษส่วน</h4>
+                        <ul>
+                            <li>$a^{\frac{m}{n}} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m$</li>
+                            <li>$a^{\frac{1}{n}} = \sqrt[n]{a}$</li>
+                            <li>$a^{-\frac{m}{n}} = \frac{1}{a^{\frac{m}{n}}}$</li>
+                            <li>$(a^m)^n = a^{mn}$</li>
+                            <li>$a^m \times a^n = a^{m+n}$</li>
+                            <li>$\frac{a^m}{a^n} = a^{m-n}$</li>
+                            <li>$(ab)^m = a^m b^m$</li>
+                            <li>$\left(\frac{a}{b}\right)^m = \frac{a^m}{b^m}$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.5 เลขยกกำลังเศษส่วน</p>
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <p><strong>โจทย์:</strong> จงเขียนในรูปเลขยกกำลังเศษส่วน</p>
+                        <p>ก) $\sqrt{5}$ &nbsp;&nbsp; ข) $\sqrt[3]{7}$ &nbsp;&nbsp; ค) $\sqrt[4]{x^3}$ &nbsp;&nbsp; ง) $(\sqrt[5]{a})^2$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $\sqrt{5} = 5^{\frac{1}{2}}$</p>
+                        <p>ข) $\sqrt[3]{7} = 7^{\frac{1}{3}}$</p>
+                        <p>ค) $\sqrt[4]{x^3} = x^{\frac{3}{4}}$</p>
+                        <p>ง) $(\sqrt[5]{a})^2 = (a^{\frac{1}{5}})^2 = a^{\frac{2}{5}}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.5 เลขยกกำลังเศษส่วน</p>
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าของ</p>
+                        <p>ก) $8^{\frac{1}{3}}$ &nbsp;&nbsp; ข) $16^{\frac{3}{4}}$ &nbsp;&nbsp; ค) $27^{\frac{2}{3}}$ &nbsp;&nbsp; ง) $32^{\frac{2}{5}}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) $8^{\frac{1}{3}} = \sqrt[3]{8} = 2$</p>
+                        <p>ข) $16^{\frac{3}{4}} = (\sqrt[4]{16})^3 = 2^3 = 8$</p>
+                        <p>ค) $27^{\frac{2}{3}} = (\sqrt[3]{27})^2 = 3^2 = 9$</p>
+                        <p>ง) $32^{\frac{2}{5}} = (\sqrt[5]{32})^2 = 2^2 = 4$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <p><strong>โจทย์:</strong> จงทำให้เป็นรูปง่าย</p>
+                        <p>ก) $x^{\frac{1}{2}} \times x^{\frac{1}{3}}$ &nbsp;&nbsp; ข) $\frac{a^{\frac{3}{4}}}{a^{\frac{1}{4}}}$ &nbsp;&nbsp; ค) $(y^{\frac{2}{3}})^{\frac{3}{2}}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $x^{\frac{1}{2}} \times x^{\frac{1}{3}} = x^{\frac{1}{2} + \frac{1}{3}} = x^{\frac{3+2}{6}} = x^{\frac{5}{6}}$</p>
+                        <p>ข) $\frac{a^{\frac{3}{4}}}{a^{\frac{1}{4}}} = a^{\frac{3}{4} - \frac{1}{4}} = a^{\frac{2}{4}} = a^{\frac{1}{2}}$</p>
+                        <p>ค) $(y^{\frac{2}{3}})^{\frac{3}{2}} = y^{\frac{2}{3} \times \frac{3}{2}} = y^1 = y$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าของ</p>
+                        <p>ก) $4^{-\frac{1}{2}}$ &nbsp;&nbsp; ข) $8^{-\frac{2}{3}}$ &nbsp;&nbsp; ค) $\left(\frac{9}{16}\right)^{\frac{1}{2}}$ &nbsp;&nbsp; ง) $\left(\frac{8}{27}\right)^{-\frac{1}{3}}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $4^{-\frac{1}{2}} = \frac{1}{4^{\frac{1}{2}}} = \frac{1}{\sqrt{4}} = \frac{1}{2}$</p>
+                        <p>ข) $8^{-\frac{2}{3}} = \frac{1}{8^{\frac{2}{3}}} = \frac{1}{(\sqrt[3]{8})^2} = \frac{1}{2^2} = \frac{1}{4}$</p>
+                        <p>ค) $\left(\frac{9}{16}\right)^{\frac{1}{2}} = \frac{9^{\frac{1}{2}}}{16^{\frac{1}{2}}} = \frac{\sqrt{9}}{\sqrt{16}} = \frac{3}{4}$</p>
+                        <p>ง) $\left(\frac{8}{27}\right)^{-\frac{1}{3}} = \left(\frac{27}{8}\right)^{\frac{1}{3}} = \frac{27^{\frac{1}{3}}}{8^{\frac{1}{3}}} = \frac{\sqrt[3]{27}}{\sqrt[3]{8}} = \frac{3}{2}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -221,24 +524,88 @@
                 <!-- Section 1.6 -->
                 <section id="section6">
                     <h2>1.6 การประมาณค่า</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.6 การประมาณค่า</p>
+                        <p><strong>การประมาณค่า</strong> คือการหาค่าใกล้เคียงของจำนวนที่ซับซ้อน โดยใช้จำนวนที่เรียบง่ายกว่า มี 2 วิธีหลัก:</p>
+                        <ul>
+                            <li><strong>การปัดเศษ:</strong> ปัดค่าให้เหลือจำนวนหลักที่ต้องการ</li>
+                            <li><strong>การประมาณจำนวนอตรรกยะ:</strong> หาค่าใกล้เคียงโดยใช้จำนวนที่รู้แล้ว</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>หลักการปัดเศษ</h4>
+                        <ul>
+                            <li>ถ้าตัวเลขหลักถัดไป < 5 ให้ปัดลง (คงค่าเดิม)</li>
+                            <li>ถ้าตัวเลขหลักถัดไป ≥ 5 ให้ปัดขึ้น (เพิ่มค่า 1)</li>
+                        </ul>
+                        <p><strong>ตัวอย่าง:</strong></p>
+                        <ul>
+                            <li>3.14159 ≈ 3.14 (ปัดทศนิยม 2 ตำแหน่ง)</li>
+                            <li>3.14159 ≈ 3.1 (ปัดทศนิยม 1 ตำแหน่ง)</li>
+                            <li>3.14159 ≈ 3 (ปัดเป็นจำนวนเต็ม)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>การประมาณค่ารากที่สอง</h4>
+                        <p>ใช้จำนวนกำลังสองสมบูรณ์ที่ใกล้เคียง:</p>
+                        <ul>
+                            <li>$1^2 = 1, 2^2 = 4, 3^2 = 9, 4^2 = 16, 5^2 = 25, ...$</li>
+                            <li>$6^2 = 36, 7^2 = 49, 8^2 = 64, 9^2 = 81, 10^2 = 100$</li>
+                        </ul>
+                        <p><strong>วิธีประมาณ:</strong> หาจำนวนเต็มสองจำนวนที่รากที่สองของมันอยู่ระหว่างจำนวนที่ต้องการหา</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.6 การประมาณค่า</p>
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <p><strong>โจทย์:</strong> จงประมาณค่า $\sqrt{50}$ โดยให้ค่าเป็นจำนวนเต็มที่ใกล้เคียงที่สุด</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>หาจำนวนกำลังสองสมบูรณ์ที่ใกล้เคียงกับ 50:</p>
+                        <p>$7^2 = 49$ และ $8^2 = 64$</p>
+                        <p>ดังนั้น $7 < \sqrt{50} < 8$</p>
+                        <p>เนื่องจาก $50 - 49 = 1$ และ $64 - 50 = 14$</p>
+                        <p>$\sqrt{50}$ ใกล้ 7 มากกว่า 8</p>
+                        <p><strong>ตอบ:</strong> $\sqrt{50} \approx 7$ (ค่าจริง ≈ 7.07)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.6 การประมาณค่า</p>
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <p><strong>โจทย์:</strong> จงประมาณค่า $\sqrt{75}$ ให้เป็นทศนิยม 1 ตำแหน่ง</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$8^2 = 64$ และ $9^2 = 81$</p>
+                        <p>ดังนั้น $8 < \sqrt{75} < 9$</p>
+                        <p>หาค่ากลาง: $75 - 64 = 11$ และ $81 - 75 = 6$</p>
+                        <p>$\sqrt{75}$ อยู่ประมาณ $\frac{11}{11+6} = \frac{11}{17} \approx 0.65$ ของช่วาง</p>
+                        <p>$\sqrt{75} \approx 8 + 0.65 = 8.65$</p>
+                        <p>ปัดทศนิยม 1 ตำแหน่ง: $\sqrt{75} \approx 8.7$</p>
+                        <p><strong>ตอบ:</strong> $\sqrt{75} \approx 8.7$ (ค่าจริง ≈ 8.66)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <p><strong>โจทย์:</strong> จงปัดเศษ $\pi + \sqrt{2}$ ให้เป็นทศนิยม 2 ตำแหน่ง</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$\pi \approx 3.14159...$</p>
+                        <p>$\sqrt{2} \approx 1.41421...$</p>
+                        <p>$\pi + \sqrt{2} \approx 3.14159 + 1.41421$</p>
+                        <p>$\approx 4.55580...$</p>
+                        <p>ปัดทศนิยม 2 ตำแหน่ง: $4.56$</p>
+                        <p><strong>ตอบ:</strong> $\pi + \sqrt{2} \approx 4.56$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4</h4>
+                        <p><strong>โจทย์:</strong> จงประมาณค่า $\sqrt[3]{100}$ โดยให้อยู่ระหว่างจำนวนเต็มสองจำนวน</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หาจำนวนกำลังสามสมบูรณ์ที่ใกล้เคียง:</p>
+                        <p>$4^3 = 64$ และ $5^3 = 125$</p>
+                        <p>เนื่องจาก $64 < 100 < 125$</p>
+                        <p>ดังนั้น $4 < \sqrt[3]{100} < 5$</p>
+                        <p>เนื่องจาก $100 - 64 = 36$ และ $125 - 100 = 25$</p>
+                        <p>$\sqrt[3]{100}$ ใกล้ 5 มากกว่า 4</p>
+                        <p><strong>ตอบ:</strong> $4 < \sqrt[3]{100} < 5$ และ $\sqrt[3]{100} \approx 4.6$ (ค่าจริง ≈ 4.64)</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -247,74 +614,110 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 1</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: จำนวนจริงและจำนวนตรรกยะ (3 คะแนน)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>จงระบุว่าจำนวนต่อไปนี้เป็นจำนวนตรรกยะหรืออตรรกยะ: $0.125, \sqrt{36}, \sqrt{11}, \frac{7}{9}, \pi$</li>
+                            <li>จงเขียน $0.\overline{6}$ ในรูปเศษส่วนอย่างต่ำ</li>
+                            <li>จงหาจำนวนตรรกยะ 2 จำนวนที่อยู่ระหว่าง $\frac{2}{5}$ และ $\frac{1}{2}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+                            <p><strong>1.</strong> $0.125 = \frac{125}{1000} = \frac{1}{8}$ (ตรรกยะ), $\sqrt{36} = 6$ (ตรรกยะ), $\sqrt{11}$ (อตรรกยะ), $\frac{7}{9}$ (ตรรกยะ), $\pi$ (อตรรกยะ)</p>
+                            <p><strong>2.</strong> ให้ $x = 0.\overline{6} = 0.666...$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$10x = 6.666...$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$10x - x = 6$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$9x = 6$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$x = \frac{6}{9} = \frac{2}{3}$</p>
+                            <p><strong>3.</strong> $\frac{2}{5} = 0.4, \frac{1}{2} = 0.5$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;ตัวอย่าง: $0.42 = \frac{42}{100} = \frac{21}{50}$ และ $0.45 = \frac{45}{100} = \frac{9}{20}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การดำเนินการกับรากที่สอง (3 คะแนน)</h3>
+                        <ol start="4">
+                            <li>จงทำให้เป็นรูปง่าย: $\sqrt{32} + \sqrt{98} - \sqrt{18}$</li>
+                            <li>จงคำนวณ: $\sqrt{6} \times \sqrt{24}$</li>
+                            <li>จงทำให้ตัวส่วนเป็นจำนวนตรรกยะ: $\frac{5}{\sqrt{2} + \sqrt{3}}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+                            <p><strong>4.</strong> $\sqrt{32} + \sqrt{98} - \sqrt{18}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt{16 \times 2} + \sqrt{49 \times 2} - \sqrt{9 \times 2}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 4\sqrt{2} + 7\sqrt{2} - 3\sqrt{2} = 8\sqrt{2}$</p>
+                            <p><strong>5.</strong> $\sqrt{6} \times \sqrt{24} = \sqrt{6 \times 24} = \sqrt{144} = 12$</p>
+                            <p><strong>6.</strong> $\frac{5}{\sqrt{2} + \sqrt{3}} = \frac{5}{\sqrt{2} + \sqrt{3}} \times \frac{\sqrt{3} - \sqrt{2}}{\sqrt{3} - \sqrt{2}}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \frac{5(\sqrt{3} - \sqrt{2})}{3 - 2} = 5\sqrt{3} - 5\sqrt{2}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: รากที่สามและรากที่ n (3 คะแนน)</h3>
+                        <ol start="7">
+                            <li>จงหาค่าของ: $\sqrt[3]{-125}, \sqrt[4]{256}, \sqrt[5]{243}$</li>
+                            <li>จงทำให้เป็นรูปง่าย: $\sqrt[3]{54} + \sqrt[3]{128}$</li>
+                            <li>จงหาค่า $x$ ที่ทำให้ $\sqrt[3]{2x - 1} = 3$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+                            <p><strong>7.</strong> $\sqrt[3]{-125} = \sqrt[3]{(-5)^3} = -5$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$\sqrt[4]{256} = \sqrt[4]{4^4} = 4$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$\sqrt[5]{243} = \sqrt[5]{3^5} = 3$</p>
+                            <p><strong>8.</strong> $\sqrt[3]{54} + \sqrt[3]{128}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= \sqrt[3]{27 \times 2} + \sqrt[3]{64 \times 2}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= 3\sqrt[3]{2} + 4\sqrt[3]{2} = 7\sqrt[3]{2}$</p>
+                            <p><strong>9.</strong> $\sqrt[3]{2x - 1} = 3$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;ยกกำลัง 3: $2x - 1 = 27$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$2x = 28$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$x = 14$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: เลขยกกำลังเศษส่วน (3 คะแนน)</h3>
+                        <ol start="10">
+                            <li>จงเขียนในรูปเลขยกกำลังเศษส่วน: $\sqrt[4]{x^5}, (\sqrt[3]{a^2})^4$</li>
+                            <li>จงหาค่าของ: $64^{\frac{2}{3}}, 125^{-\frac{1}{3}}, \left(\frac{16}{81}\right)^{\frac{3}{4}}$</li>
+                            <li>จงทำให้เป็นรูปง่าย: $a^{\frac{2}{3}} \times a^{\frac{1}{6}} \div a^{\frac{1}{2}}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+                            <p><strong>10.</strong> $\sqrt[4]{x^5} = x^{\frac{5}{4}}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$(\sqrt[3]{a^2})^4 = (a^{\frac{2}{3}})^4 = a^{\frac{8}{3}}$</p>
+                            <p><strong>11.</strong> $64^{\frac{2}{3}} = (\sqrt[3]{64})^2 = 4^2 = 16$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$125^{-\frac{1}{3}} = \frac{1}{125^{\frac{1}{3}}} = \frac{1}{\sqrt[3]{125}} = \frac{1}{5}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$\left(\frac{16}{81}\right)^{\frac{3}{4}} = \frac{16^{\frac{3}{4}}}{81^{\frac{3}{4}}} = \frac{(\sqrt[4]{16})^3}{(\sqrt[4]{81})^3} = \frac{2^3}{3^3} = \frac{8}{27}$</p>
+                            <p><strong>12.</strong> $a^{\frac{2}{3}} \times a^{\frac{1}{6}} \div a^{\frac{1}{2}}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= a^{\frac{2}{3} + \frac{1}{6} - \frac{1}{2}}$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$= a^{\frac{4+1-3}{6}} = a^{\frac{2}{6}} = a^{\frac{1}{3}}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: การประมาณค่า (3 คะแนน)</h3>
+                        <ol start="13">
+                            <li>จงประมาณค่า $\sqrt{60}$ โดยให้อยู่ระหว่างจำนวนเต็มสองจำนวน และบอกว่าใกล้จำนวนใดมากกว่า</li>
+                            <li>จงปัดเศษ $3\sqrt{2} + \pi$ ให้เป็นทศนิยม 2 ตำแหน่ง (กำหนดให้ $\sqrt{2} \approx 1.414, \pi \approx 3.142$)</li>
+                            <li>จงเรียงจำนวนต่อไปนี้จากน้อยไปมาก: $\sqrt{15}, 3.8, \frac{15}{4}, \sqrt[3]{60}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+                            <p><strong>13.</strong> $7^2 = 49, 8^2 = 64$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;ดังนั้น $7 < \sqrt{60} < 8$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$60 - 49 = 11, 64 - 60 = 4$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$\sqrt{60}$ ใกล้ 8 มากกว่า</p>
+                            <p><strong>14.</strong> $3\sqrt{2} + \pi \approx 3(1.414) + 3.142$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;$\approx 4.242 + 3.142 = 7.384$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;ปัดทศนิยม 2 ตำแหน่ง: $7.38$</p>
+                            <p><strong>15.</strong> $\sqrt{15} \approx 3.873, 3.8 = 3.8, \frac{15}{4} = 3.75, \sqrt[3]{60} \approx 3.915$</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;เรียง: $\frac{15}{4} < 3.8 < \sqrt{15} < \sqrt[3]{60}$</p>
                         </div>
                     </div>
 

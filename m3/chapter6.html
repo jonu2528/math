@@ -71,7 +71,7 @@
                 <h1>บทที่ 6: สถิติและความน่าจะเป็น</h1>
                 
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ สถิติและความน่าจะเป็น ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.3</p>
+                    <p>บทนี้จะเรียนรู้เกี่ยวกับสถิติและความน่าจะเป็นในระดับที่ลึกขึ้น รวมถึงการนำเสนอข้อมูลด้วยกราฟและตาราง การวิเคราะห์การกระจายของข้อมูล ส่วนเบี่ยงเบนมาตรฐาน การคำนวณความน่าจะเป็น และการทดลองทางสถิติ ซึ่งเป็นความรู้พื้นฐานสำคัญในการวิเคราะห์ข้อมูลและการตัดสินใจ</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -91,24 +91,170 @@
                 <!-- Section 6.1 -->
                 <section id="section1">
                     <h2>6.1 การนำเสนอข้อมูล</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.1 การนำเสนอข้อมูล</p>
+                        <h4>การนำเสนอข้อมูล (Data Presentation)</h4>
+                        <p><strong>การนำเสนอข้อมูล</strong> คือ การแสดงข้อมูลในรูปแบบที่เข้าใจง่าย สื่อความหมายชัดเจน มีหลายรูปแบบ ได้แก่:</p>
+                        <ul>
+                            <li><strong>ตารางแจกแจงความถี่ (Frequency Table):</strong> ตารางที่แสดงข้อมูลและความถี่ของแต่ละข้อมูล</li>
+                            <li><strong>กราฟแท่ง (Bar Graph):</strong> แสดงข้อมูลด้วยแท่งสี่เหลี่ยม ใช้เปรียบเทียบข้อมูล</li>
+                            <li><strong>กราฟเส้น (Line Graph):</strong> แสดงการเปลี่ยนแปลงของข้อมูลตามเวลา</li>
+                            <li><strong>กราฟวงกลม (Pie Chart):</strong> แสดงส่วนประกอบของข้อมูลทั้งหมด</li>
+                            <li><strong>ฮิสโทแกรม (Histogram):</strong> กราฟแท่งที่แสดงการแจกแจงของข้อมูลต่อเนื่อง</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญในสถิติพื้นฐาน</h4>
+                        <p><strong>ความถี่สัมพัทธ์ (Relative Frequency):</strong></p>
+                        $$\text{ความถี่สัมพัทธ์} = \frac{\text{ความถี่ของข้อมูล}}{\text{ความถี่ทั้งหมด}}$$
+
+                        <p><strong>ความถี่สะสม (Cumulative Frequency):</strong></p>
+                        <p style="margin-left: 20px;">การรวมความถี่ตั้งแต่ข้อมูลแรกจนถึงข้อมูลนั้น</p>
+
+                        <p><strong>เปอร์เซ็นต์ (Percentage):</strong></p>
+                        $$\text{เปอร์เซ็นต์} = \text{ความถี่สัมพัทธ์} \times 100\%$$
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.1 การนำเสนอข้อมูล</p>
+                        <h4>ตัวอย่างที่ 1: ตารางแจกแจงความถี่</h4>
+                        <p><strong>โจทย์:</strong> คะแนนสอบของนักเรียน 20 คน มีดังนี้: 7, 8, 6, 9, 7, 8, 10, 7, 6, 8, 9, 7, 8, 10, 7, 9, 8, 7, 9, 8 จงสร้างตารางแจกแจงความถี่</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>นับความถี่ของแต่ละคะแนน:</p>
+                        <table style="margin: 10px 20px; border-collapse: collapse;">
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">คะแนน</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ความถี่</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ความถี่สัมพัทธ์</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">เปอร์เซ็นต์</th>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2/20 = 0.10</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10%</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6/20 = 0.30</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">30%</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">8</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6/20 = 0.30</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">30%</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">9</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4/20 = 0.20</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">20%</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2/20 = 0.10</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10%</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5; font-weight: bold;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">รวม</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">20</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">1.00</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">100%</td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.1 การนำเสนอข้อมูล</p>
+                        <h4>ตัวอย่างที่ 2: การหาความถี่สะสม</h4>
+                        <p><strong>โจทย์:</strong> จากตัวอย่างที่ 1 จงหาความถี่สะสมของแต่ละคะแนน</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <table style="margin: 10px 20px; border-collapse: collapse;">
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">คะแนน</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ความถี่</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ความถี่สะสม</th>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2 + 6 = 8</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">8</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">8 + 6 = 14</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">9</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">14 + 4 = 18</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">18 + 2 = 20</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การวิเคราะห์กราฟวงกลม</h4>
+                        <p><strong>โจทย์:</strong> นักเรียน 40 คน มีงานอดิเรก: อ่านหนังสือ 10 คน, ดูหนัง 12 คน, เล่นกีฬา 8 คน, ฟังเพลง 10 คน จงหาองศาของแต่ละส่วนในกราฟวงกลม</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>วงกลมมี 360° แบ่งตามสัดส่วนของแต่ละกิจกรรม:</p>
+                        <p>อ่านหนังสือ: $$\frac{10}{40} \times 360° = 90°$$</p>
+                        <p>ดูหนัง: $$\frac{12}{40} \times 360° = 108°$$</p>
+                        <p>เล่นกีฬา: $$\frac{8}{40} \times 360° = 72°$$</p>
+                        <p>ฟังเพลง: $$\frac{10}{40} \times 360° = 90°$$</p>
+                        <p><strong>ตอบ:</strong> อ่านหนังสือ 90°, ดูหนัง 108°, เล่นกีฬา 72°, ฟังเพลง 90°</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การแบ่งกลุ่มข้อมูล</h4>
+                        <p><strong>โจทย์:</strong> คะแนนสอบของนักเรียน 30 คน: 45, 67, 82, 56, 73, 88, 92, 51, 64, 78, 85, 70, 59, 81, 75, 63, 89, 72, 68, 55, 76, 83, 91, 60, 74, 86, 69, 77, 84, 65 จงแบ่งกลุ่มช่วงคะแนนทุก 10 คะแนน และสร้างตารางแจกแจงความถี่</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <table style="margin: 10px 20px; border-collapse: collapse;">
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">ช่วงคะแนน</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ความถี่</th>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">40-49</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">1</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">50-59</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">60-69</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">70-79</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">9</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">80-89</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">7</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">90-99</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5; font-weight: bold;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">รวม</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">30</td>
+                            </tr>
+                        </table>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -117,24 +263,85 @@
                 <!-- Section 6.2 -->
                 <section id="section2">
                     <h2>6.2 การกระจายของข้อมูล</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.2 การกระจายของข้อมูล</p>
+                        <h4>การกระจายของข้อมูล (Data Distribution)</h4>
+                        <p><strong>การกระจายของข้อมูล</strong> คือ การวัดว่าข้อมูลแต่ละตัวห่างจากค่ากลาง (ค่าเฉลี่ย) มากน้อยเพียงใด มีหน่วยวัดดังนี้:</p>
+                        <ul>
+                            <li><strong>พิสัย (Range):</strong> ความแตกต่างระหว่างค่าสูงสุดกับค่าต่ำสุด</li>
+                            <li><strong>ควอไทล์ (Quartile):</strong> ค่าที่แบ่งข้อมูลออกเป็น 4 ส่วนเท่าๆ กัน</li>
+                            <li><strong>พิสัยระหว่างควอไทล์ (Inter quartile Range - IQR):</strong> ระหว่าง Q₃ และ Q₁</li>
+                            <li><strong>ส่วนเบี่ยงเบนจากค่าเฉลี่ย (Deviation):</strong> ระยะห่างของแต่ละข้อมูลจากค่าเฉลี่ย</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรการวัดการกระจาย</h4>
+                        <p><strong>พิสัย (Range):</strong></p>
+                        $$R = \text{ค่าสูงสุด} - \text{ค่าต่ำสุด}$$
+
+                        <p><strong>ควอไทล์:</strong></p>
+                        <ul>
+                            <li>Q₁ (ควอไทล์ที่ 1): ค่ากลางของครึ่งล่าง</li>
+                            <li>Q₂ (ควอไทล์ที่ 2 หรือมัธยฐาน): ค่ากลางของข้อมูล</li>
+                            <li>Q₃ (ควอไทล์ที่ 3): ค่ากลางของครึ่งบน</li>
+                        </ul>
+
+                        <p><strong>พิสัยระหว่างควอไทล์:</strong></p>
+                        $$IQR = Q_3 - Q_1$$
+
+                        <p><strong>ส่วนเบี่ยงเบนจากค่าเฉลี่ย:</strong></p>
+                        $$\text{ส่วนเบี่ยงเบน} = x_i - \bar{x}$$
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.2 การกระจายของข้อมูล</p>
+                        <h4>ตัวอย่างที่ 1: การหาพิสัย</h4>
+                        <p><strong>โจทย์:</strong> คะแนนสอบของนักเรียน: 65, 72, 80, 55, 90, 75, 68, 85, 78, 82 จงหาพิสัย</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>1. หาค่าสูงสุดและค่าต่ำสุด:</p>
+                        <p style="margin-left: 20px;">ค่าสูงสุด = 90</p>
+                        <p style="margin-left: 20px;">ค่าต่ำสุด = 55</p>
+                        <p>2. คำนวณพิสัย:</p>
+                        $$R = 90 - 55 = 35$$
+                        <p><strong>ตอบ:</strong> พิสัย = 35 คะแนน</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.2 การกระจายของข้อมูล</p>
+                        <h4>ตัวอย่างที่ 2: การหาควอไทล์</h4>
+                        <p><strong>โจทย์:</strong> ข้อมูล: 5, 7, 8, 10, 12, 15, 18, 20, 22 จงหา Q₁, Q₂ และ Q₃</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>1. เรียงข้อมูลจากน้อยไปมาก (เรียงแล้ว): 5, 7, 8, 10, 12, 15, 18, 20, 22</p>
+                        <p>2. หา Q₂ (มัธยฐาน) - ตัวกลางของข้อมูล 9 ตัว:</p>
+                        $$Q_2 = 12$$ (ตัวที่ 5)
+                        <p>3. หา Q₁ - ค่ากลางของครึ่งล่าง (5, 7, 8, 10):</p>
+                        $$Q_1 = \frac{7 + 8}{2} = 7.5$$
+                        <p>4. หา Q₃ - ค่ากลางของครึ่งบน (15, 18, 20, 22):</p>
+                        $$Q_3 = \frac{18 + 20}{2} = 19$$
+                        <p><strong>ตอบ:</strong> Q₁ = 7.5, Q₂ = 12, Q₃ = 19</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การหาพิสัยระหว่างควอไทล์</h4>
+                        <p><strong>โจทย์:</strong> จากตัวอย่างที่ 2 จงหาพิสัยระหว่างควอไทล์ (IQR)</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จากตัวอย่างที่ 2: Q₁ = 7.5, Q₃ = 19</p>
+                        $$IQR = Q_3 - Q_1 = 19 - 7.5 = 11.5$$
+                        <p><strong>ตอบ:</strong> IQR = 11.5</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การหาส่วนเบี่ยงเบนจากค่าเฉลี่ย</h4>
+                        <p><strong>โจทย์:</strong> ข้อมูล: 10, 12, 15, 18, 20 จงหาส่วนเบี่ยงเบนของแต่ละข้อมูลจากค่าเฉลี่ย</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>1. หาค่าเฉลี่ย:</p>
+                        $$\bar{x} = \frac{10 + 12 + 15 + 18 + 20}{5} = \frac{75}{5} = 15$$
+                        <p>2. หาส่วนเบี่ยงเบนของแต่ละข้อมูล:</p>
+                        <p style="margin-left: 20px;">10 - 15 = -5</p>
+                        <p style="margin-left: 20px;">12 - 15 = -3</p>
+                        <p style="margin-left: 20px;">15 - 15 = 0</p>
+                        <p style="margin-left: 20px;">18 - 15 = 3</p>
+                        <p style="margin-left: 20px;">20 - 15 = 5</p>
+                        <p><strong>ตอบ:</strong> ส่วนเบี่ยงเบนคือ -5, -3, 0, 3, 5</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -143,24 +350,120 @@
                 <!-- Section 6.3 -->
                 <section id="section3">
                     <h2>6.3 ส่วนเบี่ยงเบนมาตรฐาน</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.3 ส่วนเบี่ยงเบนมาตรฐาน</p>
+                        <h4>ส่วนเบี่ยงเบนมาตรฐาน (Standard Deviation)</h4>
+                        <p><strong>ส่วนเบี่ยงเบนมาตรฐาน</strong> คือ การวัดความกระจายของข้อมูลจากค่าเฉลี่ย โดยบอกว่าข้อมูลกระจายตัวออกจากค่าเฉลี่ยมากน้อยเพียงใด</p>
+                        <ul>
+                            <li>ค่าส่วนเบี่ยงเบนมาตรฐานน้อย = ข้อมูลกระจายตัวน้อย (ใกล้ค่าเฉลี่ย)</li>
+                            <li>ค่าส่วนเบี่ยงเบนมาตรฐานมาก = ข้อมูลกระจายตัวมาก (ห่างจากค่าเฉลี่ย)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรส่วนเบี่ยงเบนมาตรฐาน</h4>
+                        <p><strong>1. ความแปรปรวน (Variance - σ² หรือ s²):</strong></p>
+                        $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n}$$
+                        <p>หรือ</p>
+                        $$s^2 = \frac{\sum x_i^2}{n} - \bar{x}^2$$
+
+                        <p><strong>2. ส่วนเบี่ยงเบนมาตรฐาน (Standard Deviation - σ หรือ s):</strong></p>
+                        $$s = \sqrt{s^2} = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n}}$$
+
+                        <p style="margin-left: 20px;">โดยที่:</p>
+                        <p style="margin-left: 40px;">$x_i$ = ข้อมูลแต่ละตัว</p>
+                        <p style="margin-left: 40px;">$\bar{x}$ = ค่าเฉลี่ย</p>
+                        <p style="margin-left: 40px;">$n$ = จำนวนข้อมูล</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.3 ส่วนเบี่ยงเบนมาตรฐาน</p>
+                        <h4>ตัวอย่างที่ 1: การหาส่วนเบี่ยงเบนมาตรฐาน (วิธีที่ 1)</h4>
+                        <p><strong>โจทย์:</strong> ข้อมูล: 4, 6, 8, 10, 12 จงหาส่วนเบี่ยงเบนมาตรฐาน</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>1. หาค่าเฉลี่ย:</p>
+                        $$\bar{x} = \frac{4 + 6 + 8 + 10 + 12}{5} = \frac{40}{5} = 8$$
+                        <p>2. หาส่วนเบี่ยงเบนของแต่ละข้อมูล:</p>
+                        <table style="margin: 10px 20px; border-collapse: collapse;">
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">$x_i$</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">$x_i - \bar{x}$</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">$(x_i - \bar{x})^2$</th>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">-4</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">16</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">6</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">-2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">8</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">0</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">0</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">10</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">12</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">16</td>
+                            </tr>
+                            <tr style="border: 1px solid #ddd; background-color: #f5f5f5; font-weight: bold;">
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">รวม</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">0</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">40</td>
+                            </tr>
+                        </table>
+                        <p>3. หาความแปรปรวน:</p>
+                        $$s^2 = \frac{40}{5} = 8$$
+                        <p>4. หาส่วนเบี่ยงเบนมาตรฐาน:</p>
+                        $$s = \sqrt{8} = 2.83$$
+                        <p><strong>ตอบ:</strong> ส่วนเบี่ยงเบนมาตรฐาน ≈ 2.83</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.3 ส่วนเบี่ยงเบนมาตรฐาน</p>
+                        <h4>ตัวอย่างที่ 2: การหาส่วนเบี่ยงเบนมาตรฐาน (วิธีที่ 2)</h4>
+                        <p><strong>โจทย์:</strong> ข้อมูล: 3, 5, 7 จงหาส่วนเบี่ยงเบนมาตรฐาน</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>1. หาค่าเฉลี่ย:</p>
+                        $$\bar{x} = \frac{3 + 5 + 7}{3} = \frac{15}{3} = 5$$
+                        <p>2. หา $\sum x_i^2$:</p>
+                        $$\sum x_i^2 = 3^2 + 5^2 + 7^2 = 9 + 25 + 49 = 83$$
+                        <p>3. หาความแปรปรวนโดยใช้สูตร:</p>
+                        $$s^2 = \frac{\sum x_i^2}{n} - \bar{x}^2 = \frac{83}{3} - 5^2 = 27.67 - 25 = 2.67$$
+                        <p>4. หาส่วนเบี่ยงเบนมาตรฐาน:</p>
+                        $$s = \sqrt{2.67} = 1.63$$
+                        <p><strong>ตอบ:</strong> ส่วนเบี่ยงเบนมาตรฐาน ≈ 1.63</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การเปรียบเทียบการกระจายของข้อมูล</h4>
+                        <p><strong>โจทย์:</strong> กลุ่ม A มีข้อมูล: 48, 50, 52 และกลุ่ม B มีข้อมูล: 30, 50, 70 ทั้งสองกลุ่มมีค่าเฉลี่ยเท่ากัน กลุ่มใดมีการกระจายมากกว่า</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p><strong>กลุ่ม A:</strong></p>
+                        <p>ค่าเฉลี่ย = $\frac{48 + 50 + 52}{3} = 50$</p>
+                        <p>$s^2 = \frac{(48-50)^2 + (50-50)^2 + (52-50)^2}{3} = \frac{4 + 0 + 4}{3} = 2.67$</p>
+                        <p>$s_A = \sqrt{2.67} = 1.63$</p>
+                        <p><strong>กลุ่ม B:</strong></p>
+                        <p>ค่าเฉลี่ย = $\frac{30 + 50 + 70}{3} = 50$</p>
+                        <p>$s^2 = \frac{(30-50)^2 + (50-50)^2 + (70-50)^2}{3} = \frac{400 + 0 + 400}{3} = 266.67$</p>
+                        <p>$s_B = \sqrt{266.67} = 16.33$</p>
+                        <p><strong>ตอบ:</strong> กลุ่ม B มีการกระจายมากกว่า (16.33 > 1.63)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การใช้ส่วนเบี่ยงเบนมาตรฐานในการวิเคราะห์</h4>
+                        <p><strong>โจทย์:</strong> คะแนนสอบมีค่าเฉลี่ย 70 และส่วนเบี่ยงเบนมาตรฐาน 5 นักเรียนคนหนึ่งได้ 80 คะแนน อยู่ห่างจากค่าเฉลี่ยกี่ส่วนเบี่ยงเบนมาตรฐาน</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>คำนวณคะแนนมาตรฐาน (z-score):</p>
+                        $$z = \frac{x - \bar{x}}{s} = \frac{80 - 70}{5} = \frac{10}{5} = 2$$
+                        <p><strong>ตอบ:</strong> อยู่ห่างจากค่าเฉลี่ย 2 ส่วนเบี่ยงเบนมาตรฐาน (สูงกว่าค่าเฉลี่ย)</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -169,24 +472,69 @@
                 <!-- Section 6.4 -->
                 <section id="section4">
                     <h2>6.4 ความน่าจะเป็น</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.4 ความน่าจะเป็น</p>
+                        <h4>ความน่าจะเป็น (Probability)</h4>
+                        <p><strong>ความน่าจะเป็น</strong> คือ การวัดโอกาสที่เหตุการณ์หนึ่งจะเกิดขึ้น มีค่าระหว่าง 0 ถึง 1</p>
+                        <ul>
+                            <li>ความน่าจะเป็น = 0 หมายถึง เหตุการณ์นั้นเป็นไปไม่ได้</li>
+                            <li>ความน่าจะเป็น = 1 หมายถึง เหตุการณ์นั้นเกิดขึ้นแน่นอน</li>
+                            <li>ความน่าจะเป็น = 0.5 หมายถึง มีโอกาสเกิด 50%</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรความน่าจะเป็น</h4>
+                        <p><strong>ความน่าจะเป็นของเหตุการณ์ A:</strong></p>
+                        $$P(A) = \frac{\text{จำนวนผลลัพธ์ที่เป็นไปได้ของ A}}{\text{จำนวนผลลัพธ์ที่เป็นไปได้ทั้งหมด}}$$
+
+                        <p><strong>กฎสำคัญ:</strong></p>
+                        <ul>
+                            <li>$0 \leq P(A) \leq 1$</li>
+                            <li>$P(A) + P(A') = 1$ โดย A' คือ เหตุการณ์ตรงข้าม</li>
+                            <li>$P(\text{เหตุการณ์แน่นอน}) = 1$</li>
+                            <li>$P(\text{เหตุการณ์เป็นไปไม่ได้}) = 0$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.4 ความน่าจะเป็น</p>
+                        <h4>ตัวอย่างที่ 1: ความน่าจะเป็นจากลูกเต๋า</h4>
+                        <p><strong>โจทย์:</strong> ทอดลูกเต๋า 1 ลูก จงหาความน่าจะเป็นที่จะได้หน้า 5</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ผลลัพธ์ที่เป็นไปได้ทั้งหมด = 6 (ได้หน้า 1, 2, 3, 4, 5, 6)</p>
+                        <p>ผลลัพธ์ที่ต้องการ (หน้า 5) = 1</p>
+                        $$P(\text{หน้า 5}) = \frac{1}{6}$$
+                        <p><strong>ตอบ:</strong> $\frac{1}{6}$ หรือ ประมาณ 0.167 หรือ 16.7%</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.4 ความน่าจะเป็น</p>
+                        <h4>ตัวอย่างที่ 2: ความน่าจะเป็นจากไพ่</h4>
+                        <p><strong>โจทย์:</strong> จับไพ่ 1 ใบจากสำรับ 52 ใบ จงหาความน่าจะเป็นที่จะได้ไพ่โพธิ์</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ไพ่ทั้งหมด = 52 ใบ</p>
+                        <p>ไพ่โพธิ์ = 13 ใบ (A, 2, 3, ..., 10, J, Q, K ของโพธิ์)</p>
+                        $$P(\text{ไพ่โพธิ์}) = \frac{13}{52} = \frac{1}{4}$$
+                        <p><strong>ตอบ:</strong> $\frac{1}{4}$ หรือ 0.25 หรือ 25%</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: เหตุการณ์ตรงข้าม</h4>
+                        <p><strong>โจทย์:</strong> ความน่าจะเป็นที่ฝนจะตกคือ 0.3 จงหาความน่าจะเป็นที่ฝนไม่ตก</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ให้ A = เหตุการณ์ที่ฝนตก, P(A) = 0.3</p>
+                        <p>A' = เหตุการณ์ที่ฝนไม่ตก</p>
+                        $$P(A') = 1 - P(A) = 1 - 0.3 = 0.7$$
+                        <p><strong>ตอบ:</strong> 0.7 หรือ 70%</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ความน่าจะเป็นจากตาราง</h4>
+                        <p><strong>โจทย์:</strong> สำรวจนักเรียน 100 คน พบว่า ชอบคณิต 40 คน, ชอบวิทย์ 35 คน, ชอบอังกฤษ 25 คน ถ้าสุ่มนักเรียน 1 คน จงหาความน่าจะเป็นที่จะได้นักเรียนที่ชอบคณิต</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>นักเรียนทั้งหมด = 100 คน</p>
+                        <p>นักเรียนที่ชอบคณิต = 40 คน</p>
+                        $$P(\text{ชอบคณิต}) = \frac{40}{100} = \frac{2}{5} = 0.4$$
+                        <p><strong>ตอบ:</strong> 0.4 หรือ 40%</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -195,24 +543,68 @@
                 <!-- Section 6.5 -->
                 <section id="section5">
                     <h2>6.5 เหตุการณ์ร่วม</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.5 เหตุการณ์ร่วม</p>
+                        <h4>เหตุการณ์ร่วม (Compound Events)</h4>
+                        <p><strong>เหตุการณ์ร่วม</strong> คือ เหตุการณ์ที่เกิดจากการรวมของเหตุการณ์ตั้งแต่ 2 เหตุการณ์ขึ้นไป มี 2 ประเภทหลัก:</p>
+                        <ul>
+                            <li><strong>เหตุการณ์อิสระ (Independent Events):</strong> เหตุการณ์ที่ไม่มีผลต่อกัน</li>
+                            <li><strong>เหตุการณ์ไม่อิสระ (Dependent Events):</strong> เหตุการณ์ที่มีผลต่อกัน</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรความน่าจะเป็นเหตุการณ์ร่วม</h4>
+                        <p><strong>กฎการคูณ (สำหรับเหตุการณ์อิสระ):</strong></p>
+                        $$P(A \text{ และ } B) = P(A) \times P(B)$$
+
+                        <p><strong>กฎการบวก (สำหรับเหตุการณ์ที่ไม่เกิดพร้อมกัน):</strong></p>
+                        $$P(A \text{ หรือ } B) = P(A) + P(B)$$
+
+                        <p><strong>กฎการบวกทั่วไป:</strong></p>
+                        $$P(A \text{ หรือ } B) = P(A) + P(B) - P(A \text{ และ } B)$$
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.5 เหตุการณ์ร่วม</p>
+                        <h4>ตัวอย่างที่ 1: เหตุการณ์อิสระ (ทอดเหรียญ)</h4>
+                        <p><strong>โจทย์:</strong> ทอดเหรียญ 2 ครั้ง จงหาความน่าจะเป็นที่จะได้หัวทั้ง 2 ครั้ง</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ครั้งที่ 1: P(หัว) = $\frac{1}{2}$</p>
+                        <p>ครั้งที่ 2: P(หัว) = $\frac{1}{2}$ (อิสระจากครั้งที่ 1)</p>
+                        $$P(\text{หัวทั้ง 2 ครั้ง}) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$$
+                        <p><strong>ตอบ:</strong> $\frac{1}{4}$ หรือ 0.25 หรือ 25%</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.5 เหตุการณ์ร่วม</p>
+                        <h4>ตัวอย่างที่ 2: กฎการบวก</h4>
+                        <p><strong>โจทย์:</strong> ทอดลูกเต๋า 1 ลูก จงหาความน่าจะเป็นที่จะได้หน้า 2 หรือหน้า 5</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>P(หน้า 2) = $\frac{1}{6}$</p>
+                        <p>P(หน้า 5) = $\frac{1}{6}$</p>
+                        <p>เนื่องจากไม่สามารถเกิดพร้อมกัน:</p>
+                        $$P(\text{หน้า 2 หรือ 5}) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$$
+                        <p><strong>ตอบ:</strong> $\frac{1}{3}$ หรือ ประมาณ 0.333 หรือ 33.3%</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: เหตุการณ์ไม่อิสระ</h4>
+                        <p><strong>โจทย์:</strong> กล่องมีลูกบอล 5 ลูก (แดง 3 ลูก, น้ำเงิน 2 ลูก) หยิบลูกบอล 2 ลูกโดยไม่ใส่กลับ จงหาความน่าจะเป็นที่จะได้ลูกบอลสีแดงทั้ง 2 ลูก</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ลูกที่ 1: P(แดง) = $\frac{3}{5}$</p>
+                        <p>ลูกที่ 2: เหลือ 4 ลูก (แดง 2, น้ำเงิน 2)</p>
+                        <p style="margin-left: 20px;">P(แดง|ลูกแรกแดง) = $\frac{2}{4} = \frac{1}{2}$</p>
+                        $$P(\text{แดงทั้ง 2}) = \frac{3}{5} \times \frac{2}{4} = \frac{6}{20} = \frac{3}{10}$$
+                        <p><strong>ตอบ:</strong> $\frac{3}{10}$ หรือ 0.3 หรือ 30%</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การใช้แผนภาพต้นไม้</h4>
+                        <p><strong>โจทย์:</strong> ทอดเหรียญ 2 ครั้ง จงหาผลลัพธ์ที่เป็นไปได้ทั้งหมดและความน่าจะเป็นที่จะได้หัวอย่างน้อย 1 ครั้ง</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ผลลัพธ์ที่เป็นไปได้: HH, HT, TH, TT (H=หัว, T=ก้อย)</p>
+                        <p>ผลลัพธ์ที่มีหัวอย่างน้อย 1 ครั้ง: HH, HT, TH (3 แบบ)</p>
+                        $$P(\text{หัวอย่างน้อย 1 ครั้ง}) = \frac{3}{4}$$
+                        <p><strong>ตอบ:</strong> $\frac{3}{4}$ หรือ 0.75 หรือ 75%</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -221,24 +613,69 @@
                 <!-- Section 6.6 -->
                 <section id="section6">
                     <h2>6.6 การทดลองและตัวอย่าง</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.6 การทดลองและตัวอย่าง</p>
+                        <h4>การทดลองและตัวอย่าง (Experiments and Sampling)</h4>
+                        <p><strong>การทดลอง</strong> คือ กระบวนการที่ทำเพื่อสังเกตผลลัพธ์</p>
+                        <p><strong>การสุ่มตัวอย่าง</strong> คือ การเลือกข้อมูลบางส่วนจากประชากรทั้งหมด มีหลายวิธี:</p>
+                        <ul>
+                            <li><strong>การสุ่มแบบง่าย (Simple Random Sampling):</strong> ทุกคนมีโอกาสถูกเลือกเท่ากัน</li>
+                            <li><strong>การสุ่มแบบมีระบบ (Systematic Sampling):</strong> เลือกตามช่วงที่กำหนด</li>
+                            <li><strong>การสุ่มแบบแบ่งชั้น (Stratified Sampling):</strong> แบ่งกลุ่มแล้วสุ่มจากแต่ละกลุ่ม</li>
+                            <li><strong>การสุ่มแบบกลุ่ม (Cluster Sampling):</strong> สุ่มกลุ่มแล้วเก็บข้อมูลทั้งกลุ่ม</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>แนวคิดสำคัญ</h4>
+                        <p><strong>ประชากร (Population):</strong> ข้อมูลทั้งหมดที่สนใจศึกษา</p>
+                        <p><strong>ตัวอย่าง (Sample):</strong> ข้อมูลบางส่วนที่เลือกมาจากประชากร</p>
+                        <p><strong>ขนาดตัวอย่าง (Sample Size):</strong> จำนวนข้อมูลในตัวอย่าง</p>
+                        <p><strong>ความเอนเอียง (Bias):</strong> ความไม่เป็นกลางในการเก็บข้อมูล</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.6 การทดลองและตัวอย่าง</p>
+                        <h4>ตัวอย่างที่ 1: การทดลองและผลลัพธ์</h4>
+                        <p><strong>โจทย์:</strong> ทอดลูกเต๋า 2 ลูก จงหาจำนวนผลลัพธ์ที่เป็นไปได้ทั้งหมด และความน่าจะเป็นที่ผลรวมเท่ากับ 7</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>1. จำนวนผลลัพธ์ทั้งหมด = 6 × 6 = 36 แบบ</p>
+                        <p>2. ผลรวมเท่ากับ 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 แบบ</p>
+                        $$P(\text{ผลรวม 7}) = \frac{6}{36} = \frac{1}{6}$$
+                        <p><strong>ตอบ:</strong> มี 36 ผลลัพธ์ที่เป็นไปได้, ความน่าจะเป็น = $\frac{1}{6}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.6 การทดลองและตัวอย่าง</p>
+                        <h4>ตัวอย่างที่ 2: การสุ่มตัวอย่างแบบง่าย</h4>
+                        <p><strong>โจทย์:</strong> โรงเรียนมีนักเรียน 1,200 คน ต้องการสำรวจความพึงพอใจโดยสุ่มตัวอย่าง 100 คน อธิบายวิธีการสุ่มแบบง่าย</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>1. กำหนดหมายเลขให้นักเรียนทุกคน 1-1,200</p>
+                        <p>2. ใช้ตารางเลขสุ่มหรือคอมพิวเตอร์สุ่มเลข 100 หมายเลข</p>
+                        <p>3. นักเรียนที่ถูกสุ่มเลือกจะเป็นตัวอย่าง</p>
+                        <p><strong>ข้อดี:</strong> ทุกคนมีโอกาสถูกเลือกเท่ากัน ($\frac{100}{1200} = \frac{1}{12}$)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การระบุความเอนเอียง</h4>
+                        <p><strong>โจทย์:</strong> ต้องการสำรวจความคิดเห็นเกี่ยวกับอาหารกลางวันของโรงเรียน โดยถามนักเรียนที่มารับอาหารในช่วงเวลา 12.00-12.30 น. วิธีนี้มีความเอนเอียงหรือไม่</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>วิธีนี้<strong>มีความเอนเอียง</strong> เพราะ:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>ไม่ครอบคลุมนักเรียนที่มารับอาหารช่วงเวลาอื่น</li>
+                            <li>นักเรียนบางคนอาจไม่รับอาหารเลย</li>
+                            <li>ตัวอย่างไม่เป็นตัวแทนของประชากรทั้งหมด</li>
+                        </ul>
+                        <p><strong>แนะนำ:</strong> ควรสุ่มตัวอย่างจากนักเรียนทุกคนในโรงเรียน</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประมาณค่าจากตัวอย่าง</h4>
+                        <p><strong>โจทย์:</strong> สุ่มตรวจสอบสินค้า 50 ชิ้น พบว่ามีของเสีย 4 ชิ้น ถ้าผลิตสินค้า 10,000 ชิ้น คาดว่าจะมีของเสียกี่ชิ้น</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>1. อัตราส่วนของของเสียจากตัวอย่าง:</p>
+                        $$\frac{4}{50} = \frac{2}{25} = 0.08 = 8\%$$
+                        <p>2. ประมาณของเสียในสินค้า 10,000 ชิ้น:</p>
+                        $$10{,}000 \times 0.08 = 800 \text{ ชิ้น}$$
+                        <p><strong>ตอบ:</strong> คาดว่าจะมีของเสียประมาณ 800 ชิ้น</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -247,74 +684,129 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 6</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: การนำเสนอข้อมูล (3 คะแนน)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>คะแนนสอบของนักเรียน 15 คน: 6, 7, 8, 7, 9, 8, 7, 10, 8, 7, 9, 8, 6, 9, 8 จงสร้างตารางแจกแจงความถี่</li>
+                            <li>จากข้อ 1 จงหาความถี่สัมพัทธ์และเปอร์เซ็นต์ของคะแนน 8</li>
+                            <li>นักเรียน 60 คน มีงานอดิเรก: วาดรูป 15 คน, เล่นดนตรี 20 คน, กีฬา 25 คน จงหาองศาของแต่ละส่วนในกราฟวงกลม</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+                            <p><strong>1.</strong> ตารางแจกแจงความถี่:<br>
+                            คะแนน 6: ความถี่ 2<br>
+                            คะแนน 7: ความถี่ 4<br>
+                            คะแนน 8: ความถี่ 5<br>
+                            คะแนน 9: ความถี่ 3<br>
+                            คะแนน 10: ความถี่ 1<br>
+                            รวม: 15 คน</p>
+
+                            <p><strong>2.</strong> ความถี่สัมพัทธ์ของคะแนน 8 = $$\frac{5}{15} = \frac{1}{3}$$<br>
+                            เปอร์เซ็นต์ = $$\frac{1}{3} \times 100\% = 33.33\%$$<br>
+                            <strong>ตอบ: ความถี่สัมพัทธ์ = 1/3, เปอร์เซ็นต์ = 33.33%</strong></p>
+
+                            <p><strong>3.</strong> วาดรูป: $$\frac{15}{60} \times 360° = 90°$$<br>
+                            เล่นดนตรี: $$\frac{20}{60} \times 360° = 120°$$<br>
+                            กีฬา: $$\frac{25}{60} \times 360° = 150°$$<br>
+                            <strong>ตอบ: วาดรูป 90°, เล่นดนตรี 120°, กีฬา 150°</strong></p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การกระจายของข้อมูล (3 คะแนน)</h3>
+                        <ol start="4">
+                            <li>ข้อมูล: 12, 15, 18, 22, 25, 30, 35 จงหาพิสัย</li>
+                            <li>ข้อมูล: 3, 5, 7, 9, 11, 13, 15, 17, 19 จงหา Q₁, Q₂ และ Q₃</li>
+                            <li>จากข้อ 5 จงหาพิสัยระหว่างควอไทล์ (IQR)</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+                            <p><strong>4.</strong> ค่าสูงสุด = 35, ค่าต่ำสุด = 12<br>
+                            พิสัย = 35 - 12 = 23<br>
+                            <strong>ตอบ: พิสัย = 23</strong></p>
+
+                            <p><strong>5.</strong> ข้อมูลเรียงแล้ว: 3, 5, 7, 9, 11, 13, 15, 17, 19<br>
+                            Q₂ (มัธยฐาน) = 11 (ตัวที่ 5)<br>
+                            Q₁ (ครึ่งล่าง: 3, 5, 7, 9) = $$\frac{5+7}{2} = 6$$<br>
+                            Q₃ (ครึ่งบน: 13, 15, 17, 19) = $$\frac{15+17}{2} = 16$$<br>
+                            <strong>ตอบ: Q₁ = 6, Q₂ = 11, Q₃ = 16</strong></p>
+
+                            <p><strong>6.</strong> IQR = Q₃ - Q₁ = 16 - 6 = 10<br>
+                            <strong>ตอบ: IQR = 10</strong></p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: ส่วนเบี่ยงเบนมาตรฐาน (3 คะแนน)</h3>
+                        <ol start="7">
+                            <li>ข้อมูล: 2, 4, 6, 8, 10 จงหาค่าเฉลี่ย</li>
+                            <li>จากข้อ 7 จงหาความแปรปรวน</li>
+                            <li>จากข้อ 8 จงหาส่วนเบี่ยงเบนมาตรฐาน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+                            <p><strong>7.</strong> $$\bar{x} = \frac{2+4+6+8+10}{5} = \frac{30}{5} = 6$$<br>
+                            <strong>ตอบ: ค่าเฉลี่ย = 6</strong></p>
+
+                            <p><strong>8.</strong> $$s^2 = \frac{(2-6)^2 + (4-6)^2 + (6-6)^2 + (8-6)^2 + (10-6)^2}{5}$$<br>
+                            $$= \frac{16 + 4 + 0 + 4 + 16}{5} = \frac{40}{5} = 8$$<br>
+                            <strong>ตอบ: ความแปรปรวน = 8</strong></p>
+
+                            <p><strong>9.</strong> $$s = \sqrt{8} = 2.83$$<br>
+                            <strong>ตอบ: ส่วนเบี่ยงเบนมาตรฐาน ≈ 2.83</strong></p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: ความน่าจะเป็น (3 คะแนน)</h3>
+                        <ol start="10">
+                            <li>ทอดลูกเต๋า 1 ลูก จงหาความน่าจะเป็นที่จะได้หน้าเลขคู่</li>
+                            <li>จับไพ่ 1 ใบจากสำรับ 52 ใบ จงหาความน่าจะเป็นที่จะได้ไพ่ A</li>
+                            <li>ความน่าจะเป็นที่นักเรียนคนหนึ่งสอบผ่านคือ 0.75 จงหาความน่าจะเป็นที่สอบไม่ผ่าน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+                            <p><strong>10.</strong> หน้าเลขคู่ = 2, 4, 6 (มี 3 หน้า)<br>
+                            $$P(\text{เลขคู่}) = \frac{3}{6} = \frac{1}{2}$$<br>
+                            <strong>ตอบ: 1/2 หรือ 0.5 หรือ 50%</strong></p>
+
+                            <p><strong>11.</strong> ไพ่ A มี 4 ใบ (A โพธิ์, ข้าวหลามตัด, เพชร, ดอกจิก)<br>
+                            $$P(\text{ไพ่ A}) = \frac{4}{52} = \frac{1}{13}$$<br>
+                            <strong>ตอบ: 1/13 หรือ ≈ 0.077 หรือ 7.7%</strong></p>
+
+                            <p><strong>12.</strong> P(สอบไม่ผ่าน) = 1 - P(สอบผ่าน)<br>
+                            = 1 - 0.75 = 0.25<br>
+                            <strong>ตอบ: 0.25 หรือ 25%</strong></p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: เหตุการณ์ร่วมและการทดลอง (3 คะแนน)</h3>
+                        <ol start="13">
+                            <li>ทอดเหรียญ 3 ครั้ง จงหาความน่าจะเป็นที่จะได้หัวทั้ง 3 ครั้ง</li>
+                            <li>ทอดลูกเต๋า 1 ลูก จงหาความน่าจะเป็นที่จะได้หน้า 3 หรือหน้า 6</li>
+                            <li>กล่องมีลูกบอล 4 ลูก (แดง 2 ลูก, เขียว 2 ลูก) หยิบ 2 ลูกโดยไม่ใส่กลับ จงหาความน่าจะเป็นที่จะได้ลูกบอลสีเดียวกัน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+                            <p><strong>13.</strong> P(หัว) ในแต่ละครั้ง = $$\frac{1}{2}$$<br>
+                            P(หัวทั้ง 3 ครั้ง) = $$\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}$$<br>
+                            <strong>ตอบ: 1/8 หรือ 0.125 หรือ 12.5%</strong></p>
+
+                            <p><strong>14.</strong> P(หน้า 3) = $$\frac{1}{6}$$, P(หน้า 6) = $$\frac{1}{6}$$<br>
+                            P(หน้า 3 หรือ 6) = $$\frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$$<br>
+                            <strong>ตอบ: 1/3 หรือ ≈ 0.333 หรือ 33.3%</strong></p>
+
+                            <p><strong>15.</strong> P(แดงทั้ง 2) = $$\frac{2}{4} \times \frac{1}{3} = \frac{2}{12} = \frac{1}{6}$$<br>
+                            P(เขียวทั้ง 2) = $$\frac{2}{4} \times \frac{1}{3} = \frac{2}{12} = \frac{1}{6}$$<br>
+                            P(สีเดียวกัน) = $$\frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$$<br>
+                            <strong>ตอบ: 1/3 หรือ ≈ 0.333 หรือ 33.3%</strong></p>
                         </div>
                     </div>
 
