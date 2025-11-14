@@ -123,6 +123,19 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
 
+    // Toggle answer function for exercises
+    window.toggleAnswer = function(answerId) {
+        const answerDiv = document.getElementById(answerId);
+        if (answerDiv) {
+            if (answerDiv.style.display === 'none' || answerDiv.style.display === '') {
+                answerDiv.style.display = 'block';
+                answerDiv.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                answerDiv.style.display = 'none';
+            }
+        }
+    };
+
     // Print button functionality (if exists)
     const printButtons = document.querySelectorAll('.print-btn');
     printButtons.forEach(btn => {

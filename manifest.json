@@ -1,0 +1,89 @@
+{
+  "name": "คณิตศาสตร์มัธยม ม.1-6",
+  "short_name": "คณิตมัธยม",
+  "description": "เว็บไซต์ให้ความรู้คณิตศาสตร์ระดับมัธยมศึกษาปีที่ 1-6 อย่างครบถ้วน พร้อมตัวอย่างและแบบฝึกหัด",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#667eea",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "th",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icons/icon-72x72.svg",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96x96.svg",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128x128.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144x144.svg",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152x152.svg",
+      "sizes": "152x152",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384x384.svg",
+      "sizes": "384x384",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "mathematics"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "ม.1",
+      "short_name": "ม.1",
+      "description": "คณิตศาสตร์ ม.1",
+      "url": "/m1.html",
+      "icons": [{ "src": "icons/icon-96x96.svg", "sizes": "96x96", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "ม.2",
+      "short_name": "ม.2",
+      "description": "คณิตศาสตร์ ม.2",
+      "url": "/m2.html",
+      "icons": [{ "src": "icons/icon-96x96.svg", "sizes": "96x96", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "ม.3",
+      "short_name": "ม.3",
+      "description": "คณิตศาสตร์ ม.3",
+      "url": "/m3.html",
+      "icons": [{ "src": "icons/icon-96x96.svg", "sizes": "96x96", "type": "image/svg+xml" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
