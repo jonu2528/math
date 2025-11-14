@@ -70,7 +70,7 @@
                 <h1>บทที่ 6: ตรีโกณมิติ</h1>
                 
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ ตรีโกณมิติ ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.4</p>
+                    <p>ตรีโกณมิติ (Trigonometry) เป็นศาสตร์ที่ศึกษาความสัมพันธ์ระหว่างมุมและด้านของสามเหลี่ยม โดยเฉพาะสามเหลี่ยมมุมฉาก บทนี้จะเรียนรู้เกี่ยวกับอัตราส่วนตรีโกณมิติพื้นฐาน การแก้สามเหลี่ยม กราฟของฟังก์ชันตรีโกณมิติ และเอกลักษณ์ตรีโกณมิติ ซึ่งมีประโยชน์ในหลายสาขาวิชา</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,74 @@
                 <!-- Section 6.1 -->
                 <section id="section1">
                     <h2>6.1 อัตราส่วนตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.1 อัตราส่วนตรีโกณมิติ</p>
+                        <h4>อัตราส่วนตรีโกณมิติในสามเหลี่ยมมุมฉาก</h4>
+                        <p>ในสามเหลี่ยมมุมฉากที่มีมุม $\theta$ ประกอบด้วย:</p>
+                        <ul>
+                            <li><strong>ด้านตรงข้ามมุมฉาก (hypotenuse)</strong> - ด้านที่ยาวที่สุด</li>
+                            <li><strong>ด้านตรงข้ามมุม $\theta$ (opposite)</strong></li>
+                            <li><strong>ด้านประชิดมุม $\theta$ (adjacent)</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>อัตราส่วนตรีโกณมิติ 6 ประการ</h4>
+                        <p><strong>1. ไซน์ (sine):</strong> $\sin \theta = \frac{\text{ตรงข้าม}}{\text{ตรงข้ามมุมฉาก}} = \frac{opposite}{hypotenuse}$</p>
+                        <p><strong>2. โคไซน์ (cosine):</strong> $\cos \theta = \frac{\text{ประชิด}}{\text{ตรงข้ามมุมฉาก}} = \frac{adjacent}{hypotenuse}$</p>
+                        <p><strong>3. แทนเจนต์ (tangent):</strong> $\tan \theta = \frac{\text{ตรงข้าม}}{\text{ประชิด}} = \frac{opposite}{adjacent}$</p>
+                        <p><strong>4. โคแทนเจนต์ (cotangent):</strong> $\cot \theta = \frac{1}{\tan \theta} = \frac{\text{ประชิด}}{\text{ตรงข้าม}}$</p>
+                        <p><strong>5. ซีแคนต์ (secant):</strong> $\sec \theta = \frac{1}{\cos \theta} = \frac{\text{ตรงข้ามมุมฉาก}}{\text{ประชิด}}$</p>
+                        <p><strong>6. โคซีแคนต์ (cosecant):</strong> $\csc \theta = \frac{1}{\sin \theta} = \frac{\text{ตรงข้ามมุมฉาก}}{\text{ตรงข้าม}}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.1 อัตราส่วนตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: หาอัตราส่วนตรีโกณมิติ</h4>
+                        <p><strong>โจทย์:</strong> ในสามเหลี่ยมมุมฉาก $ABC$ มุม $C = 90°$ ถ้า $AB = 13$ cm, $BC = 5$ cm จงหา $\sin A$, $\cos A$ และ $\tan A$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>หา $AC$ จากทฤษฎีบทพีทาโกรัส:</p>
+                        <p>$$AC^2 = AB^2 - BC^2 = 13^2 - 5^2 = 169 - 25 = 144$$</p>
+                        <p>$$AC = 12 \text{ cm}$$</p>
+                        <p>สำหรับมุม $A$: ด้านตรงข้าม = $BC = 5$, ด้านประชิด = $AC = 12$, ด้านตรงข้ามมุมฉาก = $AB = 13$</p>
+                        <p>$$\sin A = \frac{BC}{AB} = \frac{5}{13}$$</p>
+                        <p>$$\cos A = \frac{AC}{AB} = \frac{12}{13}$$</p>
+                        <p>$$\tan A = \frac{BC}{AC} = \frac{5}{12}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.1 อัตราส่วนตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: หาค่าที่ไม่ทราบ</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\sin \theta = \frac{3}{5}$ และ $\theta$ เป็นมุมแหลม จงหา $\cos \theta$ และ $\tan \theta$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ให้ ด้านตรงข้าม = $3k$, ด้านตรงข้ามมุมฉาก = $5k$</p>
+                        <p>หาด้านประชิดจากทฤษฎีบทพีทาโกรัส:</p>
+                        <p>$$\text{ประชิด}^2 = (5k)^2 - (3k)^2 = 25k^2 - 9k^2 = 16k^2$$</p>
+                        <p>$$\text{ประชิด} = 4k$$</p>
+                        <p>$$\cos \theta = \frac{\text{ประชิด}}{\text{ตรงข้ามมุมฉาก}} = \frac{4k}{5k} = \frac{4}{5}$$</p>
+                        <p>$$\tan \theta = \frac{\text{ตรงข้าม}}{\text{ประชิด}} = \frac{3k}{4k} = \frac{3}{4}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: ค่าตรีโกณมิติของมุมพิเศษ</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่า $\sin 45°$, $\cos 45°$ และ $\tan 45°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ในสามเหลี่ยมมุมฉากหน้าจั่วที่มีมุม $45°-45°-90°$</p>
+                        <p>ถ้าด้านประชิด = ด้านตรงข้าม = $1$</p>
+                        <p>ด้านตรงข้ามมุมฉาก = $\sqrt{1^2 + 1^2} = \sqrt{2}$</p>
+                        <p>$$\sin 45° = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$</p>
+                        <p>$$\cos 45° = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$</p>
+                        <p>$$\tan 45° = \frac{1}{1} = 1$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ตารางค่าตรีโกณมิติของมุมพิเศษ</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่า $\sin 30° + \cos 60° + \tan 30°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จากตารางค่ามุมพิเศษ:</p>
+                        <p>$$\sin 30° = \frac{1}{2}$$</p>
+                        <p>$$\cos 60° = \frac{1}{2}$$</p>
+                        <p>$$\tan 30° = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$$</p>
+                        <p>$$\sin 30° + \cos 60° + \tan 30° = \frac{1}{2} + \frac{1}{2} + \frac{\sqrt{3}}{3}$$</p>
+                        <p>$$= 1 + \frac{\sqrt{3}}{3} = \frac{3 + \sqrt{3}}{3}$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +166,91 @@
                 <!-- Section 6.2 -->
                 <section id="section2">
                     <h2>6.2 การหาค่าอัตราส่วน</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.2 การหาค่าอัตราส่วน</p>
+                        <h4>ตารางค่าตรีโกณมิติของมุมพิเศษ</h4>
+                        <p>มุมพิเศษที่ควรจำคือ $0°, 30°, 45°, 60°, 90°$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>ค่าตรีโกณมิติของมุมพิเศษ</h4>
+                        <table style="width:100%; border-collapse: collapse; text-align: center;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">มุม</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sin$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\cos$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\tan$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0°$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$30°$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{1}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{3}$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$45°$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{2}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{2}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$60°$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{1}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\sqrt{3}$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$90°$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ไม่นิยาม</td>
+                            </tr>
+                        </table>
+                        <p><strong>วิธีจำ:</strong> สังเกตว่า $\sin 30° = \cos 60°$ และ $\sin 60° = \cos 30°$ (มุมเสริม)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.2 การหาค่าอัตราส่วน</p>
+                        <h4>ตัวอย่างที่ 1: การใช้ตาราง</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่า $2\sin 30° + 3\cos 60° - \tan 45°$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$2\sin 30° + 3\cos 60° - \tan 45°$$</p>
+                        <p>$$= 2 \times \frac{1}{2} + 3 \times \frac{1}{2} - 1$$</p>
+                        <p>$$= 1 + \frac{3}{2} - 1$$</p>
+                        <p>$$= \frac{3}{2}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.2 การหาค่าอัตราส่วน</p>
+                        <h4>ตัวอย่างที่ 2: หาค่าจากเครื่องคิดเลข</h4>
+                        <p><strong>โจทย์:</strong> ใช้เครื่องคิดเลขหาค่า $\sin 37°$ (ปัดเป็น 4 ตำแหน่ง)</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ตรวจสอบว่าเครื่องคิดเลขอยู่ในโหมด DEG (องศา)</p>
+                        <p>กด: sin 37 =</p>
+                        <p>$$\sin 37° \approx 0.6018$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หามุมจากค่าตรีโกณมิติ</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\sin \theta = 0.5$ และ $0° < \theta < 90°$ จงหา $\theta$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จากตาราง $\sin 30° = \frac{1}{2} = 0.5$</p>
+                        <p>ดังนั้น $\theta = 30°$</p>
+                        <p>(หรือใช้ $\sin^{-1}(0.5)$ บนเครื่องคิดเลข)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\cos A = \frac{\sqrt{3}}{2}$ และ $A$ เป็นมุมแหลม จงหา $\sin A$ และ $\tan A$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จากตาราง $\cos 30° = \frac{\sqrt{3}}{2}$ ดังนั้น $A = 30°$</p>
+                        <p>$$\sin A = \sin 30° = \frac{1}{2}$$</p>
+                        <p>$$\tan A = \tan 30° = \frac{\sqrt{3}}{3}$$</p>
+                        <p>หรือใช้ $\tan A = \frac{\sin A}{\cos A} = \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +259,70 @@
                 <!-- Section 6.3 -->
                 <section id="section3">
                     <h2>6.3 การแก้สามเหลี่ยมมุมฉาก</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.3 การแก้สามเหลี่ยมมุมฉาก</p>
+                        <h4>การแก้สามเหลี่ยมมุมฉาก</h4>
+                        <p><strong>การแก้สามเหลี่ยม</strong> หมายถึง การหาความยาวด้านและขนาดมุมที่ไม่ทราบค่าของสามเหลี่ยมมุมฉาก โดยใช้:</p>
+                        <ul>
+                            <li>อัตราส่วนตรีโกณมิติ ($\sin, \cos, \tan$)</li>
+                            <li>ทฤษฎีบทพีทาโกรัส</li>
+                            <li>ผลรวมมุมภายในสามเหลี่ยม = $180°$</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>ขั้นตอนการแก้สามเหลี่ยม</h4>
+                        <p><strong>1. กรณีรู้ 1 ด้าน 1 มุม:</strong> ใช้อัตราส่วนตรีโกณมิติหาด้านอื่น</p>
+                        <p><strong>2. กรณีรู้ 2 ด้าน:</strong> ใช้ทฤษฎีบทพีทาโกรัสหาด้านที่สาม แล้วใช้อัตราส่วนหามุม</p>
+                        <p><strong>3. หามุมที่เหลือ:</strong> ใช้ผลรวมมุม = $180°$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.3 การแก้สามเหลี่ยมมุมฉาก</p>
+                        <h4>ตัวอย่างที่ 1: รู้ 1 ด้าน 1 มุม</h4>
+                        <p><strong>โจทย์:</strong> ในสามเหลี่ยม $ABC$ มุม $C = 90°$, มุม $A = 35°$ และ $AC = 10$ cm จงหา $AB$ และ $BC$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>หา $AB$ (ด้านตรงข้ามมุมฉาก):</p>
+                        <p>$$\cos 35° = \frac{AC}{AB} = \frac{10}{AB}$$</p>
+                        <p>$$AB = \frac{10}{\cos 35°} \approx \frac{10}{0.8192} \approx 12.21 \text{ cm}$$</p>
+                        <p>หา $BC$:</p>
+                        <p>$$\tan 35° = \frac{BC}{AC} = \frac{BC}{10}$$</p>
+                        <p>$$BC = 10 \times \tan 35° \approx 10 \times 0.7002 \approx 7.00 \text{ cm}$$</p>
+                        <p>หามุม $B$: $B = 180° - 90° - 35° = 55°$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.3 การแก้สามเหลี่ยมมุมฉาก</p>
+                        <h4>ตัวอย่างที่ 2: รู้ 2 ด้าน</h4>
+                        <p><strong>โจทย์:</strong> สามเหลี่ยมมุมฉาก $PQR$ มีมุมฉากที่ $R$, $PQ = 25$ cm และ $PR = 15$ cm จงหา $QR$ และมุม $P$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>หา $QR$ โดยทฤษฎีบทพีทาโกรัส:</p>
+                        <p>$$QR^2 = PQ^2 - PR^2 = 25^2 - 15^2 = 625 - 225 = 400$$</p>
+                        <p>$$QR = 20 \text{ cm}$$</p>
+                        <p>หามุม $P$:</p>
+                        <p>$$\sin P = \frac{QR}{PQ} = \frac{20}{25} = 0.8$$</p>
+                        <p>$$P = \sin^{-1}(0.8) \approx 53.13°$$</p>
+                        <p>มุม $Q = 180° - 90° - 53.13° = 36.87°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การประยุกต์ - ความสูง</h4>
+                        <p><strong>โจทย์:</strong> ต้นไม้สูง 20 เมตร หล่นเอียงไปกระทบพื้นจุดหนึ่งห่างจากโคนต้นไม้ 12 เมตร จงหามุมระหว่างต้นไม้กับพื้น</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ให้มุมที่หา = $\theta$</p>
+                        <p>$$\sin \theta = \frac{\text{ความสูง}}{\text{ความยาวต้นไม้}} = \frac{20}{20} = 1$$</p>
+                        <p>แต่ต้องหาความยาวต้นไม้จริงจากพีทาโกรัส:</p>
+                        <p>$$L^2 = 20^2 + 12^2 = 400 + 144 = 544$$</p>
+                        <p>$$L = \sqrt{544} \approx 23.32 \text{ เมตร}$$</p>
+                        <p>$$\sin \theta = \frac{20}{23.32} \approx 0.858$$</p>
+                        <p>$$\theta \approx 59°$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์ - ระยะทาง</h4>
+                        <p><strong>โจทย์:</strong> จากตึกสูง 50 เมตร มองเห็นรถยนต์คันหนึ่งทำมุมยอดต่ำ $30°$ กับแนวระดับ จงหาระยะทางจากฐานตึกถึงรถยนต์</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ให้ระยะทางที่หา = $d$</p>
+                        <p>$$\tan 30° = \frac{50}{d}$$</p>
+                        <p>$$d = \frac{50}{\tan 30°} = \frac{50}{\frac{\sqrt{3}}{3}} = \frac{150}{\sqrt{3}} = 50\sqrt{3} \approx 86.60 \text{ เมตร}$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +331,60 @@
                 <!-- Section 6.4 -->
                 <section id="section4">
                     <h2>6.4 มุมในตำแหน่งมาตรฐาน</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.4 มุมในตำแหน่งมาตรฐาน</p>
+                        <h4>มุมในตำแหน่งมาตรฐาน</h4>
+                        <p><strong>มุมในตำแหน่งมาตรฐาน</strong> คือมุมที่มีจุดยอดอยู่ที่จุดกำเนิด ด้านเริ่มต้นทับกับแกน $x$ บวก และหมุนทวนเข็มนาฬิกา (บวก) หรือตามเข็มนาฬิกา (ลบ)</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>นิยามตรีโกณมิติบนวงกลมหนึ่งหน่วย</h4>
+                        <p>ถ้าจุด $P(x, y)$ อยู่บนวงกลมรัศมี $r$ และ $\theta$ คือมุมในตำแหน่งมาตรฐาน</p>
+                        <p>$$\sin \theta = \frac{y}{r}, \quad \cos \theta = \frac{x}{r}, \quad \tan \theta = \frac{y}{x}$$</p>
+                        <p><strong>บนวงกลมหนึ่งหน่วย</strong> ($r = 1$):</p>
+                        <p>$$\sin \theta = y, \quad \cos \theta = x$$</p>
+                        <p><strong>เครื่องหมายในแต่ละควอดรันต์:</strong></p>
+                        <ul>
+                            <li>ควอดรันต์ที่ 1 ($0° < \theta < 90°$): $\sin, \cos, \tan$ ทั้งหมดเป็น<strong>บวก</strong></li>
+                            <li>ควอดรันต์ที่ 2 ($90° < \theta < 180°$): เฉพาะ $\sin$ เป็น<strong>บวก</strong></li>
+                            <li>ควอดรันต์ที่ 3 ($180° < \theta < 270°$): เฉพาะ $\tan$ เป็น<strong>บวก</strong></li>
+                            <li>ควอดรันต์ที่ 4 ($270° < \theta < 360°$): เฉพาะ $\cos$ เป็น<strong>บวก</strong></li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.4 มุมในตำแหน่งมาตรฐาน</p>
+                        <h4>ตัวอย่างที่ 1: หาค่าในควอดรันต์ต่างๆ</h4>
+                        <p><strong>โจทย์:</strong> จงหา $\sin 120°$, $\cos 120°$ และ $\tan 120°$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$120°$ อยู่ในควอดรันต์ที่ 2 มุมอ้างอิง = $180° - 120° = 60°$</p>
+                        <p>$$\sin 120° = \sin 60° = \frac{\sqrt{3}}{2}$$ (บวก)</p>
+                        <p>$$\cos 120° = -\cos 60° = -\frac{1}{2}$$ (ลบ)</p>
+                        <p>$$\tan 120° = -\tan 60° = -\sqrt{3}$$ (ลบ)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.4 มุมในตำแหน่งมาตรฐาน</p>
+                        <h4>ตัวอย่างที่ 2: มุมมากกว่า 360°</h4>
+                        <p><strong>โจทย์:</strong> จงหา $\sin 420°$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$420° = 360° + 60°$</p>
+                        <p>$$\sin 420° = \sin 60° = \frac{\sqrt{3}}{2}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: มุมลบ</h4>
+                        <p><strong>โจทย์:</strong> จงหา $\cos(-45°)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$-45°$ หมุนตามเข็มนาฬิกา = $360° - 45° = 315°$ (ควอดรันต์ที่ 4)</p>
+                        <p>$$\cos(-45°) = \cos 45° = \frac{\sqrt{2}}{2}$$ (โคไซน์เป็นฟังก์ชันคู่)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: หาพิกัดบนวงกลม</h4>
+                        <p><strong>โจทย์:</strong> จุด $P$ อยู่บนวงกลมหนึ่งหน่วย มุมในตำแหน่งมาตรฐาน = $150°$ จงหาพิกัดของจุด $P$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$x = \cos 150° = -\cos 30° = -\frac{\sqrt{3}}{2}$</p>
+                        <p>$y = \sin 150° = \sin 30° = \frac{1}{2}$</p>
+                        <p>$$P\left(-\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +393,79 @@
                 <!-- Section 6.5 -->
                 <section id="section5">
                     <h2>6.5 กราฟฟังก์ชันตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.5 กราฟฟังก์ชันตรีโกณมิติ</p>
+                        <h4>กราฟฟังก์ชันตรีโกณมิติพื้นฐาน</h4>
+                        <p>ฟังก์ชันตรีโกณมิติเป็นฟังก์ชันคาบ (periodic) คือมีรูปแบบที่ซ้ำกันเป็นช่วงๆ</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>คุณสมบัติของกราฟตรีโกณมิติ</h4>
+                        <p><strong>1. ฟังก์ชันไซน์ $y = \sin x$</strong></p>
+                        <ul>
+                            <li>โดเมน: $(-\infty, \infty)$</li>
+                            <li>เรนจ์: $[-1, 1]$</li>
+                            <li>คาบ (Period): $360°$ หรือ $2\pi$ เรเดียน</li>
+                            <li>แอมพลิจูด (Amplitude): $1$</li>
+                            <li>ผ่าน $(0, 0)$, $(90°, 1)$, $(180°, 0)$, $(270°, -1)$, $(360°, 0)$</li>
+                        </ul>
+                        <p><strong>2. ฟังก์ชันโคไซน์ $y = \cos x$</strong></p>
+                        <ul>
+                            <li>โดเมน: $(-\infty, \infty)$</li>
+                            <li>เรนจ์: $[-1, 1]$</li>
+                            <li>คาบ: $360°$ หรือ $2\pi$ เรเดียน</li>
+                            <li>แอมพลิจูด: $1$</li>
+                            <li>ผ่าน $(0, 1)$, $(90°, 0)$, $(180°, -1)$, $(270°, 0)$, $(360°, 1)$</li>
+                        </ul>
+                        <p><strong>3. ฟังก์ชันแทนเจนต์ $y = \tan x$</strong></p>
+                        <ul>
+                            <li>โดเมน: $x \neq 90°, 270°, ...$</li>
+                            <li>เรนจ์: $(-\infty, \infty)$</li>
+                            <li>คาบ: $180°$ หรือ $\pi$ เรเดียน</li>
+                            <li>มีเส้นกำกับดิ่งที่ $x = 90° + 180°k$ ($k$ เป็นจำนวนเต็ม)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.5 กราฟฟังก์ชันตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: กราฟ $y = 2\sin x$</h4>
+                        <p><strong>โจทย์:</strong> จงหาแอมพลิจูด คาบ และเรนจ์ของ $y = 2\sin x$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>เปรียบเทียบกับ $y = A\sin x$</p>
+                        <p>แอมพลิจูด $A = 2$</p>
+                        <p>คาบ = $360°$ (ไม่เปลี่ยน)</p>
+                        <p>เรนจ์: $[-2, 2]$ (เพราะ $-2 \leq 2\sin x \leq 2$)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.5 กราฟฟังก์ชันตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: กราฟ $y = \cos(x - 30°)$</h4>
+                        <p><strong>โจทย์:</strong> กราฟ $y = \cos(x - 30°)$ เลื่อนไปทางใด</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>เปรียบเทียบกับ $y = \cos(x - c)$</p>
+                        <p>กราฟเลื่อนไปทางขวา $30°$</p>
+                        <p>ค่าสูงสุด $= 1$ เกิดที่ $x = 30°, 390°, ...$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาค่าจากกราฟ</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $y = \sin x$ และ $y = 0.5$ จงหาค่า $x$ ที่ $0° \leq x \leq 360°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$\sin x = 0.5 = \sin 30°$</p>
+                        <p>จากกราฟไซน์ใน 1 คาบ:</p>
+                        <p>$x = 30°$ (ควอดรันต์ที่ 1)</p>
+                        <p>$x = 180° - 30° = 150°$ (ควอดรันต์ที่ 2)</p>
+                        <p><strong>ตอบ:</strong> $x = 30°$ หรือ $x = 150°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: แก้สมการ</h4>
+                        <p><strong>โจทย์:</strong> จงหาคำตอบของสมการ $2\cos x = 1$ เมื่อ $0° \leq x < 360°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\cos x = \frac{1}{2}$$</p>
+                        <p>$\cos 60° = \frac{1}{2}$</p>
+                        <p>จากกราฟโคไซน์:</p>
+                        <p>$x = 60°$ (ควอดรันต์ที่ 1)</p>
+                        <p>$x = 360° - 60° = 300°$ (ควอดรันต์ที่ 4)</p>
+                        <p><strong>ตอบ:</strong> $x = 60°$ หรือ $x = 300°$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +474,66 @@
                 <!-- Section 6.6 -->
                 <section id="section6">
                     <h2>6.6 เอกลักษณ์ตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 6.6 เอกลักษณ์ตรีโกณมิติ</p>
+                        <h4>เอกลักษณ์ตรีโกณมิติ (Trigonometric Identities)</h4>
+                        <p><strong>เอกลักษณ์ตรีโกณมิติ</strong> คือสมการที่เป็นจริงสำหรับทุกค่าของตัวแปร ใช้ในการพิสูจน์และลดรูปนิพจน์ตรีโกณมิติ</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>เอกลักษณ์พื้นฐาน</h4>
+                        <p><strong>1. เอกลักษณ์พีทาโกรัส:</strong></p>
+                        <p>$$\sin^2 \theta + \cos^2 \theta = 1$$</p>
+                        <p>$$1 + \tan^2 \theta = \sec^2 \theta$$</p>
+                        <p>$$1 + \cot^2 \theta = \csc^2 \theta$$</p>
+                        <p><strong>2. เอกลักษณ์ส่วนกลับ:</strong></p>
+                        <p>$$\tan \theta = \frac{\sin \theta}{\cos \theta}, \quad \cot \theta = \frac{\cos \theta}{\sin \theta}$$</p>
+                        <p>$$\sec \theta = \frac{1}{\cos \theta}, \quad \csc \theta = \frac{1}{\sin \theta}$$</p>
+                        <p><strong>3. เอกลักษณ์มุมเสริม:</strong></p>
+                        <p>$$\sin(90° - \theta) = \cos \theta$$</p>
+                        <p>$$\cos(90° - \theta) = \sin \theta$$</p>
+                        <p>$$\tan(90° - \theta) = \cot \theta$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 6.6 เอกลักษณ์ตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: ใช้เอกลักษณ์พีทาโกรัส</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\sin \theta = \frac{5}{13}$ จงหา $\cos \theta$ (เมื่อ $\theta$ เป็นมุมแหลม)</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ใช้ $\sin^2 \theta + \cos^2 \theta = 1$</p>
+                        <p>$$\left(\frac{5}{13}\right)^2 + \cos^2 \theta = 1$$</p>
+                        <p>$$\frac{25}{169} + \cos^2 \theta = 1$$</p>
+                        <p>$$\cos^2 \theta = 1 - \frac{25}{169} = \frac{144}{169}$$</p>
+                        <p>$$\cos \theta = \frac{12}{13}$$ (เป็นบวกเพราะเป็นมุมแหลม)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 6.6 เอกลักษณ์ตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: พิสูจน์เอกลักษณ์</h4>
+                        <p><strong>โจทย์:</strong> จงพิสูจน์ว่า $\frac{\sin \theta}{\cos \theta} + \frac{\cos \theta}{\sin \theta} = \frac{1}{\sin \theta \cos \theta}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>พิจารณาด้านซ้าย:</p>
+                        <p>$$\frac{\sin \theta}{\cos \theta} + \frac{\cos \theta}{\sin \theta}$$</p>
+                        <p>$$= \frac{\sin^2 \theta + \cos^2 \theta}{\sin \theta \cos \theta}$$</p>
+                        <p>$$= \frac{1}{\sin \theta \cos \theta}$$ (เพราะ $\sin^2 \theta + \cos^2 \theta = 1$)</p>
+                        <p>ซึ่งเท่ากับด้านขวา ดังนั้นพิสูจน์แล้ว</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: ลดรูปนิพจน์</h4>
+                        <p><strong>โจทย์:</strong> จงลดรูป $\frac{1 - \sin^2 x}{\cos x}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\frac{1 - \sin^2 x}{\cos x}$$</p>
+                        <p>$$= \frac{\cos^2 x}{\cos x}$$ (เพราะ $1 - \sin^2 x = \cos^2 x$)</p>
+                        <p>$$= \cos x$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ใช้เอกลักษณ์หลายสูตร</h4>
+                        <p><strong>โจทย์:</strong> จงลดรูป $(\sec^2 \theta - 1) \cos^2 \theta$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ใช้ $\sec^2 \theta - 1 = \tan^2 \theta$</p>
+                        <p>$$(\sec^2 \theta - 1) \cos^2 \theta = \tan^2 \theta \cdot \cos^2 \theta$$</p>
+                        <p>$$= \frac{\sin^2 \theta}{\cos^2 \theta} \cdot \cos^2 \theta$$</p>
+                        <p>$$= \sin^2 \theta$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -246,74 +542,112 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 6</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: อัตราส่วนตรีโกณมิติพื้นฐาน (4 ข้อ)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>ในสามเหลี่ยมมุมฉาก $ABC$ มุม $C = 90°$, $AC = 8$ cm, $BC = 6$ cm จงหา $\sin A$, $\cos A$ และ $\tan B$</li>
+                            <li>ถ้า $\cos \theta = \frac{12}{13}$ และ $\theta$ เป็นมุมแหลม จงหา $\sin \theta$ และ $\tan \theta$</li>
+                            <li>ในสามเหลี่ยมมุมฉาก ถ้า $\tan A = \frac{3}{4}$ จงหา $\sin A$ และ $\cos A$</li>
+                            <li>จงหาค่า $\sin 30° \times \cos 60° + \tan 45°$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+                            <p><strong>1.</strong> $AB = \sqrt{8^2+6^2} = 10$ cm
+                            <br>$\sin A = \frac{6}{10} = \frac{3}{5}$, $\cos A = \frac{8}{10} = \frac{4}{5}$, $\tan B = \frac{8}{6} = \frac{4}{3}$</p>
+                            <p><strong>2.</strong> ให้ประชิด $= 12k$, ตรงข้ามมุมฉาก $= 13k$
+                            <br>ตรงข้าม $= \sqrt{(13k)^2-(12k)^2} = 5k$
+                            <br>$\sin \theta = \frac{5}{13}$, $\tan \theta = \frac{5}{12}$</p>
+                            <p><strong>3.</strong> ตรงข้าม $= 3k$, ประชิด $= 4k$, ตรงข้ามมุมฉาก $= 5k$
+                            <br>$\sin A = \frac{3}{5}$, $\cos A = \frac{4}{5}$</p>
+                            <p><strong>4.</strong> $\frac{1}{2} \times \frac{1}{2} + 1 = \frac{1}{4} + 1 = \frac{5}{4}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การหาค่าอัตราส่วน (4 ข้อ)</h3>
+                        <ol start="5">
+                            <li>จงหาค่า $\sin 60° + \cos 30° - 2\tan 60°$</li>
+                            <li>ถ้า $\sin A = \cos 60°$ และ $A$ เป็นมุมแหลม จงหา $A$</li>
+                            <li>จงหาค่า $\frac{\sin 30° + \cos 45°}{\tan 45°}$</li>
+                            <li>ถ้า $\tan \theta = \sqrt{3}$ และ $0° < \theta < 90°$ จงหา $\theta$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+                            <p><strong>5.</strong> $\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} - 2\sqrt{3} = \sqrt{3} - 2\sqrt{3} = -\sqrt{3}$</p>
+                            <p><strong>6.</strong> $\sin A = \frac{1}{2} = \sin 30°$ ดังนั้น $A = 30°$</p>
+                            <p><strong>7.</strong> $\frac{\frac{1}{2} + \frac{\sqrt{2}}{2}}{1} = \frac{1 + \sqrt{2}}{2}$</p>
+                            <p><strong>8.</strong> $\theta = 60°$ (เพราะ $\tan 60° = \sqrt{3}$)</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: การแก้สามเหลี่ยมมุมฉาก (4 ข้อ)</h3>
+                        <ol start="9">
+                            <li>สามเหลี่ยมมุมฉาก $ABC$ มีมุมฉากที่ $C$, $AB = 20$ cm, มุม $A = 40°$ จงหา $AC$ (ปัดทศนิยม 2 ตำแหน่ง)</li>
+                            <li>สามเหลี่ยมมุมฉาก มี $a = 7$ cm, $b = 24$ cm จงหามุมแหลมทั้งสอง</li>
+                            <li>บันไดยาว 5 เมตร พิงกำแพง ทำมุม $60°$ กับพื้น จงหาความสูงที่บันไดถึง</li>
+                            <li>จากยอดตึกสูง 40 เมตร มองเห็นวัตถุทำมุมยอดต่ำ $45°$ จงหาระยะทางจากฐานตึกถึงวัตถุ</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+                            <p><strong>9.</strong> $\cos 40° = \frac{AC}{20}$
+                            <br>$AC = 20 \cos 40° \approx 20 \times 0.766 \approx 15.32$ cm</p>
+                            <p><strong>10.</strong> $c = \sqrt{7^2+24^2} = 25$ cm
+                            <br>$\sin A = \frac{7}{25} \Rightarrow A \approx 16.26°$
+                            <br>$B = 90° - 16.26° = 73.74°$</p>
+                            <p><strong>11.</strong> $h = 5 \sin 60° = 5 \times \frac{\sqrt{3}}{2} = \frac{5\sqrt{3}}{2} \approx 4.33$ เมตร</p>
+                            <p><strong>12.</strong> $\tan 45° = \frac{40}{d}$
+                            <br>$d = \frac{40}{1} = 40$ เมตร</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: มุมในตำแหน่งมาตรฐานและกราฟ (4 ข้อ)</h3>
+                        <ol start="13">
+                            <li>จงหาค่า $\sin 150°$</li>
+                            <li>จงหาค่า $\cos 240°$</li>
+                            <li>แก้สมการ $\sin x = \frac{\sqrt{3}}{2}$ เมื่อ $0° \leq x < 360°$</li>
+                            <li>จุด $P$ บนวงกลมหนึ่งหน่วยทำมุม $120°$ กับแกน $x$ บวก จงหาพิกัด $P$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+                            <p><strong>13.</strong> $150°$ อยู่ในควอดรันต์ที่ 2, มุมอ้างอิง $= 30°$
+                            <br>$\sin 150° = \sin 30° = \frac{1}{2}$</p>
+                            <p><strong>14.</strong> $240°$ อยู่ในควอดรันต์ที่ 3, มุมอ้างอิง $= 60°$
+                            <br>$\cos 240° = -\cos 60° = -\frac{1}{2}$</p>
+                            <p><strong>15.</strong> $\sin 60° = \frac{\sqrt{3}}{2}$
+                            <br>$x = 60°$ (ควอดรันต์ที่ 1) หรือ $x = 120°$ (ควอดรันต์ที่ 2)</p>
+                            <p><strong>16.</strong> $x = \cos 120° = -\frac{1}{2}$, $y = \sin 120° = \frac{\sqrt{3}}{2}$
+                            <br>$P\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: เอกลักษณ์ตรีโกณมิติ (4 ข้อ)</h3>
+                        <ol start="17">
+                            <li>ถ้า $\sin \theta = \frac{8}{17}$ จงหา $\cos \theta$ (เมื่อ $\theta$ เป็นมุมแหลม)</li>
+                            <li>จงลดรูป $\frac{\sin^2 x + \cos^2 x}{\cos x}$</li>
+                            <li>จงพิสูจน์ว่า $\tan^2 \theta + 1 = \sec^2 \theta$</li>
+                            <li>จงลดรูป $\sin x \cdot \tan x + \cos x$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+                            <p><strong>17.</strong> $\sin^2 \theta + \cos^2 \theta = 1$
+                            <br>$\left(\frac{8}{17}\right)^2 + \cos^2 \theta = 1$
+                            <br>$\cos^2 \theta = 1 - \frac{64}{289} = \frac{225}{289}$
+                            <br>$\cos \theta = \frac{15}{17}$</p>
+                            <p><strong>18.</strong> $\frac{1}{\cos x} = \sec x$</p>
+                            <p><strong>19.</strong> แบ่งทั้งสองข้างของ $\sin^2 \theta + \cos^2 \theta = 1$ ด้วย $\cos^2 \theta$:
+                            <br>$\frac{\sin^2 \theta}{\cos^2 \theta} + 1 = \frac{1}{\cos^2 \theta}$
+                            <br>$\tan^2 \theta + 1 = \sec^2 \theta$</p>
+                            <p><strong>20.</strong> $\sin x \cdot \frac{\sin x}{\cos x} + \cos x = \frac{\sin^2 x}{\cos x} + \cos x$
+                            <br>$= \frac{\sin^2 x + \cos^2 x}{\cos x} = \frac{1}{\cos x} = \sec x$</p>
                         </div>
                     </div>
 

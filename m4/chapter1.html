@@ -70,7 +70,7 @@
                 <h1>บทที่ 1: เซตและตรรกศาสตร์</h1>
                 
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ เซตและตรรกศาสตร์ ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.4</p>
+                    <p>เซตและตรรกศาสตร์เป็นพื้นฐานสำคัญของคณิตศาสตร์สมัยใหม่ ในบทนี้จะเรียนรู้เกี่ยวกับเซต การดำเนินการของเซต กฎต่างๆ ของเซต ตลอดจนตรรกศาสตร์ที่ใช้ในการให้เหตุผลทางคณิตศาสตร์ ซึ่งจะช่วยพัฒนาทักษะการคิดวิเคราะห์และการให้เหตุผลอย่างเป็นระบบ</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,81 @@
                 <!-- Section 1.1 -->
                 <section id="section1">
                     <h2>1.1 ความหมายของเซต</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.1 ความหมายของเซต</p>
+                        <p><strong>เซต (Set)</strong> คือ กลุ่มหรือคอลเลกชันของสิ่งต่างๆ ที่มีคุณสมบัติชัดเจนว่าสิ่งใดเป็นสมาชิกของเซตนั้น และสิ่งใดไม่เป็นสมาชิก</p>
+
+                        <p><strong>สัญลักษณ์:</strong></p>
+                        <ul>
+                            <li>เซตมักใช้ตัวอักษรตัวพิมพ์ใหญ่ เช่น $A, B, C, X, Y$</li>
+                            <li>สมาชิกของเซตใช้ตัวอักษรตัวพิมพ์เล็ก เช่น $a, b, c, x, y$</li>
+                            <li>$x \in A$ หมายถึง $x$ เป็นสมาชิกของเซต $A$</li>
+                            <li>$x \notin A$ หมายถึง $x$ ไม่เป็นสมาชิกของเซต $A$</li>
+                        </ul>
+
+                        <p><strong>วิธีการเขียนเซต:</strong></p>
+                        <ol>
+                            <li><strong>วิธีแจกแจงสมาชิก:</strong> เขียนสมาชิกทั้งหมดในวงเล็บปีกกา { }
+                                <br>เช่น $A = \{1, 2, 3, 4, 5\}$</li>
+                            <li><strong>วิธีกำหนดคุณสมบัติ:</strong> ใช้เงื่อนไขหรือคุณสมบัติของสมาชิก
+                                <br>เช่น $A = \{x | x \text{ เป็นจำนวนนับที่น้อยกว่าหรือเท่ากับ } 5\}$</li>
+                        </ol>
+
+                        <p><strong>เซตพิเศษ:</strong></p>
+                        <ul>
+                            <li><strong>เซตว่าง (Empty Set):</strong> เซตที่ไม่มีสมาชิก แทนด้วย $\emptyset$ หรือ $\{\}$</li>
+                            <li><strong>เซตสากล (Universal Set):</strong> เซตที่ประกอบด้วยสมาชิกทั้งหมดที่กำลังพิจารณา แทนด้วย $U$</li>
+                            <li><strong>จำนวนสมาชิก:</strong> แทนด้วย $n(A)$ หรือ $|A|$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.1 ความหมายของเซต</p>
+                        <h4>ตัวอย่างที่ 1: การเขียนเซตและหาจำนวนสมาชิก</h4>
+                        <p><strong>โจทย์:</strong> จงเขียนเซต $A$ ของจำนวนเต็มบวกที่น้อยกว่า 8 ด้วยวิธีแจกแจงสมาชิก และหาจำนวนสมาชิกของเซต $A$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>จำนวนเต็มบวกที่น้อยกว่า 8 คือ 1, 2, 3, 4, 5, 6, 7</p>
+                        <p>$$A = \{1, 2, 3, 4, 5, 6, 7\}$$</p>
+                        <p>จำนวนสมาชิกของเซต $A$ คือ $$n(A) = 7$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.1 ความหมายของเซต</p>
+                        <h4>ตัวอย่างที่ 2: การเขียนเซตด้วยคุณสมบัติ</h4>
+                        <p><strong>โจทย์:</strong> จงเขียนเซต $B = \{2, 4, 6, 8, 10\}$ ด้วยวิธีกำหนดคุณสมบัติ</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>สังเกตว่าสมาชิกของเซต $B$ เป็นจำนวนคู่ที่มากกว่า 0 และน้อยกว่าหรือเท่ากับ 10</p>
+                        <p>$$B = \{x | x \text{ เป็นจำนวนคู่และ } 0 < x \leq 10\}$$</p>
+                        <p>หรือ $$B = \{2n | n \in \mathbb{Z}^+ \text{ และ } 1 \leq n \leq 5\}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การตรวจสอบสมาชิกของเซต</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $C = \{x | x^2 - 5x + 6 = 0\}$ จงหาสมาชิกทั้งหมดของเซต $C$ และตรวจสอบว่า 2, 3, 4 เป็นสมาชิกของเซต $C$ หรือไม่</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หาค่า $x$ ที่ทำให้ $x^2 - 5x + 6 = 0$</p>
+                        <p>$$x^2 - 5x + 6 = 0$$</p>
+                        <p>$$(x - 2)(x - 3) = 0$$</p>
+                        <p>$$x = 2 \text{ หรือ } x = 3$$</p>
+                        <p>ดังนั้น $$C = \{2, 3\}$$</p>
+                        <p><strong>ตรวจสอบ:</strong></p>
+                        <ul>
+                            <li>$2 \in C$ (ใช่, 2 เป็นสมาชิกของเซต $C$)</li>
+                            <li>$3 \in C$ (ใช่, 3 เป็นสมาชิกของเซต $C$)</li>
+                            <li>$4 \notin C$ (ไม่ใช่, 4 ไม่เป็นสมาชิกของเซต $C$)</li>
+                        </ul>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: เซตว่างและจำนวนสมาชิก</h4>
+                        <p><strong>โจทย์:</strong> พิจารณาเซต $D = \{x | x \in \mathbb{R}, x^2 + 1 = 0\}$ เซต $D$ เป็นเซตว่างหรือไม่ เพราะเหตุใด</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หาค่า $x$ ที่เป็นจำนวนจริงและทำให้ $x^2 + 1 = 0$</p>
+                        <p>$$x^2 + 1 = 0$$</p>
+                        <p>$$x^2 = -1$$</p>
+                        <p>เนื่องจาก $x^2$ ของจำนวนจริงใดๆ จะมีค่ามากกว่าหรือเท่ากับ 0 เสมอ</p>
+                        <p>จึงไม่มีจำนวนจริงที่ทำให้ $x^2 = -1$</p>
+                        <p>ดังนั้น $$D = \emptyset$$ (เซต $D$ เป็นเซตว่าง)</p>
+                        <p>และ $$n(D) = 0$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +173,113 @@
                 <!-- Section 1.2 -->
                 <section id="section2">
                     <h2>1.2 การดำเนินการของเซต</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.2 การดำเนินการของเซต</p>
+
+                        <p><strong>1. เซตย่อย (Subset):</strong></p>
+                        <p>$A \subseteq B$ หมายถึง $A$ เป็นเซตย่อยของ $B$ ก็ต่อเมื่อสมาชิกทุกตัวของ $A$ เป็นสมาชิกของ $B$</p>
+                        <ul>
+                            <li>$A \subseteq B$ อ่านว่า "$A$ เป็นเซตย่อยของ $B$"</li>
+                            <li>$A \subset B$ หมายถึง $A$ เป็นเซตย่อยแท้ของ $B$ (มีสมาชิกบางตัวของ $B$ ที่ไม่อยู่ใน $A$)</li>
+                            <li>เซตว่าง $\emptyset$ เป็นเซตย่อยของทุกเซต</li>
+                            <li>ทุกเซตเป็นเซตย่อยของตัวเอง</li>
+                        </ul>
+
+                        <p><strong>2. ยูเนียน (Union):</strong></p>
+                        <p>$$A \cup B = \{x | x \in A \text{ หรือ } x \in B\}$$</p>
+                        <p>ยูเนียนของเซต $A$ และ $B$ คือเซตที่ประกอบด้วยสมาชิกที่อยู่ใน $A$ หรือ $B$ หรือทั้งสองเซต</p>
+
+                        <p><strong>3. อินเตอร์เซกชัน (Intersection):</strong></p>
+                        <p>$$A \cap B = \{x | x \in A \text{ และ } x \in B\}$$</p>
+                        <p>อินเตอร์เซกชันของเซต $A$ และ $B$ คือเซตที่ประกอบด้วยสมาชิกที่อยู่ทั้งใน $A$ และ $B$</p>
+
+                        <p><strong>4. ผลต่าง (Difference):</strong></p>
+                        <p>$$A - B = \{x | x \in A \text{ และ } x \notin B\}$$</p>
+                        <p>ผลต่างของเซต $A$ และ $B$ คือเซตที่ประกอบด้วยสมาชิกที่อยู่ใน $A$ แต่ไม่อยู่ใน $B$</p>
+
+                        <p><strong>5. คอมพลีเมนต์ (Complement):</strong></p>
+                        <p>$$A^c = U - A = \{x | x \in U \text{ และ } x \notin A\}$$</p>
+                        <p>คอมพลีเมนต์ของเซต $A$ คือเซตที่ประกอบด้วยสมาชิกทั้งหมดในเซตสากล $U$ ที่ไม่อยู่ใน $A$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.2 การดำเนินการของเซต</p>
+                        <h4>ตัวอย่างที่ 1: การหายูเนียนและอินเตอร์เซกชัน</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $A = \{1, 2, 3, 4, 5\}$ และ $B = \{3, 4, 5, 6, 7\}$ จงหา $A \cup B$ และ $A \cap B$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p><strong>หา $A \cup B$:</strong></p>
+                        <p>เซตที่ประกอบด้วยสมาชิกที่อยู่ใน $A$ หรือ $B$ หรือทั้งสองเซต</p>
+                        <p>$$A \cup B = \{1, 2, 3, 4, 5, 6, 7\}$$</p>
+                        <p>$$n(A \cup B) = 7$$</p>
+
+                        <p><strong>หา $A \cap B$:</strong></p>
+                        <p>เซตที่ประกอบด้วยสมาชิกที่อยู่ทั้งใน $A$ และ $B$</p>
+                        <p>$$A \cap B = \{3, 4, 5\}$$</p>
+                        <p>$$n(A \cap B) = 3$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.2 การดำเนินการของเซต</p>
+                        <h4>ตัวอย่างที่ 2: การหาผลต่างและคอมพลีเมนต์</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $U = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$, $A = \{2, 4, 6, 8\}$ และ $B = \{1, 2, 3, 4, 5\}$ จงหา $A - B$, $B - A$ และ $A^c$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>หา $A - B$:</strong></p>
+                        <p>สมาชิกที่อยู่ใน $A$ แต่ไม่อยู่ใน $B$</p>
+                        <p>$$A - B = \{6, 8\}$$</p>
+
+                        <p><strong>หา $B - A$:</strong></p>
+                        <p>สมาชิกที่อยู่ใน $B$ แต่ไม่อยู่ใน $A$</p>
+                        <p>$$B - A = \{1, 3, 5\}$$</p>
+
+                        <p><strong>หา $A^c$:</strong></p>
+                        <p>สมาชิกที่อยู่ใน $U$ แต่ไม่อยู่ใน $A$</p>
+                        <p>$$A^c = \{1, 3, 5, 7, 9, 10\}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การตรวจสอบเซตย่อย</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $A = \{1, 3, 5\}$, $B = \{1, 2, 3, 4, 5, 6\}$ และ $C = \{2, 4, 6\}$ จงตรวจสอบว่า</p>
+                        <ol>
+                            <li>$A \subseteq B$ หรือไม่</li>
+                            <li>$C \subseteq B$ หรือไม่</li>
+                            <li>$A \subseteq C$ หรือไม่</li>
+                        </ol>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p><strong>1. ตรวจสอบ $A \subseteq B$:</strong></p>
+                        <p>สมาชิกของ $A$ คือ 1, 3, 5</p>
+                        <p>ตรวจสอบ: $1 \in B$, $3 \in B$, $5 \in B$</p>
+                        <p>เนื่องจากสมาชิกทุกตัวของ $A$ อยู่ใน $B$ ดังนั้น <strong>$A \subseteq B$ เป็นจริง</strong></p>
+
+                        <p><strong>2. ตรวจสอบ $C \subseteq B$:</strong></p>
+                        <p>สมาชิกของ $C$ คือ 2, 4, 6</p>
+                        <p>ตรวจสอบ: $2 \in B$, $4 \in B$, $6 \in B$</p>
+                        <p>เนื่องจากสมาชิกทุกตัวของ $C$ อยู่ใน $B$ ดังนั้น <strong>$C \subseteq B$ เป็นจริง</strong></p>
+
+                        <p><strong>3. ตรวจสอบ $A \subseteq C$:</strong></p>
+                        <p>สมาชิกของ $A$ คือ 1, 3, 5</p>
+                        <p>ตรวจสอบ: $1 \notin C$</p>
+                        <p>เนื่องจาก 1 ไม่อยู่ใน $C$ ดังนั้น <strong>$A \subseteq C$ ไม่เป็นจริง</strong></p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การหาจำนวนสมาชิกจากสูตร</h4>
+                        <p><strong>โจทย์:</strong> ในชั้น ม.4 มีนักเรียน 50 คน เรียนคณิตศาสตร์ 30 คน เรียนวิทยาศาสตร์ 35 คน และเรียนทั้งสองวิชา 20 คน จงหาจำนวนนักเรียนที่</p>
+                        <ol>
+                            <li>เรียนคณิตศาสตร์หรือวิทยาศาสตร์</li>
+                            <li>ไม่เรียนทั้งสองวิชา</li>
+                        </ol>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>กำหนดให้ $M$ = เซตของนักเรียนที่เรียนคณิตศาสตร์, $S$ = เซตของนักเรียนที่เรียนวิทยาศาสตร์</p>
+                        <p>จากโจทย์: $n(U) = 50$, $n(M) = 30$, $n(S) = 35$, $n(M \cap S) = 20$</p>
+
+                        <p><strong>1. หาจำนวนนักเรียนที่เรียนคณิตศาสตร์หรือวิทยาศาสตร์:</strong></p>
+                        <p>ใช้สูตร: $$n(M \cup S) = n(M) + n(S) - n(M \cap S)$$</p>
+                        <p>$$n(M \cup S) = 30 + 35 - 20 = 45$$</p>
+                        <p>ดังนั้น มีนักเรียน <strong>45 คน</strong> ที่เรียนคณิตศาสตร์หรือวิทยาศาสตร์</p>
+
+                        <p><strong>2. หาจำนวนนักเรียนที่ไม่เรียนทั้งสองวิชา:</strong></p>
+                        <p>$$n((M \cup S)^c) = n(U) - n(M \cup S)$$</p>
+                        <p>$$n((M \cup S)^c) = 50 - 45 = 5$$</p>
+                        <p>ดังนั้น มีนักเรียน <strong>5 คน</strong> ที่ไม่เรียนทั้งสองวิชา</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +288,125 @@
                 <!-- Section 1.3 -->
                 <section id="section3">
                     <h2>1.3 กฎของเซต</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.3 กฎของเซต</p>
+                        <h4>กฎพื้นฐานของเซต</h4>
+
+                        <p><strong>1. กฎการสลับที่ (Commutative Laws):</strong></p>
+                        <ul>
+                            <li>$$A \cup B = B \cup A$$</li>
+                            <li>$$A \cap B = B \cap A$$</li>
+                        </ul>
+
+                        <p><strong>2. กฎการเปลี่ยนหมู่ (Associative Laws):</strong></p>
+                        <ul>
+                            <li>$$(A \cup B) \cup C = A \cup (B \cup C)$$</li>
+                            <li>$$(A \cap B) \cap C = A \cap (B \cap C)$$</li>
+                        </ul>
+
+                        <p><strong>3. กฎการแจกแจง (Distributive Laws):</strong></p>
+                        <ul>
+                            <li>$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$</li>
+                            <li>$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$</li>
+                        </ul>
+
+                        <p><strong>4. กฎเอกลักษณ์ (Identity Laws):</strong></p>
+                        <ul>
+                            <li>$$A \cup \emptyset = A$$</li>
+                            <li>$$A \cap U = A$$</li>
+                        </ul>
+
+                        <p><strong>5. กฎการส่วนเติมเต็ม (Complement Laws):</strong></p>
+                        <ul>
+                            <li>$$A \cup A^c = U$$</li>
+                            <li>$$A \cap A^c = \emptyset$$</li>
+                            <li>$$(A^c)^c = A$$</li>
+                            <li>$$\emptyset^c = U$$ และ $$U^c = \emptyset$$</li>
+                        </ul>
+
+                        <p><strong>6. กฎของเดอมอร์แกน (De Morgan's Laws):</strong></p>
+                        <ul>
+                            <li>$$(A \cup B)^c = A^c \cap B^c$$</li>
+                            <li>$$(A \cap B)^c = A^c \cup B^c$$</li>
+                        </ul>
+
+                        <p><strong>7. กฎการดูดซับ (Absorption Laws):</strong></p>
+                        <ul>
+                            <li>$$A \cup (A \cap B) = A$$</li>
+                            <li>$$A \cap (A \cup B) = A$$</li>
+                        </ul>
+
+                        <p><strong>8. กฎอื่นๆ:</strong></p>
+                        <ul>
+                            <li>$$A \cup A = A$$ (Idempotent Law)</li>
+                            <li>$$A \cap A = A$$ (Idempotent Law)</li>
+                            <li>$$A \cup U = U$$</li>
+                            <li>$$A \cap \emptyset = \emptyset$$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.3 กฎของเซต</p>
+                        <h4>ตัวอย่างที่ 1: การใช้กฎของเดอมอร์แกน</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $U = \{1, 2, 3, 4, 5, 6, 7, 8\}$, $A = \{1, 2, 3, 4\}$ และ $B = \{3, 4, 5, 6\}$ จงตรวจสอบกฎของเดอมอร์แกน $(A \cup B)^c = A^c \cap B^c$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p><strong>หาด้านซ้าย: $(A \cup B)^c$</strong></p>
+                        <p>$$A \cup B = \{1, 2, 3, 4, 5, 6\}$$</p>
+                        <p>$$(A \cup B)^c = \{7, 8\}$$</p>
+
+                        <p><strong>หาด้านขวา: $A^c \cap B^c$</strong></p>
+                        <p>$$A^c = \{5, 6, 7, 8\}$$</p>
+                        <p>$$B^c = \{1, 2, 7, 8\}$$</p>
+                        <p>$$A^c \cap B^c = \{7, 8\}$$</p>
+
+                        <p><strong>สรุป:</strong> $(A \cup B)^c = A^c \cap B^c = \{7, 8\}$ ดังนั้นกฎของเดอมอร์แกนเป็นจริง</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.3 กฎของเซต</p>
+                        <h4>ตัวอย่างที่ 2: การใช้กฎการแจกแจง</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $A = \{1, 2\}$, $B = \{2, 3\}$ และ $C = \{3, 4\}$ จงตรวจสอบกฎการแจกแจง $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>หาด้านซ้าย: $A \cap (B \cup C)$</strong></p>
+                        <p>$$B \cup C = \{2, 3, 4\}$$</p>
+                        <p>$$A \cap (B \cup C) = \{1, 2\} \cap \{2, 3, 4\} = \{2\}$$</p>
+
+                        <p><strong>หาด้านขวา: $(A \cap B) \cup (A \cap C)$</strong></p>
+                        <p>$$A \cap B = \{1, 2\} \cap \{2, 3\} = \{2\}$$</p>
+                        <p>$$A \cap C = \{1, 2\} \cap \{3, 4\} = \emptyset$$</p>
+                        <p>$$(A \cap B) \cup (A \cap C) = \{2\} \cup \emptyset = \{2\}$$</p>
+
+                        <p><strong>สรุป:</strong> $A \cap (B \cup C) = (A \cap B) \cup (A \cap C) = \{2\}$ ดังนั้นกฎการแจกแจงเป็นจริง</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การพิสูจน์ด้วยกฎของเซต</h4>
+                        <p><strong>โจทย์:</strong> จงพิสูจน์ว่า $A - B = A \cap B^c$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จากนิยาม: $A - B = \{x | x \in A \text{ และ } x \notin B\}$</p>
+                        <p>เนื่องจาก $x \notin B$ เท่ากับ $x \in B^c$</p>
+                        <p>ดังนั้น $A - B = \{x | x \in A \text{ และ } x \in B^c\}$</p>
+                        <p>จากนิยามของอินเตอร์เซกชัน: $A \cap B^c = \{x | x \in A \text{ และ } x \in B^c\}$</p>
+                        <p><strong>สรุป:</strong> $A - B = A \cap B^c$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์ใช้กฎของเซต</h4>
+                        <p><strong>โจทย์:</strong> จงพิสูจน์ว่า $(A - B) \cup (B - A) = (A \cup B) - (A \cap B)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p><strong>พิจารณาด้านซ้าย:</strong></p>
+                        <p>$(A - B) \cup (B - A)$</p>
+                        <p>$= (A \cap B^c) \cup (B \cap A^c)$ (จากตัวอย่างที่ 3)</p>
+
+                        <p><strong>พิจารณาด้านขวา:</strong></p>
+                        <p>$(A \cup B) - (A \cap B)$</p>
+                        <p>$= (A \cup B) \cap (A \cap B)^c$ (จากนิยามของผลต่าง)</p>
+                        <p>$= (A \cup B) \cap (A^c \cup B^c)$ (จากกฎของเดอมอร์แกน)</p>
+                        <p>$= [(A \cup B) \cap A^c] \cup [(A \cup B) \cap B^c]$ (จากกฎการแจกแจง)</p>
+                        <p>$= [(A \cap A^c) \cup (B \cap A^c)] \cup [(A \cap B^c) \cup (B \cap B^c)]$ (จากกฎการแจกแจง)</p>
+                        <p>$= [\emptyset \cup (B \cap A^c)] \cup [(A \cap B^c) \cup \emptyset]$ (จาก $A \cap A^c = \emptyset$)</p>
+                        <p>$= (B \cap A^c) \cup (A \cap B^c)$</p>
+                        <p>$= (A \cap B^c) \cup (B \cap A^c)$ (จากกฎการสลับที่)</p>
+
+                        <p><strong>สรุป:</strong> $(A - B) \cup (B - A) = (A \cup B) - (A \cap B)$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +415,136 @@
                 <!-- Section 1.4 -->
                 <section id="section4">
                     <h2>1.4 ประพจน์</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.4 ประพจน์</p>
+
+                        <p><strong>ประพจน์ (Proposition)</strong> คือ ประโยคบอกเล่าที่สามารถบอกได้ว่าจริงหรือเท็จอย่างใดอย่างหนึ่งเท่านั้น แต่ไม่สามารถเป็นทั้งจริงและเท็จในเวลาเดียวกัน</p>
+
+                        <p><strong>ประเภทของประพจน์:</strong></p>
+                        <ol>
+                            <li><strong>ประพจน์อะตอม (Atomic Proposition):</strong> ประพจน์ที่ไม่สามารถแยกย่อยออกเป็นประพจน์ที่เล็กกว่าได้ มักใช้ตัวอักษร $p, q, r, s$ แทน</li>
+                            <li><strong>ประพจน์ประกอบ (Compound Proposition):</strong> ประพจน์ที่เกิดจากการนำประพจน์อะตอมมาเชื่อมด้วยตัวเชื่อม</li>
+                        </ol>
+
+                        <p><strong>ตัวเชื่อมประพจน์:</strong></p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">ตัวเชื่อม</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">สัญลักษณ์</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">ความหมาย</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">เป็นจริงเมื่อ</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">การปฏิเสธ (Negation)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\sim p$ หรือ $\neg p$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ไม่ใช่ $p$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ เป็นเท็จ</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">การเชื่อม "และ" (Conjunction)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p \land q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ และ $q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ทั้ง $p$ และ $q$ เป็นจริง</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">การเชื่อม "หรือ" (Disjunction)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p \lor q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ หรือ $q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ หรือ $q$ หรือทั้งคู่เป็นจริง</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">การแถลง (Conditional)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p \rightarrow q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ถ้า $p$ แล้ว $q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ เป็นเท็จ หรือ $q$ เป็นจริง</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">การแถลงสองทาง (Biconditional)</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p \leftrightarrow q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ ก็ต่อเมื่อ $q$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$p$ และ $q$ มีค่าความจริงเหมือนกัน</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>หมายเหตุ:</strong> ประพจน์ $p \rightarrow q$ จะเป็นเท็จก็ต่อเมื่อ $p$ เป็นจริงและ $q$ เป็นเท็จ</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.4 ประพจน์</p>
+                        <h4>ตัวอย่างที่ 1: การระบุประพจน์</h4>
+                        <p><strong>โจทย์:</strong> จงพิจารณาว่าข้อความต่อไปนี้เป็นประพจน์หรือไม่ ถ้าเป็นให้ระบุว่าเป็นจริงหรือเท็จ</p>
+                        <ol>
+                            <li>$2 + 3 = 5$</li>
+                            <li>กรุงเทพฯ เป็นเมืองหลวงของไทย</li>
+                            <li>$x + 5 = 10$</li>
+                            <li>คุณชอบคณิตศาสตร์หรือไม่?</li>
+                            <li>$5 > 3$</li>
+                        </ol>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <ol>
+                            <li>$2 + 3 = 5$ เป็นประพจน์ และเป็น<strong>จริง</strong></li>
+                            <li>กรุงเทพฯ เป็นเมืองหลวงของไทย เป็นประพจน์ และเป็น<strong>จริง</strong></li>
+                            <li>$x + 5 = 10$ <strong>ไม่เป็นประพจน์</strong> เพราะไม่สามารถบอกได้ว่าจริงหรือเท็จจนกว่าจะทราบค่าของ $x$</li>
+                            <li>คุณชอบคณิตศาสตร์หรือไม่? <strong>ไม่เป็นประพจน์</strong> เพราะเป็นประโยคคำถาม</li>
+                            <li>$5 > 3$ เป็นประพจน์ และเป็น<strong>จริง</strong></li>
+                        </ol>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.4 ประพจน์</p>
+                        <h4>ตัวอย่างที่ 2: การหาค่าความจริงของประพจน์ประกอบ</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $p:$ "$3 < 5$" และ $q:$ "$2$ เป็นจำนวนคี่" จงหาค่าความจริงของ</p>
+                        <ol>
+                            <li>$p \land q$</li>
+                            <li>$p \lor q$</li>
+                            <li>$\sim p$</li>
+                            <li>$p \rightarrow q$</li>
+                        </ol>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>พิจารณา: $p$ เป็นจริง (เพราะ $3 < 5$) และ $q$ เป็นเท็จ (เพราะ $2$ เป็นจำนวนคู่)</p>
+                        <ol>
+                            <li>$p \land q$ = จริง $\land$ เท็จ = <strong>เท็จ</strong> (เพราะต้องเป็นจริงทั้งคู่)</li>
+                            <li>$p \lor q$ = จริง $\lor$ เท็จ = <strong>จริง</strong> (เพราะมีอย่างน้อยหนึ่งข้อเป็นจริง)</li>
+                            <li>$\sim p$ = $\sim$(จริง) = <strong>เท็จ</strong></li>
+                            <li>$p \rightarrow q$ = จริง $\rightarrow$ เท็จ = <strong>เท็จ</strong> (เพราะ $p$ จริงแต่ $q$ เท็จ)</li>
+                        </ol>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การเขียนประพจน์ด้วยสัญลักษณ์</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $p:$ "วันนี้ฝนตก" และ $q:$ "อากาศหนาว" จงเขียนประพจน์ต่อไปนี้ด้วยสัญลักษณ์</p>
+                        <ol>
+                            <li>วันนี้ฝนตกและอากาศหนาว</li>
+                            <li>ถ้าวันนี้ฝนตก แล้วอากาศหนาว</li>
+                            <li>วันนี้ไม่ได้ฝนตก</li>
+                            <li>วันนี้ฝนตกหรืออากาศหนาว</li>
+                            <li>วันนี้ฝนตกก็ต่อเมื่ออากาศหนาว</li>
+                        </ol>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <ol>
+                            <li>$p \land q$</li>
+                            <li>$p \rightarrow q$</li>
+                            <li>$\sim p$</li>
+                            <li>$p \lor q$</li>
+                            <li>$p \leftrightarrow q$</li>
+                        </ol>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การแปลประพจน์สัญลักษณ์เป็นประโยค</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $p:$ "$n$ เป็นจำนวนคู่" และ $q:$ "$n$ หารด้วย 4 ลงตัว" จงแปลประพจน์ต่อไปนี้เป็นประโยค</p>
+                        <ol>
+                            <li>$q \rightarrow p$</li>
+                            <li>$p \land \sim q$</li>
+                            <li>$\sim p \lor q$</li>
+                            <li>$p \leftrightarrow q$</li>
+                        </ol>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <ol>
+                            <li>$q \rightarrow p$: "ถ้า $n$ หารด้วย 4 ลงตัว แล้ว $n$ เป็นจำนวนคู่"</li>
+                            <li>$p \land \sim q$: "$n$ เป็นจำนวนคู่ และ $n$ หารด้วย 4 ไม่ลงตัว"</li>
+                            <li>$\sim p \lor q$: "$n$ ไม่เป็นจำนวนคู่ หรือ $n$ หารด้วย 4 ลงตัว"</li>
+                            <li>$p \leftrightarrow q$: "$n$ เป็นจำนวนคู่ ก็ต่อเมื่อ $n$ หารด้วย 4 ลงตัว"</li>
+                        </ol>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +553,290 @@
                 <!-- Section 1.5 -->
                 <section id="section5">
                     <h2>1.5 ตารางค่าความจริง</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.5 ตารางค่าความจริง</p>
+
+                        <p><strong>ตารางค่าความจริง (Truth Table)</strong> คือ ตารางที่แสดงค่าความจริงของประพจน์ประกอบในทุกกรณีที่เป็นไปได้ของประพจน์อะตอมที่ประกอบเข้าด้วยกัน</p>
+
+                        <p><strong>การสร้างตารางค่าความจริง:</strong></p>
+                        <ol>
+                            <li>ถ้ามีประพจน์อะตอม $n$ ตัว จะมีแถวทั้งหมด $2^n$ แถว</li>
+                            <li>กำหนดค่าความจริงของประพจน์อะตอมทุกกรณีที่เป็นไปได้ (ใช้ T = จริง, F = เท็จ)</li>
+                            <li>หาค่าความจริงของประพจน์ประกอบตามตัวเชื่อม</li>
+                        </ol>
+
+                        <p><strong>ตารางค่าความจริงพื้นฐาน:</strong></p>
+
+                        <p><strong>1. การปฏิเสธ ($\sim p$)</strong></p>
+                        <table style="width: 50%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>2. การเชื่อม "และ" ($p \land q$)</strong></p>
+                        <table style="width: 60%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \land q$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>3. การเชื่อม "หรือ" ($p \lor q$)</strong></p>
+                        <table style="width: 60%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \lor q$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>4. การแถลง ($p \rightarrow q$)</strong></p>
+                        <table style="width: 60%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \rightarrow q$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>ประเภทของประพจน์ตามตารางค่าความจริง:</strong></p>
+                        <ul>
+                            <li><strong>สัจนิรันดร์ (Tautology):</strong> ประพจน์ที่มีค่าความจริงเป็นจริงทุกกรณี</li>
+                            <li><strong>ขัดแย้งนิรันดร์ (Contradiction):</strong> ประพจน์ที่มีค่าความจริงเป็นเท็จทุกกรณี</li>
+                            <li><strong>สมมูล (Equivalent):</strong> ประพจน์สองประพจน์ที่มีค่าความจริงเหมือนกันทุกกรณี</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.5 ตารางค่าความจริง</p>
+                        <h4>ตัวอย่างที่ 1: การสร้างตารางค่าความจริงของ $\sim (p \land q)$</h4>
+                        <p><strong>โจทย์:</strong> จงสร้างตารางค่าความจริงของประพจน์ $\sim (p \land q)$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <table style="width: 80%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \land q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim (p \land q)$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.5 ตารางค่าความจริง</p>
+                        <h4>ตัวอย่างที่ 2: การพิสูจน์ประพจน์สมมูล</h4>
+                        <p><strong>โจทย์:</strong> จงพิสูจน์ว่า $\sim (p \land q)$ สมมูลกับ $\sim p \lor \sim q$ (กฎของเดอมอร์แกน)</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \land q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim (p \land q)$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim p \lor \sim q$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
+                        <p><strong>สรุป:</strong> เนื่องจาก $\sim (p \land q)$ และ $\sim p \lor \sim q$ มีค่าความจริงเหมือนกันทุกกรณี ดังนั้น $\sim (p \land q) \equiv \sim p \lor \sim q$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การตรวจสอบสัจนิรันดร์</h4>
+                        <p><strong>โจทย์:</strong> จงตรวจสอบว่าประพจน์ $p \lor \sim p$ เป็นสัจนิรันดร์หรือไม่</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <table style="width: 60%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \lor \sim p$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
+                        <p><strong>สรุป:</strong> เนื่องจาก $p \lor \sim p$ มีค่าความจริงเป็นจริงทุกกรณี ดังนั้น <strong>$p \lor \sim p$ เป็นสัจนิรันดร์</strong></p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การสร้างตารางค่าความจริงของประพจน์ที่ซับซ้อน</h4>
+                        <p><strong>โจทย์:</strong> จงสร้างตารางค่าความจริงของประพจน์ $(p \rightarrow q) \land (q \rightarrow p)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$p \rightarrow q$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$q \rightarrow p$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$(p \rightarrow q) \land (q \rightarrow p)$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                            </tr>
+                        </table>
+                        <p><strong>สังเกต:</strong> ประพจน์ $(p \rightarrow q) \land (q \rightarrow p)$ มีค่าความจริงเหมือนกับ $p \leftrightarrow q$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +845,118 @@
                 <!-- Section 1.6 -->
                 <section id="section6">
                     <h2>1.6 การให้เหตุผล</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.6 การให้เหตุผล</p>
+
+                        <p><strong>การให้เหตุผล (Logical Reasoning)</strong> คือ กระบวนการอนุมานหรือสรุปข้อความใหม่จากข้อความที่ทราบอยู่แล้วโดยใช้หลักของตรรกศาสตร์</p>
+
+                        <p><strong>รูปแบบของการให้เหตุผล:</strong></p>
+
+                        <p><strong>1. การอนุมานตรง (Direct Reasoning)</strong></p>
+                        <p>รูปแบบ: ถ้า $p \rightarrow q$ เป็นจริง และ $p$ เป็นจริง แล้ว $q$ เป็นจริง</p>
+                        <p>เรียกว่า <strong>Modus Ponens</strong></p>
+                        <p>ตัวอย่าง:</p>
+                        <ul>
+                            <li>ถ้าฝนตก แล้วถนนเปียก (จริง)</li>
+                            <li>ฝนตก (จริง)</li>
+                            <li>ดังนั้น ถนนเปียก (สรุปได้)</li>
+                        </ul>
+
+                        <p><strong>2. การอนุมานโดยการปฏิเสธผล (Modus Tollens)</strong></p>
+                        <p>รูปแบบ: ถ้า $p \rightarrow q$ เป็นจริง และ $\sim q$ เป็นจริง แล้ว $\sim p$ เป็นจริง</p>
+                        <p>ตัวอย่าง:</p>
+                        <ul>
+                            <li>ถ้าฝนตก แล้วถนนเปียก (จริง)</li>
+                            <li>ถนนไม่เปียก (จริง)</li>
+                            <li>ดังนั้น ฝนไม่ตก (สรุปได้)</li>
+                        </ul>
+
+                        <p><strong>3. การอนุมานแบบสร้อยโซ่ (Hypothetical Syllogism)</strong></p>
+                        <p>รูปแบบ: ถ้า $p \rightarrow q$ และ $q \rightarrow r$ เป็นจริง แล้ว $p \rightarrow r$ เป็นจริง</p>
+                        <p>ตัวอย่าง:</p>
+                        <ul>
+                            <li>ถ้าฝนตก แล้วถนนเปียก</li>
+                            <li>ถ้าถนนเปียก แล้วรถจะวิ่งช้า</li>
+                            <li>ดังนั้น ถ้าฝนตก แล้วรถจะวิ่งช้า</li>
+                        </ul>
+
+                        <p><strong>4. การอนุมานแบบเลือก (Disjunctive Syllogism)</strong></p>
+                        <p>รูปแบบ: ถ้า $p \lor q$ เป็นจริง และ $\sim p$ เป็นจริง แล้ว $q$ เป็นจริง</p>
+                        <p>ตัวอย่าง:</p>
+                        <ul>
+                            <li>วันนี้เป็นวันอาทิตย์หรือวันจันทร์</li>
+                            <li>วันนี้ไม่ใช่วันอาทิตย์</li>
+                            <li>ดังนั้น วันนี้เป็นวันจันทร์</li>
+                        </ul>
+
+                        <p><strong>รูปแบบที่ไม่ถูกต้อง (Fallacy):</strong></p>
+                        <ul>
+                            <li><strong>การยืนยันผล:</strong> จาก $p \rightarrow q$ และ $q$ เป็นจริง ไม่สามารถสรุปว่า $p$ เป็นจริง</li>
+                            <li><strong>การปฏิเสธเหตุ:</strong> จาก $p \rightarrow q$ และ $\sim p$ เป็นจริง ไม่สามารถสรุปว่า $\sim q$ เป็นจริง</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.6 การให้เหตุผล</p>
+                        <h4>ตัวอย่างที่ 1: การอนุมานตรง (Modus Ponens)</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้</p>
+                        <ul>
+                            <li>ถ้า $n$ หารด้วย 4 ลงตัว แล้ว $n$ เป็นจำนวนคู่</li>
+                            <li>$n$ หารด้วย 4 ลงตัว</li>
+                        </ul>
+                        <p>จงสรุปว่าอะไร</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>กำหนดให้ $p:$ "$n$ หารด้วย 4 ลงตัว" และ $q:$ "$n$ เป็นจำนวนคู่"</p>
+                        <p>จากสมมติฐาน: $p \rightarrow q$ เป็นจริง และ $p$ เป็นจริง</p>
+                        <p>ใช้ Modus Ponens: ดังนั้น $q$ เป็นจริง</p>
+                        <p><strong>สรุป:</strong> $n$ เป็นจำนวนคู่</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.6 การให้เหตุผล</p>
+                        <h4>ตัวอย่างที่ 2: การอนุมานโดยการปฏิเสธผล (Modus Tollens)</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้</p>
+                        <ul>
+                            <li>ถ้าพรุ่งนี้เป็นวันเสาร์ แล้วโรงเรียนหยุด</li>
+                            <li>พรุ่งนี้โรงเรียนไม่หยุด</li>
+                        </ul>
+                        <p>จงสรุปว่าอะไร</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>กำหนดให้ $p:$ "พรุ่งนี้เป็นวันเสาร์" และ $q:$ "โรงเรียนหยุด"</p>
+                        <p>จากสมมติฐาน: $p \rightarrow q$ เป็นจริง และ $\sim q$ เป็นจริง</p>
+                        <p>ใช้ Modus Tollens: ดังนั้น $\sim p$ เป็นจริง</p>
+                        <p><strong>สรุป:</strong> พรุ่งนี้ไม่เป็นวันเสาร์</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การอนุมานแบบสร้อยโซ่</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้</p>
+                        <ul>
+                            <li>ถ้า $x > 5$ แล้ว $x > 3$</li>
+                            <li>ถ้า $x > 3$ แล้ว $x > 0$</li>
+                        </ul>
+                        <p>จงสรุปว่าอะไร</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>กำหนดให้ $p:$ "$x > 5$", $q:$ "$x > 3$" และ $r:$ "$x > 0$"</p>
+                        <p>จากสมมติฐาน: $p \rightarrow q$ และ $q \rightarrow r$ เป็นจริง</p>
+                        <p>ใช้ Hypothetical Syllogism: ดังนั้น $p \rightarrow r$ เป็นจริง</p>
+                        <p><strong>สรุป:</strong> ถ้า $x > 5$ แล้ว $x > 0$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การตรวจสอบการให้เหตุผลที่ไม่ถูกต้อง</h4>
+                        <p><strong>โจทย์:</strong> พิจารณาการให้เหตุผลต่อไปนี้ว่าถูกต้องหรือไม่</p>
+                        <ul>
+                            <li>ถ้าฝนตก แล้วถนนเปียก</li>
+                            <li>ถนนเปียก</li>
+                            <li>ดังนั้น ฝนตก</li>
+                        </ul>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>กำหนดให้ $p:$ "ฝนตก" และ $q:$ "ถนนเปียก"</p>
+                        <p>จากสมมติฐาน: $p \rightarrow q$ และ $q$ เป็นจริง</p>
+                        <p>พยายามสรุปว่า $p$ เป็นจริง</p>
+                        <p>นี่คือรูปแบบ <strong>"การยืนยันผล"</strong> ซึ่งเป็น <strong>Fallacy (การให้เหตุผลที่ไม่ถูกต้อง)</strong></p>
+                        <p>เพราะถนนอาจเปียกจากสาเหตุอื่น เช่น มีคนราดน้ำ หรือรถฉีดน้ำผ่าน</p>
+                        <p><strong>สรุป:</strong> การให้เหตุผลนี้<strong>ไม่ถูกต้อง</strong></p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -246,74 +965,255 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 1</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: ความหมายของเซต (3 ข้อ)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>จงเขียนเซต $A$ ของจำนวนเฉพาะที่น้อยกว่า 15 ด้วยวิธีแจกแจงสมาชิก และหา $n(A)$</li>
+                            <li>กำหนดให้ $B = \{x | x^2 - 7x + 12 = 0\}$ จงหาสมาชิกของเซต $B$</li>
+                            <li>จงเขียนเซต $C = \{3, 6, 9, 12, 15\}$ ด้วยวิธีกำหนดคุณสมบัติ</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+                            <p><strong>1.</strong> จำนวนเฉพาะที่น้อยกว่า 15 คือ 2, 3, 5, 7, 11, 13<br>
+                            $A = \{2, 3, 5, 7, 11, 13\}$ และ $n(A) = 6$</p>
+
+                            <p><strong>2.</strong> แก้สมการ $x^2 - 7x + 12 = 0$<br>
+                            $(x - 3)(x - 4) = 0$<br>
+                            $x = 3$ หรือ $x = 4$<br>
+                            ดังนั้น $B = \{3, 4\}$</p>
+
+                            <p><strong>3.</strong> สังเกตว่าสมาชิกทุกตัวเป็นพหุคูณของ 3 ที่มากกว่า 0 และน้อยกว่าหรือเท่ากับ 15<br>
+                            $C = \{x | x = 3n, n \in \mathbb{Z}^+ \text{ และ } 1 \leq n \leq 5\}$<br>
+                            หรือ $C = \{x | x \text{ เป็นพหุคูณของ } 3 \text{ และ } 0 < x \leq 15\}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การดำเนินการของเซต (4 ข้อ)</h3>
+                        <ol start="4">
+                            <li>กำหนดให้ $A = \{1, 2, 3, 4, 5, 6\}$ และ $B = \{4, 5, 6, 7, 8\}$ จงหา $A \cup B$, $A \cap B$ และ $A - B$</li>
+                            <li>กำหนดให้ $U = \{x | x \text{ เป็นจำนวนเต็มบวกที่น้อยกว่า } 11\}$ และ $A = \{2, 4, 6, 8, 10\}$ จงหา $A^c$</li>
+                            <li>กำหนดให้ $P = \{1, 3, 5\}$, $Q = \{1, 2, 3, 4, 5\}$ และ $R = \{1, 3, 5, 7, 9\}$ จงตรวจสอบว่า $P \subseteq Q$ และ $P \subseteq R$ หรือไม่</li>
+                            <li>ในโรงเรียนแห่งหนึ่งมีนักเรียน 100 คน เล่นฟุตบอล 60 คน เล่นบาสเกตบอล 50 คน และเล่นทั้งสองอย่าง 30 คน จงหาจำนวนนักเรียนที่ไม่เล่นทั้งสองอย่าง</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+                            <p><strong>4.</strong> $A \cup B = \{1, 2, 3, 4, 5, 6, 7, 8\}$<br>
+                            $A \cap B = \{4, 5, 6\}$<br>
+                            $A - B = \{1, 2, 3\}$</p>
+
+                            <p><strong>5.</strong> $U = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$<br>
+                            $A^c = \{1, 3, 5, 7, 9\}$</p>
+
+                            <p><strong>6.</strong> ตรวจสอบ $P \subseteq Q$:<br>
+                            สมาชิกของ $P$ คือ 1, 3, 5 ซึ่งอยู่ใน $Q$ ทั้งหมด<br>
+                            ดังนั้น $P \subseteq Q$ เป็นจริง<br><br>
+                            ตรวจสอบ $P \subseteq R$:<br>
+                            สมาชิกของ $P$ คือ 1, 3, 5 ซึ่งอยู่ใน $R$ ทั้งหมด<br>
+                            ดังนั้น $P \subseteq R$ เป็นจริง</p>
+
+                            <p><strong>7.</strong> กำหนดให้ $F$ = เซตของนักเรียนที่เล่นฟุตบอล, $B$ = เซตของนักเรียนที่เล่นบาสเกตบอล<br>
+                            $n(U) = 100$, $n(F) = 60$, $n(B) = 50$, $n(F \cap B) = 30$<br>
+                            $n(F \cup B) = n(F) + n(B) - n(F \cap B) = 60 + 50 - 30 = 80$<br>
+                            จำนวนนักเรียนที่ไม่เล่นทั้งสองอย่าง $= n(U) - n(F \cup B) = 100 - 80 = 20$ คน</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: กฎของเซต (3 ข้อ)</h3>
+                        <ol start="8">
+                            <li>กำหนดให้ $U = \{1, 2, 3, 4, 5, 6, 7, 8\}$, $A = \{1, 2, 3, 4\}$ และ $B = \{3, 4, 5, 6\}$ จงตรวจสอบกฎของเดอมอร์แกน $(A \cap B)^c = A^c \cup B^c$</li>
+                            <li>จงพิสูจน์ว่า $A \cup (A \cap B) = A$ โดยใช้กฎของเซต</li>
+                            <li>กำหนดให้ $X = \{1, 2\}$, $Y = \{2, 3\}$ และ $Z = \{1, 3\}$ จงตรวจสอบกฎการแจกแจง $X \cup (Y \cap Z) = (X \cup Y) \cap (X \cup Z)$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+                            <p><strong>8.</strong> หาด้านซ้าย: $(A \cap B)^c$<br>
+                            $A \cap B = \{3, 4\}$<br>
+                            $(A \cap B)^c = \{1, 2, 5, 6, 7, 8\}$<br><br>
+                            หาด้านขวา: $A^c \cup B^c$<br>
+                            $A^c = \{5, 6, 7, 8\}$<br>
+                            $B^c = \{1, 2, 7, 8\}$<br>
+                            $A^c \cup B^c = \{1, 2, 5, 6, 7, 8\}$<br><br>
+                            เนื่องจาก $(A \cap B)^c = A^c \cup B^c$ ดังนั้นกฎของเดอมอร์แกนเป็นจริง</p>
+
+                            <p><strong>9.</strong> $A \cup (A \cap B)$<br>
+                            $= (A \cup A) \cap (A \cup B)$ (กฎการแจกแจง)<br>
+                            $= A \cap (A \cup B)$ (เพราะ $A \cup A = A$)<br>
+                            $= A$ (กฎการดูดซับ)</p>
+
+                            <p><strong>10.</strong> หาด้านซ้าย: $X \cup (Y \cap Z)$<br>
+                            $Y \cap Z = \{3\}$<br>
+                            $X \cup (Y \cap Z) = \{1, 2\} \cup \{3\} = \{1, 2, 3\}$<br><br>
+                            หาด้านขวา: $(X \cup Y) \cap (X \cup Z)$<br>
+                            $X \cup Y = \{1, 2, 3\}$<br>
+                            $X \cup Z = \{1, 2, 3\}$<br>
+                            $(X \cup Y) \cap (X \cup Z) = \{1, 2, 3\}$<br><br>
+                            เนื่องจากทั้งสองด้านเท่ากัน ดังนั้นกฎการแจกแจงเป็นจริง</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: ประพจน์ (3 ข้อ)</h3>
+                        <ol start="11">
+                            <li>จงพิจารณาว่าข้อความใดต่อไปนี้เป็นประพจน์ ถ้าเป็นให้ระบุว่าจริงหรือเท็จ<br>
+                            (ก) $\sqrt{16} = 4$<br>
+                            (ข) คุณทำการบ้านเสร็จหรือยัง?<br>
+                            (ค) $x + 3 = 7$</li>
+                            <li>กำหนดให้ $p:$ "$5 < 10$" และ $q:$ "$3$ เป็นจำนวนคู่" จงหาค่าความจริงของ $p \land q$, $p \lor q$ และ $p \rightarrow q$</li>
+                            <li>กำหนดให้ $p:$ "$n$ หารด้วย 6 ลงตัว" และ $q:$ "$n$ หารด้วย 2 ลงตัว" จงเขียนประพจน์ต่อไปนี้ด้วยสัญลักษณ์<br>
+                            (ก) $n$ ไม่หารด้วย 6 ลงตัว<br>
+                            (ข) ถ้า $n$ หารด้วย 6 ลงตัว แล้ว $n$ หารด้วย 2 ลงตัว</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+                            <p><strong>11.</strong> (ก) $\sqrt{16} = 4$ เป็นประพจน์ และเป็นจริง<br>
+                            (ข) คุณทำการบ้านเสร็จหรือยัง? ไม่เป็นประพจน์ (เป็นประโยคคำถาม)<br>
+                            (ค) $x + 3 = 7$ ไม่เป็นประพจน์ (ไม่สามารถบอกได้ว่าจริงหรือเท็จจนกว่าจะทราบค่า $x$)</p>
+
+                            <p><strong>12.</strong> $p$ เป็นจริง (เพราะ $5 < 10$) และ $q$ เป็นเท็จ (เพราะ 3 เป็นจำนวนคี่)<br>
+                            $p \land q = $ จริง $\land$ เท็จ $= $ เท็จ<br>
+                            $p \lor q = $ จริง $\lor$ เท็จ $= $ จริง<br>
+                            $p \rightarrow q = $ จริง $\rightarrow$ เท็จ $= $ เท็จ</p>
+
+                            <p><strong>13.</strong> (ก) $\sim p$<br>
+                            (ข) $p \rightarrow q$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: ตารางค่าความจริงและการให้เหตุผล (5 ข้อ)</h3>
+                        <ol start="14">
+                            <li>จงสร้างตารางค่าความจริงของประพจน์ $(p \lor q) \land \sim p$</li>
+                            <li>จงพิสูจน์ว่า $p \rightarrow q$ สมมูลกับ $\sim p \lor q$ โดยใช้ตารางค่าความจริง</li>
+                            <li>จงตรวจสอบว่าประพจน์ $(p \land \sim p)$ เป็นขัดแย้งนิรันดร์หรือไม่</li>
+                            <li>กำหนดให้<br>
+                            - ถ้า $x > 0$ แล้ว $x^2 > 0$<br>
+                            - $x > 0$<br>
+                            จงสรุปว่าอะไร และระบุรูปแบบการให้เหตุผล</li>
+                            <li>จงพิจารณาว่าการให้เหตุผลต่อไปนี้ถูกต้องหรือไม่ พร้อมอธิบาย<br>
+                            - ถ้านักเรียนเรียนหนัก แล้วนักเรียนสอบผ่าน<br>
+                            - นักเรียนไม่เรียนหนัก<br>
+                            - ดังนั้น นักเรียนสอบไม่ผ่าน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+                            <p><strong>14.</strong> ตารางค่าความจริงของ $(p \lor q) \land \sim p$</p>
+                            <table style="width: 80%; border-collapse: collapse; margin: 10px 0;">
+                                <tr style="background-color: #f0f0f0;">
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p \lor q$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$(p \lor q) \land \sim p$</th>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>15.</strong> ตารางค่าความจริงเปรียบเทียบ $p \rightarrow q$ กับ $\sim p \lor q$</p>
+                            <table style="width: 80%; border-collapse: collapse; margin: 10px 0;">
+                                <tr style="background-color: #f0f0f0;">
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$q$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p \rightarrow q$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$\sim p \lor q$</th>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                </tr>
+                            </table>
+                            <p>เนื่องจาก $p \rightarrow q$ และ $\sim p \lor q$ มีค่าความจริงเหมือนกันทุกกรณี ดังนั้น $p \rightarrow q \equiv \sim p \lor q$</p>
+
+                            <p><strong>16.</strong> ตารางค่าความจริงของ $p \land \sim p$</p>
+                            <table style="width: 60%; border-collapse: collapse; margin: 10px 0;">
+                                <tr style="background-color: #f0f0f0;">
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$\sim p$</th>
+                                    <th style="border: 1px solid #ddd; padding: 8px;">$p \land \sim p$</th>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">T</td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                                </tr>
+                            </table>
+                            <p>เนื่องจาก $p \land \sim p$ มีค่าความจริงเป็นเท็จทุกกรณี ดังนั้น $p \land \sim p$ เป็นขัดแย้งนิรันดร์</p>
+
+                            <p><strong>17.</strong> กำหนดให้ $p:$ "$x > 0$" และ $q:$ "$x^2 > 0$"<br>
+                            จากสมมติฐาน: $p \rightarrow q$ เป็นจริง และ $p$ เป็นจริง<br>
+                            ใช้ Modus Ponens (การอนุมานตรง)<br>
+                            สรุป: $x^2 > 0$</p>
+
+                            <p><strong>18.</strong> กำหนดให้ $p:$ "นักเรียนเรียนหนัก" และ $q:$ "นักเรียนสอบผ่าน"<br>
+                            จากสมมติฐาน: $p \rightarrow q$ และ $\sim p$<br>
+                            พยายามสรุปว่า $\sim q$<br>
+                            นี่คือรูปแบบ "การปฏิเสธเหตุ" ซึ่งเป็น Fallacy (การให้เหตุผลที่ไม่ถูกต้อง)<br>
+                            เพราะแม้ไม่เรียนหนัก ก็อาจสอบผ่านได้จากสาเหตุอื่น เช่น มีพื้นฐานดีอยู่แล้ว<br>
+                            สรุป: การให้เหตุผลนี้ไม่ถูกต้อง</p>
                         </div>
                     </div>
 
