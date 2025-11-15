@@ -13,7 +13,7 @@
     <title>บทที่ 3: เวกเตอร์ | คณิตศาสตร์ ม.5</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -68,9 +68,9 @@
 
             <section class="main-content">
                 <h1>บทที่ 3: เวกเตอร์</h1>
-                
+
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ เวกเตอร์ ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.5</p>
+                    <p>เวกเตอร์ (Vector) เป็นปริมาณทางคณิตศาสตร์ที่มีทั้งขนาดและทิศทาง ซึ่งแตกต่างจากสเกลาร์ (Scalar) ที่มีเพียงขนาดเท่านั้น เวกเตอร์มีความสำคัญอย่างมากในวิชาฟิสิกส์ วิศวกรรมศาสตร์ และคณิตศาสตร์ประยุกต์ ใช้ในการอธิบายปริมาณต่างๆ เช่น แรง ความเร็ว ความกระจัด เป็นต้น บทนี้จะศึกษาพื้นฐานของเวกเตอร์ การดำเนินการทางคณิตศาสตร์ของเวกเตอร์ และการประยุกต์ใช้งาน</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,116 @@
                 <!-- Section 3.1 -->
                 <section id="section1">
                     <h2>3.1 ความหมายของเวกเตอร์</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.1 ความหมายของเวกเตอร์</p>
+                        <p><strong>เวกเตอร์</strong> คือ ปริมาณที่มีทั้งขนาด (Magnitude) และทิศทาง (Direction) เช่น แรง ความเร็ว ความกระจัด</p>
+                        <p><strong>สเกลาร์</strong> คือ ปริมาณที่มีเพียงขนาดเท่านั้น ไม่มีทิศทาง เช่น เวลา อุณหภูมิ มวล ระยะทาง</p>
+
+                        <h4>การแทนเวกเตอร์</h4>
+                        <p>การแทนเวกเตอร์มีหลายวิธี:</p>
+                        <ul>
+                            <li><strong>วิธีที่ 1:</strong> ใช้ลูกศรเหนือตัวอักษร เช่น $\vec{v}$, $\vec{u}$, $\vec{a}$</li>
+                            <li><strong>วิธีที่ 2:</strong> ใช้ตัวอักษรตัวหนา เช่น <strong>v</strong>, <strong>u</strong>, <strong>a</strong></li>
+                            <li><strong>วิธีที่ 3:</strong> ใช้ตัวอักษรพร้อมลูกศร เช่น $\overrightarrow{AB}$ (เวกเตอร์จากจุด A ไปจุด B)</li>
+                        </ul>
+
+                        <h4>องค์ประกอบของเวกเตอร์</h4>
+                        <p>เวกเตอร์ในระนาบสองมิติสามารถเขียนในรูป:</p>
+                        <ul>
+                            <li><strong>รูพิกัด:</strong> $\vec{v} = (x, y)$ หรือ $\vec{v} = \langle x, y \rangle$</li>
+                            <li><strong>รูปเวกเตอร์หน่วย:</strong> $\vec{v} = x\vec{i} + y\vec{j}$ โดยที่ $\vec{i} = (1,0)$ และ $\vec{j} = (0,1)$</li>
+                        </ul>
+
+                        <p>เวกเตอร์ในปริภูมิสามมิติสามารถเขียนในรูป:</p>
+                        <ul>
+                            <li><strong>รูพิกัด:</strong> $\vec{v} = (x, y, z)$ หรือ $\vec{v} = \langle x, y, z \rangle$</li>
+                            <li><strong>รูปเวกเตอร์หน่วย:</strong> $\vec{v} = x\vec{i} + y\vec{j} + z\vec{k}$ โดยที่ $\vec{i} = (1,0,0)$, $\vec{j} = (0,1,0)$ และ $\vec{k} = (0,0,1)$</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>ขนาดของเวกเตอร์ในระนาบ 2 มิติ:</strong></p>
+                        <p>$$|\vec{v}| = \sqrt{x^2 + y^2}$$</p>
+
+                        <p><strong>ขนาดของเวกเตอร์ในปริภูมิ 3 มิติ:</strong></p>
+                        <p>$$|\vec{v}| = \sqrt{x^2 + y^2 + z^2}$$</p>
+
+                        <p><strong>เวกเตอร์จากจุด A$(x_1, y_1)$ ไปจุด B$(x_2, y_2)$:</strong></p>
+                        <p>$$\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1)$$</p>
+
+                        <p><strong>เวกเตอร์หน่วย (Unit Vector):</strong> เวกเตอร์ที่มีขนาดเท่ากับ 1</p>
+                        <p>$$\hat{v} = \frac{\vec{v}}{|\vec{v}|}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.1 ความหมายของเวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 1: การหาขนาดของเวกเตอร์ 2 มิติ</h4>
+                        <p><strong>โจทย์:</strong> จงหาขนาดของเวกเตอร์ $\vec{v} = 3\vec{i} + 4\vec{j}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>จากโจทย์ $\vec{v} = 3\vec{i} + 4\vec{j}$ แปลว่า $\vec{v} = (3, 4)$</p>
+                        <p>ดังนั้น</p>
+                        <p>$$|\vec{v}| = \sqrt{3^2 + 4^2}$$</p>
+                        <p>$$= \sqrt{9 + 16}$$</p>
+                        <p>$$= \sqrt{25}$$</p>
+                        <p>$$= 5$$</p>
+                        <p><strong>ตอบ:</strong> $|\vec{v}| = 5$ หน่วย</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.1 ความหมายของเวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 2: การหาเวกเตอร์จากสองจุด</h4>
+                        <p><strong>โจทย์:</strong> จงหาเวกเตอร์ $\overrightarrow{AB}$ และขนาดของเวกเตอร์นั้น เมื่อ $A(2, 1)$ และ $B(5, 5)$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) หาเวกเตอร์ $\overrightarrow{AB}$</p>
+                        <p>$$\overrightarrow{AB} = (5-2, 5-1)$$</p>
+                        <p>$$= (3, 4)$$</p>
+                        <p>$$= 3\vec{i} + 4\vec{j}$$</p>
+
+                        <p>ข) หาขนาดของเวกเตอร์ $\overrightarrow{AB}$</p>
+                        <p>$$|\overrightarrow{AB}| = \sqrt{3^2 + 4^2}$$</p>
+                        <p>$$= \sqrt{9 + 16}$$</p>
+                        <p>$$= \sqrt{25}$$</p>
+                        <p>$$= 5$$</p>
+                        <p><strong>ตอบ:</strong> $\overrightarrow{AB} = (3, 4)$ และ $|\overrightarrow{AB}| = 5$ หน่วย</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การหาเวกเตอร์หน่วย</h4>
+                        <p><strong>โจทย์:</strong> จงหาเวกเตอร์หน่วยในทิศทางเดียวกับ $\vec{v} = (-6, 8)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ขั้นตอนที่ 1: หาขนาดของเวกเตอร์ $\vec{v}$</p>
+                        <p>$$|\vec{v}| = \sqrt{(-6)^2 + 8^2}$$</p>
+                        <p>$$= \sqrt{36 + 64}$$</p>
+                        <p>$$= \sqrt{100}$$</p>
+                        <p>$$= 10$$</p>
+
+                        <p>ขั้นตอนที่ 2: หาเวกเตอร์หน่วย</p>
+                        <p>$$\hat{v} = \frac{\vec{v}}{|\vec{v}|}$$</p>
+                        <p>$$= \frac{(-6, 8)}{10}$$</p>
+                        <p>$$= \left(-\frac{6}{10}, \frac{8}{10}\right)$$</p>
+                        <p>$$= \left(-\frac{3}{5}, \frac{4}{5}\right)$$</p>
+
+                        <p>ตรวจสอบ: $|\hat{v}| = \sqrt{\left(-\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{\frac{25}{25}} = 1$ ✓</p>
+                        <p><strong>ตอบ:</strong> $\hat{v} = \left(-\frac{3}{5}, \frac{4}{5}\right)$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: เวกเตอร์ในปริภูมิ 3 มิติ</h4>
+                        <p><strong>โจทย์:</strong> จงหาขนาดของเวกเตอร์ $\vec{u} = 2\vec{i} - 3\vec{j} + 6\vec{k}$ และหาเวกเตอร์หน่วย</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) หาขนาดของเวกเตอร์</p>
+                        <p>จากโจทย์ $\vec{u} = (2, -3, 6)$</p>
+                        <p>$$|\vec{u}| = \sqrt{2^2 + (-3)^2 + 6^2}$$</p>
+                        <p>$$= \sqrt{4 + 9 + 36}$$</p>
+                        <p>$$= \sqrt{49}$$</p>
+                        <p>$$= 7$$</p>
+
+                        <p>ข) หาเวกเตอร์หน่วย</p>
+                        <p>$$\hat{u} = \frac{\vec{u}}{|\vec{u}|}$$</p>
+                        <p>$$= \frac{(2, -3, 6)}{7}$$</p>
+                        <p>$$= \left(\frac{2}{7}, -\frac{3}{7}, \frac{6}{7}\right)$$</p>
+                        <p>$$= \frac{2}{7}\vec{i} - \frac{3}{7}\vec{j} + \frac{6}{7}\vec{k}$$</p>
+                        <p><strong>ตอบ:</strong> $|\vec{u}| = 7$ และ $\hat{u} = \left(\frac{2}{7}, -\frac{3}{7}, \frac{6}{7}\right)$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +208,108 @@
                 <!-- Section 3.2 -->
                 <section id="section2">
                     <h2>3.2 การบวกลบเวกเตอร์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.2 การบวกลบเวกเตอร์</p>
+                        <h4>การบวกเวกเตอร์</h4>
+                        <p>การบวกเวกเตอร์สามารถทำได้โดยการบวกองค์ประกอบที่สอดคล้องกัน</p>
+                        <p>ถ้า $\vec{u} = (u_1, u_2)$ และ $\vec{v} = (v_1, v_2)$ แล้ว</p>
+                        <p>$$\vec{u} + \vec{v} = (u_1 + v_1, u_2 + v_2)$$</p>
+
+                        <p><strong>วิธีเรขาคณิต:</strong></p>
+                        <ul>
+                            <li><strong>กฎสามเหลี่ยม (Triangle Law):</strong> วาดเวกเตอร์ทั้งสองต่อหัวต่อท้ายกัน เวกเตอร์ผลลัพธ์คือเส้นตรงจากจุดเริ่มต้นของเวกเตอร์แรกไปยังจุดสุดท้ายของเวกเตอร์ที่สอง</li>
+                            <li><strong>กฎสี่เหลี่ยมด้านขนาน (Parallelogram Law):</strong> วาดเวกเตอร์ทั้งสองเริ่มจากจุดเดียวกัน เวกเตอร์ผลลัพธ์คือเส้นทแยงมุมของสี่เหลี่ยมด้านขนาน</li>
+                        </ul>
+
+                        <h4>การลบเวกเตอร์</h4>
+                        <p>การลบเวกเตอร์เหมือนกับการบวกกับเวกเตอร์ลบ</p>
+                        <p>$$\vec{u} - \vec{v} = \vec{u} + (-\vec{v}) = (u_1 - v_1, u_2 - v_2)$$</p>
+
+                        <h4>สมบัติของการบวกเวกเตอร์</h4>
+                        <ol>
+                            <li><strong>สมบัติการสลับที่:</strong> $\vec{u} + \vec{v} = \vec{v} + \vec{u}$</li>
+                            <li><strong>สมบัติการเปลี่ยนหมู่:</strong> $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$</li>
+                            <li><strong>เอกลักษณ์การบวก:</strong> $\vec{u} + \vec{0} = \vec{u}$ โดยที่ $\vec{0} = (0, 0)$ คือเวกเตอร์ศูนย์</li>
+                            <li><strong>อินเวอร์สการบวก:</strong> $\vec{u} + (-\vec{u}) = \vec{0}$</li>
+                        </ol>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>การบวกเวกเตอร์ในระนาบ 2 มิติ:</strong></p>
+                        <p>$$\vec{u} + \vec{v} = (u_1, u_2) + (v_1, v_2) = (u_1 + v_1, u_2 + v_2)$$</p>
+
+                        <p><strong>การลบเวกเตอร์ในระนาบ 2 มิติ:</strong></p>
+                        <p>$$\vec{u} - \vec{v} = (u_1, u_2) - (v_1, v_2) = (u_1 - v_1, u_2 - v_2)$$</p>
+
+                        <p><strong>การบวกเวกเตอร์ในปริภูมิ 3 มิติ:</strong></p>
+                        <p>$$\vec{u} + \vec{v} = (u_1, u_2, u_3) + (v_1, v_2, v_3) = (u_1 + v_1, u_2 + v_2, u_3 + v_3)$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.2 การบวกลบเวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 1: การบวกเวกเตอร์พื้นฐาน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (3, 5)$ และ $\vec{v} = (-1, 2)$ จงหา $\vec{u} + \vec{v}$ และ $\vec{u} - \vec{v}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $\vec{u} + \vec{v}$</p>
+                        <p>$$\vec{u} + \vec{v} = (3, 5) + (-1, 2)$$</p>
+                        <p>$$= (3 + (-1), 5 + 2)$$</p>
+                        <p>$$= (2, 7)$$</p>
+
+                        <p>ข) $\vec{u} - \vec{v}$</p>
+                        <p>$$\vec{u} - \vec{v} = (3, 5) - (-1, 2)$$</p>
+                        <p>$$= (3 - (-1), 5 - 2)$$</p>
+                        <p>$$= (4, 3)$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{u} + \vec{v} = (2, 7)$ และ $\vec{u} - \vec{v} = (4, 3)$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.2 การบวกลบเวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 2: การบวกเวกเตอร์แบบเวกเตอร์หน่วย</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{a} = 2\vec{i} - 3\vec{j}$ และ $\vec{b} = -\vec{i} + 4\vec{j}$ จงหา $\vec{a} + \vec{b}$ และขนาดของเวกเตอร์ผลลัพธ์</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) หา $\vec{a} + \vec{b}$</p>
+                        <p>$$\vec{a} + \vec{b} = (2\vec{i} - 3\vec{j}) + (-\vec{i} + 4\vec{j})$$</p>
+                        <p>$$= (2-1)\vec{i} + (-3+4)\vec{j}$$</p>
+                        <p>$$= \vec{i} + \vec{j}$$</p>
+                        <p>$$= (1, 1)$$</p>
+
+                        <p>ข) หาขนาดของเวกเตอร์ผลลัพธ์</p>
+                        <p>$$|\vec{a} + \vec{b}| = \sqrt{1^2 + 1^2}$$</p>
+                        <p>$$= \sqrt{2}$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{a} + \vec{b} = \vec{i} + \vec{j}$ และ $|\vec{a} + \vec{b}| = \sqrt{2}$ หน่วย</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การบวกลบเวกเตอร์หลายตัว</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (1, 2)$, $\vec{v} = (3, -1)$ และ $\vec{w} = (-2, 4)$ จงหา $2\vec{u} - \vec{v} + 3\vec{w}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$2\vec{u} - \vec{v} + 3\vec{w} = 2(1, 2) - (3, -1) + 3(-2, 4)$$</p>
+                        <p>$$= (2, 4) - (3, -1) + (-6, 12)$$</p>
+                        <p>$$= (2-3+(-6), 4-(-1)+12)$$</p>
+                        <p>$$= (2-3-6, 4+1+12)$$</p>
+                        <p>$$= (-7, 17)$$</p>
+                        <p><strong>ตอบ:</strong> $2\vec{u} - \vec{v} + 3\vec{w} = (-7, 17)$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การบวกเวกเตอร์ในปริภูมิ 3 มิติ</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{p} = (2, -1, 3)$ และ $\vec{q} = (-3, 4, 1)$ จงหา $\vec{p} + \vec{q}$, $\vec{p} - \vec{q}$ และ $|\vec{p} + \vec{q}|$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $\vec{p} + \vec{q}$</p>
+                        <p>$$\vec{p} + \vec{q} = (2, -1, 3) + (-3, 4, 1)$$</p>
+                        <p>$$= (2+(-3), -1+4, 3+1)$$</p>
+                        <p>$$= (-1, 3, 4)$$</p>
+
+                        <p>ข) $\vec{p} - \vec{q}$</p>
+                        <p>$$\vec{p} - \vec{q} = (2, -1, 3) - (-3, 4, 1)$$</p>
+                        <p>$$= (2-(-3), -1-4, 3-1)$$</p>
+                        <p>$$= (5, -5, 2)$$</p>
+
+                        <p>ค) $|\vec{p} + \vec{q}|$</p>
+                        <p>$$|\vec{p} + \vec{q}| = |(-1, 3, 4)|$$</p>
+                        <p>$$= \sqrt{(-1)^2 + 3^2 + 4^2}$$</p>
+                        <p>$$= \sqrt{1 + 9 + 16}$$</p>
+                        <p>$$= \sqrt{26}$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{p} + \vec{q} = (-1, 3, 4)$, $\vec{p} - \vec{q} = (5, -5, 2)$ และ $|\vec{p} + \vec{q}| = \sqrt{26}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +318,108 @@
                 <!-- Section 3.3 -->
                 <section id="section3">
                     <h2>3.3 ผลคูณสเกลาร์</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.3 ผลคูณสเกลาร์</p>
+                        <p><strong>ผลคูณสเกลาร์</strong> (Scalar Multiplication) คือ การคูณเวกเตอร์ด้วยจำนวนจริง (สเกลาร์) ผลลัพธ์จะเป็นเวกเตอร์ที่มีทิศทางเดียวกัน (หรือตรงกันข้าม) แต่ขนาดเปลี่ยนไป</p>
+
+                        <p>ถ้า $\vec{v} = (v_1, v_2)$ และ $k$ เป็นจำนวนจริง แล้ว</p>
+                        <p>$$k\vec{v} = k(v_1, v_2) = (kv_1, kv_2)$$</p>
+
+                        <h4>สมบัติของผลคูณสเกลาร์</h4>
+                        <p>ให้ $k$, $m$ เป็นจำนวนจริง และ $\vec{u}$, $\vec{v}$ เป็นเวกเตอร์ จะได้</p>
+                        <ol>
+                            <li>$k(\vec{u} + \vec{v}) = k\vec{u} + k\vec{v}$ (กระจาย)</li>
+                            <li>$(k + m)\vec{u} = k\vec{u} + m\vec{u}$ (กระจาย)</li>
+                            <li>$k(m\vec{u}) = (km)\vec{u}$ (สลับที่)</li>
+                            <li>$1\vec{u} = \vec{u}$ (เอกลักษณ์)</li>
+                            <li>$0\vec{u} = \vec{0}$ และ $k\vec{0} = \vec{0}$</li>
+                            <li>ถ้า $k > 0$ แล้ว $k\vec{v}$ มีทิศทางเดียวกับ $\vec{v}$</li>
+                            <li>ถ้า $k < 0$ แล้ว $k\vec{v}$ มีทิศทางตรงข้ามกับ $\vec{v}$</li>
+                            <li>$|k\vec{v}| = |k||\vec{v}|$</li>
+                        </ol>
+
+                        <h4>เวกเตอร์ขนาน</h4>
+                        <p>เวกเตอร์ $\vec{u}$ และ $\vec{v}$ ขนานกันก็ต่อเมื่อ $\vec{u} = k\vec{v}$ สำหรับจำนวนจริง $k$ ใดๆ</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>ผลคูณสเกลาร์:</strong></p>
+                        <p>$$k\vec{v} = k(v_1, v_2) = (kv_1, kv_2)$$</p>
+
+                        <p><strong>ขนาดของผลคูณสเกลาร์:</strong></p>
+                        <p>$$|k\vec{v}| = |k| \cdot |\vec{v}|$$</p>
+
+                        <p><strong>เวกเตอร์ขนาน:</strong></p>
+                        <p>$\vec{u}$ ขนานกับ $\vec{v}$ $\Leftrightarrow$ $\vec{u} = k\vec{v}$ สำหรับ $k \in \mathbb{R}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.3 ผลคูณสเกลาร์</p>
+                        <h4>ตัวอย่างที่ 1: ผลคูณสเกลาร์พื้นฐาน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{v} = (2, -3)$ จงหา $3\vec{v}$ และ $-2\vec{v}$ พร้อมทั้งหาขนาดของเวกเตอร์ทั้งสอง</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) $3\vec{v}$</p>
+                        <p>$$3\vec{v} = 3(2, -3)$$</p>
+                        <p>$$= (3 \times 2, 3 \times (-3))$$</p>
+                        <p>$$= (6, -9)$$</p>
+                        <p>$$|3\vec{v}| = \sqrt{6^2 + (-9)^2} = \sqrt{36 + 81} = \sqrt{117} = 3\sqrt{13}$$</p>
+
+                        <p>ข) $-2\vec{v}$</p>
+                        <p>$$-2\vec{v} = -2(2, -3)$$</p>
+                        <p>$$= (-2 \times 2, -2 \times (-3))$$</p>
+                        <p>$$= (-4, 6)$$</p>
+                        <p>$$|-2\vec{v}| = \sqrt{(-4)^2 + 6^2} = \sqrt{16 + 36} = \sqrt{52} = 2\sqrt{13}$$</p>
+
+                        <p>ตรวจสอบ: $|\vec{v}| = \sqrt{2^2 + (-3)^2} = \sqrt{13}$</p>
+                        <p>$|3\vec{v}| = 3|\vec{v}| = 3\sqrt{13}$ ✓ และ $|-2\vec{v}| = 2|\vec{v}| = 2\sqrt{13}$ ✓</p>
+                        <p><strong>ตอบ:</strong> $3\vec{v} = (6, -9)$, $|3\vec{v}| = 3\sqrt{13}$ และ $-2\vec{v} = (-4, 6)$, $|-2\vec{v}| = 2\sqrt{13}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.3 ผลคูณสเกลาร์</p>
+                        <h4>ตัวอย่างที่ 2: การใช้สมบัติผลคูณสเกลาร์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (1, 2)$ และ $\vec{v} = (3, -1)$ จงหา $2\vec{u} + 3\vec{v}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$$2\vec{u} + 3\vec{v} = 2(1, 2) + 3(3, -1)$$</p>
+                        <p>$$= (2, 4) + (9, -3)$$</p>
+                        <p>$$= (2+9, 4+(-3))$$</p>
+                        <p>$$= (11, 1)$$</p>
+                        <p><strong>ตอบ:</strong> $2\vec{u} + 3\vec{v} = (11, 1)$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การหาเวกเตอร์ขนาน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{a} = (4, 6)$ และ $\vec{b} = (-6, -9)$ เวกเตอร์ทั้งสองนี้ขนานกันหรือไม่</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เวกเตอร์สองตัวจะขนานกันก็ต่อเมื่อ $\vec{a} = k\vec{b}$ สำหรับ $k$ ใดๆ</p>
+                        <p>ลองหา $k$ จากองค์ประกอบแรก:</p>
+                        <p>$$4 = k(-6)$$</p>
+                        <p>$$k = -\frac{4}{6} = -\frac{2}{3}$$</p>
+
+                        <p>ตรวจสอบกับองค์ประกอบที่สอง:</p>
+                        <p>$$-\frac{2}{3} \times (-9) = 6$$ ✓</p>
+
+                        <p>ดังนั้น $\vec{a} = -\frac{2}{3}\vec{b}$ หรือ $\vec{b} = -\frac{3}{2}\vec{a}$</p>
+                        <p><strong>ตอบ:</strong> เวกเตอร์ทั้งสองขนานกัน</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การหาค่า k เมื่อเวกเตอร์ขนาน</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\vec{u} = (2k, 6)$ ขนานกับ $\vec{v} = (4, k+1)$ จงหาค่า $k$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เมื่อเวกเตอร์ขนานกัน จะได้ว่า</p>
+                        <p>$$\frac{2k}{4} = \frac{6}{k+1}$$</p>
+                        <p>$$\frac{k}{2} = \frac{6}{k+1}$$</p>
+                        <p>$$k(k+1) = 12$$</p>
+                        <p>$$k^2 + k = 12$$</p>
+                        <p>$$k^2 + k - 12 = 0$$</p>
+                        <p>$$(k+4)(k-3) = 0$$</p>
+                        <p>$$k = -4 \text{ หรือ } k = 3$$</p>
+
+                        <p>ตรวจสอบ:</p>
+                        <p>เมื่อ $k = -4$: $\vec{u} = (-8, 6)$, $\vec{v} = (4, -3)$ → $\vec{u} = -2\vec{v}$ ✓</p>
+                        <p>เมื่อ $k = 3$: $\vec{u} = (6, 6)$, $\vec{v} = (4, 4)$ → $\vec{u} = \frac{3}{2}\vec{v}$ ✓</p>
+                        <p><strong>ตอบ:</strong> $k = -4$ หรือ $k = 3$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +428,121 @@
                 <!-- Section 3.4 -->
                 <section id="section4">
                     <h2>3.4 ผลคูณจุด</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.4 ผลคูณจุด</p>
+                        <p><strong>ผลคูณจุด</strong> (Dot Product) หรือ <strong>ผลคูณสเกลาร์</strong> (Scalar Product) ของเวกเตอร์สองตัวคือจำนวนสเกลาร์ที่ได้จากการคูณองค์ประกอบที่สอดคล้องกันแล้วนำมาบวกกัน</p>
+
+                        <p>ถ้า $\vec{u} = (u_1, u_2)$ และ $\vec{v} = (v_1, v_2)$ แล้ว</p>
+                        <p>$$\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2$$</p>
+
+                        <p>สำหรับเวกเตอร์ในปริภูมิ 3 มิติ ถ้า $\vec{u} = (u_1, u_2, u_3)$ และ $\vec{v} = (v_1, v_2, v_3)$ แล้ว</p>
+                        <p>$$\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3$$</p>
+
+                        <h4>ความสัมพันธ์กับมุม</h4>
+                        <p>$$\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|\cos\theta$$</p>
+                        <p>โดยที่ $\theta$ คือมุมระหว่างเวกเตอร์ $\vec{u}$ และ $\vec{v}$</p>
+
+                        <h4>สมบัติของผลคูณจุด</h4>
+                        <ol>
+                            <li>$\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$ (สลับที่ได้)</li>
+                            <li>$\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w}$ (กระจาย)</li>
+                            <li>$k(\vec{u} \cdot \vec{v}) = (k\vec{u}) \cdot \vec{v} = \vec{u} \cdot (k\vec{v})$</li>
+                            <li>$\vec{u} \cdot \vec{u} = |\vec{u}|^2$</li>
+                            <li>$\vec{u} \cdot \vec{v} = 0 \Leftrightarrow \vec{u} \perp \vec{v}$ (เวกเตอร์ตั้งฉาก)</li>
+                        </ol>
+
+                        <h4>การหามุมระหว่างเวกเตอร์</h4>
+                        <p>$$\cos\theta = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}||\vec{v}|}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>ผลคูณจุดในระนาบ 2 มิติ:</strong></p>
+                        <p>$$\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2$$</p>
+
+                        <p><strong>ผลคูณจุดในปริภูมิ 3 มิติ:</strong></p>
+                        <p>$$\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3$$</p>
+
+                        <p><strong>ความสัมพันธ์กับมุม:</strong></p>
+                        <p>$$\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|\cos\theta$$</p>
+
+                        <p><strong>การหามุมระหว่างเวกเตอร์:</strong></p>
+                        <p>$$\cos\theta = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}||\vec{v}|}$$</p>
+
+                        <p><strong>เงื่อนไขตั้งฉาก:</strong></p>
+                        <p>$$\vec{u} \perp \vec{v} \Leftrightarrow \vec{u} \cdot \vec{v} = 0$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.4 ผลคูณจุด</p>
+                        <h4>ตัวอย่างที่ 1: การหาผลคูณจุดพื้นฐาน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (3, 4)$ และ $\vec{v} = (2, -1)$ จงหา $\vec{u} \cdot \vec{v}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$\vec{u} \cdot \vec{v} = (3)(2) + (4)(-1)$$</p>
+                        <p>$$= 6 + (-4)$$</p>
+                        <p>$$= 2$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{u} \cdot \vec{v} = 2$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.4 ผลคูณจุด</p>
+                        <h4>ตัวอย่างที่ 2: การหามุมระหว่างเวกเตอร์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{a} = (1, 2)$ และ $\vec{b} = (3, 1)$ จงหามุมระหว่างเวกเตอร์ทั้งสอง</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ขั้นตอนที่ 1: หา $\vec{a} \cdot \vec{b}$</p>
+                        <p>$$\vec{a} \cdot \vec{b} = (1)(3) + (2)(1) = 3 + 2 = 5$$</p>
+
+                        <p>ขั้นตอนที่ 2: หา $|\vec{a}|$ และ $|\vec{b}|$</p>
+                        <p>$$|\vec{a}| = \sqrt{1^2 + 2^2} = \sqrt{5}$$</p>
+                        <p>$$|\vec{b}| = \sqrt{3^2 + 1^2} = \sqrt{10}$$</p>
+
+                        <p>ขั้นตอนที่ 3: หามุม $\theta$</p>
+                        <p>$$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}$$</p>
+                        <p>$$= \frac{5}{\sqrt{5} \times \sqrt{10}}$$</p>
+                        <p>$$= \frac{5}{\sqrt{50}}$$</p>
+                        <p>$$= \frac{5}{5\sqrt{2}}$$</p>
+                        <p>$$= \frac{1}{\sqrt{2}}$$</p>
+                        <p>$$\theta = \arccos\left(\frac{1}{\sqrt{2}}\right) = 45°$$</p>
+                        <p><strong>ตอบ:</strong> มุมระหว่างเวกเตอร์ทั้งสองเท่ากับ 45°</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การตรวจสอบเวกเตอร์ตั้งฉาก</h4>
+                        <p><strong>โจทย์:</strong> จงตรวจสอบว่าเวกเตอร์คู่ใดต่อไปนี้ตั้งฉากกัน</p>
+                        <p>ก) $\vec{u} = (3, 4)$ และ $\vec{v} = (4, -3)$</p>
+                        <p>ข) $\vec{p} = (2, 1)$ และ $\vec{q} = (1, 2)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ก) ตรวจสอบ $\vec{u}$ และ $\vec{v}$</p>
+                        <p>$$\vec{u} \cdot \vec{v} = (3)(4) + (4)(-3)$$</p>
+                        <p>$$= 12 + (-12)$$</p>
+                        <p>$$= 0$$</p>
+                        <p>เนื่องจาก $\vec{u} \cdot \vec{v} = 0$ ดังนั้น $\vec{u} \perp \vec{v}$ ✓</p>
+
+                        <p>ข) ตรวจสอบ $\vec{p}$ และ $\vec{q}$</p>
+                        <p>$$\vec{p} \cdot \vec{q} = (2)(1) + (1)(2)$$</p>
+                        <p>$$= 2 + 2$$</p>
+                        <p>$$= 4$$</p>
+                        <p>เนื่องจาก $\vec{p} \cdot \vec{q} \neq 0$ ดังนั้น $\vec{p}$ ไม่ตั้งฉากกับ $\vec{q}$</p>
+                        <p><strong>ตอบ:</strong> คู่ (ก) ตั้งฉากกัน คู่ (ข) ไม่ตั้งฉากกัน</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ผลคูณจุดในปริภูมิ 3 มิติ</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (1, -2, 3)$ และ $\vec{v} = (2, 1, -1)$ จงหา $\vec{u} \cdot \vec{v}$ และมุมระหว่างเวกเตอร์ทั้งสอง</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) หา $\vec{u} \cdot \vec{v}$</p>
+                        <p>$$\vec{u} \cdot \vec{v} = (1)(2) + (-2)(1) + (3)(-1)$$</p>
+                        <p>$$= 2 + (-2) + (-3)$$</p>
+                        <p>$$= -3$$</p>
+
+                        <p>ข) หามุมระหว่างเวกเตอร์</p>
+                        <p>$$|\vec{u}| = \sqrt{1^2 + (-2)^2 + 3^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$$</p>
+                        <p>$$|\vec{v}| = \sqrt{2^2 + 1^2 + (-1)^2} = \sqrt{4 + 1 + 1} = \sqrt{6}$$</p>
+
+                        <p>$$\cos\theta = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}||\vec{v}|} = \frac{-3}{\sqrt{14} \times \sqrt{6}} = \frac{-3}{\sqrt{84}} = \frac{-3}{2\sqrt{21}}$$</p>
+
+                        <p>$$\theta = \arccos\left(\frac{-3}{2\sqrt{21}}\right) \approx 107.9°$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{u} \cdot \vec{v} = -3$ และมุมระหว่างเวกเตอร์ประมาณ 107.9°</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +551,138 @@
                 <!-- Section 3.5 -->
                 <section id="section5">
                     <h2>3.5 ผลคูณไขว้</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.5 ผลคูณไขว้</p>
+                        <p><strong>ผลคูณไขว้</strong> (Cross Product) หรือ <strong>ผลคูณเวกเตอร์</strong> (Vector Product) ของเวกเตอร์สองตัวในปริภูมิสามมิติคือเวกเตอร์ที่ตั้งฉากกับเวกเตอร์ทั้งสอง</p>
+
+                        <p>ถ้า $\vec{u} = (u_1, u_2, u_3)$ และ $\vec{v} = (v_1, v_2, v_3)$ แล้ว</p>
+                        <p>$$\vec{u} \times \vec{v} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{vmatrix}$$</p>
+
+                        <p>$$= (u_2v_3 - u_3v_2)\vec{i} - (u_1v_3 - u_3v_1)\vec{j} + (u_1v_2 - u_2v_1)\vec{k}$$</p>
+                        <p>$$= (u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1)$$</p>
+
+                        <h4>ขนาดของผลคูณไขว้</h4>
+                        <p>$$|\vec{u} \times \vec{v}| = |\vec{u}||\vec{v}|\sin\theta$$</p>
+                        <p>โดยที่ $\theta$ คือมุมระหว่างเวกเตอร์ $\vec{u}$ และ $\vec{v}$</p>
+
+                        <h4>สมบัติของผลคูณไขว้</h4>
+                        <ol>
+                            <li>$\vec{u} \times \vec{v} = -(\vec{v} \times \vec{u})$ (ไม่สลับที่)</li>
+                            <li>$\vec{u} \times (\vec{v} + \vec{w}) = \vec{u} \times \vec{v} + \vec{u} \times \vec{w}$ (กระจาย)</li>
+                            <li>$k(\vec{u} \times \vec{v}) = (k\vec{u}) \times \vec{v} = \vec{u} \times (k\vec{v})$</li>
+                            <li>$\vec{u} \times \vec{u} = \vec{0}$</li>
+                            <li>$\vec{u} \times \vec{v} = \vec{0} \Leftrightarrow \vec{u}$ ขนานกับ $\vec{v}$</li>
+                            <li>$\vec{u} \times \vec{v}$ ตั้งฉากกับทั้ง $\vec{u}$ และ $\vec{v}$</li>
+                            <li>$\vec{i} \times \vec{j} = \vec{k}$, $\vec{j} \times \vec{k} = \vec{i}$, $\vec{k} \times \vec{i} = \vec{j}$</li>
+                        </ol>
+
+                        <h4>การประยุกต์</h4>
+                        <p>ขนาดของผลคูณไขว้เท่ากับพื้นที่สี่เหลี่ยมด้านขนานที่มี $\vec{u}$ และ $\vec{v}$ เป็นด้าน</p>
+                        <p>$$\text{พื้นที่} = |\vec{u} \times \vec{v}|$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>ผลคูณไขว้:</strong></p>
+                        <p>$$\vec{u} \times \vec{v} = (u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1)$$</p>
+
+                        <p><strong>ขนาดของผลคูณไขว้:</strong></p>
+                        <p>$$|\vec{u} \times \vec{v}| = |\vec{u}||\vec{v}|\sin\theta$$</p>
+
+                        <p><strong>พื้นที่สี่เหลี่ยมด้านขนาน:</strong></p>
+                        <p>$$\text{พื้นที่} = |\vec{u} \times \vec{v}|$$</p>
+
+                        <p><strong>พื้นที่สามเหลี่ยม:</strong></p>
+                        <p>$$\text{พื้นที่} = \frac{1}{2}|\vec{u} \times \vec{v}|$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.5 ผลคูณไขว้</p>
+                        <h4>ตัวอย่างที่ 1: การหาผลคูณไขว้พื้นฐาน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (1, 2, 3)$ และ $\vec{v} = (4, 5, 6)$ จงหา $\vec{u} \times \vec{v}$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$\vec{u} \times \vec{v} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 1 & 2 & 3 \\ 4 & 5 & 6 \end{vmatrix}$$</p>
+
+                        <p>องค์ประกอบที่ 1 (ทิศ $\vec{i}$):</p>
+                        <p>$$= (2)(6) - (3)(5) = 12 - 15 = -3$$</p>
+
+                        <p>องค์ประกอบที่ 2 (ทิศ $\vec{j}$):</p>
+                        <p>$$= -[(1)(6) - (3)(4)] = -(6 - 12) = -(-6) = 6$$</p>
+
+                        <p>องค์ประกอบที่ 3 (ทิศ $\vec{k}$):</p>
+                        <p>$$= (1)(5) - (2)(4) = 5 - 8 = -3$$</p>
+
+                        <p>$$\vec{u} \times \vec{v} = (-3, 6, -3) = -3\vec{i} + 6\vec{j} - 3\vec{k}$$</p>
+                        <p><strong>ตอบ:</strong> $\vec{u} \times \vec{v} = (-3, 6, -3)$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.5 ผลคูณไขว้</p>
+                        <h4>ตัวอย่างที่ 2: การหาพื้นที่สี่เหลี่ยมด้านขนาน</h4>
+                        <p><strong>โจทย์:</strong> จงหาพื้นที่สี่เหลี่ยมด้านขนานที่มี $\vec{a} = (2, 1, 0)$ และ $\vec{b} = (1, 3, 0)$ เป็นด้าน</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ขั้นตอนที่ 1: หา $\vec{a} \times \vec{b}$</p>
+                        <p>$$\vec{a} \times \vec{b} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & 0 \\ 1 & 3 & 0 \end{vmatrix}$$</p>
+
+                        <p>$$= [(1)(0) - (0)(3)]\vec{i} - [(2)(0) - (0)(1)]\vec{j} + [(2)(3) - (1)(1)]\vec{k}$$</p>
+                        <p>$$= 0\vec{i} - 0\vec{j} + (6-1)\vec{k}$$</p>
+                        <p>$$= 5\vec{k}$$</p>
+                        <p>$$= (0, 0, 5)$$</p>
+
+                        <p>ขั้นตอนที่ 2: หาขนาดของ $\vec{a} \times \vec{b}$</p>
+                        <p>$$|\vec{a} \times \vec{b}| = \sqrt{0^2 + 0^2 + 5^2} = 5$$</p>
+
+                        <p>ขั้นตอนที่ 3: พื้นที่สี่เหลี่ยมด้านขนาน</p>
+                        <p>$$\text{พื้นที่} = |\vec{a} \times \vec{b}| = 5$$</p>
+                        <p><strong>ตอบ:</strong> พื้นที่สี่เหลี่ยมด้านขนานเท่ากับ 5 ตารางหน่วย</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การตรวจสอบการตั้งฉาก</h4>
+                        <p><strong>โจทย์:</strong> ให้ $\vec{u} = (2, -1, 3)$ และ $\vec{v} = (1, 4, 2)$ จงแสดงว่า $\vec{u} \times \vec{v}$ ตั้งฉากกับทั้ง $\vec{u}$ และ $\vec{v}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ขั้นตอนที่ 1: หา $\vec{u} \times \vec{v}$</p>
+                        <p>$$\vec{u} \times \vec{v} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 2 & -1 & 3 \\ 1 & 4 & 2 \end{vmatrix}$$</p>
+
+                        <p>$$= [(-1)(2) - (3)(4)]\vec{i} - [(2)(2) - (3)(1)]\vec{j} + [(2)(4) - (-1)(1)]\vec{k}$$</p>
+                        <p>$$= (-2-12)\vec{i} - (4-3)\vec{j} + (8+1)\vec{k}$$</p>
+                        <p>$$= -14\vec{i} - \vec{j} + 9\vec{k}$$</p>
+                        <p>$$= (-14, -1, 9)$$</p>
+
+                        <p>ขั้นตอนที่ 2: ตรวจสอบว่า $(\vec{u} \times \vec{v}) \perp \vec{u}$</p>
+                        <p>$$(\vec{u} \times \vec{v}) \cdot \vec{u} = (-14, -1, 9) \cdot (2, -1, 3)$$</p>
+                        <p>$$= (-14)(2) + (-1)(-1) + (9)(3)$$</p>
+                        <p>$$= -28 + 1 + 27$$</p>
+                        <p>$$= 0$$ ✓</p>
+
+                        <p>ขั้นตอนที่ 3: ตรวจสอบว่า $(\vec{u} \times \vec{v}) \perp \vec{v}$</p>
+                        <p>$$(\vec{u} \times \vec{v}) \cdot \vec{v} = (-14, -1, 9) \cdot (1, 4, 2)$$</p>
+                        <p>$$= (-14)(1) + (-1)(4) + (9)(2)$$</p>
+                        <p>$$= -14 - 4 + 18$$</p>
+                        <p>$$= 0$$ ✓</p>
+                        <p><strong>ตอบ:</strong> แสดงแล้วว่า $\vec{u} \times \vec{v}$ ตั้งฉากกับทั้ง $\vec{u}$ และ $\vec{v}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การหาพื้นที่สามเหลี่ยม</h4>
+                        <p><strong>โจทย์:</strong> จงหาพื้นที่สามเหลี่ยมที่มีจุดยอด $A(1, 0, 0)$, $B(0, 2, 0)$ และ $C(0, 0, 3)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ขั้นตอนที่ 1: หาเวกเตอร์ $\overrightarrow{AB}$ และ $\overrightarrow{AC}$</p>
+                        <p>$$\overrightarrow{AB} = (0-1, 2-0, 0-0) = (-1, 2, 0)$$</p>
+                        <p>$$\overrightarrow{AC} = (0-1, 0-0, 3-0) = (-1, 0, 3)$$</p>
+
+                        <p>ขั้นตอนที่ 2: หา $\overrightarrow{AB} \times \overrightarrow{AC}$</p>
+                        <p>$$\overrightarrow{AB} \times \overrightarrow{AC} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ -1 & 2 & 0 \\ -1 & 0 & 3 \end{vmatrix}$$</p>
+
+                        <p>$$= [(2)(3) - (0)(0)]\vec{i} - [(-1)(3) - (0)(-1)]\vec{j} + [(-1)(0) - (2)(-1)]\vec{k}$$</p>
+                        <p>$$= 6\vec{i} - (-3)\vec{j} + 2\vec{k}$$</p>
+                        <p>$$= (6, 3, 2)$$</p>
+
+                        <p>ขั้นตอนที่ 3: หาขนาด</p>
+                        <p>$$|\overrightarrow{AB} \times \overrightarrow{AC}| = \sqrt{6^2 + 3^2 + 2^2} = \sqrt{36 + 9 + 4} = \sqrt{49} = 7$$</p>
+
+                        <p>ขั้นตอนที่ 4: หาพื้นที่สามเหลี่ยม</p>
+                        <p>$$\text{พื้นที่} = \frac{1}{2}|\overrightarrow{AB} \times \overrightarrow{AC}| = \frac{7}{2}$$</p>
+                        <p><strong>ตอบ:</strong> พื้นที่สามเหลี่ยมเท่ากับ $\frac{7}{2}$ ตารางหน่วย</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +691,136 @@
                 <!-- Section 3.6 -->
                 <section id="section6">
                     <h2>3.6 การประยุกต์เวกเตอร์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 3.6 การประยุกต์เวกเตอร์</p>
+                        <h4>การประยุกต์ใช้เวกเตอร์</h4>
+                        <p>เวกเตอร์มีการประยุกต์ใช้อย่างกว้างขวางในหลายสาขาวิชา ดังนี้</p>
+
+                        <h4>1. ฟิสิกส์</h4>
+                        <ul>
+                            <li><strong>แรง:</strong> การหาแรงลัพธ์จากแรงหลายตัวที่กระทำต่อวัตถุ</li>
+                            <li><strong>ความเร็ว:</strong> การวิเคราะห์การเคลื่อนที่ในแนวระนาบหรือปริภูมิ</li>
+                            <li><strong>งาน:</strong> $W = \vec{F} \cdot \vec{d}$ โดยที่ $\vec{F}$ คือแรง และ $\vec{d}$ คือการกระจัด</li>
+                            <li><strong>โมเมนต์:</strong> $\vec{M} = \vec{r} \times \vec{F}$ โดยที่ $\vec{r}$ คือระยะทาง</li>
+                        </ul>
+
+                        <h4>2. เรขาคณิต</h4>
+                        <ul>
+                            <li>การหาพื้นที่สามเหลี่ยมและสี่เหลี่ยมด้านขนาน</li>
+                            <li>การหาปริมาตรของทรงสี่หน้า (Tetrahedron)</li>
+                            <li>การตรวจสอบความขนาน ตั้งฉาก หรืออยู่ในระนาบเดียวกัน</li>
+                        </ul>
+
+                        <h4>3. วิศวกรรมศาสตร์</h4>
+                        <ul>
+                            <li>การวิเคราะห์โครงสร้าง (Structural Analysis)</li>
+                            <li>การศึกษาการเคลื่อนที่ของหุ่นยนต์</li>
+                            <li>การออกแบบระบบกลไก</li>
+                        </ul>
+
+                        <h4>4. คอมพิวเตอร์กราฟิก</h4>
+                        <ul>
+                            <li>การหมุนและแปลงรูปวัตถุสามมิติ</li>
+                            <li>การคำนวณแสงและเงา</li>
+                            <li>การตรวจสอบการชนกันของวัตถุ</li>
+                        </ul>
+
+                        <h4>สูตรที่ใช้บ่อย</h4>
+                        <p><strong>งานที่ทำโดยแรง:</strong> $W = \vec{F} \cdot \vec{d} = |\vec{F}||\vec{d}|\cos\theta$</p>
+                        <p><strong>ปริมาตรทรงสี่หน้า:</strong> $V = \frac{1}{6}|\vec{a} \cdot (\vec{b} \times \vec{c})|$</p>
+                        <p><strong>ระยะจากจุดถึงเส้นตรง:</strong> ใช้ผลคูณไขว้</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ</h4>
+                        <p><strong>งาน (Work):</strong></p>
+                        <p>$$W = \vec{F} \cdot \vec{d} = |\vec{F}||\vec{d}|\cos\theta$$</p>
+
+                        <p><strong>โมเมนต์ (Moment):</strong></p>
+                        <p>$$\vec{M} = \vec{r} \times \vec{F}$$</p>
+
+                        <p><strong>ปริมาตรทรงสี่หน้า:</strong></p>
+                        <p>$$V = \frac{1}{6}|\vec{a} \cdot (\vec{b} \times \vec{c})|$$</p>
+
+                        <p><strong>การฉายเวกเตอร์:</strong></p>
+                        <p>$$\text{proj}_{\vec{v}}\vec{u} = \frac{\vec{u} \cdot \vec{v}}{|\vec{v}|^2}\vec{v}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 3.6 การประยุกต์เวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 1: การหางานจากแรง</h4>
+                        <p><strong>โจทย์:</strong> แรง $\vec{F} = (3, 4)$ นิวตัน กระทำต่อวัตถุ ทำให้วัตถุเคลื่อนที่จากจุด $A(1, 2)$ ไปยังจุด $B(5, 5)$ เมตร จงหางานที่แรงนี้ทำ</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ขั้นตอนที่ 1: หาการกระจัด $\vec{d}$</p>
+                        <p>$$\vec{d} = \overrightarrow{AB} = (5-1, 5-2) = (4, 3)$$</p>
+
+                        <p>ขั้นตอนที่ 2: หางาน</p>
+                        <p>$$W = \vec{F} \cdot \vec{d}$$</p>
+                        <p>$$= (3, 4) \cdot (4, 3)$$</p>
+                        <p>$$= (3)(4) + (4)(3)$$</p>
+                        <p>$$= 12 + 12$$</p>
+                        <p>$$= 24 \text{ จูล}$$</p>
+                        <p><strong>ตอบ:</strong> งานที่แรงทำเท่ากับ 24 จูล</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 3.6 การประยุกต์เวกเตอร์</p>
+                        <h4>ตัวอย่างที่ 2: การหาแรงลัพธ์</h4>
+                        <p><strong>โจทย์:</strong> วัตถุถูกแรงสามแรงกระทำพร้อมกัน คือ $\vec{F_1} = (2, 3)$ N, $\vec{F_2} = (-1, 4)$ N และ $\vec{F_3} = (3, -2)$ N จงหาแรงลัพธ์และขนาดของแรงลัพธ์</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ก) แรงลัพธ์</p>
+                        <p>$$\vec{F} = \vec{F_1} + \vec{F_2} + \vec{F_3}$$</p>
+                        <p>$$= (2, 3) + (-1, 4) + (3, -2)$$</p>
+                        <p>$$= (2+(-1)+3, 3+4+(-2))$$</p>
+                        <p>$$= (4, 5) \text{ N}$$</p>
+
+                        <p>ข) ขนาดของแรงลัพธ์</p>
+                        <p>$$|\vec{F}| = \sqrt{4^2 + 5^2}$$</p>
+                        <p>$$= \sqrt{16 + 25}$$</p>
+                        <p>$$= \sqrt{41}$$</p>
+                        <p>$$\approx 6.4 \text{ N}$$</p>
+                        <p><strong>ตอบ:</strong> แรงลัพธ์คือ $(4, 5)$ N มีขนาด $\sqrt{41} \approx 6.4$ N</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: ปริมาตรทรงสี่หน้า</h4>
+                        <p><strong>โจทย์:</strong> จงหาปริมาตรของทรงสี่หน้าที่มีจุดยอดที่ $O(0,0,0)$, $A(2,0,0)$, $B(0,3,0)$ และ $C(0,0,4)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ขั้นตอนที่ 1: หาเวกเตอร์จาก O</p>
+                        <p>$$\vec{a} = \overrightarrow{OA} = (2, 0, 0)$$</p>
+                        <p>$$\vec{b} = \overrightarrow{OB} = (0, 3, 0)$$</p>
+                        <p>$$\vec{c} = \overrightarrow{OC} = (0, 0, 4)$$</p>
+
+                        <p>ขั้นตอนที่ 2: หา $\vec{b} \times \vec{c}$</p>
+                        <p>$$\vec{b} \times \vec{c} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{vmatrix}$$</p>
+                        <p>$$= (12, 0, 0)$$</p>
+
+                        <p>ขั้นตอนที่ 3: หา $\vec{a} \cdot (\vec{b} \times \vec{c})$</p>
+                        <p>$$\vec{a} \cdot (\vec{b} \times \vec{c}) = (2, 0, 0) \cdot (12, 0, 0) = 24$$</p>
+
+                        <p>ขั้นตอนที่ 4: หาปริมาตร</p>
+                        <p>$$V = \frac{1}{6}|\vec{a} \cdot (\vec{b} \times \vec{c})|$$</p>
+                        <p>$$= \frac{1}{6} \times 24$$</p>
+                        <p>$$= 4 \text{ ลูกบาศก์หน่วย}$$</p>
+                        <p><strong>ตอบ:</strong> ปริมาตรเท่ากับ 4 ลูกบาศก์หน่วย</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การฉายเวกเตอร์</h4>
+                        <p><strong>โจทย์:</strong> จงหาการฉายของเวกเตอร์ $\vec{u} = (3, 4)$ บนเวกเตอร์ $\vec{v} = (1, 0)$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>สูตรการฉายเวกเตอร์: $\text{proj}_{\vec{v}}\vec{u} = \frac{\vec{u} \cdot \vec{v}}{|\vec{v}|^2}\vec{v}$</p>
+
+                        <p>ขั้นตอนที่ 1: หา $\vec{u} \cdot \vec{v}$</p>
+                        <p>$$\vec{u} \cdot \vec{v} = (3)(1) + (4)(0) = 3$$</p>
+
+                        <p>ขั้นตอนที่ 2: หา $|\vec{v}|^2$</p>
+                        <p>$$|\vec{v}|^2 = 1^2 + 0^2 = 1$$</p>
+
+                        <p>ขั้นตอนที่ 3: หาการฉาย</p>
+                        <p>$$\text{proj}_{\vec{v}}\vec{u} = \frac{3}{1}(1, 0)$$</p>
+                        <p>$$= (3, 0)$$</p>
+
+                        <p>ความยาวของการฉาย: $|\text{proj}_{\vec{v}}\vec{u}| = 3$</p>
+                        <p><strong>ตอบ:</strong> การฉายของ $\vec{u}$ บน $\vec{v}$ คือ $(3, 0)$ มีความยาว 3 หน่วย</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -246,74 +829,198 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 3</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: ความหมายและพื้นฐานของเวกเตอร์ (3 คะแนน)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>จงหาขนาดของเวกเตอร์ $\vec{v} = 5\vec{i} - 12\vec{j}$</li>
+                            <li>จงหาเวกเตอร์ $\overrightarrow{PQ}$ เมื่อ $P(3, -2)$ และ $Q(-1, 5)$ พร้อมทั้งหาขนาด</li>
+                            <li>จงหาเวกเตอร์หน่วยในทิศทางเดียวกับ $\vec{a} = (8, -15)$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+                            <p><strong>1.</strong>
+                            $$|\vec{v}| = \sqrt{5^2 + (-12)^2} = \sqrt{25 + 144} = \sqrt{169} = 13$$
+                            ตอบ: 13 หน่วย
+                            </p>
+
+                            <p><strong>2.</strong>
+                            $$\overrightarrow{PQ} = (-1-3, 5-(-2)) = (-4, 7)$$
+                            $$|\overrightarrow{PQ}| = \sqrt{(-4)^2 + 7^2} = \sqrt{16 + 49} = \sqrt{65}$$
+                            ตอบ: $\overrightarrow{PQ} = (-4, 7)$ และ $|\overrightarrow{PQ}| = \sqrt{65}$ หน่วย
+                            </p>
+
+                            <p><strong>3.</strong>
+                            $$|\vec{a}| = \sqrt{8^2 + (-15)^2} = \sqrt{64 + 225} = \sqrt{289} = 17$$
+                            $$\hat{a} = \frac{\vec{a}}{|\vec{a}|} = \frac{(8, -15)}{17} = \left(\frac{8}{17}, -\frac{15}{17}\right)$$
+                            ตอบ: $\left(\frac{8}{17}, -\frac{15}{17}\right)$
+                            </p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การบวกลบเวกเตอร์ (3 คะแนน)</h3>
+                        <ol start="4">
+                            <li>ให้ $\vec{u} = (2, -3)$ และ $\vec{v} = (-1, 5)$ จงหา $\vec{u} + \vec{v}$ และ $|\vec{u} + \vec{v}|$</li>
+                            <li>ให้ $\vec{a} = 3\vec{i} - 2\vec{j}$ และ $\vec{b} = \vec{i} + 4\vec{j}$ จงหา $2\vec{a} - 3\vec{b}$</li>
+                            <li>ให้ $\vec{p} = (1, 2, -1)$ และ $\vec{q} = (3, -1, 2)$ จงหา $\vec{p} + 2\vec{q}$ และขนาด</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+                            <p><strong>4.</strong>
+                            $$\vec{u} + \vec{v} = (2, -3) + (-1, 5) = (1, 2)$$
+                            $$|\vec{u} + \vec{v}| = \sqrt{1^2 + 2^2} = \sqrt{5}$$
+                            ตอบ: $\vec{u} + \vec{v} = (1, 2)$ และ $|\vec{u} + \vec{v}| = \sqrt{5}$
+                            </p>
+
+                            <p><strong>5.</strong>
+                            $$2\vec{a} - 3\vec{b} = 2(3\vec{i} - 2\vec{j}) - 3(\vec{i} + 4\vec{j})$$
+                            $$= 6\vec{i} - 4\vec{j} - 3\vec{i} - 12\vec{j}$$
+                            $$= 3\vec{i} - 16\vec{j} = (3, -16)$$
+                            ตอบ: $3\vec{i} - 16\vec{j}$
+                            </p>
+
+                            <p><strong>6.</strong>
+                            $$\vec{p} + 2\vec{q} = (1, 2, -1) + 2(3, -1, 2)$$
+                            $$= (1, 2, -1) + (6, -2, 4)$$
+                            $$= (7, 0, 3)$$
+                            $$|\vec{p} + 2\vec{q}| = \sqrt{7^2 + 0^2 + 3^2} = \sqrt{49 + 9} = \sqrt{58}$$
+                            ตอบ: $\vec{p} + 2\vec{q} = (7, 0, 3)$ และขนาด $\sqrt{58}$
+                            </p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: ผลคูณสเกลาร์และเวกเตอร์ขนาน (3 คะแนน)</h3>
+                        <ol start="7">
+                            <li>ให้ $\vec{v} = (-3, 4)$ จงหา $-2\vec{v}$ และ $|-2\vec{v}|$</li>
+                            <li>เวกเตอร์ $\vec{u} = (6, -8)$ และ $\vec{v} = (-9, 12)$ ขนานกันหรือไม่ เพราะเหตุใด</li>
+                            <li>ถ้า $\vec{a} = (k, 9)$ ขนานกับ $\vec{b} = (2, k-1)$ จงหาค่า $k$ ทั้งหมด</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+                            <p><strong>7.</strong>
+                            $$-2\vec{v} = -2(-3, 4) = (6, -8)$$
+                            $$|-2\vec{v}| = \sqrt{6^2 + (-8)^2} = \sqrt{36 + 64} = \sqrt{100} = 10$$
+                            ตอบ: $-2\vec{v} = (6, -8)$ และ $|-2\vec{v}| = 10$
+                            </p>
+
+                            <p><strong>8.</strong>
+                            ตรวจสอบ: $\frac{-9}{6} = -\frac{3}{2}$ และ $\frac{12}{-8} = -\frac{3}{2}$
+                            <br>เนื่องจากอัตราส่วนเท่ากัน ดังนั้น $\vec{v} = -\frac{3}{2}\vec{u}$
+                            <br>ตอบ: ขนานกัน เพราะ $\vec{v} = -\frac{3}{2}\vec{u}$
+                            </p>
+
+                            <p><strong>9.</strong>
+                            $$\frac{k}{2} = \frac{9}{k-1}$$
+                            $$k(k-1) = 18$$
+                            $$k^2 - k - 18 = 0$$
+                            $$(k-\frac{1-\sqrt{73}}{2})(k-\frac{1+\sqrt{73}}{2}) = 0$$
+                            หรือใช้สูตร: $k = \frac{1 \pm \sqrt{1+72}}{2} = \frac{1 \pm \sqrt{73}}{2}$
+                            <br>ตอบ: $k = \frac{1 + \sqrt{73}}{2}$ หรือ $k = \frac{1 - \sqrt{73}}{2}$
+                            </p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: ผลคูณจุด (3 คะแนน)</h3>
+                        <ol start="10">
+                            <li>ให้ $\vec{u} = (2, 5)$ และ $\vec{v} = (3, -1)$ จงหา $\vec{u} \cdot \vec{v}$</li>
+                            <li>จงหามุมระหว่างเวกเตอร์ $\vec{a} = (1, \sqrt{3})$ และ $\vec{b} = (\sqrt{3}, 1)$</li>
+                            <li>จงตรวจสอบว่า $\vec{p} = (5, -2)$ และ $\vec{q} = (2, 5)$ ตั้งฉากกันหรือไม่</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+                            <p><strong>10.</strong>
+                            $$\vec{u} \cdot \vec{v} = (2)(3) + (5)(-1) = 6 - 5 = 1$$
+                            ตอบ: 1
+                            </p>
+
+                            <p><strong>11.</strong>
+                            $$\vec{a} \cdot \vec{b} = (1)(\sqrt{3}) + (\sqrt{3})(1) = 2\sqrt{3}$$
+                            $$|\vec{a}| = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{4} = 2$$
+                            $$|\vec{b}| = \sqrt{(\sqrt{3})^2 + 1^2} = \sqrt{4} = 2$$
+                            $$\cos\theta = \frac{2\sqrt{3}}{2 \times 2} = \frac{\sqrt{3}}{2}$$
+                            $$\theta = 30°$$
+                            ตอบ: มุมระหว่างเวกเตอร์เท่ากับ 30°
+                            </p>
+
+                            <p><strong>12.</strong>
+                            $$\vec{p} \cdot \vec{q} = (5)(2) + (-2)(5) = 10 - 10 = 0$$
+                            เนื่องจาก $\vec{p} \cdot \vec{q} = 0$
+                            <br>ตอบ: ตั้งฉากกัน
+                            </p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: ผลคูณไขว้ (3 คะแนน)</h3>
+                        <ol start="13">
+                            <li>ให้ $\vec{u} = (2, 1, -1)$ และ $\vec{v} = (1, -2, 3)$ จงหา $\vec{u} \times \vec{v}$</li>
+                            <li>จงหาพื้นที่สี่เหลี่ยมด้านขนานที่มีเวกเตอร์ $\vec{a} = (3, 0, 1)$ และ $\vec{b} = (1, 2, 0)$ เป็นด้าน</li>
+                            <li>จงหาพื้นที่สามเหลี่ยมที่มีจุดยอด $A(1, 0, 0)$, $B(0, 1, 0)$ และ $C(0, 0, 1)$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+                            <p><strong>13.</strong>
+                            $$\vec{u} \times \vec{v} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -1 \\ 1 & -2 & 3 \end{vmatrix}$$
+                            $$= [(1)(3) - (-1)(-2)]\vec{i} - [(2)(3) - (-1)(1)]\vec{j} + [(2)(-2) - (1)(1)]\vec{k}$$
+                            $$= (3-2)\vec{i} - (6+1)\vec{j} + (-4-1)\vec{k}$$
+                            $$= \vec{i} - 7\vec{j} - 5\vec{k}$$
+                            ตอบ: $(1, -7, -5)$
+                            </p>
+
+                            <p><strong>14.</strong>
+                            $$\vec{a} \times \vec{b} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 3 & 0 & 1 \\ 1 & 2 & 0 \end{vmatrix}$$
+                            $$= (-2)\vec{i} + (1)\vec{j} + (6)\vec{k} = (-2, 1, 6)$$
+                            $$|\vec{a} \times \vec{b}| = \sqrt{(-2)^2 + 1^2 + 6^2} = \sqrt{4+1+36} = \sqrt{41}$$
+                            ตอบ: พื้นที่ = $\sqrt{41}$ ตารางหน่วย
+                            </p>
+
+                            <p><strong>15.</strong>
+                            $$\overrightarrow{AB} = (-1, 1, 0), \quad \overrightarrow{AC} = (-1, 0, 1)$$
+                            $$\overrightarrow{AB} \times \overrightarrow{AC} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ -1 & 1 & 0 \\ -1 & 0 & 1 \end{vmatrix}$$
+                            $$= (1, 1, 1)$$
+                            $$|\overrightarrow{AB} \times \overrightarrow{AC}| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}$$
+                            $$\text{พื้นที่} = \frac{1}{2}\sqrt{3}$$
+                            ตอบ: $\frac{\sqrt{3}}{2}$ ตารางหน่วย
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-section">
+                        <h3>ส่วนที่ 6: การประยุกต์ (3 คะแนน)</h3>
+                        <ol start="16">
+                            <li>แรง $\vec{F} = (5, 12)$ นิวตัน กระทำต่อวัตถุทำให้เคลื่อนที่ $\vec{d} = (3, 4)$ เมตร จงหางานที่แรงทำ</li>
+                            <li>วัตถุถูกแรงสองแรงกระทำคือ $\vec{F_1} = (4, -3)$ N และ $\vec{F_2} = (-1, 7)$ N จงหาแรงลัพธ์และขนาด</li>
+                            <li>จงหาปริมาตรของทรงสี่หน้าที่มีจุดยอดอยู่ที่ $O(0,0,0)$, $A(1,0,0)$, $B(0,2,0)$ และ $C(0,0,3)$</li>
+                        </ol>
+                        <button class="toggle-answer" onclick="toggleAnswer('answer6')">แสดง/ซ่อนเฉลย</button>
+                        <div id="answer6" class="answer" style="display: none;">
+                            <h4>เฉลย ส่วนที่ 6:</h4>
+                            <p><strong>16.</strong>
+                            $$W = \vec{F} \cdot \vec{d} = (5)(3) + (12)(4) = 15 + 48 = 63 \text{ จูล}$$
+                            ตอบ: 63 จูล
+                            </p>
+
+                            <p><strong>17.</strong>
+                            $$\vec{F} = \vec{F_1} + \vec{F_2} = (4, -3) + (-1, 7) = (3, 4) \text{ N}$$
+                            $$|\vec{F}| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5 \text{ N}$$
+                            ตอบ: แรงลัพธ์ $(3, 4)$ N มีขนาด 5 N
+                            </p>
+
+                            <p><strong>18.</strong>
+                            $$\vec{a} = (1,0,0), \vec{b} = (0,2,0), \vec{c} = (0,0,3)$$
+                            $$\vec{b} \times \vec{c} = (6, 0, 0)$$
+                            $$\vec{a} \cdot (\vec{b} \times \vec{c}) = (1)(6) = 6$$
+                            $$V = \frac{1}{6}|6| = 1 \text{ ลูกบาศก์หน่วย}$$
+                            ตอบ: 1 ลูกบาศก์หน่วย
+                            </p>
                         </div>
                     </div>
 
@@ -328,7 +1035,7 @@
 
             <aside class="sidebar-right">
                 <div class="ad-space" data-ad-position="sidebarMiddle"></div>
-                
+
                 <div class="related-topics">
                     <h3>บทเรียนที่เกี่ยวข้อง</h3>
                     <ul>
@@ -339,7 +1046,7 @@
                         <li><a href="chapter6.html">บทที่ 6</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="ad-space" data-ad-position="sidebarBottom"></div>
             </aside>
         </div>

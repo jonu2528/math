@@ -13,7 +13,7 @@
     <title>บทที่ 1: ตรีโกณมิติ | คณิตศาสตร์ ม.5</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -68,9 +68,9 @@
 
             <section class="main-content">
                 <h1>บทที่ 1: ตรีโกณมิติ</h1>
-                
+
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ ตรีโกณมิติ ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.5</p>
+                    <p>ตรีโกณมิติ (Trigonometry) เป็นสาขาหนึ่งของคณิตศาสตร์ที่ศึกษาความสัมพันธ์ระหว่างมุมและด้านของรูปสามเหลี่ยม โดยมีการประยุกต์ใช้ในชีวิตจริงหลากหลายด้าน เช่น วิศวกรรม ฟิสิกส์ ดาราศาสตร์ การสำรวจ และการนำทาง ในบทนี้เราจะศึกษาฟังก์ชันตรีโกณมิติ เอกลักษณ์ตรีโกณมิติ สมการตรีโกณมิติ กฎของไซน์และโคไซน์ รวมถึงการแก้สามเหลี่ยมในรูปแบบต่างๆ</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,145 @@
                 <!-- Section 1.1 -->
                 <section id="section1">
                     <h2>1.1 ฟังก์ชันตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.1 ฟังก์ชันตรีโกณมิติ</p>
+                        <h4>ความหมายของฟังก์ชันตรีโกณมิติ</h4>
+                        <p><strong>ฟังก์ชันตรีโกณมิติ</strong> (Trigonometric Functions) เป็นฟังก์ชันที่แสดงความสัมพันธ์ระหว่างมุมกับอัตราส่วนของด้านในรูปสามเหลี่ยมมุมฉาก มี 6 ฟังก์ชันหลัก ได้แก่:</p>
+
+                        <p><strong>1. ไซน์ (Sine)</strong>: $\sin \theta = \frac{\text{ด้านตรงข้าม}}{\text{ด้านตรง}}$</p>
+                        <p><strong>2. โคไซน์ (Cosine)</strong>: $\cos \theta = \frac{\text{ด้านประชิด}}{\text{ด้านตรง}}$</p>
+                        <p><strong>3. แทนเจนต์ (Tangent)</strong>: $\tan \theta = \frac{\text{ด้านตรงข้าม}}{\text{ด้านประชิด}} = \frac{\sin \theta}{\cos \theta}$</p>
+                        <p><strong>4. โคซีแคนต์ (Cosecant)</strong>: $\csc \theta = \frac{1}{\sin \theta}$</p>
+                        <p><strong>5. ซีแคนต์ (Secant)</strong>: $\sec \theta = \frac{1}{\cos \theta}$</p>
+                        <p><strong>6. โคแทนเจนต์ (Cotangent)</strong>: $\cot \theta = \frac{1}{\tan \theta} = \frac{\cos \theta}{\sin \theta}$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรสำคัญ - ฟังก์ชันตรีโกณมิติในวงกลมหนึ่งหน่วย</h4>
+                        <p>กำหนดมุม $\theta$ ในตำแหน่งมาตรฐาน และจุด $P(x, y)$ บนวงกลมหนึ่งหน่วย</p>
+                        <p>$$\sin \theta = y$$</p>
+                        <p>$$\cos \theta = x$$</p>
+                        <p>$$\tan \theta = \frac{y}{x}, \quad x \neq 0$$</p>
+                        <p>$$\csc \theta = \frac{1}{y}, \quad y \neq 0$$</p>
+                        <p>$$\sec \theta = \frac{1}{x}, \quad x \neq 0$$</p>
+                        <p>$$\cot \theta = \frac{x}{y}, \quad y \neq 0$$</p>
+                    </div>
+
+                    <div class="definition">
+                        <h4>ค่าของฟังก์ชันตรีโกณมิติในมุมพิเศษ</h4>
+                        <table style="width:100%; border-collapse: collapse; text-align: center;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="border: 1px solid #ddd; padding: 8px;">มุม ($\theta$)</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$0°$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$30°$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$45°$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$60°$</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">$90°$</th>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>$\sin \theta$</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{1}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{2}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>$\cos \theta$</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{2}}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{1}{2}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;"><strong>$\tan \theta$</strong></td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$0$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\frac{\sqrt{3}}{3}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$1$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">$\sqrt{3}$</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">ไม่กำหนด</td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.1 ฟังก์ชันตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: หาค่าฟังก์ชันตรีโกณมิติจากสามเหลี่ยมมุมฉาก</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยมมุมฉาก ABC โดยมีมุมฉากที่ C ถ้า $AB = 13$ ซม. และ $BC = 5$ ซม. จงหาค่า $\sin A$, $\cos A$ และ $\tan A$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ขั้นที่ 1: หาความยาวด้าน $AC$ โดยใช้ทฤษฎีพีทาโกรัส</p>
+                        <p>$$AC^2 + BC^2 = AB^2$$</p>
+                        <p>$$AC^2 + 5^2 = 13^2$$</p>
+                        <p>$$AC^2 = 169 - 25 = 144$$</p>
+                        <p>$$AC = 12 \text{ ซม.}$$</p>
+
+                        <p>ขั้นที่ 2: หาค่าฟังก์ชันตรีโกณมิติ</p>
+                        <p>สำหรับมุม A: ด้านตรงข้าม = $BC = 5$, ด้านประชิด = $AC = 12$, ด้านตรง = $AB = 13$</p>
+                        <p>$$\sin A = \frac{\text{ด้านตรงข้าม}}{\text{ด้านตรง}} = \frac{5}{13}$$</p>
+                        <p>$$\cos A = \frac{\text{ด้านประชิด}}{\text{ด้านตรง}} = \frac{12}{13}$$</p>
+                        <p>$$\tan A = \frac{\text{ด้านตรงข้าม}}{\text{ด้านประชิด}} = \frac{5}{12}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\sin A = \frac{5}{13}$, $\cos A = \frac{12}{13}$, $\tan A = \frac{5}{12}$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.1 ฟังก์ชันตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: หาค่าฟังก์ชันตรีโกณมิติจากค่าที่กำหนด</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\sin \theta = \frac{3}{5}$ และ $0° < \theta < 90°$ จงหาค่า $\cos \theta$ และ $\tan \theta$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ขั้นที่ 1: ใช้เอกลักษณ์พีทาโกรัส $\sin^2 \theta + \cos^2 \theta = 1$</p>
+                        <p>$$\left(\frac{3}{5}\right)^2 + \cos^2 \theta = 1$$</p>
+                        <p>$$\frac{9}{25} + \cos^2 \theta = 1$$</p>
+                        <p>$$\cos^2 \theta = 1 - \frac{9}{25} = \frac{16}{25}$$</p>
+                        <p>$$\cos \theta = \frac{4}{5}$$ (เป็นบวกเพราะ $0° < \theta < 90°$)</p>
+
+                        <p>ขั้นที่ 2: หาค่า $\tan \theta$</p>
+                        <p>$$\tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{3/5}{4/5} = \frac{3}{4}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\cos \theta = \frac{4}{5}$ และ $\tan \theta = \frac{3}{4}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: คำนวณค่าฟังก์ชันตรีโกณมิติในมุมที่ใหญ่กว่า 90°</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่า $\sin 150°$, $\cos 210°$ และ $\tan 315°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p><strong>หา $\sin 150°$:</strong></p>
+                        <p>$150° = 180° - 30°$ (มุมอ้างอิง = $30°$)</p>
+                        <p>ในควอแดรนต์ที่ 2: sin เป็นบวก</p>
+                        <p>$$\sin 150° = \sin 30° = \frac{1}{2}$$</p>
+
+                        <p><strong>หา $\cos 210°$:</strong></p>
+                        <p>$210° = 180° + 30°$ (มุมอ้างอิง = $30°$)</p>
+                        <p>ในควอแดรนต์ที่ 3: cos เป็นลบ</p>
+                        <p>$$\cos 210° = -\cos 30° = -\frac{\sqrt{3}}{2}$$</p>
+
+                        <p><strong>หา $\tan 315°$:</strong></p>
+                        <p>$315° = 360° - 45°$ (มุมอ้างอิง = $45°$)</p>
+                        <p>ในควอแดรนต์ที่ 4: tan เป็นลบ</p>
+                        <p>$$\tan 315° = -\tan 45° = -1$$</p>
+
+                        <p><strong>ตอบ:</strong> $\sin 150° = \frac{1}{2}$, $\cos 210° = -\frac{\sqrt{3}}{2}$, $\tan 315° = -1$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: หาค่าฟังก์ชันซีแคนต์และโคแทนเจนต์</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\cos \theta = -\frac{5}{13}$ และ $\theta$ อยู่ในควอแดรนต์ที่ 2 จงหาค่า $\sec \theta$, $\csc \theta$ และ $\cot \theta$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ขั้นที่ 1: หา $\sec \theta$</p>
+                        <p>$$\sec \theta = \frac{1}{\cos \theta} = \frac{1}{-5/13} = -\frac{13}{5}$$</p>
+
+                        <p>ขั้นที่ 2: หา $\sin \theta$ โดยใช้เอกลักษณ์พีทาโกรัส</p>
+                        <p>$$\sin^2 \theta + \cos^2 \theta = 1$$</p>
+                        <p>$$\sin^2 \theta + \left(-\frac{5}{13}\right)^2 = 1$$</p>
+                        <p>$$\sin^2 \theta = 1 - \frac{25}{169} = \frac{144}{169}$$</p>
+                        <p>$$\sin \theta = \frac{12}{13}$$ (เป็นบวกในควอแดรนต์ที่ 2)</p>
+
+                        <p>ขั้นที่ 3: หา $\csc \theta$ และ $\cot \theta$</p>
+                        <p>$$\csc \theta = \frac{1}{\sin \theta} = \frac{1}{12/13} = \frac{13}{12}$$</p>
+                        <p>$$\cot \theta = \frac{\cos \theta}{\sin \theta} = \frac{-5/13}{12/13} = -\frac{5}{12}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\sec \theta = -\frac{13}{5}$, $\csc \theta = \frac{13}{12}$, $\cot \theta = -\frac{5}{12}$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +237,108 @@
                 <!-- Section 1.2 -->
                 <section id="section2">
                     <h2>1.2 เอกลักษณ์ตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.2 เอกลักษณ์ตรีโกณมิติ</p>
+                        <p><strong>เอกลักษณ์ตรีโกณมิติ</strong> (Trigonometric Identities) คือสมการที่เป็นจริงสำหรับทุกค่าของตัวแปรที่ทำให้นิพจน์ทั้งสองข้างของสมการมีความหมาย เอกลักษณ์เหล่านี้ใช้ในการลดรูปนิพจน์ตรีโกณมิติและการพิสูจน์</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>เอกลักษณ์พีทาโกรัส (Pythagorean Identities)</h4>
+                        <p>$$\sin^2 \theta + \cos^2 \theta = 1$$</p>
+                        <p>$$1 + \tan^2 \theta = \sec^2 \theta$$</p>
+                        <p>$$1 + \cot^2 \theta = \csc^2 \theta$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>เอกลักษณ์ผลรวมและผลต่างของมุม</h4>
+                        <p>$$\sin(A + B) = \sin A \cos B + \cos A \sin B$$</p>
+                        <p>$$\sin(A - B) = \sin A \cos B - \cos A \sin B$$</p>
+                        <p>$$\cos(A + B) = \cos A \cos B - \sin A \sin B$$</p>
+                        <p>$$\cos(A - B) = \cos A \cos B + \sin A \sin B$$</p>
+                        <p>$$\tan(A + B) = \frac{\tan A + \tan B}{1 - \tan A \tan B}$$</p>
+                        <p>$$\tan(A - B) = \frac{\tan A - \tan B}{1 + \tan A \tan B}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>เอกลักษณ์มุมสองเท่า (Double Angle Identities)</h4>
+                        <p>$$\sin 2\theta = 2\sin \theta \cos \theta$$</p>
+                        <p>$$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2\cos^2 \theta - 1 = 1 - 2\sin^2 \theta$$</p>
+                        <p>$$\tan 2\theta = \frac{2\tan \theta}{1 - \tan^2 \theta}$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>เอกลักษณ์มุมครึ่งหนึ่ง (Half Angle Identities)</h4>
+                        <p>$$\sin^2 \frac{\theta}{2} = \frac{1 - \cos \theta}{2}$$</p>
+                        <p>$$\cos^2 \frac{\theta}{2} = \frac{1 + \cos \theta}{2}$$</p>
+                        <p>$$\tan \frac{\theta}{2} = \frac{1 - \cos \theta}{\sin \theta} = \frac{\sin \theta}{1 + \cos \theta}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.2 เอกลักษณ์ตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: พิสูจน์เอกลักษณ์ตรีโกณมิติ</h4>
+                        <p><strong>โจทย์:</strong> พิสูจน์ว่า $\frac{1 - \cos 2\theta}{\sin 2\theta} = \tan \theta$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>พิจารณาทางซ้าย:</p>
+                        <p>$$\frac{1 - \cos 2\theta}{\sin 2\theta}$$</p>
+
+                        <p>ใช้เอกลักษณ์มุมสองเท่า: $\cos 2\theta = 1 - 2\sin^2 \theta$ และ $\sin 2\theta = 2\sin \theta \cos \theta$</p>
+                        <p>$$= \frac{1 - (1 - 2\sin^2 \theta)}{2\sin \theta \cos \theta}$$</p>
+                        <p>$$= \frac{2\sin^2 \theta}{2\sin \theta \cos \theta}$$</p>
+                        <p>$$= \frac{\sin \theta}{\cos \theta}$$</p>
+                        <p>$$= \tan \theta$$ (พิสูจน์แล้ว)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.2 เอกลักษณ์ตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: การใช้เอกลักษณ์ผลรวมของมุม</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าที่แน่นอนของ $\sin 75°$ โดยใช้เอกลักษณ์ผลรวมของมุม</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>เขียน $75° = 45° + 30°$</p>
+                        <p>ใช้เอกลักษณ์: $\sin(A + B) = \sin A \cos B + \cos A \sin B$</p>
+                        <p>$$\sin 75° = \sin(45° + 30°)$$</p>
+                        <p>$$= \sin 45° \cos 30° + \cos 45° \sin 30°$$</p>
+                        <p>$$= \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2}$$</p>
+                        <p>$$= \frac{\sqrt{6}}{4} + \frac{\sqrt{2}}{4}$$</p>
+                        <p>$$= \frac{\sqrt{6} + \sqrt{2}}{4}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\sin 75° = \frac{\sqrt{6} + \sqrt{2}}{4}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การใช้เอกลักษณ์มุมสองเท่า</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\sin \theta = \frac{3}{5}$ และ $0° < \theta < 90°$ จงหาค่า $\sin 2\theta$ และ $\cos 2\theta$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ขั้นที่ 1: หา $\cos \theta$ โดยใช้เอกลักษณ์พีทาโกรัส</p>
+                        <p>$$\sin^2 \theta + \cos^2 \theta = 1$$</p>
+                        <p>$$\left(\frac{3}{5}\right)^2 + \cos^2 \theta = 1$$</p>
+                        <p>$$\cos^2 \theta = 1 - \frac{9}{25} = \frac{16}{25}$$</p>
+                        <p>$$\cos \theta = \frac{4}{5}$$</p>
+
+                        <p>ขั้นที่ 2: หา $\sin 2\theta$</p>
+                        <p>$$\sin 2\theta = 2\sin \theta \cos \theta = 2 \cdot \frac{3}{5} \cdot \frac{4}{5} = \frac{24}{25}$$</p>
+
+                        <p>ขั้นที่ 3: หา $\cos 2\theta$</p>
+                        <p>$$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = \left(\frac{4}{5}\right)^2 - \left(\frac{3}{5}\right)^2 = \frac{16}{25} - \frac{9}{25} = \frac{7}{25}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\sin 2\theta = \frac{24}{25}$ และ $\cos 2\theta = \frac{7}{25}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ลดรูปนิพจน์ตรีโกณมิติ</h4>
+                        <p><strong>โจทย์:</strong> ลดรูป $\frac{\sin \theta}{1 + \cos \theta} + \frac{1 + \cos \theta}{\sin \theta}$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\frac{\sin \theta}{1 + \cos \theta} + \frac{1 + \cos \theta}{\sin \theta}$$</p>
+
+                        <p>นำมาหาร่วม:</p>
+                        <p>$$= \frac{\sin^2 \theta + (1 + \cos \theta)^2}{\sin \theta(1 + \cos \theta)}$$</p>
+                        <p>$$= \frac{\sin^2 \theta + 1 + 2\cos \theta + \cos^2 \theta}{\sin \theta(1 + \cos \theta)}$$</p>
+
+                        <p>ใช้ $\sin^2 \theta + \cos^2 \theta = 1$:</p>
+                        <p>$$= \frac{1 + 1 + 2\cos \theta}{\sin \theta(1 + \cos \theta)}$$</p>
+                        <p>$$= \frac{2(1 + \cos \theta)}{\sin \theta(1 + \cos \theta)}$$</p>
+                        <p>$$= \frac{2}{\sin \theta} = 2\csc \theta$$</p>
+
+                        <p><strong>ตอบ:</strong> $2\csc \theta$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +347,112 @@
                 <!-- Section 1.3 -->
                 <section id="section3">
                     <h2>1.3 สมการตรีโกณมิติ</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.3 สมการตรีโกณมิติ</p>
+                        <p><strong>สมการตรีโกณมิติ</strong> (Trigonometric Equations) คือสมการที่มีฟังก์ชันตรีโกณมิติของตัวแปรที่ไม่ทราบค่า การแก้สมการคือการหาค่ามุมที่ทำให้สมการเป็นจริง</p>
+
+                        <p><strong>หลักการแก้สมการตรีโกณมิติ:</strong></p>
+                        <ul>
+                            <li>1. แยกฟังก์ชันตรีโกณมิติออกมาให้อยู่ข้างเดียวของสมการ</li>
+                            <li>2. ใช้เอกลักษณ์ตรีโกณมิติช่วยลดรูปหรือแปลงสมการ</li>
+                            <li>3. หาค่ามุมพื้นฐาน (principal value)</li>
+                            <li>4. หาคำตอบทั่วไปในช่วงที่กำหนด</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>รูปแบบพื้นฐานของสมการตรีโกณมิติ</h4>
+                        <p><strong>1. สมการไซน์:</strong> ถ้า $\sin \theta = k$ เมื่อ $-1 \leq k \leq 1$</p>
+                        <p>คำตอบ: $\theta = \alpha + 360°n$ หรือ $\theta = (180° - \alpha) + 360°n$ เมื่อ $n$ เป็นจำนวนเต็ม</p>
+
+                        <p><strong>2. สมการโคไซน์:</strong> ถ้า $\cos \theta = k$ เมื่อ $-1 \leq k \leq 1$</p>
+                        <p>คำตอบ: $\theta = \pm \alpha + 360°n$ เมื่อ $n$ เป็นจำนวนเต็ม</p>
+
+                        <p><strong>3. สมการแทนเจนต์:</strong> ถ้า $\tan \theta = k$</p>
+                        <p>คำตอบ: $\theta = \alpha + 180°n$ เมื่อ $n$ เป็นจำนวนเต็ม</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.3 สมการตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 1: แก้สมการตรีโกณมิติพื้นฐาน</h4>
+                        <p><strong>โจทย์:</strong> แก้สมการ $2\sin \theta - 1 = 0$ สำหรับ $0° \leq \theta < 360°$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$2\sin \theta - 1 = 0$$</p>
+                        <p>$$2\sin \theta = 1$$</p>
+                        <p>$$\sin \theta = \frac{1}{2}$$</p>
+
+                        <p>ค่ามุมพื้นฐาน: $\theta = 30°$</p>
+                        <p>เนื่องจาก $\sin \theta > 0$ ในควอแดรนต์ที่ 1 และ 2</p>
+
+                        <p>คำตอบในช่วง $0° \leq \theta < 360°$ คือ:</p>
+                        <p>$$\theta = 30° \quad \text{หรือ} \quad \theta = 180° - 30° = 150°$$</p>
+
+                        <p><strong>ตอบ:</strong> $\theta = 30°$ หรือ $150°$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.3 สมการตรีโกณมิติ</p>
+                        <h4>ตัวอย่างที่ 2: แก้สมการที่มีฟังก์ชันกำลังสอง</h4>
+                        <p><strong>โจทย์:</strong> แก้สมการ $2\cos^2 \theta + \cos \theta - 1 = 0$ สำหรับ $0° \leq \theta < 360°$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ให้ $x = \cos \theta$ จะได้:</p>
+                        <p>$$2x^2 + x - 1 = 0$$</p>
+
+                        <p>แยกตัวประกอบ:</p>
+                        <p>$$(2x - 1)(x + 1) = 0$$</p>
+                        <p>$$x = \frac{1}{2} \quad \text{หรือ} \quad x = -1$$</p>
+
+                        <p><strong>กรณีที่ 1:</strong> $\cos \theta = \frac{1}{2}$</p>
+                        <p>$$\theta = 60° \quad \text{หรือ} \quad \theta = 360° - 60° = 300°$$</p>
+
+                        <p><strong>กรณีที่ 2:</strong> $\cos \theta = -1$</p>
+                        <p>$$\theta = 180°$$</p>
+
+                        <p><strong>ตอบ:</strong> $\theta = 60°, 180°, 300°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: แก้สมการโดยใช้เอกลักษณ์</h4>
+                        <p><strong>โจทย์:</strong> แก้สมการ $\sin 2\theta = \cos \theta$ สำหรับ $0° \leq \theta < 360°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ใช้เอกลักษณ์ $\sin 2\theta = 2\sin \theta \cos \theta$</p>
+                        <p>$$2\sin \theta \cos \theta = \cos \theta$$</p>
+                        <p>$$2\sin \theta \cos \theta - \cos \theta = 0$$</p>
+                        <p>$$\cos \theta(2\sin \theta - 1) = 0$$</p>
+
+                        <p><strong>กรณีที่ 1:</strong> $\cos \theta = 0$</p>
+                        <p>$$\theta = 90° \quad \text{หรือ} \quad \theta = 270°$$</p>
+
+                        <p><strong>กรณีที่ 2:</strong> $2\sin \theta - 1 = 0$</p>
+                        <p>$$\sin \theta = \frac{1}{2}$$</p>
+                        <p>$$\theta = 30° \quad \text{หรือ} \quad \theta = 150°$$</p>
+
+                        <p><strong>ตอบ:</strong> $\theta = 30°, 90°, 150°, 270°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: แก้สมการที่มีสองฟังก์ชัน</h4>
+                        <p><strong>โจทย์:</strong> แก้สมการ $\sin \theta + \cos \theta = 1$ สำหรับ $0° \leq \theta < 360°$</p>
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\sin \theta + \cos \theta = 1$$</p>
+                        <p>$$\sin \theta = 1 - \cos \theta$$</p>
+
+                        <p>ยกกำลังสองทั้งสองข้าง:</p>
+                        <p>$$\sin^2 \theta = (1 - \cos \theta)^2$$</p>
+                        <p>$$\sin^2 \theta = 1 - 2\cos \theta + \cos^2 \theta$$</p>
+
+                        <p>ใช้ $\sin^2 \theta = 1 - \cos^2 \theta$:</p>
+                        <p>$$1 - \cos^2 \theta = 1 - 2\cos \theta + \cos^2 \theta$$</p>
+                        <p>$$0 = 2\cos^2 \theta - 2\cos \theta$$</p>
+                        <p>$$0 = 2\cos \theta(\cos \theta - 1)$$</p>
+
+                        <p><strong>กรณีที่ 1:</strong> $\cos \theta = 0$ ให้ $\theta = 90°$ หรือ $270°$</p>
+                        <p>ตรวจสอบ: เมื่อ $\theta = 90°$: $\sin 90° + \cos 90° = 1 + 0 = 1$ ✓</p>
+                        <p>เมื่อ $\theta = 270°$: $\sin 270° + \cos 270° = -1 + 0 = -1$ ✗</p>
+
+                        <p><strong>กรณีที่ 2:</strong> $\cos \theta = 1$ ให้ $\theta = 0°$</p>
+                        <p>ตรวจสอบ: $\sin 0° + \cos 0° = 0 + 1 = 1$ ✓</p>
+
+                        <p><strong>ตอบ:</strong> $\theta = 0°, 90°$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +461,104 @@
                 <!-- Section 1.4 -->
                 <section id="section4">
                     <h2>1.4 กฎของไซน์</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.4 กฎของไซน์</p>
+                        <p><strong>กฎของไซน์</strong> (Law of Sines หรือ Sine Rule) เป็นความสัมพันธ์ระหว่างด้านและมุมของรูปสามเหลี่ยมใดๆ ไม่จำเป็นต้องเป็นสามเหลี่ยมมุมฉาก กฎนี้มีประโยชน์ในการหาค่าด้านหรือมุมที่ไม่ทราบค่าในรูปสามเหลี่ยม</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎของไซน์</h4>
+                        <p>สำหรับรูปสามเหลี่ยม ABC ที่มีด้าน $a$, $b$, $c$ ตรงข้ามกับมุม $A$, $B$, $C$ ตามลำดับ</p>
+                        <p>$$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$</p>
+                        <p>หรือเขียนได้ว่า:</p>
+                        <p>$$\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$$</p>
+
+                        <p><strong>การใช้งาน:</strong></p>
+                        <ul>
+                            <li>ใช้เมื่อทราบมุม 2 มุม และด้าน 1 ด้าน (AAS หรือ ASA)</li>
+                            <li>ใช้เมื่อทราบด้าน 2 ด้าน และมุมตรงข้ามด้านหนึ่ง (SSA - ต้องระวังกรณีที่มีคำตอบสองค่า)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.4 กฎของไซน์</p>
+                        <h4>ตัวอย่างที่ 1: หาความยาวด้านโดยใช้กฎของไซน์ (กรณี ASA)</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $A = 40°$, $B = 60°$ และ $c = 10$ ซม. จงหาความยาวของด้าน $a$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+
+                        <p>ขั้นที่ 1: หามุม $C$</p>
+                        <p>$$C = 180° - A - B = 180° - 40° - 60° = 80°$$</p>
+
+                        <p>ขั้นที่ 2: ใช้กฎของไซน์หา $a$</p>
+                        <p>$$\frac{a}{\sin A} = \frac{c}{\sin C}$$</p>
+                        <p>$$\frac{a}{\sin 40°} = \frac{10}{\sin 80°}$$</p>
+                        <p>$$a = \frac{10 \sin 40°}{\sin 80°}$$</p>
+                        <p>$$a = \frac{10 \times 0.6428}{0.9848}$$</p>
+                        <p>$$a \approx 6.53 \text{ ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> $a \approx 6.53$ ซม.</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.4 กฎของไซน์</p>
+                        <h4>ตัวอย่างที่ 2: หามุมโดยใช้กฎของไซน์</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 7$ ซม., $b = 9$ ซม. และ $A = 35°$ จงหามุม $B$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ใช้กฎของไซน์:</p>
+                        <p>$$\frac{\sin A}{a} = \frac{\sin B}{b}$$</p>
+                        <p>$$\frac{\sin 35°}{7} = \frac{\sin B}{9}$$</p>
+                        <p>$$\sin B = \frac{9 \sin 35°}{7}$$</p>
+                        <p>$$\sin B = \frac{9 \times 0.5736}{7}$$</p>
+                        <p>$$\sin B = 0.7372$$</p>
+                        <p>$$B = \sin^{-1}(0.7372) \approx 47.5°$$</p>
+
+                        <p>หรือ $B \approx 180° - 47.5° = 132.5°$ (แต่ต้องตรวจสอบว่า $A + B < 180°$)</p>
+                        <p>เนื่องจาก $35° + 132.5° = 167.5° < 180°$ ทั้งสองคำตอบเป็นไปได้</p>
+
+                        <p><strong>ตอบ:</strong> $B \approx 47.5°$ หรือ $132.5°$ (กรณี SSA มีคำตอบสองค่า)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาพื้นที่สามเหลี่ยมโดยใช้กฎของไซน์</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 12$ ซม., $B = 50°$ และ $C = 70°$ จงหาพื้นที่ของรูปสามเหลี่ยม ABC</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ขั้นที่ 1: หามุม $A$</p>
+                        <p>$$A = 180° - B - C = 180° - 50° - 70° = 60°$$</p>
+
+                        <p>ขั้นที่ 2: หาด้าน $c$ โดยใช้กฎของไซน์</p>
+                        <p>$$\frac{a}{\sin A} = \frac{c}{\sin C}$$</p>
+                        <p>$$\frac{12}{\sin 60°} = \frac{c}{\sin 70°}$$</p>
+                        <p>$$c = \frac{12 \sin 70°}{\sin 60°} = \frac{12 \times 0.9397}{0.8660} \approx 13.02 \text{ ซม.}$$</p>
+
+                        <p>ขั้นที่ 3: หาพื้นที่โดยใช้สูตร $\text{พื้นที่} = \frac{1}{2}ac\sin B$</p>
+                        <p>$$\text{พื้นที่} = \frac{1}{2} \times 12 \times 13.02 \times \sin 50°$$</p>
+                        <p>$$= \frac{1}{2} \times 12 \times 13.02 \times 0.7660$$</p>
+                        <p>$$\approx 59.87 \text{ ตร.ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> พื้นที่ $\approx 59.87$ ตร.ซม.</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์ใช้กฎของไซน์ในชีวิตจริง</h4>
+                        <p><strong>โจทย์:</strong> จากจุด A บนพื้นดิน สังเกตยอดตึกสูง B ได้มุมเงย $40°$ จากนั้นเดินเข้าไปใกล้ตึก $30$ เมตร ถึงจุด C สังเกตยอดตึกได้มุมเงย $55°$ จงหาความสูงของตึก</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ในรูปสามเหลี่ยม ABC:</p>
+                        <p>- มุมที่ A = $40°$</p>
+                        <p>- มุมที่ C = $180° - 55° = 125°$ (มุมภายนอก)</p>
+                        <p>- ด้าน AC = $30$ ม.</p>
+
+                        <p>ขั้นที่ 1: หามุมที่ B</p>
+                        <p>$$\angle ABC = 180° - 40° - 125° = 15°$$</p>
+
+                        <p>ขั้นที่ 2: ใช้กฎของไซน์หาด้าน BC</p>
+                        <p>$$\frac{BC}{\sin 40°} = \frac{30}{\sin 15°}$$</p>
+                        <p>$$BC = \frac{30 \sin 40°}{\sin 15°} = \frac{30 \times 0.6428}{0.2588} \approx 74.52 \text{ ม.}$$</p>
+
+                        <p>ขั้นที่ 3: หาความสูงของตึก</p>
+                        <p>$$h = BC \times \sin 55° = 74.52 \times 0.8192 \approx 61.05 \text{ ม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> ความสูงของตึก $\approx 61.05$ เมตร</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +567,99 @@
                 <!-- Section 1.5 -->
                 <section id="section5">
                     <h2>1.5 กฎของโคไซน์</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.5 กฎของโคไซน์</p>
+                        <p><strong>กฎของโคไซน์</strong> (Law of Cosines หรือ Cosine Rule) เป็นการขยายความทฤษฎีพีทาโกรัสให้ใช้ได้กับรูปสามเหลี่ยมทุกชนิด กฎนี้เชื่อมโยงความยาวของด้านทั้งสามกับมุมหนึ่งของรูปสามเหลี่ยม มีประโยชน์ในการหาค่าด้านหรือมุมที่ไม่ทราบค่า</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎของโคไซน์</h4>
+                        <p>สำหรับรูปสามเหลี่ยม ABC ที่มีด้าน $a$, $b$, $c$ และมุม $A$, $B$, $C$ ตามลำดับ</p>
+                        <p>$$a^2 = b^2 + c^2 - 2bc \cos A$$</p>
+                        <p>$$b^2 = a^2 + c^2 - 2ac \cos B$$</p>
+                        <p>$$c^2 = a^2 + b^2 - 2ab \cos C$$</p>
+
+                        <p>หรือเขียนในรูปของมุม:</p>
+                        <p>$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$</p>
+                        <p>$$\cos B = \frac{a^2 + c^2 - b^2}{2ac}$$</p>
+                        <p>$$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$</p>
+
+                        <p><strong>การใช้งาน:</strong></p>
+                        <ul>
+                            <li>ใช้เมื่อทราบด้าน 2 ด้าน และมุมระหว่างด้านทั้งสอง (SAS)</li>
+                            <li>ใช้เมื่อทราบด้านทั้ง 3 ด้าน (SSS)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.5 กฎของโคไซน์</p>
+                        <h4>ตัวอย่างที่ 1: หาความยาวด้านโดยใช้กฎของโคไซน์ (กรณี SAS)</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $b = 8$ ซม., $c = 10$ ซม. และ $A = 60°$ จงหาความยาวของด้าน $a$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ใช้กฎของโคไซน์:</p>
+                        <p>$$a^2 = b^2 + c^2 - 2bc \cos A$$</p>
+                        <p>$$a^2 = 8^2 + 10^2 - 2(8)(10) \cos 60°$$</p>
+                        <p>$$a^2 = 64 + 100 - 160 \times \frac{1}{2}$$</p>
+                        <p>$$a^2 = 164 - 80$$</p>
+                        <p>$$a^2 = 84$$</p>
+                        <p>$$a = \sqrt{84} = 2\sqrt{21} \approx 9.17 \text{ ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> $a = 2\sqrt{21} \approx 9.17$ ซม.</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.5 กฎของโคไซน์</p>
+                        <h4>ตัวอย่างที่ 2: หามุมโดยใช้กฎของโคไซน์ (กรณี SSS)</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 7$ ซม., $b = 8$ ซม. และ $c = 5$ ซม. จงหามุม $C$</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ใช้กฎของโคไซน์:</p>
+                        <p>$$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$</p>
+                        <p>$$\cos C = \frac{7^2 + 8^2 - 5^2}{2(7)(8)}$$</p>
+                        <p>$$\cos C = \frac{49 + 64 - 25}{112}$$</p>
+                        <p>$$\cos C = \frac{88}{112} = \frac{11}{14}$$</p>
+                        <p>$$C = \cos^{-1}\left(\frac{11}{14}\right) \approx 38.21°$$</p>
+
+                        <p><strong>ตอบ:</strong> $C \approx 38.21°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาพื้นที่สามเหลี่ยมโดยใช้กฎของโคไซน์</h4>
+                        <p><strong>โจทย์:</strong> รูปสามเหลี่ยม ABC มีด้าน $a = 12$ ซม., $b = 15$ ซม. และมุม $C = 75°$ จงหาพื้นที่ของรูปสามเหลี่ยม ABC</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>วิธีที่ 1: ใช้สูตร $\text{พื้นที่} = \frac{1}{2}ab\sin C$</p>
+                        <p>$$\text{พื้นที่} = \frac{1}{2} \times 12 \times 15 \times \sin 75°$$</p>
+                        <p>$$= 90 \times 0.9659$$</p>
+                        <p>$$\approx 86.93 \text{ ตร.ซม.}$$</p>
+
+                        <p>วิธีที่ 2: หาด้าน $c$ ก่อนแล้วใช้สูตรเฮรอน</p>
+                        <p>$$c^2 = a^2 + b^2 - 2ab \cos C$$</p>
+                        <p>$$c^2 = 12^2 + 15^2 - 2(12)(15) \cos 75°$$</p>
+                        <p>$$c^2 = 144 + 225 - 360 \times 0.2588$$</p>
+                        <p>$$c^2 = 369 - 93.17 = 275.83$$</p>
+                        <p>$$c \approx 16.61 \text{ ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> พื้นที่ $\approx 86.93$ ตร.ซม.</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์ใช้กฎของโคไซน์</h4>
+                        <p><strong>โจทย์:</strong> เรือลำหนึ่งออกจากท่าเรือแล่นไปทางทิศเหนือ $50$ กม. จากนั้นเปลี่ยนทิศไปทางตะวันออกเฉียงเหนือ ($45°$ จากทิศเหนือ) เป็นระยะทาง $40$ กม. จงหาระยะทางของเรือจากท่าเรือเป็นเส้นตรง</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ให้ A = ท่าเรือ, B = จุดแรกที่เปลี่ยนทิศ, C = ตำแหน่งปัจจุบันของเรือ</p>
+                        <p>- $AB = 50$ กม.</p>
+                        <p>- $BC = 40$ กม.</p>
+                        <p>- มุมที่ B = $180° - 45° = 135°$ (มุมระหว่างเส้นทางสองทิศทาง)</p>
+
+                        <p>ใช้กฎของโคไซน์หาด้าน $AC$:</p>
+                        <p>$$AC^2 = AB^2 + BC^2 - 2(AB)(BC) \cos B$$</p>
+                        <p>$$AC^2 = 50^2 + 40^2 - 2(50)(40) \cos 135°$$</p>
+                        <p>$$AC^2 = 2500 + 1600 - 4000 \times (-\frac{\sqrt{2}}{2})$$</p>
+                        <p>$$AC^2 = 4100 + 2828.43$$</p>
+                        <p>$$AC^2 = 6928.43$$</p>
+                        <p>$$AC \approx 83.24 \text{ กม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> ระยะทางของเรือจากท่าเรือ $\approx 83.24$ กิโลเมตร</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +668,126 @@
                 <!-- Section 1.6 -->
                 <section id="section6">
                     <h2>1.6 การแก้สามเหลี่ยม</h2>
-                    
+
                     <div class="definition">
                         <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 1.6 การแก้สามเหลี่ยม</p>
+                        <p><strong>การแก้สามเหลี่ยม</strong> (Solving Triangles) หมายถึง การหาค่าของด้านและมุมที่ไม่ทราบค่าทั้งหมดในรูปสามเหลี่ยม เมื่อทราบข้อมูลบางส่วน การแก้สามเหลี่ยมใช้กฎของไซน์ กฎของโคไซน์ และทฤษฎีพีทาโกรัส</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>รูปแบบการแก้สามเหลี่ยม</h4>
+
+                        <p><strong>1. กรณี ASA (Angle-Side-Angle)</strong></p>
+                        <p>ทราบมุม 2 มุม และด้านระหว่างมุมทั้งสอง</p>
+                        <p>วิธีแก้: หามุมที่เหลือ แล้วใช้กฎของไซน์หาด้านที่เหลือ</p>
+
+                        <p><strong>2. กรณี AAS (Angle-Angle-Side)</strong></p>
+                        <p>ทราบมุม 2 มุม และด้านที่ไม่อยู่ระหว่างมุมทั้งสอง</p>
+                        <p>วิธีแก้: หามุมที่เหลือ แล้วใช้กฎของไซน์หาด้านที่เหลือ</p>
+
+                        <p><strong>3. กรณี SAS (Side-Angle-Side)</strong></p>
+                        <p>ทราบด้าน 2 ด้าน และมุมระหว่างด้านทั้งสอง</p>
+                        <p>วิธีแก้: ใช้กฎของโคไซน์หาด้านที่เหลือ แล้วใช้กฎของไซน์หรือโคไซน์หามุมที่เหลือ</p>
+
+                        <p><strong>4. กรณี SSS (Side-Side-Side)</strong></p>
+                        <p>ทราบด้านทั้ง 3 ด้าน</p>
+                        <p>วิธีแก้: ใช้กฎของโคไซน์หามุมทั้งหมด</p>
+
+                        <p><strong>5. กรณี SSA (Side-Side-Angle)</strong></p>
+                        <p>ทราบด้าน 2 ด้าน และมุมที่ไม่อยู่ระหว่างด้านทั้งสอง</p>
+                        <p>วิธีแก้: ใช้กฎของไซน์ (ระวัง! อาจมีคำตอบ 0, 1 หรือ 2 คำตอบ)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 1.6 การแก้สามเหลี่ยม</p>
+                        <h4>ตัวอย่างที่ 1: แก้สามเหลี่ยมกรณี ASA</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $A = 50°$, $C = 70°$ และ $b = 12$ ซม. จงหาค่าที่เหลือทั้งหมด</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+
+                        <p>ขั้นที่ 1: หามุม $B$</p>
+                        <p>$$B = 180° - A - C = 180° - 50° - 70° = 60°$$</p>
+
+                        <p>ขั้นที่ 2: ใช้กฎของไซน์หาด้าน $a$</p>
+                        <p>$$\frac{a}{\sin A} = \frac{b}{\sin B}$$</p>
+                        <p>$$\frac{a}{\sin 50°} = \frac{12}{\sin 60°}$$</p>
+                        <p>$$a = \frac{12 \sin 50°}{\sin 60°} = \frac{12 \times 0.7660}{0.8660} \approx 10.62 \text{ ซม.}$$</p>
+
+                        <p>ขั้นที่ 3: ใช้กฎของไซน์หาด้าน $c$</p>
+                        <p>$$\frac{c}{\sin C} = \frac{b}{\sin B}$$</p>
+                        <p>$$\frac{c}{\sin 70°} = \frac{12}{\sin 60°}$$</p>
+                        <p>$$c = \frac{12 \sin 70°}{\sin 60°} = \frac{12 \times 0.9397}{0.8660} \approx 13.02 \text{ ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> $B = 60°$, $a \approx 10.62$ ซม., $c \approx 13.02$ ซม.</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 1.6 การแก้สามเหลี่ยม</p>
+                        <h4>ตัวอย่างที่ 2: แก้สามเหลี่ยมกรณี SAS</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 9$ ซม., $c = 7$ ซม. และ $B = 55°$ จงหาค่าที่เหลือทั้งหมด</p>
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+
+                        <p>ขั้นที่ 1: ใช้กฎของโคไซน์หาด้าน $b$</p>
+                        <p>$$b^2 = a^2 + c^2 - 2ac \cos B$$</p>
+                        <p>$$b^2 = 9^2 + 7^2 - 2(9)(7) \cos 55°$$</p>
+                        <p>$$b^2 = 81 + 49 - 126 \times 0.5736$$</p>
+                        <p>$$b^2 = 130 - 72.27 = 57.73$$</p>
+                        <p>$$b \approx 7.60 \text{ ซม.}$$</p>
+
+                        <p>ขั้นที่ 2: ใช้กฎของไซน์หามุม $A$</p>
+                        <p>$$\frac{\sin A}{a} = \frac{\sin B}{b}$$</p>
+                        <p>$$\sin A = \frac{a \sin B}{b} = \frac{9 \times 0.8192}{7.60} = 0.9702$$</p>
+                        <p>$$A \approx 76.01°$$</p>
+
+                        <p>ขั้นที่ 3: หามุม $C$</p>
+                        <p>$$C = 180° - A - B = 180° - 76.01° - 55° = 48.99°$$</p>
+
+                        <p><strong>ตอบ:</strong> $b \approx 7.60$ ซม., $A \approx 76.01°$, $C \approx 48.99°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: แก้สามเหลี่ยมกรณี SSS</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 8$ ซม., $b = 10$ ซม. และ $c = 6$ ซม. จงหามุมทั้งสาม</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ขั้นที่ 1: ใช้กฎของโคไซน์หามุม $A$</p>
+                        <p>$$\cos A = \frac{b^2 + c^2 - a^2}{2bc} = \frac{10^2 + 6^2 - 8^2}{2(10)(6)}$$</p>
+                        <p>$$\cos A = \frac{100 + 36 - 64}{120} = \frac{72}{120} = 0.6$$</p>
+                        <p>$$A = \cos^{-1}(0.6) \approx 53.13°$$</p>
+
+                        <p>ขั้นที่ 2: ใช้กฎของโคไซน์หามุม $B$</p>
+                        <p>$$\cos B = \frac{a^2 + c^2 - b^2}{2ac} = \frac{8^2 + 6^2 - 10^2}{2(8)(6)}$$</p>
+                        <p>$$\cos B = \frac{64 + 36 - 100}{96} = \frac{0}{96} = 0$$</p>
+                        <p>$$B = \cos^{-1}(0) = 90°$$</p>
+
+                        <p>ขั้นที่ 3: หามุม $C$</p>
+                        <p>$$C = 180° - A - B = 180° - 53.13° - 90° = 36.87°$$</p>
+
+                        <p><strong>ตอบ:</strong> $A \approx 53.13°$, $B = 90°$, $C \approx 36.87°$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: แก้สามเหลี่ยมกรณี SSA (กรณีที่มีคำตอบสองค่า)</h4>
+                        <p><strong>โจทย์:</strong> ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 8$ ซม., $b = 10$ ซม. และ $A = 40°$ จงหาค่าที่เหลือทั้งหมด (ถ้ามี)</p>
+                        <p><strong>วิธีทำ:</strong></p>
+
+                        <p>ขั้นที่ 1: ใช้กฎของไซน์หามุม $B$</p>
+                        <p>$$\frac{\sin B}{b} = \frac{\sin A}{a}$$</p>
+                        <p>$$\sin B = \frac{b \sin A}{a} = \frac{10 \times \sin 40°}{8} = \frac{10 \times 0.6428}{8} = 0.8035$$</p>
+
+                        <p>ขั้นที่ 2: หาค่ามุม $B$</p>
+                        <p>$$B_1 = \sin^{-1}(0.8035) \approx 53.47°$$</p>
+                        <p>$$B_2 = 180° - 53.47° = 126.53°$$</p>
+
+                        <p><strong>กรณีที่ 1:</strong> $B = 53.47°$</p>
+                        <p>$$C = 180° - 40° - 53.47° = 86.53°$$</p>
+                        <p>$$\frac{c}{\sin C} = \frac{a}{\sin A}$$</p>
+                        <p>$$c = \frac{8 \times \sin 86.53°}{\sin 40°} = \frac{8 \times 0.9980}{0.6428} \approx 12.42 \text{ ซม.}$$</p>
+
+                        <p><strong>กรณีที่ 2:</strong> $B = 126.53°$</p>
+                        <p>$$C = 180° - 40° - 126.53° = 13.47°$$</p>
+                        <p>$$c = \frac{8 \times \sin 13.47°}{\sin 40°} = \frac{8 \times 0.2331}{0.6428} \approx 2.90 \text{ ซม.}$$</p>
+
+                        <p><strong>ตอบ:</strong> มีคำตอบสองชุด</p>
+                        <p>ชุดที่ 1: $B \approx 53.47°$, $C \approx 86.53°$, $c \approx 12.42$ ซม.</p>
+                        <p>ชุดที่ 2: $B \approx 126.53°$, $C \approx 13.47°$, $c \approx 2.90$ ซม.</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -246,74 +796,196 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 1</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: ฟังก์ชันตรีโกณมิติและเอกลักษณ์ (4 คะแนน)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>ถ้า $\tan \theta = \frac{5}{12}$ และ $\theta$ อยู่ในควอแดรนต์ที่ 1 จงหาค่า $\sin \theta$ และ $\cos \theta$</li>
+                            <li>จงหาค่าที่แน่นอนของ $\cos 15°$ โดยใช้เอกลักษณ์ผลต่างของมุม</li>
+                            <li>พิสูจน์ว่า $\frac{\tan \theta + \cot \theta}{\tan \theta} = \csc^2 \theta$</li>
+                            <li>ถ้า $\cos \theta = -\frac{3}{5}$ และ $90° < \theta < 180°$ จงหาค่า $\sin 2\theta$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+
+                            <p><strong>1.</strong> ให้สามเหลี่ยมมุมฉากมีด้านตรงข้าม = 5, ด้านประชิด = 12</p>
+                            <p>หาด้านตรง: $c = \sqrt{5^2 + 12^2} = \sqrt{25 + 144} = \sqrt{169} = 13$</p>
+                            <p>$$\sin \theta = \frac{5}{13}, \quad \cos \theta = \frac{12}{13}$$</p>
+
+                            <p><strong>2.</strong> $\cos 15° = \cos(45° - 30°)$</p>
+                            <p>$$= \cos 45° \cos 30° + \sin 45° \sin 30°$$</p>
+                            <p>$$= \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2}$$</p>
+                            <p>$$= \frac{\sqrt{6}}{4} + \frac{\sqrt{2}}{4} = \frac{\sqrt{6} + \sqrt{2}}{4}$$</p>
+
+                            <p><strong>3.</strong> พิจารณาทางซ้าย:</p>
+                            <p>$$\frac{\tan \theta + \cot \theta}{\tan \theta} = \frac{\tan \theta}{\tan \theta} + \frac{\cot \theta}{\tan \theta} = 1 + \frac{1}{\tan^2 \theta}$$</p>
+                            <p>$$= 1 + \cot^2 \theta = \csc^2 \theta$$ (ใช้เอกลักษณ์พีทาโกรัส)</p>
+
+                            <p><strong>4.</strong> หา $\sin \theta$ จาก $\sin^2 \theta + \cos^2 \theta = 1$</p>
+                            <p>$$\sin^2 \theta = 1 - \left(-\frac{3}{5}\right)^2 = 1 - \frac{9}{25} = \frac{16}{25}$$</p>
+                            <p>$$\sin \theta = \frac{4}{5}$$ (บวกในควอแดรนต์ที่ 2)</p>
+                            <p>$$\sin 2\theta = 2\sin \theta \cos \theta = 2 \times \frac{4}{5} \times \left(-\frac{3}{5}\right) = -\frac{24}{25}$$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: สมการตรีโกณมิติ (4 คะแนน)</h3>
+                        <ol start="5">
+                            <li>แก้สมการ $2\cos \theta + \sqrt{3} = 0$ สำหรับ $0° \leq \theta < 360°$</li>
+                            <li>แก้สมการ $\tan^2 \theta - 3 = 0$ สำหรับ $0° \leq \theta < 360°$</li>
+                            <li>แก้สมการ $\sin 2\theta = \sin \theta$ สำหรับ $0° \leq \theta < 360°$</li>
+                            <li>แก้สมการ $2\sin^2 \theta - 3\sin \theta + 1 = 0$ สำหรับ $0° \leq \theta < 360°$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+
+                            <p><strong>5.</strong> $2\cos \theta + \sqrt{3} = 0$</p>
+                            <p>$$\cos \theta = -\frac{\sqrt{3}}{2}$$</p>
+                            <p>ในช่วง $0° \leq \theta < 360°$:</p>
+                            <p>$$\theta = 150° \quad \text{หรือ} \quad \theta = 210°$$</p>
+
+                            <p><strong>6.</strong> $\tan^2 \theta - 3 = 0$</p>
+                            <p>$$\tan^2 \theta = 3$$</p>
+                            <p>$$\tan \theta = \pm\sqrt{3}$$</p>
+                            <p>เมื่อ $\tan \theta = \sqrt{3}$: $\theta = 60°, 240°$</p>
+                            <p>เมื่อ $\tan \theta = -\sqrt{3}$: $\theta = 120°, 300°$</p>
+                            <p>$$\theta = 60°, 120°, 240°, 300°$$</p>
+
+                            <p><strong>7.</strong> $\sin 2\theta = \sin \theta$</p>
+                            <p>$$2\sin \theta \cos \theta = \sin \theta$$</p>
+                            <p>$$2\sin \theta \cos \theta - \sin \theta = 0$$</p>
+                            <p>$$\sin \theta(2\cos \theta - 1) = 0$$</p>
+                            <p>เมื่อ $\sin \theta = 0$: $\theta = 0°, 180°$</p>
+                            <p>เมื่อ $\cos \theta = \frac{1}{2}$: $\theta = 60°, 300°$</p>
+                            <p>$$\theta = 0°, 60°, 180°, 300°$$</p>
+
+                            <p><strong>8.</strong> ให้ $x = \sin \theta$</p>
+                            <p>$$2x^2 - 3x + 1 = 0$$</p>
+                            <p>$$(2x - 1)(x - 1) = 0$$</p>
+                            <p>$$x = \frac{1}{2} \quad \text{หรือ} \quad x = 1$$</p>
+                            <p>เมื่อ $\sin \theta = \frac{1}{2}$: $\theta = 30°, 150°$</p>
+                            <p>เมื่อ $\sin \theta = 1$: $\theta = 90°$</p>
+                            <p>$$\theta = 30°, 90°, 150°$$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: กฎของไซน์ (3 คะแนน)</h3>
+                        <ol start="9">
+                            <li>ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 10$ ซม., $A = 45°$ และ $B = 60°$ จงหาความยาวของด้าน $b$</li>
+                            <li>ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 12$ ซม., $b = 8$ ซม. และ $A = 70°$ จงหามุม $B$</li>
+                            <li>ในรูปสามเหลี่ยม ABC มี $A = 50°$, $B = 70°$ และ $a = 15$ ซม. จงหาพื้นที่ของสามเหลี่ยม ABC</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+
+                            <p><strong>9.</strong> ใช้กฎของไซน์:</p>
+                            <p>$$\frac{a}{\sin A} = \frac{b}{\sin B}$$</p>
+                            <p>$$\frac{10}{\sin 45°} = \frac{b}{\sin 60°}$$</p>
+                            <p>$$b = \frac{10 \times \sin 60°}{\sin 45°} = \frac{10 \times \frac{\sqrt{3}}{2}}{\frac{\sqrt{2}}{2}}$$</p>
+                            <p>$$b = \frac{10\sqrt{3}}{\sqrt{2}} = 5\sqrt{6} \approx 12.25 \text{ ซม.}$$</p>
+
+                            <p><strong>10.</strong> ใช้กฎของไซน์:</p>
+                            <p>$$\frac{\sin A}{a} = \frac{\sin B}{b}$$</p>
+                            <p>$$\sin B = \frac{b \sin A}{a} = \frac{8 \times \sin 70°}{12}$$</p>
+                            <p>$$\sin B = \frac{8 \times 0.9397}{12} = 0.6265$$</p>
+                            <p>$$B = \sin^{-1}(0.6265) \approx 38.79°$$ (หรือ $141.21°$ แต่ไม่เป็นไปได้เพราะ $A + B > 180°$)</p>
+
+                            <p><strong>11.</strong> หามุม $C = 180° - 50° - 70° = 60°$</p>
+                            <p>หาด้าน $c$ จากกฎของไซน์:</p>
+                            <p>$$\frac{c}{\sin C} = \frac{a}{\sin A}$$</p>
+                            <p>$$c = \frac{15 \times \sin 60°}{\sin 50°} = \frac{15 \times 0.8660}{0.7660} \approx 16.95 \text{ ซม.}$$</p>
+                            <p>พื้นที่ $= \frac{1}{2} \times a \times c \times \sin B$</p>
+                            <p>$$= \frac{1}{2} \times 15 \times 16.95 \times \sin 70°$$</p>
+                            <p>$$= \frac{1}{2} \times 15 \times 16.95 \times 0.9397 \approx 119.48 \text{ ตร.ซม.}$$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: กฎของโคไซน์ (3 คะแนน)</h3>
+                        <ol start="12">
+                            <li>ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 7$ ซม., $b = 9$ ซม. และ $C = 120°$ จงหาความยาวของด้าน $c$</li>
+                            <li>ในรูปสามเหลี่ยม ABC กำหนดให้ $a = 5$ ซม., $b = 7$ ซม. และ $c = 8$ ซม. จงหามุม $A$</li>
+                            <li>รูปสามเหลี่ยมมีด้านยาว $6$ ซม., $8$ ซม. และ $10$ ซม. จงหามุมที่ใหญ่ที่สุด</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+
+                            <p><strong>12.</strong> ใช้กฎของโคไซน์:</p>
+                            <p>$$c^2 = a^2 + b^2 - 2ab \cos C$$</p>
+                            <p>$$c^2 = 7^2 + 9^2 - 2(7)(9) \cos 120°$$</p>
+                            <p>$$c^2 = 49 + 81 - 126 \times (-\frac{1}{2})$$</p>
+                            <p>$$c^2 = 130 + 63 = 193$$</p>
+                            <p>$$c = \sqrt{193} \approx 13.89 \text{ ซม.}$$</p>
+
+                            <p><strong>13.</strong> ใช้กฎของโคไซน์:</p>
+                            <p>$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$</p>
+                            <p>$$\cos A = \frac{7^2 + 8^2 - 5^2}{2(7)(8)} = \frac{49 + 64 - 25}{112} = \frac{88}{112} = \frac{11}{14}$$</p>
+                            <p>$$A = \cos^{-1}\left(\frac{11}{14}\right) \approx 38.21°$$</p>
+
+                            <p><strong>14.</strong> มุมที่ใหญ่ที่สุดตรงข้ามด้านที่ยาวที่สุด (10 ซม.)</p>
+                            <p>$$\cos C = \frac{6^2 + 8^2 - 10^2}{2(6)(8)} = \frac{36 + 64 - 100}{96} = \frac{0}{96} = 0$$</p>
+                            <p>$$C = \cos^{-1}(0) = 90°$$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: การแก้สามเหลี่ยมและการประยุกต์ (6 คะแนน)</h3>
+                        <ol start="15">
+                            <li>แก้สามเหลี่ยม ABC เมื่อกำหนดให้ $a = 12$ ซม., $b = 15$ ซม. และ $c = 18$ ซม.</li>
+                            <li>แก้สามเหลี่ยม ABC เมื่อกำหนดให้ $A = 35°$, $B = 65°$ และ $c = 20$ ซม.</li>
+                            <li>แก้สามเหลี่ยม ABC เมื่อกำหนดให้ $a = 8$ ซม., $b = 12$ ซม. และ $C = 75°$</li>
+                            <li>หอคอยสูง $h$ เมตร จากจุด A บนพื้นดินมองเห็นยอดหอคอยได้มุมเงย $30°$ จากจุด B ที่อยู่ห่างจากจุด A เป็นระยะ $50$ เมตร มองเห็นยอดหอคอยได้มุมเงย $45°$ และจุด A, B อยู่ด้านเดียวกันของหอคอย จงหาความสูงของหอคอย</li>
+                            <li>เรือลำหนึ่งแล่นจากท่าเรือไปทางทิศเหนือ $30$ กม. จากนั้นเปลี่ยนทิศไปทางตะวันออกเฉียงเหนือ $60°$ เป็นระยะทาง $25$ กม. จงหาระยะทางของเรือจากท่าเรือเป็นเส้นตรง</li>
+                            <li>รูปสามเหลี่ยม ABC มีด้าน $a = 13$ ซม., $b = 14$ ซม. และ $c = 15$ ซม. จงหาพื้นที่ของรูปสามเหลี่ยม ABC โดยใช้สูตรเฮรอน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+
+                            <p><strong>15.</strong> กรณี SSS - ใช้กฎของโคไซน์</p>
+                            <p>$$\cos A = \frac{15^2 + 18^2 - 12^2}{2(15)(18)} = \frac{225 + 324 - 144}{540} = \frac{405}{540} = 0.75$$</p>
+                            <p>$$A = \cos^{-1}(0.75) \approx 41.41°$$</p>
+                            <p>$$\cos B = \frac{12^2 + 18^2 - 15^2}{2(12)(18)} = \frac{144 + 324 - 225}{432} = \frac{243}{432} = 0.5625$$</p>
+                            <p>$$B = \cos^{-1}(0.5625) \approx 55.77°$$</p>
+                            <p>$$C = 180° - 41.41° - 55.77° = 82.82°$$</p>
+
+                            <p><strong>16.</strong> กรณี AAS</p>
+                            <p>$$C = 180° - 35° - 65° = 80°$$</p>
+                            <p>$$\frac{a}{\sin A} = \frac{c}{\sin C}$$</p>
+                            <p>$$a = \frac{20 \times \sin 35°}{\sin 80°} = \frac{20 \times 0.5736}{0.9848} \approx 11.64 \text{ ซม.}$$</p>
+                            <p>$$b = \frac{20 \times \sin 65°}{\sin 80°} = \frac{20 \times 0.9063}{0.9848} \approx 18.40 \text{ ซม.}$$</p>
+
+                            <p><strong>17.</strong> กรณี SAS - ใช้กฎของโคไซน์</p>
+                            <p>$$c^2 = a^2 + b^2 - 2ab \cos C$$</p>
+                            <p>$$c^2 = 8^2 + 12^2 - 2(8)(12) \cos 75°$$</p>
+                            <p>$$c^2 = 64 + 144 - 192 \times 0.2588 = 208 - 49.69 = 158.31$$</p>
+                            <p>$$c \approx 12.58 \text{ ซม.}$$</p>
+                            <p>ใช้กฎของไซน์หามุม A:</p>
+                            <p>$$\sin A = \frac{8 \times \sin 75°}{12.58} = \frac{8 \times 0.9659}{12.58} = 0.6144$$</p>
+                            <p>$$A \approx 37.93°, \quad B = 180° - 75° - 37.93° = 67.07°$$</p>
+
+                            <p><strong>18.</strong> ให้ C = ฐานหอคอย</p>
+                            <p>ในสามเหลี่ยม ABC: $\angle CAB = 30°$, $\angle CBA = 180° - 45° = 135°$, $AB = 50$ ม.</p>
+                            <p>$$\angle ACB = 180° - 30° - 135° = 15°$$</p>
+                            <p>ใช้กฎของไซน์:</p>
+                            <p>$$\frac{BC}{\sin 30°} = \frac{50}{\sin 15°}$$</p>
+                            <p>$$BC = \frac{50 \times 0.5}{0.2588} \approx 96.65 \text{ ม.}$$</p>
+                            <p>$$h = BC \times \sin 45° = 96.65 \times 0.7071 \approx 68.36 \text{ ม.}$$</p>
+
+                            <p><strong>19.</strong> มุมระหว่างเส้นทางสองทิศ = $180° - 60° = 120°$</p>
+                            <p>ใช้กฎของโคไซน์:</p>
+                            <p>$$d^2 = 30^2 + 25^2 - 2(30)(25) \cos 120°$$</p>
+                            <p>$$d^2 = 900 + 625 - 1500 \times (-0.5) = 1525 + 750 = 2275$$</p>
+                            <p>$$d = \sqrt{2275} \approx 47.70 \text{ กม.}$$</p>
+
+                            <p><strong>20.</strong> สูตรเฮรอน: $s = \frac{a + b + c}{2} = \frac{13 + 14 + 15}{2} = 21$</p>
+                            <p>$$\text{พื้นที่} = \sqrt{s(s-a)(s-b)(s-c)}$$</p>
+                            <p>$$= \sqrt{21 \times 8 \times 7 \times 6} = \sqrt{7056} = 84 \text{ ตร.ซม.}$$</p>
                         </div>
                     </div>
 
@@ -327,7 +999,7 @@
 
             <aside class="sidebar-right">
                 <div class="ad-space" data-ad-position="sidebarMiddle"></div>
-                
+
                 <div class="related-topics">
                     <h3>บทเรียนที่เกี่ยวข้อง</h3>
                     <ul>
@@ -338,7 +1010,7 @@
                         <li><a href="chapter6.html">บทที่ 6</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="ad-space" data-ad-position="sidebarBottom"></div>
             </aside>
         </div>

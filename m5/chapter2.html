@@ -13,7 +13,7 @@
     <title>บทที่ 2: เมทริกซ์ | คณิตศาสตร์ ม.5</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -68,9 +68,9 @@
 
             <section class="main-content">
                 <h1>บทที่ 2: เมทริกซ์</h1>
-                
+
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ เมทริกซ์ ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.5</p>
+                    <p>เมทริกซ์เป็นเครื่องมือทางคณิตศาสตร์ที่สำคัญมาก ใช้ในการแก้ระบบสมการ การแปลงทางเรขาคณิต และมีการประยุกต์ใช้ในด้านต่างๆ เช่น วิทยาศาสตร์คอมพิวเตอร์ เศรษฐศาสตร์ และวิศวกรรมศาสตร์ บทนี้เราจะศึกษาเกี่ยวกับความหมายของเมทริกซ์ การดำเนินการต่างๆ กับเมทริกซ์ และการแก้ระบบสมการเชิงเส้นโดยใช้เมทริกซ์</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,100 @@
                 <!-- Section 2.1 -->
                 <section id="section1">
                     <h2>2.1 ความหมายของเมทริกซ์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.1 ความหมายของเมทริกซ์</p>
+                        <h4>ความหมายของเมทริกซ์</h4>
+                        <p><strong>เมทริกซ์ (Matrix)</strong> คือ การจัดเรียงจำนวนหรือสัญลักษณ์เป็นแถวและหลัก โดยเขียนอยู่ภายในวงเล็บเหลี่ยม [ ] หรือวงเล็บมน ( )</p>
+                        <p>เมทริกซ์ที่มี $m$ แถว $n$ หลัก เรียกว่า เมทริกซ์อันดับ $m \times n$ (อ่านว่า "m cross n" หรือ "m คูณ n")</p>
+                        <p>รูปแบบทั่วไป:</p>
+                        <p>$$A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}$$</p>
+                        <p>โดยที่ $a_{ij}$ คือสมาชิกในแถวที่ $i$ หลักที่ $j$ ของเมทริกซ์ $A$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>ประเภทของเมทริกซ์</h4>
+                        <ul>
+                            <li><strong>เมทริกซ์แถว (Row Matrix):</strong> เมทริกซ์ที่มีเพียง 1 แถว เช่น $\begin{bmatrix} 1 & 2 & 3 \end{bmatrix}_{1 \times 3}$</li>
+                            <li><strong>เมทริกซ์หลัก (Column Matrix):</strong> เมทริกซ์ที่มีเพียง 1 หลัก เช่น $\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}_{3 \times 1}$</li>
+                            <li><strong>เมทริกซ์จัตุรัส (Square Matrix):</strong> เมทริกซ์ที่มีจำนวนแถวเท่ากับจำนวนหลัก เช่น $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}_{2 \times 2}$</li>
+                            <li><strong>เมทริกซ์ศูนย์ (Zero Matrix):</strong> เมทริกซ์ที่สมาชิกทุกตัวเป็น 0 แทนด้วยสัญลักษณ์ $O$ หรือ $0$</li>
+                            <li><strong>เมทริกซ์เอกลักษณ์ (Identity Matrix):</strong> เมทริกซ์จัตุรัสที่สมาชิกบนเส้นทแยงมุมเป็น 1 ที่เหลือเป็น 0 แทนด้วย $I$</li>
+                            <li><strong>เมทริกซ์เส้นทแยงมุม (Diagonal Matrix):</strong> เมทริกซ์จัตุรัสที่สมาชิกนอกเส้นทแยงมุมเป็น 0 ทั้งหมด</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.1 ความหมายของเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 1 การระบุอันดับและสมาชิกของเมทริกซ์</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $A = \begin{bmatrix} 2 & -1 & 3 \\ 0 & 5 & 7 \end{bmatrix}$ จงหา</p>
+                        <p>ก) อันดับของเมทริกซ์ $A$</p>
+                        <p>ข) $a_{12}$ และ $a_{23}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ก) เมทริกซ์ $A$ มี 2 แถว 3 หลัก</p>
+                        <p>$$\therefore \text{อันดับของเมทริกซ์ } A = 2 \times 3$$</p>
+
+                        <p>ข) $a_{12}$ หมายถึง สมาชิกในแถวที่ 1 หลักที่ 2</p>
+                        <p>$$a_{12} = -1$$</p>
+                        <p>$a_{23}$ หมายถึง สมาชิกในแถวที่ 2 หลักที่ 3</p>
+                        <p>$$a_{23} = 7$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.1 ความหมายของเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 2 การสร้างเมทริกซ์จากเงื่อนไข</h4>
+                        <p><strong>โจทย์:</strong> จงสร้างเมทริกซ์ $B$ อันดับ $3 \times 3$ โดยที่ $b_{ij} = i + 2j$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>หาค่าสมาชิกแต่ละตัวโดยใช้เงื่อนไข $b_{ij} = i + 2j$</p>
+                        <p>$b_{11} = 1 + 2(1) = 3$</p>
+                        <p>$b_{12} = 1 + 2(2) = 5$</p>
+                        <p>$b_{13} = 1 + 2(3) = 7$</p>
+                        <p>$b_{21} = 2 + 2(1) = 4$</p>
+                        <p>$b_{22} = 2 + 2(2) = 6$</p>
+                        <p>$b_{23} = 2 + 2(3) = 8$</p>
+                        <p>$b_{31} = 3 + 2(1) = 5$</p>
+                        <p>$b_{32} = 3 + 2(2) = 7$</p>
+                        <p>$b_{33} = 3 + 2(3) = 9$</p>
+
+                        <p>$$\therefore B = \begin{bmatrix} 3 & 5 & 7 \\ 4 & 6 & 8 \\ 5 & 7 & 9 \end{bmatrix}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 การจำแนกประเภทของเมทริกซ์</h4>
+                        <p><strong>โจทย์:</strong> จงระบุประเภทของเมทริกซ์ต่อไปนี้</p>
+                        <p>ก) $A = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</p>
+                        <p>ข) $B = \begin{bmatrix} 3 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 5 \end{bmatrix}$</p>
+                        <p>ค) $C = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ก) $A$ เป็นเมทริกซ์จัตุรัสอันดับ $3 \times 3$ ที่มีสมาชิกบนเส้นทแยงมุมเป็น 1 ส่วนที่เหลือเป็น 0</p>
+                        <p>$$\therefore A \text{ เป็นเมทริกซ์เอกลักษณ์}$$</p>
+
+                        <p>ข) $B$ เป็นเมทริกซ์จัตุรัสอันดับ $3 \times 3$ ที่มีสมาชิกนอกเส้นทแยงมุมเป็น 0 ทั้งหมด</p>
+                        <p>$$\therefore B \text{ เป็นเมทริกซ์เส้นทแยงมุม}$$</p>
+
+                        <p>ค) $C$ เป็นเมทริกซ์ที่สมาชิกทุกตัวเป็น 0</p>
+                        <p>$$\therefore C \text{ เป็นเมทริกซ์ศูนย์อันดับ } 3 \times 2$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 ความเท่ากันของเมทริกซ์</h4>
+                        <p><strong>โจทย์:</strong> กำหนดให้ $\begin{bmatrix} x + y & 4 \\ 2 & x - y \end{bmatrix} = \begin{bmatrix} 6 & 4 \\ 2 & 2 \end{bmatrix}$ จงหาค่า $x$ และ $y$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เมทริกซ์สองเมทริกซ์จะเท่ากันก็ต่อเมื่อ มีอันดับเท่ากันและสมาชิกในตำแหน่งเดียวกันมีค่าเท่ากัน</p>
+                        <p>จากเงื่อนไข:</p>
+                        <p>$$x + y = 6 \quad \cdots(1)$$</p>
+                        <p>$$x - y = 2 \quad \cdots(2)$$</p>
+
+                        <p>นำ $(1)$ บวก $(2)$:</p>
+                        <p>$$2x = 8$$</p>
+                        <p>$$x = 4$$</p>
+
+                        <p>แทน $x = 4$ ใน $(1)$:</p>
+                        <p>$$4 + y = 6$$</p>
+                        <p>$$y = 2$$</p>
+
+                        <p>$$\therefore x = 4, \; y = 2$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +192,80 @@
                 <!-- Section 2.2 -->
                 <section id="section2">
                     <h2>2.2 การบวกลบเมทริกซ์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.2 การบวกลบเมทริกซ์</p>
+                        <h4>การบวกและลบเมทริกซ์</h4>
+                        <p>เมทริกซ์สามารถบวกหรือลบกันได้ก็ต่อเมื่อ <strong>มีอันดับเท่ากัน</strong></p>
+                        <p>การบวกหรือลบเมทริกซ์ทำโดย <strong>บวกหรือลบสมาชิกในตำแหน่งเดียวกัน</strong></p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรการบวกลบเมทริกซ์</h4>
+                        <p>ถ้า $A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}$ และ $B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix}$</p>
+
+                        <p><strong>การบวก:</strong></p>
+                        <p>$$A + B = \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12} \\ a_{21} + b_{21} & a_{22} + b_{22} \end{bmatrix}$$</p>
+
+                        <p><strong>การลบ:</strong></p>
+                        <p>$$A - B = \begin{bmatrix} a_{11} - b_{11} & a_{12} - b_{12} \\ a_{21} - b_{21} & a_{22} - b_{22} \end{bmatrix}$$</p>
+
+                        <p><strong>สมบัติ:</strong></p>
+                        <ul>
+                            <li>$A + B = B + A$ (สมบัติการสลับที่)</li>
+                            <li>$(A + B) + C = A + (B + C)$ (สมบัติการเปลี่ยนหมู่)</li>
+                            <li>$A + O = O + A = A$ (สมบัติเอกลักษณ์การบวก)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.2 การบวกลบเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 1 การบวกเมทริกซ์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 2 & -3 \\ 5 & 1 \end{bmatrix}$ และ $B = \begin{bmatrix} 4 & 7 \\ -2 & 6 \end{bmatrix}$ จงหา $A + B$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>บวกสมาชิกในตำแหน่งเดียวกัน:</p>
+                        <p>$$A + B = \begin{bmatrix} 2 + 4 & -3 + 7 \\ 5 + (-2) & 1 + 6 \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 6 & 4 \\ 3 & 7 \end{bmatrix}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.2 การบวกลบเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 2 การลบเมทริกซ์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $P = \begin{bmatrix} 8 & 2 & -1 \\ 3 & 5 & 4 \end{bmatrix}$ และ $Q = \begin{bmatrix} 3 & -4 & 2 \\ 1 & 7 & -3 \end{bmatrix}$ จงหา $P - Q$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>ลบสมาชิกในตำแหน่งเดียวกัน:</p>
+                        <p>$$P - Q = \begin{bmatrix} 8 - 3 & 2 - (-4) & -1 - 2 \\ 3 - 1 & 5 - 7 & 4 - (-3) \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 5 & 6 & -3 \\ 2 & -2 & 7 \end{bmatrix}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 การคูณเมทริกซ์ด้วยสเกลาร์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 3 & -2 \\ 1 & 4 \end{bmatrix}$ จงหา $3A$ และ $-2A$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>การคูณเมทริกซ์ด้วยสเกลาร์ $k$ คือการคูณสมาชิกทุกตัวด้วย $k$</p>
+
+                        <p>$$3A = 3\begin{bmatrix} 3 & -2 \\ 1 & 4 \end{bmatrix} = \begin{bmatrix} 9 & -6 \\ 3 & 12 \end{bmatrix}$$</p>
+
+                        <p>$$-2A = -2\begin{bmatrix} 3 & -2 \\ 1 & 4 \end{bmatrix} = \begin{bmatrix} -6 & 4 \\ -2 & -8 \end{bmatrix}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 การหาค่าตัวแปร</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\begin{bmatrix} 2x \\ y \end{bmatrix} + \begin{bmatrix} 3 \\ -5 \end{bmatrix} = \begin{bmatrix} 11 \\ 2 \end{bmatrix}$ จงหาค่า $x$ และ $y$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\begin{bmatrix} 2x + 3 \\ y + (-5) \end{bmatrix} = \begin{bmatrix} 11 \\ 2 \end{bmatrix}$$</p>
+
+                        <p>จากตำแหน่งแถวที่ 1:</p>
+                        <p>$$2x + 3 = 11$$</p>
+                        <p>$$2x = 8$$</p>
+                        <p>$$x = 4$$</p>
+
+                        <p>จากตำแหน่งแถวที่ 2:</p>
+                        <p>$$y - 5 = 2$$</p>
+                        <p>$$y = 7$$</p>
+
+                        <p>$$\therefore x = 4, \; y = 7$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +274,82 @@
                 <!-- Section 2.3 -->
                 <section id="section3">
                     <h2>2.3 การคูณเมทริกซ์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.3 การคูณเมทริกซ์</p>
+                        <h4>การคูณเมทริกซ์</h4>
+                        <p>เมทริกซ์ $A$ อันดับ $m \times n$ สามารถคูณกับเมทริกซ์ $B$ อันดับ $p \times q$ ได้ก็ต่อเมื่อ <strong>$n = p$</strong></p>
+                        <p>กล่าวคือ <strong>จำนวนหลักของเมทริกซ์ตัวแรกต้องเท่ากับจำนวนแถวของเมทริกซ์ตัวที่สอง</strong></p>
+                        <p>ผลคูณ $AB$ จะได้เมทริกซ์ที่มีอันดับ $m \times q$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>วิธีการคูณเมทริกซ์</h4>
+                        <p>ถ้า $A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}_{2 \times 2}$ และ $B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix}_{2 \times 2}$</p>
+
+                        <p>$$AB = \begin{bmatrix} a_{11}b_{11} + a_{12}b_{21} & a_{11}b_{12} + a_{12}b_{22} \\ a_{21}b_{11} + a_{22}b_{21} & a_{21}b_{12} + a_{22}b_{22} \end{bmatrix}$$</p>
+
+                        <p><strong>ข้อสังเกต:</strong></p>
+                        <ul>
+                            <li>โดยทั่วไป $AB \neq BA$ (การคูณเมทริกซ์ไม่มีสมบัติการสลับที่)</li>
+                            <li>$(AB)C = A(BC)$ (สมบัติการเปลี่ยนหมู่)</li>
+                            <li>$A(B + C) = AB + AC$ (สมบัติการแจกแจง)</li>
+                            <li>$AI = IA = A$ (สมบัติเอกลักษณ์การคูณ)</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.3 การคูณเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 1 การคูณเมทริกซ์ 2×2</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}$ และ $B = \begin{bmatrix} 5 & 1 \\ 2 & 3 \end{bmatrix}$ จงหา $AB$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$A$ มีอันดับ $2 \times 2$ และ $B$ มีอันดับ $2 \times 2$</p>
+                        <p>จำนวนหลักของ $A$ = จำนวนแถวของ $B$ = 2 ดังนั้นคูณกันได้</p>
+                        <p>$AB$ จะได้เมทริกซ์อันดับ $2 \times 2$</p>
+
+                        <p>$$AB = \begin{bmatrix} 2(5) + 3(2) & 2(1) + 3(3) \\ 1(5) + 4(2) & 1(1) + 4(3) \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 10 + 6 & 2 + 9 \\ 5 + 8 & 1 + 12 \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 16 & 11 \\ 13 & 13 \end{bmatrix}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.3 การคูณเมทริกซ์</p>
+                        <h4>ตัวอย่างที่ 2 การคูณเมทริกซ์ต่างอันดับ</h4>
+                        <p><strong>โจทย์:</strong> ให้ $P = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}_{2 \times 3}$ และ $Q = \begin{bmatrix} 2 & 1 \\ 0 & -1 \\ 3 & 2 \end{bmatrix}_{3 \times 2}$ จงหา $PQ$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$P$ มีอันดับ $2 \times 3$ และ $Q$ มีอันดับ $3 \times 2$</p>
+                        <p>จำนวนหลักของ $P$ = จำนวนแถวของ $Q$ = 3 ดังนั้นคูณกันได้</p>
+                        <p>$PQ$ จะได้เมทริกซ์อันดับ $2 \times 2$</p>
+
+                        <p>$$PQ = \begin{bmatrix} 1(2) + 2(0) + 3(3) & 1(1) + 2(-1) + 3(2) \\ 4(2) + 5(0) + 6(3) & 4(1) + 5(-1) + 6(2) \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 2 + 0 + 9 & 1 - 2 + 6 \\ 8 + 0 + 18 & 4 - 5 + 12 \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} 11 & 5 \\ 26 & 11 \end{bmatrix}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 การแสดงว่า AB ≠ BA</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ และ $B = \begin{bmatrix} 0 & 1 \\ 2 & 3 \end{bmatrix}$ จงหา $AB$ และ $BA$ แล้วแสดงว่า $AB \neq BA$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หา $AB$:</p>
+                        <p>$$AB = \begin{bmatrix} 1(0) + 2(2) & 1(1) + 2(3) \\ 3(0) + 4(2) & 3(1) + 4(3) \end{bmatrix} = \begin{bmatrix} 4 & 7 \\ 8 & 15 \end{bmatrix}$$</p>
+
+                        <p>หา $BA$:</p>
+                        <p>$$BA = \begin{bmatrix} 0(1) + 1(3) & 0(2) + 1(4) \\ 2(1) + 3(3) & 2(2) + 3(4) \end{bmatrix} = \begin{bmatrix} 3 & 4 \\ 11 & 16 \end{bmatrix}$$</p>
+
+                        <p>$$\because \begin{bmatrix} 4 & 7 \\ 8 & 15 \end{bmatrix} \neq \begin{bmatrix} 3 & 4 \\ 11 & 16 \end{bmatrix}$$</p>
+                        <p>$$\therefore AB \neq BA$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 เมทริกซ์ทรานสโพส</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}$ จงหา $A^T$ (เมทริกซ์ทรานสโพสของ $A$)</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เมทริกซ์ทรานสโพส $A^T$ ได้จากการ<strong>สลับแถวเป็นหลัก และหลักเป็นแถว</strong></p>
+
+                        <p>$$A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$$</p>
+
+                        <p>สังเกต: $A$ มีอันดับ $2 \times 3$ ส่วน $A^T$ มีอันดับ $3 \times 2$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +358,95 @@
                 <!-- Section 2.4 -->
                 <section id="section4">
                     <h2>2.4 เมทริกซ์ผกผัน</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.4 เมทริกซ์ผกผัน</p>
+                        <h4>เมทริกซ์ผกผัน (Inverse Matrix)</h4>
+                        <p>เมทริกซ์ผกผัน $A^{-1}$ ของเมทริกซ์จัตุรัส $A$ คือเมทริกซ์ที่สมบัติว่า:</p>
+                        <p>$$AA^{-1} = A^{-1}A = I$$</p>
+                        <p>โดยที่ $I$ คือเมทริกซ์เอกลักษณ์</p>
+                        <p><strong>เงื่อนไข:</strong> เมทริกซ์ $A$ จะมีเมทริกซ์ผกผันได้ก็ต่อเมื่อ $|A| \neq 0$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรหาเมทริกซ์ผกผันของเมทริกซ์ 2×2</h4>
+                        <p>ถ้า $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ และ $|A| = ad - bc \neq 0$</p>
+
+                        <p>$$A^{-1} = \frac{1}{ad - bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$</p>
+
+                        <p>หรือเขียนอีกรูปแบบ:</p>
+                        <p>$$A^{-1} = \frac{1}{|A|}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$</p>
+
+                        <p><strong>ข้อสังเกต:</strong></p>
+                        <ul>
+                            <li>$(A^{-1})^{-1} = A$</li>
+                            <li>$(AB)^{-1} = B^{-1}A^{-1}$ (ถ้า $A$ และ $B$ มีเมทริกซ์ผกผัน)</li>
+                            <li>$(A^T)^{-1} = (A^{-1})^T$</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.4 เมทริกซ์ผกผัน</p>
+                        <h4>ตัวอย่างที่ 1 การหาเมทริกซ์ผกผัน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}$ จงหา $A^{-1}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ขั้นตอนที่ 1: หาดีเทอร์มิแนนต์ของ $A$</p>
+                        <p>$$|A| = (2)(4) - (3)(1) = 8 - 3 = 5$$</p>
+                        <p>เนื่องจาก $|A| = 5 \neq 0$ ดังนั้น $A$ มีเมทริกซ์ผกผัน</p>
+
+                        <p>ขั้นตอนที่ 2: ใช้สูตร</p>
+                        <p>$$A^{-1} = \frac{1}{5}\begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix}$$</p>
+                        <p>$$= \begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix}$$</p>
+
+                        <p>ตรวจสอบ: $AA^{-1} = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}\begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I$ ✓</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.4 เมทริกซ์ผกผัน</p>
+                        <h4>ตัวอย่างที่ 2 เมทริกซ์ที่ไม่มีเมทริกซ์ผกผัน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $B = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}$ พิจารณาว่า $B$ มีเมทริกซ์ผกผันหรือไม่</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>หาดีเทอร์มิแนนต์ของ $B$:</p>
+                        <p>$$|B| = (2)(2) - (4)(1) = 4 - 4 = 0$$</p>
+
+                        <p>$$\because |B| = 0$$</p>
+                        <p>$$\therefore B \text{ ไม่มีเมทริกซ์ผกผัน}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 การหาค่าตัวแปรให้เมทริกซ์มีผกผัน</h4>
+                        <p><strong>โจทย์:</strong> ให้ $C = \begin{bmatrix} k & 2 \\ 3 & k \end{bmatrix}$ จงหาค่า $k$ ที่ทำให้ $C$ มีเมทริกซ์ผกผัน</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$C$ จะมีเมทริกซ์ผกผันได้ก็ต่อเมื่อ $|C| \neq 0$</p>
+
+                        <p>$$|C| = k^2 - (2)(3)$$</p>
+                        <p>$$= k^2 - 6$$</p>
+
+                        <p>ต้องการให้ $|C| \neq 0$:</p>
+                        <p>$$k^2 - 6 \neq 0$$</p>
+                        <p>$$k^2 \neq 6$$</p>
+                        <p>$$k \neq \pm\sqrt{6}$$</p>
+
+                        <p>$$\therefore C \text{ มีเมทริกซ์ผกผันเมื่อ } k \neq \sqrt{6} \text{ และ } k \neq -\sqrt{6}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 การใช้เมทริกซ์ผกผันแก้สมการ</h4>
+                        <p><strong>โจทย์:</strong> ให้ $AX = B$ โดยที่ $A = \begin{bmatrix} 1 & 2 \\ 3 & 5 \end{bmatrix}$ และ $B = \begin{bmatrix} 5 \\ 13 \end{bmatrix}$ จงหา $X$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>จาก $AX = B$</p>
+                        <p>คูณทั้งสองข้างด้วย $A^{-1}$ (ทางซ้าย):</p>
+                        <p>$$A^{-1}AX = A^{-1}B$$</p>
+                        <p>$$IX = A^{-1}B$$</p>
+                        <p>$$X = A^{-1}B$$</p>
+
+                        <p>หา $A^{-1}$:</p>
+                        <p>$$|A| = (1)(5) - (2)(3) = 5 - 6 = -1$$</p>
+                        <p>$$A^{-1} = \frac{1}{-1}\begin{bmatrix} 5 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -5 & 2 \\ 3 & -1 \end{bmatrix}$$</p>
+
+                        <p>หา $X$:</p>
+                        <p>$$X = \begin{bmatrix} -5 & 2 \\ 3 & -1 \end{bmatrix}\begin{bmatrix} 5 \\ 13 \end{bmatrix} = \begin{bmatrix} -25 + 26 \\ 15 - 13 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +455,89 @@
                 <!-- Section 2.5 -->
                 <section id="section5">
                     <h2>2.5 ดีเทอร์มิแนนต์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.5 ดีเทอร์มิแนนต์</p>
+                        <h4>ดีเทอร์มิแนนต์ (Determinant)</h4>
+                        <p>ดีเทอร์มิแนนต์เป็นค่าตัวเลขที่หาได้จากเมทริกซ์จัตุรัส แทนด้วยสัญลักษณ์ $|A|$ หรือ $\det(A)$</p>
+                        <p>ดีเทอร์มิแนนต์ใช้ในการตรวจสอบว่าเมทริกซ์มีเมทริกซ์ผกผันหรือไม่ และใช้ในการแก้ระบบสมการเชิงเส้น</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สูตรหาดีเทอร์มิแนนต์</h4>
+
+                        <p><strong>เมทริกซ์ 2×2:</strong></p>
+                        <p>$$\left|\begin{matrix} a & b \\ c & d \end{matrix}\right| = ad - bc$$</p>
+
+                        <p><strong>เมทริกซ์ 3×3:</strong> (วิธีการกางแถว หรือ Sarrus Rule)</p>
+                        <p>$$\left|\begin{matrix} a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \\ a_3 & b_3 & c_3 \end{matrix}\right| = a_1b_2c_3 + b_1c_2a_3 + c_1a_2b_3 - c_1b_2a_3 - b_1a_2c_3 - a_1c_2b_3$$</p>
+
+                        <p><strong>สมบัติของดีเทอร์มิแนนต์:</strong></p>
+                        <ul>
+                            <li>$|AB| = |A| \cdot |B|$</li>
+                            <li>$|A^T| = |A|$</li>
+                            <li>$|kA| = k^n|A|$ (เมื่อ $A$ มีอันดับ $n \times n$)</li>
+                            <li>ถ้าสลับแถว 2 แถวหรือหลัก 2 หลัก ดีเทอร์มิแนนต์จะเปลี่ยนเครื่องหมาย</li>
+                            <li>ถ้ามีแถวหรือหลักใดเป็น 0 ทั้งหมด ดีเทอร์มิแนนต์จะเท่ากับ 0</li>
+                        </ul>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.5 ดีเทอร์มิแนนต์</p>
+                        <h4>ตัวอย่างที่ 1 หาดีเทอร์มิแนนต์ของเมทริกซ์ 2×2</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าดีเทอร์มิแนนต์ของ $A = \begin{bmatrix} 3 & 5 \\ 2 & 4 \end{bmatrix}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$|A| = \left|\begin{matrix} 3 & 5 \\ 2 & 4 \end{matrix}\right|$$</p>
+                        <p>$$= (3)(4) - (5)(2)$$</p>
+                        <p>$$= 12 - 10$$</p>
+                        <p>$$= 2$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.5 ดีเทอร์มิแนนต์</p>
+                        <h4>ตัวอย่างที่ 2 หาดีเทอร์มิแนนต์ของเมทริกซ์ 3×3</h4>
+                        <p><strong>โจทย์:</strong> จงหาค่าดีเทอร์มิแนนต์ของ $B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$</p>
+
+                        <p><strong>วิธีทำ:</strong> ใช้วิธีการกางแถว (Sarrus Rule)</p>
+                        <p>$$|B| = \left|\begin{matrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{matrix}\right|$$</p>
+
+                        <p>เขียนเส้นทแยงขวาลง (บวก):</p>
+                        <p>$(1)(5)(9) + (2)(6)(7) + (3)(4)(8) = 45 + 84 + 96 = 225$</p>
+
+                        <p>เขียนเส้นทแยงซ้ายลง (ลบ):</p>
+                        <p>$(3)(5)(7) + (2)(4)(9) + (1)(6)(8) = 105 + 72 + 48 = 225$</p>
+
+                        <p>$$|B| = 225 - 225 = 0$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 การหาค่าตัวแปรจากดีเทอร์มิแนนต์</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $\left|\begin{matrix} x & 3 \\ 2 & x \end{matrix}\right| = 7$ จงหาค่า $x$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$$\left|\begin{matrix} x & 3 \\ 2 & x \end{matrix}\right| = 7$$</p>
+                        <p>$$x^2 - (3)(2) = 7$$</p>
+                        <p>$$x^2 - 6 = 7$$</p>
+                        <p>$$x^2 = 13$$</p>
+                        <p>$$x = \pm\sqrt{13}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 การใช้สมบัติของดีเทอร์มิแนนต์</h4>
+                        <p><strong>โจทย์:</strong> ให้ $A = \begin{bmatrix} 2 & 1 \\ 3 & 4 \end{bmatrix}$ และ $B = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ จงหา $|AB|$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>วิธีที่ 1: ใช้สมบัติ $|AB| = |A| \cdot |B|$</p>
+
+                        <p>หา $|A|$:</p>
+                        <p>$$|A| = (2)(4) - (1)(3) = 8 - 3 = 5$$</p>
+
+                        <p>หา $|B|$:</p>
+                        <p>$$|B| = (1)(3) - (2)(0) = 3 - 0 = 3$$</p>
+
+                        <p>$$|AB| = |A| \cdot |B| = 5 \times 3 = 15$$</p>
+
+                        <p>วิธีที่ 2: หา $AB$ ก่อนแล้วหาดีเทอร์มิแนนต์</p>
+                        <p>$$AB = \begin{bmatrix} 2 & 7 \\ 3 & 18 \end{bmatrix}$$</p>
+                        <p>$$|AB| = (2)(18) - (7)(3) = 36 - 21 = 15$$ (ได้ผลเดียวกัน)</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +546,103 @@
                 <!-- Section 2.6 -->
                 <section id="section6">
                     <h2>2.6 การแก้ระบบสมการ</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 2.6 การแก้ระบบสมการ</p>
+                        <h4>การแก้ระบบสมการเชิงเส้นด้วยเมทริกซ์</h4>
+                        <p>ระบบสมการเชิงเส้นสามารถเขียนในรูปเมทริกซ์ได้ดังนี้:</p>
+                        <p>$$AX = B$$</p>
+                        <p>โดยที่ $A$ คือเมทริกซ์สัมประสิทธิ์, $X$ คือเมทริกซ์ตัวแปร, $B$ คือเมทริกซ์คงที่</p>
+                        <p>ถ้า $A$ มีเมทริกซ์ผกผัน จะได้:</p>
+                        <p>$$X = A^{-1}B$$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>วิธีการแก้ระบบสมการ</h4>
+
+                        <p><strong>วิธีที่ 1: ใช้เมทริกซ์ผกผัน</strong></p>
+                        <p>จาก $AX = B$ คูณทั้งสองข้างด้วย $A^{-1}$ (ทางซ้าย)</p>
+                        <p>$$A^{-1}AX = A^{-1}B$$</p>
+                        <p>$$X = A^{-1}B$$</p>
+
+                        <p><strong>วิธีที่ 2: กฎของเครเมอร์ (Cramer's Rule)</strong></p>
+                        <p>สำหรับระบบสมการ 2 ตัวแปร:</p>
+                        <p>$$\begin{cases} a_1x + b_1y = c_1 \\ a_2x + b_2y = c_2 \end{cases}$$</p>
+
+                        <p>$$x = \frac{\left|\begin{matrix} c_1 & b_1 \\ c_2 & b_2 \end{matrix}\right|}{\left|\begin{matrix} a_1 & b_1 \\ a_2 & b_2 \end{matrix}\right|}, \quad y = \frac{\left|\begin{matrix} a_1 & c_1 \\ a_2 & c_2 \end{matrix}\right|}{\left|\begin{matrix} a_1 & b_1 \\ a_2 & b_2 \end{matrix}\right|}$$</p>
+
+                        <p>เงื่อนไข: $\left|\begin{matrix} a_1 & b_1 \\ a_2 & b_2 \end{matrix}\right| \neq 0$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 2.6 การแก้ระบบสมการ</p>
+                        <h4>ตัวอย่างที่ 1 แก้ระบบสมการด้วยเมทริกซ์ผกผัน</h4>
+                        <p><strong>โจทย์:</strong> แก้ระบบสมการ $\begin{cases} 2x + y = 7 \\ x + 3y = 11 \end{cases}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>เขียนในรูปเมทริกซ์ $AX = B$:</p>
+                        <p>$$\begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 7 \\ 11 \end{bmatrix}$$</p>
+
+                        <p>หา $A^{-1}$:</p>
+                        <p>$$|A| = (2)(3) - (1)(1) = 6 - 1 = 5$$</p>
+                        <p>$$A^{-1} = \frac{1}{5}\begin{bmatrix} 3 & -1 \\ -1 & 2 \end{bmatrix}$$</p>
+
+                        <p>หา $X$:</p>
+                        <p>$$X = A^{-1}B = \frac{1}{5}\begin{bmatrix} 3 & -1 \\ -1 & 2 \end{bmatrix}\begin{bmatrix} 7 \\ 11 \end{bmatrix}$$</p>
+                        <p>$$= \frac{1}{5}\begin{bmatrix} 21 - 11 \\ -7 + 22 \end{bmatrix} = \frac{1}{5}\begin{bmatrix} 10 \\ 15 \end{bmatrix} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}$$</p>
+
+                        <p>$$\therefore x = 2, \; y = 3$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 2.6 การแก้ระบบสมการ</p>
+                        <h4>ตัวอย่างที่ 2 แก้ระบบสมการด้วยกฎของเครเมอร์</h4>
+                        <p><strong>โจทย์:</strong> แก้ระบบสมการ $\begin{cases} 3x - 2y = 5 \\ 4x + y = 10 \end{cases}$ ด้วยกฎของเครเมอร์</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>หาดีเทอร์มิแนนต์หลัก:</p>
+                        <p>$$D = \left|\begin{matrix} 3 & -2 \\ 4 & 1 \end{matrix}\right| = (3)(1) - (-2)(4) = 3 + 8 = 11$$</p>
+
+                        <p>หา $D_x$ (แทนหลักแรกด้วยค่าคงที่):</p>
+                        <p>$$D_x = \left|\begin{matrix} 5 & -2 \\ 10 & 1 \end{matrix}\right| = (5)(1) - (-2)(10) = 5 + 20 = 25$$</p>
+
+                        <p>หา $D_y$ (แทนหลักที่สองด้วยค่าคงที่):</p>
+                        <p>$$D_y = \left|\begin{matrix} 3 & 5 \\ 4 & 10 \end{matrix}\right| = (3)(10) - (5)(4) = 30 - 20 = 10$$</p>
+
+                        <p>$$x = \frac{D_x}{D} = \frac{25}{11}$$</p>
+                        <p>$$y = \frac{D_y}{D} = \frac{10}{11}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3 ระบบสมการที่มีคำตอบเพียงหนึ่ง</h4>
+                        <p><strong>โจทย์:</strong> แก้ระบบสมการ $\begin{cases} x + 2y = 8 \\ 3x - y = 5 \end{cases}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เขียนในรูปเมทริกซ์:</p>
+                        <p>$$A = \begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}, \quad X = \begin{bmatrix} x \\ y \end{bmatrix}, \quad B = \begin{bmatrix} 8 \\ 5 \end{bmatrix}$$</p>
+
+                        <p>$$|A| = (1)(-1) - (2)(3) = -1 - 6 = -7 \neq 0$$</p>
+                        <p>ดังนั้น $A$ มีเมทริกซ์ผกผัน ระบบสมการมีคำตอบเพียงหนึ่ง</p>
+
+                        <p>$$A^{-1} = \frac{1}{-7}\begin{bmatrix} -1 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{7} & \frac{2}{7} \\ \frac{3}{7} & -\frac{1}{7} \end{bmatrix}$$</p>
+
+                        <p>$$X = A^{-1}B = \begin{bmatrix} \frac{1}{7} & \frac{2}{7} \\ \frac{3}{7} & -\frac{1}{7} \end{bmatrix}\begin{bmatrix} 8 \\ 5 \end{bmatrix} = \begin{bmatrix} \frac{8 + 10}{7} \\ \frac{24 - 5}{7} \end{bmatrix} = \begin{bmatrix} \frac{18}{7} \\ \frac{19}{7} \end{bmatrix}$$</p>
+
+                        <p>$$\therefore x = \frac{18}{7}, \; y = \frac{19}{7}$$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4 การตรวจสอบจำนวนคำตอบ</h4>
+                        <p><strong>โจทย์:</strong> พิจารณาระบบสมการ $\begin{cases} 2x + 4y = 6 \\ x + 2y = 3 \end{cases}$ มีกี่คำตอบ</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$A = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}$$</p>
+                        <p>$$|A| = (2)(2) - (4)(1) = 4 - 4 = 0$$</p>
+
+                        <p>เนื่องจาก $|A| = 0$ ดังนั้น $A$ ไม่มีเมทริกซ์ผกผัน</p>
+                        <p>พิจารณาสมการทั้งสองพบว่า สมการที่สองคูณด้วย 2 จะได้สมการแรก</p>
+                        <p>$$2(x + 2y) = 2(3)$$</p>
+                        <p>$$2x + 4y = 6$$</p>
+
+                        <p>สมการทั้งสองเป็นสมการเดียวกัน</p>
+                        <p>$$\therefore \text{ระบบสมการมีคำตอบไม่จำกัด (infinitely many solutions)}$$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -246,74 +651,167 @@
                 <!-- Exercises -->
                 <section id="exercises">
                     <h2>แบบฝึกหัดบทที่ 2</h2>
-                    
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: ความหมายและประเภทของเมทริกซ์ (5 ข้อ)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>กำหนด $A = \begin{bmatrix} 3 & -1 & 2 \\ 0 & 5 & -4 \end{bmatrix}$ จงหาอันดับของ $A$ และหา $a_{12}$ และ $a_{23}$</li>
+                            <li>จงสร้างเมทริกซ์ $B$ อันดับ $2 \times 3$ โดยที่ $b_{ij} = 2i - j$</li>
+                            <li>จงจำแนกประเภทของเมทริกซ์ $C = \begin{bmatrix} 5 & 0 \\ 0 & 5 \end{bmatrix}$</li>
+                            <li>ถ้า $\begin{bmatrix} 2x - y & 3 \\ 4 & x + y \end{bmatrix} = \begin{bmatrix} 5 & 3 \\ 4 & 7 \end{bmatrix}$ จงหาค่า $x$ และ $y$</li>
+                            <li>จงหาเมทริกซ์เอกลักษณ์อันดับ $3 \times 3$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+
+                            <p><strong>1.</strong> $A$ มีอันดับ $2 \times 3$, $a_{12} = -1$, $a_{23} = -4$</p>
+
+                            <p><strong>2.</strong> $B = \begin{bmatrix} 1 & 0 & -1 \\ 2 & 1 & 0 \end{bmatrix}$</p>
+                            <p>วิธีทำ: $b_{11} = 2(1) - 1 = 1$, $b_{12} = 2(1) - 2 = 0$, $b_{13} = 2(1) - 3 = -1$</p>
+                            <p>$b_{21} = 2(2) - 1 = 3$, ... (แทนค่าเหมือนกัน)</p>
+
+                            <p><strong>3.</strong> $C$ เป็นเมทริกซ์เส้นทแยงมุม หรือ เมทริกซ์สเกลาร์ (Scalar Matrix) เพราะเป็นเมทริกซ์เส้นทแยงมุมที่สมาชิกบนเส้นทแยงมุมมีค่าเท่ากันทั้งหมด</p>
+
+                            <p><strong>4.</strong> จากการเท่ากันของเมทริกซ์:</p>
+                            <p>$2x - y = 5$ ... (1)</p>
+                            <p>$x + y = 7$ ... (2)</p>
+                            <p>นำ (1) + (2): $3x = 12 \Rightarrow x = 4$</p>
+                            <p>แทน $x = 4$ ใน (2): $4 + y = 7 \Rightarrow y = 3$</p>
+                            <p>ดังนั้น $x = 4, y = 3$</p>
+
+                            <p><strong>5.</strong> $I_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: การบวกลบและคูณสเกลาร์ (4 ข้อ)</h3>
+                        <ol start="6">
+                            <li>ให้ $A = \begin{bmatrix} 5 & -2 \\ 3 & 1 \end{bmatrix}$ และ $B = \begin{bmatrix} -1 & 4 \\ 2 & 0 \end{bmatrix}$ จงหา $A + B$ และ $A - B$</li>
+                            <li>ให้ $P = \begin{bmatrix} 2 & -3 & 1 \\ 0 & 4 & -2 \end{bmatrix}$ จงหา $3P$</li>
+                            <li>ถ้า $2X + \begin{bmatrix} 1 & 3 \\ -2 & 5 \end{bmatrix} = \begin{bmatrix} 7 & 9 \\ 4 & 1 \end{bmatrix}$ จงหา $X$</li>
+                            <li>ให้ $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ จงหา $2A - 3I$ โดยที่ $I$ เป็นเมทริกซ์เอกลักษณ์อันดับ $2 \times 2$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+
+                            <p><strong>6.</strong></p>
+                            <p>$A + B = \begin{bmatrix} 5 + (-1) & -2 + 4 \\ 3 + 2 & 1 + 0 \end{bmatrix} = \begin{bmatrix} 4 & 2 \\ 5 & 1 \end{bmatrix}$</p>
+                            <p>$A - B = \begin{bmatrix} 5 - (-1) & -2 - 4 \\ 3 - 2 & 1 - 0 \end{bmatrix} = \begin{bmatrix} 6 & -6 \\ 1 & 1 \end{bmatrix}$</p>
+
+                            <p><strong>7.</strong> $3P = \begin{bmatrix} 6 & -9 & 3 \\ 0 & 12 & -6 \end{bmatrix}$</p>
+
+                            <p><strong>8.</strong></p>
+                            <p>$2X = \begin{bmatrix} 7 & 9 \\ 4 & 1 \end{bmatrix} - \begin{bmatrix} 1 & 3 \\ -2 & 5 \end{bmatrix} = \begin{bmatrix} 6 & 6 \\ 6 & -4 \end{bmatrix}$</p>
+                            <p>$X = \frac{1}{2}\begin{bmatrix} 6 & 6 \\ 6 & -4 \end{bmatrix} = \begin{bmatrix} 3 & 3 \\ 3 & -2 \end{bmatrix}$</p>
+
+                            <p><strong>9.</strong></p>
+                            <p>$2A - 3I = 2\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} - 3\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$</p>
+                            <p>$= \begin{bmatrix} 2 & 4 \\ 6 & 8 \end{bmatrix} - \begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} = \begin{bmatrix} -1 & 4 \\ 6 & 5 \end{bmatrix}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: การคูณเมทริกซ์และทรานสโพส (4 ข้อ)</h3>
+                        <ol start="10">
+                            <li>ให้ $A = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}$ และ $B = \begin{bmatrix} 2 & 0 \\ 1 & 5 \end{bmatrix}$ จงหา $AB$ และ $BA$</li>
+                            <li>ให้ $P = \begin{bmatrix} 2 & -1 & 3 \\ 0 & 4 & 1 \end{bmatrix}$ และ $Q = \begin{bmatrix} 1 & 2 \\ 3 & 0 \\ -1 & 4 \end{bmatrix}$ จงหา $PQ$</li>
+                            <li>ให้ $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}$ จงหา $A^T$</li>
+                            <li>ถ้า $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ และ $B = \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix}$ จงแสดงว่า $(AB)^T = B^T A^T$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+
+                            <p><strong>10.</strong></p>
+                            <p>$AB = \begin{bmatrix} 1(2) + 3(1) & 1(0) + 3(5) \\ 2(2) + 4(1) & 2(0) + 4(5) \end{bmatrix} = \begin{bmatrix} 5 & 15 \\ 8 & 20 \end{bmatrix}$</p>
+                            <p>$BA = \begin{bmatrix} 2(1) + 0(2) & 2(3) + 0(4) \\ 1(1) + 5(2) & 1(3) + 5(4) \end{bmatrix} = \begin{bmatrix} 2 & 6 \\ 11 & 23 \end{bmatrix}$</p>
+                            <p>สังเกต: $AB \neq BA$</p>
+
+                            <p><strong>11.</strong></p>
+                            <p>$PQ = \begin{bmatrix} 2(1) + (-1)(3) + 3(-1) & 2(2) + (-1)(0) + 3(4) \\ 0(1) + 4(3) + 1(-1) & 0(2) + 4(0) + 1(4) \end{bmatrix}$</p>
+                            <p>$= \begin{bmatrix} 2 - 3 - 3 & 4 + 0 + 12 \\ 0 + 12 - 1 & 0 + 0 + 4 \end{bmatrix} = \begin{bmatrix} -4 & 16 \\ 11 & 4 \end{bmatrix}$</p>
+
+                            <p><strong>12.</strong> $A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$</p>
+
+                            <p><strong>13.</strong></p>
+                            <p>หา $AB$:</p>
+                            <p>$AB = \begin{bmatrix} 2 & 7 \\ 6 & 15 \end{bmatrix}$</p>
+                            <p>$(AB)^T = \begin{bmatrix} 2 & 6 \\ 7 & 15 \end{bmatrix}$</p>
+
+                            <p>หา $B^T A^T$:</p>
+                            <p>$B^T = \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix}$, $A^T = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}$</p>
+                            <p>$B^T A^T = \begin{bmatrix} 2 & 6 \\ 7 & 15 \end{bmatrix}$</p>
+
+                            <p>ดังนั้น $(AB)^T = B^T A^T$ (ได้พิสูจน์แล้ว)</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: ดีเทอร์มิแนนต์และเมทริกซ์ผกผัน (4 ข้อ)</h3>
+                        <ol start="14">
+                            <li>จงหาค่าดีเทอร์มิแนนต์ของ $A = \begin{bmatrix} 4 & 3 \\ 2 & 5 \end{bmatrix}$</li>
+                            <li>ให้ $B = \begin{bmatrix} 3 & 1 \\ 5 & 2 \end{bmatrix}$ จงหา $B^{-1}$</li>
+                            <li>ถ้า $\left|\begin{matrix} 2x & 4 \\ 3 & x \end{matrix}\right| = 10$ จงหาค่า $x$</li>
+                            <li>ให้ $A = \begin{bmatrix} k & 3 \\ 2 & k \end{bmatrix}$ จงหาค่า $k$ ที่ทำให้ $A$ ไม่มีเมทริกซ์ผกผัน</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+
+                            <p><strong>14.</strong></p>
+                            <p>$|A| = (4)(5) - (3)(2) = 20 - 6 = 14$</p>
+
+                            <p><strong>15.</strong></p>
+                            <p>$|B| = (3)(2) - (1)(5) = 6 - 5 = 1$</p>
+                            <p>$B^{-1} = \frac{1}{1}\begin{bmatrix} 2 & -1 \\ -5 & 3 \end{bmatrix} = \begin{bmatrix} 2 & -1 \\ -5 & 3 \end{bmatrix}$</p>
+
+                            <p><strong>16.</strong></p>
+                            <p>$2x^2 - 12 = 10$</p>
+                            <p>$2x^2 = 22$</p>
+                            <p>$x^2 = 11$</p>
+                            <p>$x = \pm\sqrt{11}$</p>
+
+                            <p><strong>17.</strong></p>
+                            <p>$A$ ไม่มีเมทริกซ์ผกผันเมื่อ $|A| = 0$</p>
+                            <p>$k^2 - 6 = 0$</p>
+                            <p>$k^2 = 6$</p>
+                            <p>$k = \pm\sqrt{6}$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: การแก้ระบบสมการ (3 ข้อ)</h3>
+                        <ol start="18">
+                            <li>แก้ระบบสมการ $\begin{cases} x + 2y = 5 \\ 3x - y = 4 \end{cases}$ โดยใช้เมทริกซ์ผกผัน</li>
+                            <li>แก้ระบบสมการ $\begin{cases} 2x + 3y = 13 \\ x - 2y = -3 \end{cases}$ โดยใช้กฎของเครเมอร์</li>
+                            <li>พิจารณาว่าระบบสมการ $\begin{cases} 2x + 4y = 8 \\ 3x + 6y = 12 \end{cases}$ มีกี่คำตอบ พร้อมอธิบายเหตุผล</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+
+                            <p><strong>18.</strong></p>
+                            <p>$A = \begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}$, $B = \begin{bmatrix} 5 \\ 4 \end{bmatrix}$</p>
+                            <p>$|A| = (1)(-1) - (2)(3) = -1 - 6 = -7$</p>
+                            <p>$A^{-1} = \frac{1}{-7}\begin{bmatrix} -1 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} \frac{1}{7} & \frac{2}{7} \\ \frac{3}{7} & -\frac{1}{7} \end{bmatrix}$</p>
+                            <p>$X = A^{-1}B = \begin{bmatrix} \frac{1}{7} & \frac{2}{7} \\ \frac{3}{7} & -\frac{1}{7} \end{bmatrix}\begin{bmatrix} 5 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{5 + 8}{7} \\ \frac{15 - 4}{7} \end{bmatrix} = \begin{bmatrix} \frac{13}{7} \\ \frac{11}{7} \end{bmatrix}$</p>
+                            <p>ดังนั้น $x = \frac{13}{7}$, $y = \frac{11}{7}$</p>
+
+                            <p><strong>19.</strong></p>
+                            <p>$D = \left|\begin{matrix} 2 & 3 \\ 1 & -2 \end{matrix}\right| = -4 - 3 = -7$</p>
+                            <p>$D_x = \left|\begin{matrix} 13 & 3 \\ -3 & -2 \end{matrix}\right| = -26 - (-9) = -17$</p>
+                            <p>$D_y = \left|\begin{matrix} 2 & 13 \\ 1 & -3 \end{matrix}\right| = -6 - 13 = -19$</p>
+                            <p>$x = \frac{D_x}{D} = \frac{-17}{-7} = \frac{17}{7}$</p>
+                            <p>$y = \frac{D_y}{D} = \frac{-19}{-7} = \frac{19}{7}$</p>
+
+                            <p><strong>20.</strong></p>
+                            <p>$A = \begin{bmatrix} 2 & 4 \\ 3 & 6 \end{bmatrix}$</p>
+                            <p>$|A| = (2)(6) - (4)(3) = 12 - 12 = 0$</p>
+                            <p>เนื่องจาก $|A| = 0$ และสมการที่สองเป็นเท่ากับสมการแรกคูณด้วย $\frac{3}{2}$</p>
+                            <p>ดังนั้น <strong>ระบบสมการมีคำตอบไม่จำกัด</strong> (infinitely many solutions)</p>
+                            <p>คำตอบทั่วไป: $y = 2 - \frac{x}{2}$ โดยที่ $x$ เป็นจำนวนจริงใดๆ</p>
                         </div>
                     </div>
 
@@ -328,7 +826,7 @@
 
             <aside class="sidebar-right">
                 <div class="ad-space" data-ad-position="sidebarMiddle"></div>
-                
+
                 <div class="related-topics">
                     <h3>บทเรียนที่เกี่ยวข้อง</h3>
                     <ul>
@@ -339,7 +837,7 @@
                         <li><a href="chapter6.html">บทที่ 6</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="ad-space" data-ad-position="sidebarBottom"></div>
             </aside>
         </div>

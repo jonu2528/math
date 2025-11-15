@@ -13,7 +13,7 @@
     <title>บทที่ 5: ลิมิตและความต่อเนื่อง | คณิตศาสตร์ ม.5</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -68,9 +68,9 @@
 
             <section class="main-content">
                 <h1>บทที่ 5: ลิมิตและความต่อเนื่อง</h1>
-                
+
                 <div class="chapter-intro">
-                    <p>บทนี้จะเรียนรู้เกี่ยวกับ ลิมิตและความต่อเนื่อง ซึ่งเป็นเนื้อหาสำคัญในคณิตศาสตร์ ม.5</p>
+                    <p>บทนี้จะเรียนรู้เกี่ยวกับ <strong>ลิมิตและความต่อเนื่องของฟังก์ชัน</strong> ซึ่งเป็นพื้นฐานสำคัญของแคลคูลัส เราจะศึกษาความหมายของลิมิต กฎการหาลิมิต ลิมิตที่อนันต์ ลิมิตเมื่อ x เข้าใกล้อนันต์ ความต่อเนื่องของฟังก์ชัน และทฤษฎีบทค่ากลาง ซึ่งจะนำไปใช้ในการศึกษาอนุพันธ์และปริพันธ์ในอนาคต</p>
                 </div>
 
                 <!-- Section Navigation -->
@@ -90,24 +90,76 @@
                 <!-- Section 5.1 -->
                 <section id="section1">
                     <h2>5.1 ลิมิตของฟังก์ชัน</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.1 ลิมิตของฟังก์ชัน</p>
+                        <h4>ความหมายของลิมิต</h4>
+                        <p><strong>ลิมิต (Limit)</strong> คือค่าที่ฟังก์ชัน $f(x)$ เข้าใกล้ เมื่อ $x$ เข้าใกล้ค่าใดค่าหนึ่ง</p>
+                        <p>เขียนแทนด้วย $$\lim_{x \to a} f(x) = L$$</p>
+                        <p>หมายความว่า เมื่อ $x$ เข้าใกล้ $a$ (แต่ $x \neq a$) แล้วค่า $f(x)$ จะเข้าใกล้ $L$</p>
+
+                        <p><strong>หมายเหตุ:</strong></p>
+                        <ul>
+                            <li>ลิมิตของ $f(x)$ ที่ $x = a$ อาจมีค่าต่างจากค่าของ $f(a)$</li>
+                            <li>แม้ว่า $f(a)$ อาจไม่นิยาม แต่ลิมิตอาจมีค่าได้</li>
+                            <li>เราพิจารณาค่าของ $f(x)$ เมื่อ $x$ เข้าใกล้ $a$ ทั้งจากทางซ้าย (Left-hand limit: $\lim_{x \to a^-}$) และทางขวา (Right-hand limit: $\lim_{x \to a^+}$)</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>ลิมิตพื้นฐาน</h4>
+                        <p>$$\lim_{x \to a} c = c \quad \text{(เมื่อ } c \text{ เป็นค่าคงที่)}$$</p>
+                        <p>$$\lim_{x \to a} x = a$$</p>
+                        <p>$$\lim_{x \to a} x^n = a^n$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 1</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.1 ลิมิตของฟังก์ชัน</p>
+                        <h4>ตัวอย่างที่ 1: หาลิมิตโดยการแทนค่าโดยตรง</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 3} (2x + 5)$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>เนื่องจากฟังก์ชัน $f(x) = 2x + 5$ เป็นฟังก์ชันพหุนาม สามารถแทนค่าโดยตรงได้</p>
+                        <p>$$\lim_{x \to 3} (2x + 5) = 2(3) + 5 = 6 + 5 = 11$$</p>
+
+                        <p><strong>ตอบ:</strong> $11$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 2</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.1 ลิมิตของฟังก์ชัน</p>
+                        <h4>ตัวอย่างที่ 2: หาลิมิตของฟังก์ชันกำลัง</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 2} (x^2 - 3x + 4)$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>แทนค่า $x = 2$ ลงในฟังก์ชัน</p>
+                        <p>$$\lim_{x \to 2} (x^2 - 3x + 4) = 2^2 - 3(2) + 4$$</p>
+                        <p>$$= 4 - 6 + 4 = 2$$</p>
+
+                        <p><strong>ตอบ:</strong> $2$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาลิมิตของฟังก์ชันตรรกยะ (รูปแบบ 0/0)</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ถ้าแทนค่า $x = 2$ โดยตรง จะได้ $\frac{0}{0}$ ซึ่งไม่นิยาม</p>
+                        <p>ดังนั้น ต้องทำการแยกตัวประกอบก่อน</p>
+                        <p>$$\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} \frac{(x-2)(x+2)}{x - 2}$$</p>
+                        <p>$$= \lim_{x \to 2} (x + 2)$$</p>
+                        <p>$$= 2 + 2 = 4$$</p>
+
+                        <p><strong>ตอบ:</strong> $4$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: หาลิมิตโดยการแยกตัวประกอบ</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to -3} \frac{x^2 + 5x + 6}{x + 3}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>แยกตัวประกอบเศษ:</p>
+                        <p>$$\lim_{x \to -3} \frac{x^2 + 5x + 6}{x + 3} = \lim_{x \to -3} \frac{(x+2)(x+3)}{x + 3}$$</p>
+                        <p>$$= \lim_{x \to -3} (x + 2)$$</p>
+                        <p>$$= -3 + 2 = -1$$</p>
+
+                        <p><strong>ตอบ:</strong> $-1$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -116,24 +168,83 @@
                 <!-- Section 5.2 -->
                 <section id="section2">
                     <h2>5.2 กฎการหาลิมิต</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.2 กฎการหาลิมิต</p>
+                        <h4>กฎของลิมิต (Limit Laws)</h4>
+                        <p>ถ้า $\displaystyle\lim_{x \to a} f(x) = L$ และ $\displaystyle\lim_{x \to a} g(x) = M$ แล้ว</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎการหาลิมิต</h4>
+                        <p><strong>1. กฎการบวก/ลบ:</strong></p>
+                        <p>$$\lim_{x \to a} [f(x) \pm g(x)] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = L \pm M$$</p>
+
+                        <p><strong>2. กฎการคูณด้วยค่าคงที่:</strong></p>
+                        <p>$$\lim_{x \to a} [c \cdot f(x)] = c \cdot \lim_{x \to a} f(x) = c \cdot L$$</p>
+
+                        <p><strong>3. กฎการคูณ:</strong></p>
+                        <p>$$\lim_{x \to a} [f(x) \cdot g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) = L \cdot M$$</p>
+
+                        <p><strong>4. กฎการหาร:</strong></p>
+                        <p>$$\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} = \frac{L}{M} \quad \text{(เมื่อ } M \neq 0)$$</p>
+
+                        <p><strong>5. กฎของเลขยกกำลัง:</strong></p>
+                        <p>$$\lim_{x \to a} [f(x)]^n = \left[\lim_{x \to a} f(x)\right]^n = L^n$$</p>
+
+                        <p><strong>6. กฎของรากที่ n:</strong></p>
+                        <p>$$\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)} = \sqrt[n]{L}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 3</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.2 กฎการหาลิมิต</p>
+                        <h4>ตัวอย่างที่ 1: ใช้กฎการบวกและคูณ</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 1} (3x^2 + 2x - 5)$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>$$\lim_{x \to 1} (3x^2 + 2x - 5) = \lim_{x \to 1} 3x^2 + \lim_{x \to 1} 2x - \lim_{x \to 1} 5$$</p>
+                        <p>$$= 3\lim_{x \to 1} x^2 + 2\lim_{x \to 1} x - 5$$</p>
+                        <p>$$= 3(1)^2 + 2(1) - 5$$</p>
+                        <p>$$= 3 + 2 - 5 = 0$$</p>
+
+                        <p><strong>ตอบ:</strong> $0$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 4</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.2 กฎการหาลิมิต</p>
+                        <h4>ตัวอย่างที่ 2: ใช้กฎการคูณและหาร</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 2} \frac{x^3 + 1}{2x - 1}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>$$\lim_{x \to 2} \frac{x^3 + 1}{2x - 1} = \frac{\lim_{x \to 2} (x^3 + 1)}{\lim_{x \to 2} (2x - 1)}$$</p>
+                        <p>$$= \frac{2^3 + 1}{2(2) - 1} = \frac{8 + 1}{4 - 1}$$</p>
+                        <p>$$= \frac{9}{3} = 3$$</p>
+
+                        <p><strong>ตอบ:</strong> $3$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: การทำตรรกยะเศษและส่วน (Rationalization)</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>คูณทั้งเศษและส่วนด้วย $\sqrt{x + 4} + 2$</p>
+                        <p>$$\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x} \cdot \frac{\sqrt{x + 4} + 2}{\sqrt{x + 4} + 2}$$</p>
+                        <p>$$= \lim_{x \to 0} \frac{(x + 4) - 4}{x(\sqrt{x + 4} + 2)}$$</p>
+                        <p>$$= \lim_{x \to 0} \frac{x}{x(\sqrt{x + 4} + 2)}$$</p>
+                        <p>$$= \lim_{x \to 0} \frac{1}{\sqrt{x + 4} + 2}$$</p>
+                        <p>$$= \frac{1}{\sqrt{0 + 4} + 2} = \frac{1}{2 + 2} = \frac{1}{4}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\frac{1}{4}$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ใช้กฎเลขยกกำลังและรากที่สอง</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 4} \sqrt{2x + 1}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>$$\lim_{x \to 4} \sqrt{2x + 1} = \sqrt{\lim_{x \to 4} (2x + 1)}$$</p>
+                        <p>$$= \sqrt{2(4) + 1}$$</p>
+                        <p>$$= \sqrt{8 + 1} = \sqrt{9} = 3$$</p>
+
+                        <p><strong>ตอบ:</strong> $3$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -142,24 +253,78 @@
                 <!-- Section 5.3 -->
                 <section id="section3">
                     <h2>5.3 ลิมิตที่อนันต์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.3 ลิมิตที่อนันต์</p>
+                        <h4>ลิมิตที่อนันต์ (Infinite Limits)</h4>
+                        <p><strong>ลิมิตที่อนันต์</strong> เกิดขึ้นเมื่อค่าของฟังก์ชันเพิ่มขึ้นหรือลดลงไปเรื่อยๆ ไม่มีที่สิ้นสุด</p>
+
+                        <p>$$\lim_{x \to a} f(x) = +\infty \quad \text{หมายความว่า } f(x) \text{ เพิ่มขึ้นไปเรื่อยๆ เมื่อ } x \to a$$</p>
+                        <p>$$\lim_{x \to a} f(x) = -\infty \quad \text{หมายความว่า } f(x) \text{ ลดลงไปเรื่อยๆ เมื่อ } x \to a$$</p>
+
+                        <p><strong>เส้นกำกับดิ่ง (Vertical Asymptote):</strong> ถ้า $\displaystyle\lim_{x \to a} f(x) = \pm\infty$ แล้วกราฟของ $f(x)$ จะมีเส้นกำกับดิ่งที่ $x = a$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎการหาลิมิตที่อนันต์</h4>
+                        <p>$$\lim_{x \to a} \frac{c}{(x-a)^n} = \begin{cases} +\infty & \text{ถ้า } c > 0 \text{ และ } n \text{ เป็นจำนวนคู่} \\ -\infty & \text{ถ้า } c < 0 \text{ และ } n \text{ เป็นจำนวนคู่} \\ +\infty & \text{ถ้า } c > 0 \text{ และ } n \text{ เป็นจำนวนคี่, } x \to a^+ \\ -\infty & \text{ถ้า } c > 0 \text{ และ } n \text{ เป็นจำนวนคี่, } x \to a^- \end{cases}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 5</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.3 ลิมิตที่อนันต์</p>
+                        <h4>ตัวอย่างที่ 1: ลิมิตที่อนันต์อย่างง่าย</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 0} \frac{1}{x^2}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>เมื่อ $x \to 0$ จะได้ $x^2 \to 0$ และ $x^2 > 0$ เสมอ</p>
+                        <p>ดังนั้น $\frac{1}{x^2} \to +\infty$</p>
+                        <p>$$\lim_{x \to 0} \frac{1}{x^2} = +\infty$$</p>
+
+                        <p><strong>ตอบ:</strong> $+\infty$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 6</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.3 ลิมิตที่อนันต์</p>
+                        <h4>ตัวอย่างที่ 2: ลิมิตทางซ้ายและทางขวา</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 2^+} \frac{1}{x-2}$ และ $\displaystyle\lim_{x \to 2^-} \frac{1}{x-2}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>ลิมิตทางขวา:</strong> เมื่อ $x \to 2^+$ แล้ว $x > 2$ ทำให้ $x - 2 > 0$</p>
+                        <p>$$\lim_{x \to 2^+} \frac{1}{x-2} = +\infty$$</p>
+
+                        <p><strong>ลิมิตทางซ้าย:</strong> เมื่อ $x \to 2^-$ แล้ว $x < 2$ ทำให้ $x - 2 < 0$</p>
+                        <p>$$\lim_{x \to 2^-} \frac{1}{x-2} = -\infty$$</p>
+
+                        <p><strong>ตอบ:</strong> $\displaystyle\lim_{x \to 2^+} \frac{1}{x-2} = +\infty$ และ $\displaystyle\lim_{x \to 2^-} \frac{1}{x-2} = -\infty$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาเส้นกำกับดิ่ง</h4>
+                        <p><strong>โจทย์:</strong> หาเส้นกำกับดิ่งของฟังก์ชัน $f(x) = \frac{x+1}{x^2-9}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เส้นกำกับดิ่งเกิดเมื่อตัวส่วนเป็นศูนย์</p>
+                        <p>$$x^2 - 9 = 0$$</p>
+                        <p>$$(x-3)(x+3) = 0$$</p>
+                        <p>$$x = 3 \text{ หรือ } x = -3$$</p>
+
+                        <p>ตรวจสอบที่ $x = 3$:</p>
+                        <p>$$\lim_{x \to 3} \frac{x+1}{x^2-9} = \lim_{x \to 3} \frac{x+1}{(x-3)(x+3)} = \pm\infty$$</p>
+
+                        <p>ตรวจสอบที่ $x = -3$:</p>
+                        <p>$$\lim_{x \to -3} \frac{x+1}{x^2-9} = \lim_{x \to -3} \frac{x+1}{(x-3)(x+3)} = \pm\infty$$</p>
+
+                        <p><strong>ตอบ:</strong> เส้นกำกับดิ่งคือ $x = 3$ และ $x = -3$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ลิมิตของฟังก์ชันตรรกยะที่อนันต์</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to 1} \frac{2x}{(x-1)^2}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เมื่อ $x \to 1$ จะได้</p>
+                        <p>เศษ: $2x \to 2(1) = 2 > 0$</p>
+                        <p>ส่วน: $(x-1)^2 \to 0$ และ $(x-1)^2 > 0$ เสมอ</p>
+                        <p>ดังนั้น $$\lim_{x \to 1} \frac{2x}{(x-1)^2} = +\infty$$</p>
+
+                        <p><strong>ตอบ:</strong> $+\infty$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -168,24 +333,70 @@
                 <!-- Section 5.4 -->
                 <section id="section4">
                     <h2>5.4 ลิมิตเมื่อ x เข้าใกล้อนันต์</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.4 ลิมิตเมื่อ x เข้าใกล้อนันต์</p>
+                        <h4>ลิมิตเมื่อ x เข้าใกล้อนันต์</h4>
+                        <p><strong>ลิมิตเมื่อ x เข้าใกล้อนันต์</strong> คือการหาค่าที่ฟังก์ชันเข้าใกล้เมื่อ $x$ มีค่ามากขึ้นเรื่อยๆ หรือน้อยลงเรื่อยๆ</p>
+
+                        <p>$$\lim_{x \to +\infty} f(x) = L \quad \text{หมายความว่า } f(x) \to L \text{ เมื่อ } x \to +\infty$$</p>
+                        <p>$$\lim_{x \to -\infty} f(x) = L \quad \text{หมายความว่า } f(x) \to L \text{ เมื่อ } x \to -\infty$$</p>
+
+                        <p><strong>เส้นกำกับราบ (Horizontal Asymptote):</strong> ถ้า $\displaystyle\lim_{x \to \pm\infty} f(x) = L$ แล้วกราฟของ $f(x)$ จะมีเส้นกำกับราบที่ $y = L$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>กฎสำหรับหาลิมิตเมื่อ x → ±∞</h4>
+                        <p>$$\lim_{x \to \infty} \frac{c}{x^n} = 0 \quad (n > 0)$$</p>
+                        <p>$$\lim_{x \to \infty} \frac{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0}{b_mx^m + b_{m-1}x^{m-1} + \cdots + b_0} = \begin{cases} \frac{a_n}{b_m} & \text{ถ้า } n = m \\ 0 & \text{ถ้า } n < m \\ \pm\infty & \text{ถ้า } n > m \end{cases}$$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 7</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.4 ลิมิตเมื่อ x เข้าใกล้อนันต์</p>
+                        <h4>ตัวอย่างที่ 1: ลิมิตเมื่อ x → ∞ ของฟังก์ชันตรรกยะ (เลขชี้กำลังเท่ากัน)</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to \infty} \frac{3x^2 + 2x - 1}{2x^2 - x + 5}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>หารทั้งเศษและส่วนด้วย $x^2$ (พจน์ที่มีเลขชี้กำลังสูงสุด)</p>
+                        <p>$$\lim_{x \to \infty} \frac{3x^2 + 2x - 1}{2x^2 - x + 5} = \lim_{x \to \infty} \frac{3 + \frac{2}{x} - \frac{1}{x^2}}{2 - \frac{1}{x} + \frac{5}{x^2}}$$</p>
+                        <p>เมื่อ $x \to \infty$ จะได้ $\frac{1}{x} \to 0$ และ $\frac{1}{x^2} \to 0$</p>
+                        <p>$$= \frac{3 + 0 - 0}{2 - 0 + 0} = \frac{3}{2}$$</p>
+
+                        <p><strong>ตอบ:</strong> $\frac{3}{2}$ (เส้นกำกับราบคือ $y = \frac{3}{2}$)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 8</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.4 ลิมิตเมื่อ x เข้าใกล้อนันต์</p>
+                        <h4>ตัวอย่างที่ 2: ลิมิตเมื่อเลขชี้กำลังเศษน้อยกว่าส่วน</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to \infty} \frac{5x + 3}{x^2 - 2x + 1}$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p>หารทั้งเศษและส่วนด้วย $x^2$</p>
+                        <p>$$\lim_{x \to \infty} \frac{5x + 3}{x^2 - 2x + 1} = \lim_{x \to \infty} \frac{\frac{5}{x} + \frac{3}{x^2}}{1 - \frac{2}{x} + \frac{1}{x^2}}$$</p>
+                        <p>$$= \frac{0 + 0}{1 - 0 + 0} = 0$$</p>
+
+                        <p><strong>ตอบ:</strong> $0$ (เส้นกำกับราบคือ $y = 0$ หรือแกน $x$)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: ลิมิตเมื่อเลขชี้กำลังเศษมากกว่าส่วน</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to \infty} \frac{2x^3 - x}{x^2 + 1}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หารทั้งเศษและส่วนด้วย $x^3$</p>
+                        <p>$$\lim_{x \to \infty} \frac{2x^3 - x}{x^2 + 1} = \lim_{x \to \infty} \frac{2 - \frac{1}{x^2}}{\frac{1}{x} + \frac{1}{x^3}}$$</p>
+                        <p>$$= \frac{2 - 0}{0 + 0} = \frac{2}{0} = +\infty$$</p>
+
+                        <p><strong>ตอบ:</strong> $+\infty$ (ไม่มีเส้นกำกับราบ)</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ลิมิตเมื่อ x → -∞</h4>
+                        <p><strong>โจทย์:</strong> หา $\displaystyle\lim_{x \to -\infty} \frac{4x^2 + x - 3}{2x^2 + 5}$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>หารทั้งเศษและส่วนด้วย $x^2$</p>
+                        <p>$$\lim_{x \to -\infty} \frac{4x^2 + x - 3}{2x^2 + 5} = \lim_{x \to -\infty} \frac{4 + \frac{1}{x} - \frac{3}{x^2}}{2 + \frac{5}{x^2}}$$</p>
+                        <p>$$= \frac{4 + 0 - 0}{2 + 0} = \frac{4}{2} = 2$$</p>
+
+                        <p><strong>ตอบ:</strong> $2$</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -194,24 +405,110 @@
                 <!-- Section 5.5 -->
                 <section id="section5">
                     <h2>5.5 ความต่อเนื่อง</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.5 ความต่อเนื่อง</p>
+                        <h4>ความต่อเนื่องของฟังก์ชัน (Continuity)</h4>
+                        <p><strong>ฟังก์ชัน $f(x)$ ต่อเนื่องที่ $x = a$</strong> ก็ต่อเมื่อเงื่อนไขทั้ง 3 ข้อต่อไปนี้เป็นจริง:</p>
+                        <ol>
+                            <li>$f(a)$ มีค่านิยาม (มีค่าอยู่จริง)</li>
+                            <li>$\displaystyle\lim_{x \to a} f(x)$ มีค่า</li>
+                            <li>$\displaystyle\lim_{x \to a} f(x) = f(a)$</li>
+                        </ol>
+
+                        <p><strong>ฟังก์ชันต่อเนื่องบนช่วง:</strong> ฟังก์ชัน $f(x)$ เรียกว่า <strong>ต่อเนื่องบนช่วง $(a, b)$</strong> ถ้า $f(x)$ ต่อเนื่องที่ทุกจุดในช่วงนั้น</p>
+
+                        <p><strong>จุดไม่ต่อเนื่อง (Discontinuity):</strong></p>
+                        <ul>
+                            <li><strong>จุดไม่ต่อเนื่องแบบถอดออกได้ (Removable):</strong> เมื่อลิมิตมีค่าแต่ไม่เท่ากับค่าของฟังก์ชัน</li>
+                            <li><strong>จุดไม่ต่อเนื่องแบบกระโดด (Jump):</strong> เมื่อลิมิตทางซ้ายและทางขวาไม่เท่ากัน</li>
+                            <li><strong>จุดไม่ต่อเนื่องแบบอนันต์ (Infinite):</strong> เมื่อลิมิตเป็นอนันต์</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>สมบัติของฟังก์ชันต่อเนื่อง</h4>
+                        <p>ถ้า $f$ และ $g$ ต่อเนื่องที่ $x = a$ แล้ว</p>
+                        <p>1. $f \pm g$ ต่อเนื่องที่ $x = a$</p>
+                        <p>2. $c \cdot f$ ต่อเนื่องที่ $x = a$ (เมื่อ $c$ เป็นค่าคงที่)</p>
+                        <p>3. $f \cdot g$ ต่อเนื่องที่ $x = a$</p>
+                        <p>4. $\frac{f}{g}$ ต่อเนื่องที่ $x = a$ (เมื่อ $g(a) \neq 0$)</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 9</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.5 ความต่อเนื่อง</p>
+                        <h4>ตัวอย่างที่ 1: ตรวจสอบความต่อเนื่อง</h4>
+                        <p><strong>โจทย์:</strong> ฟังก์ชัน $f(x) = x^2 - 3x + 2$ ต่อเนื่องที่ $x = 1$ หรือไม่</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>ตรวจสอบเงื่อนไขทั้ง 3 ข้อ:</p>
+                        <p><strong>1. ตรวจสอบว่า $f(1)$ มีค่า:</strong></p>
+                        <p>$$f(1) = 1^2 - 3(1) + 2 = 1 - 3 + 2 = 0$$ ✓</p>
+
+                        <p><strong>2. ตรวจสอบว่าลิมิตมีค่า:</strong></p>
+                        <p>$$\lim_{x \to 1} f(x) = \lim_{x \to 1} (x^2 - 3x + 2) = 1^2 - 3(1) + 2 = 0$$ ✓</p>
+
+                        <p><strong>3. ตรวจสอบว่า $\displaystyle\lim_{x \to 1} f(x) = f(1)$:</strong></p>
+                        <p>$$\lim_{x \to 1} f(x) = 0 = f(1)$$ ✓</p>
+
+                        <p><strong>ตอบ:</strong> ฟังก์ชัน $f(x)$ ต่อเนื่องที่ $x = 1$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 10</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.5 ความต่อเนื่อง</p>
+                        <h4>ตัวอย่างที่ 2: จุดไม่ต่อเนื่องแบบถอดออกได้</h4>
+                        <p><strong>โจทย์:</strong> พิจารณาความต่อเนื่องของฟังก์ชัน $f(x) = \frac{x^2 - 4}{x - 2}$ ที่ $x = 2$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>1. ตรวจสอบค่า $f(2)$:</strong></p>
+                        <p>$$f(2) = \frac{2^2 - 4}{2 - 2} = \frac{0}{0}$$ ไม่นิยาม ✗</p>
+
+                        <p><strong>2. หาลิมิต:</strong></p>
+                        <p>$$\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} \frac{(x-2)(x+2)}{x - 2} = \lim_{x \to 2} (x + 2) = 4$$</p>
+
+                        <p><strong>สรุป:</strong> $f(2)$ ไม่นิยาม แต่ลิมิตมีค่าเป็น 4</p>
+
+                        <p><strong>ตอบ:</strong> ฟังก์ชันไม่ต่อเนื่องที่ $x = 2$ (จุดไม่ต่อเนื่องแบบถอดออกได้)</p>
+                        <p>สามารถทำให้ต่อเนื่องได้โดยกำหนดให้ $f(2) = 4$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาค่าคงที่ให้ฟังก์ชันต่อเนื่อง</h4>
+                        <p><strong>โจทย์:</strong> หาค่า $k$ ที่ทำให้ฟังก์ชัน
+                        $$f(x) = \begin{cases} x^2 + 2x & \text{เมื่อ } x \leq 1 \\ kx + 3 & \text{เมื่อ } x > 1 \end{cases}$$
+                        ต่อเนื่องที่ $x = 1$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เพื่อให้ฟังก์ชันต่อเนื่องที่ $x = 1$ ต้องได้ว่า</p>
+                        <p>$$\lim_{x \to 1^-} f(x) = \lim_{x \to 1^+} f(x) = f(1)$$</p>
+
+                        <p><strong>หาลิมิตทางซ้าย:</strong></p>
+                        <p>$$\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} (x^2 + 2x) = 1^2 + 2(1) = 3$$</p>
+
+                        <p><strong>หาลิมิตทางขวา:</strong></p>
+                        <p>$$\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} (kx + 3) = k(1) + 3 = k + 3$$</p>
+
+                        <p><strong>หาค่า $k$:</strong></p>
+                        <p>$$k + 3 = 3$$</p>
+                        <p>$$k = 0$$</p>
+
+                        <p><strong>ตอบ:</strong> $k = 0$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: ฟังก์ชันที่ต่อเนื่องทุกจุด</h4>
+                        <p><strong>โจทย์:</strong> พิสูจน์ว่าฟังก์ชัน $f(x) = 3x + 5$ ต่อเนื่องทุกจุด</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>เลือกจุด $x = a$ ใดๆ แล้วตรวจสอบ</p>
+
+                        <p><strong>1. ค่าของฟังก์ชัน:</strong></p>
+                        <p>$$f(a) = 3a + 5$$ (มีค่านิยามเสมอ)</p>
+
+                        <p><strong>2. ลิมิต:</strong></p>
+                        <p>$$\lim_{x \to a} f(x) = \lim_{x \to a} (3x + 5) = 3a + 5$$</p>
+
+                        <p><strong>3. ตรวจสอบ:</strong></p>
+                        <p>$$\lim_{x \to a} f(x) = 3a + 5 = f(a)$$ ✓</p>
+
+                        <p><strong>ตอบ:</strong> ฟังก์ชัน $f(x) = 3x + 5$ ต่อเนื่องทุกจุด (เพราะเป็นฟังก์ชันเชิงเส้น)</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -220,24 +517,110 @@
                 <!-- Section 5.6 -->
                 <section id="section6">
                     <h2>5.6 ทฤษฎีบทค่ากลาง</h2>
-                    
+
                     <div class="definition">
-                        <h4>ความหมาย</h4>
-                        <p>เนื้อหาในหัวข้อนี้จะอธิบายเกี่ยวกับ 5.6 ทฤษฎีบทค่ากลาง</p>
+                        <h4>ทฤษฎีบทค่ากลาง (Intermediate Value Theorem - IVT)</h4>
+                        <p><strong>ทฤษฎีบทค่ากลาง</strong> กล่าวว่า:</p>
+                        <p>ถ้าฟังก์ชัน $f$ ต่อเนื่องบนช่วง $[a, b]$ และ $N$ เป็นจำนวนใดๆ ระหว่าง $f(a)$ และ $f(b)$ โดยที่ $f(a) \neq f(b)$
+                        แล้วจะต้องมีจำนวน $c$ อย่างน้อยหนึ่งจำนวนในช่วง $(a, b)$ ที่ทำให้ $f(c) = N$</p>
+
+                        <p><strong>การประยุกต์ใช้:</strong></p>
+                        <ul>
+                            <li>พิสูจน์ว่าสมการมีคำตอบในช่วงที่กำหนด</li>
+                            <li>หาค่าประมาณของรากของสมการ</li>
+                            <li>พิสูจน์การมีอยู่ของจำนวนบางค่า</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>ทฤษฎีบทค่ากลาง</h4>
+                        <p>ถ้า $f$ ต่อเนื่องบน $[a, b]$ และ $f(a) < N < f(b)$ (หรือ $f(a) > N > f(b)$)</p>
+                        <p>แล้วมี $c \in (a, b)$ ที่ทำให้ $f(c) = N$</p>
+
+                        <p><strong>กรณีพิเศษ (หารากสมการ):</strong></p>
+                        <p>ถ้า $f(a) \cdot f(b) < 0$ (มีเครื่องหมายตรงข้าม)</p>
+                        <p>แล้วมี $c \in (a, b)$ ที่ทำให้ $f(c) = 0$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 11</h4>
-                        <p><strong>โจทย์:</strong> ตัวอย่างเกี่ยวกับ 5.6 ทฤษฎีบทค่ากลาง</p>
+                        <h4>ตัวอย่างที่ 1: พิสูจน์การมีรากของสมการ</h4>
+                        <p><strong>โจทย์:</strong> พิสูจน์ว่าสมการ $x^3 - x - 1 = 0$ มีรากอย่างน้อยหนึ่งรากในช่วง $(1, 2)$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{สูตร} = a + b$$</p>
+                        <p>พิจารณาฟังก์ชัน $f(x) = x^3 - x - 1$</p>
+
+                        <p><strong>1. ตรวจสอบความต่อเนื่อง:</strong></p>
+                        <p>$f(x)$ เป็นฟังก์ชันพหุนาม จึงต่อเนื่องทุกจุด รวมทั้งบนช่วง $[1, 2]$ ✓</p>
+
+                        <p><strong>2. หาค่าของฟังก์ชัน:</strong></p>
+                        <p>$$f(1) = 1^3 - 1 - 1 = -1 < 0$$</p>
+                        <p>$$f(2) = 2^3 - 2 - 1 = 8 - 2 - 1 = 5 > 0$$</p>
+
+                        <p><strong>3. ใช้ทฤษฎีบทค่ากลาง:</strong></p>
+                        <p>เนื่องจาก $f(1) < 0 < f(2)$ และ $f$ ต่อเนื่องบน $[1, 2]$</p>
+                        <p>จากทฤษฎีบทค่ากลาง มี $c \in (1, 2)$ ที่ทำให้ $f(c) = 0$</p>
+
+                        <p><strong>ตอบ:</strong> สมการมีรากอย่างน้อยหนึ่งรากในช่วง $(1, 2)$</p>
                     </div>
 
                     <div class="example">
-                        <h4>ตัวอย่างที่ 12</h4>
-                        <p><strong>โจทย์:</strong> อีกตัวอย่างหนึ่งเกี่ยวกับ 5.6 ทฤษฎีบทค่ากลาง</p>
+                        <h4>ตัวอย่างที่ 2: แสดงการมีอยู่ของค่า</h4>
+                        <p><strong>โจทย์:</strong> ถ้า $f$ ต่อเนื่องบน $[0, 3]$ และ $f(0) = 2$, $f(3) = 8$ แสดงว่ามี $c \in (0, 3)$ ที่ทำให้ $f(c) = 5$</p>
+
                         <p><strong>วิธีทำ:</strong></p>
-                        <p>$$\text{ผลลัพธ์} = c \times d$$</p>
+                        <p><strong>1. ตรวจสอบเงื่อนไข:</strong></p>
+                        <p>- $f$ ต่อเนื่องบน $[0, 3]$ ✓</p>
+                        <p>- $f(0) = 2 < 5 < 8 = f(3)$ ✓</p>
+
+                        <p><strong>2. ใช้ทฤษฎีบทค่ากลาง:</strong></p>
+                        <p>เนื่องจาก $5$ อยู่ระหว่าง $f(0) = 2$ และ $f(3) = 8$</p>
+                        <p>และ $f$ ต่อเนื่องบน $[0, 3]$</p>
+                        <p>จากทฤษฎีบทค่ากลาง ต้องมี $c \in (0, 3)$ ที่ทำให้ $f(c) = 5$</p>
+
+                        <p><strong>ตอบ:</strong> พิสูจน์ได้</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 3: หาช่วงที่มีรากของสมการ</h4>
+                        <p><strong>โจทย์:</strong> สมการ $\cos x = x$ มีรากในช่วงไหน โดยพิจารณาช่วง $[0, \frac{\pi}{2}]$</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>พิจารณาฟังก์ชัน $f(x) = \cos x - x$</p>
+
+                        <p><strong>1. ตรวจสอบความต่อเนื่อง:</strong></p>
+                        <p>$f(x) = \cos x - x$ ต่อเนื่องทุกจุด ✓</p>
+
+                        <p><strong>2. หาค่าของฟังก์ชัน:</strong></p>
+                        <p>$$f(0) = \cos 0 - 0 = 1 - 0 = 1 > 0$$</p>
+                        <p>$$f\left(\frac{\pi}{2}\right) = \cos\frac{\pi}{2} - \frac{\pi}{2} = 0 - \frac{\pi}{2} \approx -1.57 < 0$$</p>
+
+                        <p><strong>3. ใช้ทฤษฎีบทค่ากลาง:</strong></p>
+                        <p>เนื่องจาก $f(0) > 0 > f(\frac{\pi}{2})$ และ $f$ ต่อเนื่องบน $[0, \frac{\pi}{2}]$</p>
+                        <p>มี $c \in (0, \frac{\pi}{2})$ ที่ทำให้ $f(c) = 0$ หรือ $\cos c = c$</p>
+
+                        <p><strong>ตอบ:</strong> สมการ $\cos x = x$ มีรากในช่วง $(0, \frac{\pi}{2})$</p>
+                    </div>
+
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 4: การประยุกต์ใช้ในปัญหาจริง</h4>
+                        <p><strong>โจทย์:</strong> อุณหภูมิในช่วงเช้าเวลา 6:00 น. เป็น 15°C และเวลา 12:00 น. เป็น 25°C
+                        สมมติว่าอุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง แสดงว่ามีเวลาใดเวลาหนึ่งระหว่าง 6:00-12:00 น. ที่อุณหภูมิเป็น 20°C</p>
+
+                        <p><strong>วิธีทำ:</strong></p>
+                        <p>ให้ $T(t)$ แทนอุณหภูมิ ณ เวลา $t$ ชั่วโมงหลังเที่ยงคืน</p>
+
+                        <p><strong>1. กำหนดค่า:</strong></p>
+                        <p>$T(6) = 15$ °C (เวลา 6:00 น.)</p>
+                        <p>$T(12) = 25$ °C (เวลา 12:00 น.)</p>
+
+                        <p><strong>2. เงื่อนไข:</strong></p>
+                        <p>- อุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง หมายความว่า $T$ ต่อเนื่องบน $[6, 12]$ ✓</p>
+                        <p>- $15 < 20 < 25$ ดังนั้น $T(6) < 20 < T(12)$ ✓</p>
+
+                        <p><strong>3. ใช้ทฤษฎีบทค่ากลาง:</strong></p>
+                        <p>จากทฤษฎีบทค่ากลาง มี $c \in (6, 12)$ ที่ทำให้ $T(c) = 20$</p>
+
+                        <p><strong>ตอบ:</strong> มีเวลาอย่างน้อยหนึ่งเวลาระหว่าง 6:00-12:00 น. ที่อุณหภูมิเป็น 20°C</p>
                     </div>
 
                     <a href="#" class="back-to-section">↑ กลับไปด้านบน</a>
@@ -245,75 +628,221 @@
 
                 <!-- Exercises -->
                 <section id="exercises">
-                    <h2>แบบฝึกหัดบทที่ 5</h2>
-                    
+                    <h2>แบบฝึกหัดบทที่ 5: ลิมิตและความต่อเนื่อง</h2>
+
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 1 (2 คะแนน)</h3>
+                        <h3>ส่วนที่ 1: ลิมิตของฟังก์ชัน (4 ข้อ)</h3>
                         <ol start="1">
-                            <li>โจทย์ข้อที่ 1</li>
-                            <li>โจทย์ข้อที่ 2</li>
+                            <li>หา $\displaystyle\lim_{x \to 2} (3x^2 - 5x + 1)$</li>
+                            <li>หา $\displaystyle\lim_{x \to -1} (x^3 + 2x^2 - x + 3)$</li>
+                            <li>หา $\displaystyle\lim_{x \to 3} \frac{x^2 - 9}{x - 3}$</li>
+                            <li>หา $\displaystyle\lim_{x \to 4} \frac{x^2 - 5x + 4}{x - 4}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer1')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer1" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 1:</h4>
-                            <p><strong>1.</strong> เฉลยข้อที่ 1</p>
-                            <p><strong>2.</strong> เฉลยข้อที่ 2</p>
+
+                            <p><strong>1.</strong> หา $\displaystyle\lim_{x \to 2} (3x^2 - 5x + 1)$</p>
+                            <p><strong>วิธีทำ:</strong> แทนค่าโดยตรง</p>
+                            <p>$$\lim_{x \to 2} (3x^2 - 5x + 1) = 3(2)^2 - 5(2) + 1$$</p>
+                            <p>$$= 3(4) - 10 + 1 = 12 - 10 + 1 = 3$$</p>
+                            <p><strong>ตอบ:</strong> $3$</p>
+
+                            <p><strong>2.</strong> หา $\displaystyle\lim_{x \to -1} (x^3 + 2x^2 - x + 3)$</p>
+                            <p><strong>วิธีทำ:</strong> แทนค่าโดยตรง</p>
+                            <p>$$\lim_{x \to -1} (x^3 + 2x^2 - x + 3) = (-1)^3 + 2(-1)^2 - (-1) + 3$$</p>
+                            <p>$$= -1 + 2 + 1 + 3 = 5$$</p>
+                            <p><strong>ตอบ:</strong> $5$</p>
+
+                            <p><strong>3.</strong> หา $\displaystyle\lim_{x \to 3} \frac{x^2 - 9}{x - 3}$</p>
+                            <p><strong>วิธีทำ:</strong> แยกตัวประกอบ</p>
+                            <p>$$\lim_{x \to 3} \frac{x^2 - 9}{x - 3} = \lim_{x \to 3} \frac{(x-3)(x+3)}{x - 3}$$</p>
+                            <p>$$= \lim_{x \to 3} (x + 3) = 3 + 3 = 6$$</p>
+                            <p><strong>ตอบ:</strong> $6$</p>
+
+                            <p><strong>4.</strong> หา $\displaystyle\lim_{x \to 4} \frac{x^2 - 5x + 4}{x - 4}$</p>
+                            <p><strong>วิธีทำ:</strong> แยกตัวประกอบ</p>
+                            <p>$$\lim_{x \to 4} \frac{x^2 - 5x + 4}{x - 4} = \lim_{x \to 4} \frac{(x-1)(x-4)}{x - 4}$$</p>
+                            <p>$$= \lim_{x \to 4} (x - 1) = 4 - 1 = 3$$</p>
+                            <p><strong>ตอบ:</strong> $3$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 2 (2 คะแนน)</h3>
-                        <ol start="3">
-                            <li>โจทย์ข้อที่ 3</li>
-                            <li>โจทย์ข้อที่ 4</li>
+                        <h3>ส่วนที่ 2: กฎการหาลิมิต (3 ข้อ)</h3>
+                        <ol start="5">
+                            <li>หา $\displaystyle\lim_{x \to 1} \frac{2x^2 + 3x - 5}{x^2 + 1}$</li>
+                            <li>หา $\displaystyle\lim_{x \to 0} \frac{\sqrt{x + 9} - 3}{x}$</li>
+                            <li>หา $\displaystyle\lim_{x \to 2} \sqrt{x^2 + 5}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer2')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer2" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 2:</h4>
-                            <p><strong>3.</strong> เฉลยข้อที่ 3</p>
-                            <p><strong>4.</strong> เฉลยข้อที่ 4</p>
+
+                            <p><strong>5.</strong> หา $\displaystyle\lim_{x \to 1} \frac{2x^2 + 3x - 5}{x^2 + 1}$</p>
+                            <p><strong>วิธีทำ:</strong> ใช้กฎการหาร</p>
+                            <p>$$\lim_{x \to 1} \frac{2x^2 + 3x - 5}{x^2 + 1} = \frac{\lim_{x \to 1}(2x^2 + 3x - 5)}{\lim_{x \to 1}(x^2 + 1)}$$</p>
+                            <p>$$= \frac{2(1)^2 + 3(1) - 5}{1^2 + 1} = \frac{2 + 3 - 5}{1 + 1} = \frac{0}{2} = 0$$</p>
+                            <p><strong>ตอบ:</strong> $0$</p>
+
+                            <p><strong>6.</strong> หา $\displaystyle\lim_{x \to 0} \frac{\sqrt{x + 9} - 3}{x}$</p>
+                            <p><strong>วิธีทำ:</strong> ทำตรรกยะเศษและส่วน</p>
+                            <p>$$\lim_{x \to 0} \frac{\sqrt{x + 9} - 3}{x} \cdot \frac{\sqrt{x + 9} + 3}{\sqrt{x + 9} + 3}$$</p>
+                            <p>$$= \lim_{x \to 0} \frac{(x + 9) - 9}{x(\sqrt{x + 9} + 3)} = \lim_{x \to 0} \frac{x}{x(\sqrt{x + 9} + 3)}$$</p>
+                            <p>$$= \lim_{x \to 0} \frac{1}{\sqrt{x + 9} + 3} = \frac{1}{\sqrt{9} + 3} = \frac{1}{3 + 3} = \frac{1}{6}$$</p>
+                            <p><strong>ตอบ:</strong> $\frac{1}{6}$</p>
+
+                            <p><strong>7.</strong> หา $\displaystyle\lim_{x \to 2} \sqrt{x^2 + 5}$</p>
+                            <p><strong>วิธีทำ:</strong> ใช้กฎรากที่สอง</p>
+                            <p>$$\lim_{x \to 2} \sqrt{x^2 + 5} = \sqrt{\lim_{x \to 2}(x^2 + 5)}$$</p>
+                            <p>$$= \sqrt{2^2 + 5} = \sqrt{4 + 5} = \sqrt{9} = 3$$</p>
+                            <p><strong>ตอบ:</strong> $3$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 3 (2 คะแนน)</h3>
-                        <ol start="5">
-                            <li>โจทย์ข้อที่ 5</li>
-                            <li>โจทย์ข้อที่ 6</li>
+                        <h3>ส่วนที่ 3: ลิมิตที่อนันต์ (3 ข้อ)</h3>
+                        <ol start="8">
+                            <li>หา $\displaystyle\lim_{x \to 0} \frac{1}{x^4}$</li>
+                            <li>หา $\displaystyle\lim_{x \to 3^+} \frac{2}{x - 3}$ และ $\displaystyle\lim_{x \to 3^-} \frac{2}{x - 3}$</li>
+                            <li>หาเส้นกำกับดิ่งของฟังก์ชัน $f(x) = \frac{2x}{x^2 - 16}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer3')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer3" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 3:</h4>
-                            <p><strong>5.</strong> เฉลยข้อที่ 5</p>
-                            <p><strong>6.</strong> เฉลยข้อที่ 6</p>
+
+                            <p><strong>8.</strong> หา $\displaystyle\lim_{x \to 0} \frac{1}{x^4}$</p>
+                            <p><strong>วิธีทำ:</strong> เมื่อ $x \to 0$, $x^4 \to 0$ และ $x^4 > 0$ เสมอ</p>
+                            <p>$$\lim_{x \to 0} \frac{1}{x^4} = +\infty$$</p>
+                            <p><strong>ตอบ:</strong> $+\infty$</p>
+
+                            <p><strong>9.</strong> หา $\displaystyle\lim_{x \to 3^+} \frac{2}{x - 3}$ และ $\displaystyle\lim_{x \to 3^-} \frac{2}{x - 3}$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>ทางขวา: เมื่อ $x \to 3^+$, $x > 3$ ทำให้ $x - 3 > 0$</p>
+                            <p>$$\lim_{x \to 3^+} \frac{2}{x - 3} = +\infty$$</p>
+                            <p>ทางซ้าย: เมื่อ $x \to 3^-$, $x < 3$ ทำให้ $x - 3 < 0$</p>
+                            <p>$$\lim_{x \to 3^-} \frac{2}{x - 3} = -\infty$$</p>
+                            <p><strong>ตอบ:</strong> $+\infty$ และ $-\infty$</p>
+
+                            <p><strong>10.</strong> หาเส้นกำกับดิ่งของฟังก์ชัน $f(x) = \frac{2x}{x^2 - 16}$</p>
+                            <p><strong>วิธีทำ:</strong> หาค่า $x$ ที่ทำให้ตัวส่วนเป็นศูนย์</p>
+                            <p>$$x^2 - 16 = 0$$</p>
+                            <p>$$(x-4)(x+4) = 0$$</p>
+                            <p>$$x = 4 \text{ หรือ } x = -4$$</p>
+                            <p><strong>ตอบ:</strong> เส้นกำกับดิ่งคือ $x = 4$ และ $x = -4$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 4 (2 คะแนน)</h3>
-                        <ol start="7">
-                            <li>โจทย์ข้อที่ 7</li>
-                            <li>โจทย์ข้อที่ 8</li>
+                        <h3>ส่วนที่ 4: ลิมิตเมื่อ x → ±∞ (4 ข้อ)</h3>
+                        <ol start="11">
+                            <li>หา $\displaystyle\lim_{x \to \infty} \frac{5x^2 - 3x + 1}{2x^2 + x - 4}$</li>
+                            <li>หา $\displaystyle\lim_{x \to \infty} \frac{3x + 7}{x^2 - 2}$</li>
+                            <li>หา $\displaystyle\lim_{x \to \infty} \frac{4x^3 + 2x}{x^2 - 1}$</li>
+                            <li>หา $\displaystyle\lim_{x \to -\infty} \frac{6x^2 + 5x}{3x^2 - 2x + 1}$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer4')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer4" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 4:</h4>
-                            <p><strong>7.</strong> เฉลยข้อที่ 7</p>
-                            <p><strong>8.</strong> เฉลยข้อที่ 8</p>
+
+                            <p><strong>11.</strong> หา $\displaystyle\lim_{x \to \infty} \frac{5x^2 - 3x + 1}{2x^2 + x - 4}$</p>
+                            <p><strong>วิธีทำ:</strong> หารทั้งเศษและส่วนด้วย $x^2$</p>
+                            <p>$$\lim_{x \to \infty} \frac{5 - \frac{3}{x} + \frac{1}{x^2}}{2 + \frac{1}{x} - \frac{4}{x^2}} = \frac{5 - 0 + 0}{2 + 0 - 0} = \frac{5}{2}$$</p>
+                            <p><strong>ตอบ:</strong> $\frac{5}{2}$</p>
+
+                            <p><strong>12.</strong> หา $\displaystyle\lim_{x \to \infty} \frac{3x + 7}{x^2 - 2}$</p>
+                            <p><strong>วิธีทำ:</strong> หารทั้งเศษและส่วนด้วย $x^2$</p>
+                            <p>$$\lim_{x \to \infty} \frac{\frac{3}{x} + \frac{7}{x^2}}{1 - \frac{2}{x^2}} = \frac{0 + 0}{1 - 0} = 0$$</p>
+                            <p><strong>ตอบ:</strong> $0$</p>
+
+                            <p><strong>13.</strong> หา $\displaystyle\lim_{x \to \infty} \frac{4x^3 + 2x}{x^2 - 1}$</p>
+                            <p><strong>วิธีทำ:</strong> หารทั้งเศษและส่วนด้วย $x^3$</p>
+                            <p>$$\lim_{x \to \infty} \frac{4 + \frac{2}{x^2}}{\frac{1}{x} - \frac{1}{x^3}} = \frac{4 + 0}{0 - 0} = \frac{4}{0} = +\infty$$</p>
+                            <p><strong>ตอบ:</strong> $+\infty$</p>
+
+                            <p><strong>14.</strong> หา $\displaystyle\lim_{x \to -\infty} \frac{6x^2 + 5x}{3x^2 - 2x + 1}$</p>
+                            <p><strong>วิธีทำ:</strong> หารทั้งเศษและส่วนด้วย $x^2$</p>
+                            <p>$$\lim_{x \to -\infty} \frac{6 + \frac{5}{x}}{3 - \frac{2}{x} + \frac{1}{x^2}} = \frac{6 + 0}{3 - 0 + 0} = \frac{6}{3} = 2$$</p>
+                            <p><strong>ตอบ:</strong> $2$</p>
                         </div>
                     </div>
 
                     <div class="exercise-section">
-                        <h3>ส่วนที่ 5 (2 คะแนน)</h3>
-                        <ol start="9">
-                            <li>โจทย์ข้อที่ 9</li>
-                            <li>โจทย์ข้อที่ 10</li>
+                        <h3>ส่วนที่ 5: ความต่อเนื่อง (3 ข้อ)</h3>
+                        <ol start="15">
+                            <li>ตรวจสอบว่าฟังก์ชัน $f(x) = x^2 - 4x + 3$ ต่อเนื่องที่ $x = 2$ หรือไม่</li>
+                            <li>พิจารณาความต่อเนื่องของฟังก์ชัน $f(x) = \frac{x^2 - 1}{x - 1}$ ที่ $x = 1$</li>
+                            <li>หาค่า $a$ ที่ทำให้ฟังก์ชัน
+                            $$f(x) = \begin{cases} x^2 - 1 & \text{เมื่อ } x < 2 \\ ax + 5 & \text{เมื่อ } x \geq 2 \end{cases}$$
+                            ต่อเนื่องที่ $x = 2$</li>
                         </ol>
                         <button class="toggle-answer" onclick="toggleAnswer('answer5')">แสดง/ซ่อนเฉลย</button>
                         <div id="answer5" class="answer" style="display: none;">
                             <h4>เฉลย ส่วนที่ 5:</h4>
-                            <p><strong>9.</strong> เฉลยข้อที่ 9</p>
-                            <p><strong>10.</strong> เฉลยข้อที่ 10</p>
+
+                            <p><strong>15.</strong> ตรวจสอบว่าฟังก์ชัน $f(x) = x^2 - 4x + 3$ ต่อเนื่องที่ $x = 2$ หรือไม่</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>1. $f(2) = 2^2 - 4(2) + 3 = 4 - 8 + 3 = -1$ (มีค่า ✓)</p>
+                            <p>2. $\displaystyle\lim_{x \to 2} f(x) = 2^2 - 4(2) + 3 = -1$ (มีค่า ✓)</p>
+                            <p>3. $\displaystyle\lim_{x \to 2} f(x) = -1 = f(2)$ ✓</p>
+                            <p><strong>ตอบ:</strong> ฟังก์ชันต่อเนื่องที่ $x = 2$</p>
+
+                            <p><strong>16.</strong> พิจารณาความต่อเนื่องของฟังก์ชัน $f(x) = \frac{x^2 - 1}{x - 1}$ ที่ $x = 1$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>1. $f(1) = \frac{1^2 - 1}{1 - 1} = \frac{0}{0}$ ไม่นิยาม ✗</p>
+                            <p>2. $\displaystyle\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = \lim_{x \to 1} \frac{(x-1)(x+1)}{x - 1} = \lim_{x \to 1} (x + 1) = 2$</p>
+                            <p><strong>ตอบ:</strong> ฟังก์ชันไม่ต่อเนื่องที่ $x = 1$ (จุดไม่ต่อเนื่องแบบถอดออกได้)</p>
+
+                            <p><strong>17.</strong> หาค่า $a$ ที่ทำให้ฟังก์ชันต่อเนื่องที่ $x = 2$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>ลิมิตทางซ้าย: $\displaystyle\lim_{x \to 2^-} f(x) = \lim_{x \to 2^-} (x^2 - 1) = 2^2 - 1 = 3$</p>
+                            <p>ลิมิตทางขวา: $\displaystyle\lim_{x \to 2^+} f(x) = \lim_{x \to 2^+} (ax + 5) = 2a + 5$</p>
+                            <p>ค่าฟังก์ชัน: $f(2) = a(2) + 5 = 2a + 5$</p>
+                            <p>เพื่อให้ต่อเนื่อง: $2a + 5 = 3$</p>
+                            <p>$$2a = -2$$</p>
+                            <p>$$a = -1$$</p>
+                            <p><strong>ตอบ:</strong> $a = -1$</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise-section">
+                        <h3>ส่วนที่ 6: ทฤษฎีบทค่ากลาง (3 ข้อ)</h3>
+                        <ol start="18">
+                            <li>พิสูจน์ว่าสมการ $x^3 + x - 5 = 0$ มีรากอย่างน้อยหนึ่งรากในช่วง $(1, 2)$</li>
+                            <li>ถ้า $f$ ต่อเนื่องบน $[1, 4]$ และ $f(1) = -2$, $f(4) = 7$ แสดงว่ามี $c \in (1, 4)$ ที่ทำให้ $f(c) = 0$</li>
+                            <li>พิสูจน์ว่าสมการ $x^2 = 2^x$ มีรากในช่วง $(1, 2)$</li>
+                        </ol>
+                        <button class="toggle-answer" onclick="toggleAnswer('answer6')">แสดง/ซ่อนเฉลย</button>
+                        <div id="answer6" class="answer" style="display: none;">
+                            <h4>เฉลย ส่วนที่ 6:</h4>
+
+                            <p><strong>18.</strong> พิสูจน์ว่าสมการ $x^3 + x - 5 = 0$ มีรากอย่างน้อยหนึ่งรากในช่วง $(1, 2)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>พิจารณา $f(x) = x^3 + x - 5$ (เป็นฟังก์ชันพหุนาม จึงต่อเนื่องทุกจุด)</p>
+                            <p>$f(1) = 1^3 + 1 - 5 = -3 < 0$</p>
+                            <p>$f(2) = 2^3 + 2 - 5 = 8 + 2 - 5 = 5 > 0$</p>
+                            <p>เนื่องจาก $f(1) < 0 < f(2)$ และ $f$ ต่อเนื่องบน $[1, 2]$</p>
+                            <p>จากทฤษฎีบทค่ากลาง มี $c \in (1, 2)$ ที่ทำให้ $f(c) = 0$</p>
+                            <p><strong>ตอบ:</strong> สมการมีรากในช่วง $(1, 2)$</p>
+
+                            <p><strong>19.</strong> ถ้า $f$ ต่อเนื่องบน $[1, 4]$ และ $f(1) = -2$, $f(4) = 7$ แสดงว่ามี $c \in (1, 4)$ ที่ทำให้ $f(c) = 0$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>เงื่อนไข: $f$ ต่อเนื่องบน $[1, 4]$ ✓</p>
+                            <p>$f(1) = -2 < 0 < 7 = f(4)$ ✓</p>
+                            <p>เนื่องจาก $0$ อยู่ระหว่าง $f(1)$ และ $f(4)$</p>
+                            <p>จากทฤษฎีบทค่ากลาง มี $c \in (1, 4)$ ที่ทำให้ $f(c) = 0$</p>
+                            <p><strong>ตอบ:</strong> พิสูจน์ได้</p>
+
+                            <p><strong>20.</strong> พิสูจน์ว่าสมการ $x^2 = 2^x$ มีรากในช่วง $(1, 2)$</p>
+                            <p><strong>วิธีทำ:</strong></p>
+                            <p>พิจารณา $f(x) = x^2 - 2^x$ (ต่อเนื่องทุกจุด)</p>
+                            <p>$f(1) = 1^2 - 2^1 = 1 - 2 = -1 < 0$</p>
+                            <p>$f(2) = 2^2 - 2^2 = 4 - 4 = 0$</p>
+                            <p>เนื่องจาก $f(1) < 0 \leq f(2)$ แต่ $f(2) = 0$ แสดงว่า $x = 2$ เป็นรากของสมการ</p>
+                            <p>หรืออาจพิจารณาช่วง $(1.5, 2)$:</p>
+                            <p>$f(1.5) = 1.5^2 - 2^{1.5} = 2.25 - 2.83 \approx -0.58 < 0$</p>
+                            <p>$f(2) = 0 > f(1.5)$</p>
+                            <p><strong>ตอบ:</strong> สมการมีรากคือ $x = 2$ (หรือมีรากในช่วง $(1, 2]$)</p>
                         </div>
                     </div>
 
@@ -328,18 +857,18 @@
 
             <aside class="sidebar-right">
                 <div class="ad-space" data-ad-position="sidebarMiddle"></div>
-                
+
                 <div class="related-topics">
                     <h3>บทเรียนที่เกี่ยวข้อง</h3>
                     <ul>
-                        <li><a href="chapter1.html">บทที่ 1</a></li>
-                        <li><a href="chapter2.html">บทที่ 2</a></li>
-                        <li><a href="chapter3.html">บทที่ 3</a></li>
-                        <li><a href="chapter4.html">บทที่ 4</a></li>
-                        <li><a href="chapter6.html">บทที่ 6</a></li>
+                        <li><a href="chapter1.html">บทที่ 1: ฟังก์ชันเอกซ์โพเนนเชียล</a></li>
+                        <li><a href="chapter2.html">บทที่ 2: ฟังก์ชันลอการิทึม</a></li>
+                        <li><a href="chapter3.html">บทที่ 3: ฟังก์ชันตรีโกณมิติ</a></li>
+                        <li><a href="chapter4.html">บทที่ 4: เวกเตอร์</a></li>
+                        <li><a href="chapter6.html">บทที่ 6: อนุพันธ์</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="ad-space" data-ad-position="sidebarBottom"></div>
             </aside>
         </div>
